@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim
+vlfsr_rng
+!s110 1569516879
+!i10b 1
+!s100 MeMDU<O3OAG1]H@5lh>4l1
+I]B8oROPoVe6]KDez[z5@a3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1569516865
+8C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v
+FC:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1569516879.000000
+!s107 C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v|
+!s90 -reportprogress|300|-work|lfsr_work|-stats=none|C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v|
+!i113 1
+Z3 o-work lfsr_work
+Z4 tCvgOpt 0
+vlfsr_rng_vlg_tst
+!s110 1569516695
+!i10b 1
+!s100 <KYX=EO5hOX>8A=]3a26C3
+IQ2]Vd5UWOC2=b?YzBV00`1
+R1
+R0
+w1569516559
+8C:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt
+FC:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1569516695.000000
+!s107 C:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt|
+!s90 -reportprogress|300|-work|lfsr_work|-stats=none|C:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt|
+!i113 1
+R3
+R4

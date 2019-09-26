@@ -1,0 +1,49 @@
+# Compile of lfsr_rng.v was successful.
+# Compile of lfsr_rng.vt was successful.
+# 2 compiles, 0 failed with no errors.
+vsim lfsr_work.lfsr_rng_vlg_tst
+# vsim lfsr_work.lfsr_rng_vlg_tst 
+# Start time: 10:51:55 on Sep 26,2019
+# Loading lfsr_work.lfsr_rng_vlg_tst
+# Loading lfsr_work.lfsr_rng
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt(38): [PCDPC] - Port size (11) does not match connection size (8) for port 'data'. The port definition is at: C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lfsr_rng_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v
+add wave -position insertpoint  \
+sim:/lfsr_rng_vlg_tst/clk
+add wave -position insertpoint  \
+sim:/lfsr_rng_vlg_tst/reset \
+sim:/lfsr_rng_vlg_tst/out
+run -all
+# Running testbench
+add wave -position insertpoint  \
+sim:/lfsr_rng_vlg_tst/i1/rst_n \
+sim:/lfsr_rng_vlg_tst/i1/data_next \
+sim:/lfsr_rng_vlg_tst/i1/data \
+sim:/lfsr_rng_vlg_tst/i1/clk \
+sim:/lfsr_rng_vlg_tst/i1/BITS
+restart
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt(38): [PCDPC] - Port size (11) does not match connection size (8) for port 'data'. The port definition is at: C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lfsr_rng_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+# Compile of lfsr_rng.v was successful.
+vsim lfsr_work.lfsr_rng_vlg_tst
+# End time: 10:54:44 on Sep 26,2019, Elapsed time: 0:02:49
+# Errors: 0, Warnings: 2
+# vsim lfsr_work.lfsr_rng_vlg_tst 
+# Start time: 10:54:44 on Sep 26,2019
+# Loading lfsr_work.lfsr_rng_vlg_tst
+# Loading lfsr_work.lfsr_rng
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/lfsr_rng/simulation/modelsim/lfsr_rng.vt(38): [PCDPC] - Port size (11) does not match connection size (8) for port 'data'. The port definition is at: C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /lfsr_rng_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/lfsr_rng/lfsr_rng.v
+add wave -position insertpoint  \
+sim:/lfsr_rng_vlg_tst/reset \
+sim:/lfsr_rng_vlg_tst/out \
+sim:/lfsr_rng_vlg_tst/clk
+run -all
+# Running testbench
+# End time: 11:00:19 on Sep 26,2019, Elapsed time: 0:05:35
+# Errors: 0, Warnings: 1
