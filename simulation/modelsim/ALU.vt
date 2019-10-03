@@ -1,0 +1,229 @@
+`timescale 1 ps/ 1 ps
+module ALU_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [15:0] destData;
+reg [7:0] operationControl;
+reg [15:0] sourceData;
+// wires                                               
+wire carry;
+wire low;
+wire negative;
+wire overflow;
+wire [15:0]  result;
+wire zero;
+
+// assign statements (if any)                          
+ALU i1 (
+// port map - connection between master ports and signals/registers   
+	.carry(carry),
+	.destData(destData),
+	.low(low),
+	.negative(negative),
+	.operationControl(operationControl),
+	.overflow(overflow),
+	.result(result),
+	.sourceData(sourceData),
+	.zero(zero)
+);
+initial begin                                                                                             
+$display("Running testbench");
+#1; 
+if(overflow != 0 || negative != 0 || zero != 0 || carry != 0 || low != 0)
+	$display("Initial constraint set failed! All other tests are invalid until this is fixed.");
+destData = 0;
+sourceData = 7;
+operationControl = 8'b00000101; //ADD Operation
+#1;
+if(result != 8'b00000111 || carry != 0 || overflow != 0)
+	$display("Failed to do simple arithmetic. Are you really an engineer?");
+destData = 9;
+#1;
+if(result != 16'b0000000000010000)
+	$display("Follow up add failed to update result from 7 to 16");
+sourceData = 65520;
+destData = 20;
+#1;
+if(overflow != 0)
+	$display("Overflow flag was set but only a carry out was needed!");
+destData = 65535;
+#1;
+if(overflow != 0)
+	$display("Overflow did not occur in the ADD operation, but overflow was reported.");
+sourceData = -32767; //This is the min number we can represent
+destData = -20000;
+#1;
+if(overflow != 1)
+	$display("Overflow occurred on two negative numbers, but was not reported for ADD.");
+sourceData = 32765;
+destData = 15;
+#1;
+if(overflow != 1)
+	$display("Overflow occurred on two positive numbers, but was not reported for ADD.");
+operationControl = 8'b00000110; //ADDU
+sourceData = 65535;
+destData = 20;
+#1;
+if(carry != 1 || result != 16'b0000000000010011)
+	$display("ADDU not setting carry when a carry is needed!");
+sourceData = 16;
+destData = 9;
+#1;
+if(carry != 0 || result != 16'b0000000000011001)
+	$display("ADDU sets carry on an operation that does not require a carry!");
+operationControl = 8'b00001110; //Multiplication operation
+#1;
+if(result != 16'b0000000010010000)
+	$display("Failed to handle multiplication!");
+operationControl = 8'b00001001; //SUB operation
+#1;
+if(result != 16'b1111111111111001 || negative != 1)
+	$display("Subtraction test failed! Expected -7");
+operationControl = 8'b00001011; //CMP
+#1;
+if(result != 0 || zero != 0)
+	$display("Comparison claims that two different numbers are equal.");     
+sourceData = 9;
+#1;
+if(zero != 1)
+	$display("Comparison claims that two of the same numbers are not equivalent.");	
+operationControl = 8'b00000001; //AND
+#1;
+if(result != 16'b0000000000001001) //9 & 9 == 9
+	$display("ANDing two numbers that are the same does not return the same number!");
+sourceData = 18;
+destData = 2;
+#1;
+if(result != 16'b0000000000000010) //18 & 2 == 2
+	$display("AND of two numbers that differ does not return only the common bits.");
+destData = 1;
+#1;
+if(result != 16'b0000000000000000)
+	$display("AND of an even number and 1 should only be zero, but it is not.");
+operationControl = 8'b00000010; //OR 
+#1;
+if(result != 16'b0000000000010011)
+	$display("OR of two values failed to combine the two numbers.");
+destData = 18;
+#1;
+if(result != 16'b0000000000010010)
+	$display("OR of two same values did not return the same value.");
+destData = 257;
+sourceData = 0;
+#1;
+if(result != 16'b0000000100000001)
+	$display("OR of a non-zero number and zero does not return the non-zero value.");
+operationControl = 8'b00000011; //XOR Tests
+destData = 56;
+sourceData = 56;
+#1;
+if(result != 16'b0000000000000000)
+	$display("XOR of the same number did not return 0.");
+sourceData = 20;
+destData = 10;
+#1;
+if(result != 16'b0000000000011110)
+	$display("XOR of two numbers did not combine values where only one 1 was present.");
+sourceData = 12;
+destData = 4;
+//Begin tests for Immediate versions of each previous operation
+sourceData = 11;
+destData = 255;
+operationControl = 8'b01010101;
+#1;
+if(result != 266) //ADDI
+	$display("ADDI is not properly adding numbers that are in range.");
+sourceData = 65535;
+#1;
+if(carry != 1)
+	$display("ADDI is improperly setting carry.");
+sourceData = -32765;
+destData = -999;
+#1;
+if(overflow != 1)
+	$display("ADDI is improperly setting overflow.");
+sourceData = -1;
+destData = -5;
+#1;
+if(negative != 1)
+	$display("ADDI not setting negative for negative numbers.");
+operationControl = 8'b01100000; //ADDU
+sourceData = 65534;
+destData = 1;
+#1;
+if(result != 65535)
+	$display("ADDUI Returns improper result.");
+if(carry != 0)
+	$display("Carry for ADDUI is improperly set.");
+destData = 15;
+#1;
+if(carry != 1)
+	$display("Carry for ADDUI is not set when it should be!");
+operationControl = 8'b10010000; //SUBI
+sourceData = -10;
+destData = 0;
+#1;
+if(result != 10)
+	$display("SUBI result is incorrect!");
+if(negative != 0)
+	$display("SUBI incorrectly sets negative flag when result is positive.");
+if(carry != 0)
+	$display("SUBI claims it needs a carry when one isn't required.");
+sourceData = 10;
+#1;
+if(negative != 1)
+	$display("SUBI does not set its negative flag when it should.");
+if(carry != 1)
+	$display("SUBI claims carry isnt needed when source is greater than dest, resulting in a negative number.");
+sourceData = -32765;
+destData = -5;
+#1;
+if(result != 32760)
+	$display("SUBI on outer bound does not handle contained operation.");
+if(overflow == 1 || carry == 1)
+	$display("SUBI claims overflow or carry on contained operation.");
+if(negative != 0)
+	$display("SUBI negative flag is set when a larger negative number is subtracted from a smaller one.");
+operationControl = 8'b10110000; //CMPI
+sourceData = 15;
+destData = 19;
+#1;
+if(result != 0)
+	$display("CMPI is sending a non-zero result.");
+if(zero == 1)
+	$display("CMPI is setting the zero flag to true for two different numbers.");
+if(low == 1)
+	$display("CMPI setting low to high when it should be low.");
+if(negative != 0)
+	$display("CMPI setting neg when dest is greater than source.");
+sourceData = 20;
+#1;
+if(negative != 1)
+	$display("CMPI should set neg when dest is less than source.");
+operationControl = 8'b00010000; //ANDI
+sourceData = -87;
+destData = -87;
+#1;
+if(result != 16'b1111111110101001)
+	$display("ANDI not working for two negative numbers.");
+operationControl = 8'b00100000; //ORI
+destData = 8'b00000010;
+sourceData = 3;
+#1;
+if(result != 3)
+	$display("ORI not functioning.");
+operationControl = 8'b00110000;
+#1;
+if(result != 1)
+	$display("XORI not functioning.");
+operationControl = 8'b11110000;
+sourceData = -7;
+#1;
+if(result != 16'b1111100100000000)
+	$display("LUI not functioning on neg numbers.");
+$display("Testing has completed. If no other lines besides this one and the initial test line printed, then everything is working.");
+end
+endmodule
+

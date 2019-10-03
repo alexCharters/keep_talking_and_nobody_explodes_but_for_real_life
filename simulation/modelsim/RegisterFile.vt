@@ -1,0 +1,115 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "09/26/2019 10:10:17"
+                                                                                
+// Verilog Test Bench template for design : RegisterFile
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module RegisterFile_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clock;
+reg [3:0] register1Address;
+reg [3:0] register2Address;
+reg shouldWrite;
+reg [3:0] writeAddress;
+reg [15:0] writeData;
+// wires                                               
+wire [15:0]  register1Data;
+wire [15:0]  register2Data;
+integer i = 0;
+
+// assign statements (if any)                          
+RegisterFile i1 (
+// port map - connection between master ports and signals/registers   
+	.clock(clock),
+	.register1Address(register1Address),
+	.register1Data(register1Data),
+	.register2Address(register2Address),
+	.register2Data(register2Data),
+	.shouldWrite(shouldWrite),
+	.writeAddress(writeAddress),
+	.writeData(writeData)
+);
+initial begin
+	clock = 0;
+	//set all registers to -1
+	shouldWrite = 1;
+	for(i = 0; i < 16; i = i + 1) begin
+		writeAddress = i;
+		writeData = -1;
+		#10;
+	end
+	shouldWrite = 0;
+	register1Address = 0;
+	register2Address = 0;
+	writeAddress = 0;
+	//initial state setup complete
+	#10;
+	$display("Starting tests!");
+	//ensure that the zero register provides a zero value
+	if(register1Data != 0 || register2Data != 0)
+		$display("Register Zero is not hard coded to zero!");
+	//test a write to register 1
+	writeAddress = 1;
+	writeData = 16'b0000000000000010;
+	shouldWrite = 1;
+	#10;
+	register1Address = 1;
+	shouldWrite = 0;
+	#10;
+	//ensure the register holds 2 as its new value.
+	if(register1Data != 16'b0000000000000010)
+		$display("Register 1 value not properly set!");
+	register2Address = 3;
+	#10;
+	//make sure that register value is constant, not just a one time change.
+	if(register1Data != 16'b0000000000000010)
+		$display("Register 1 not holding value!");
+	writeAddress = 5; 
+	writeData = register1Data;
+	//test write to different register with a copy from old values.
+	#10;
+	shouldWrite = 1;
+	register1Address = 5;
+	#10;
+	shouldWrite = 0;
+	if(register1Data != 16'b0000000000000010)
+		$display("Copy to second register failed!");
+	#10;
+	//test write when shouldWrite is not high does not change values for the writeAddr register.
+	writeAddress = 9;
+	writeData = 16;
+	register2Address = 9;
+	#10;
+	if(register2Data == 9)
+		$display("FAILURE! Register should not have its value updated unless shouldWrite is enabled!");
+	$stop;
+end        
+
+always 
+#5 clock = ~clock;                                                                                            
+endmodule
+
