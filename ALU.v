@@ -14,6 +14,8 @@ module ALU
 			LSH = 4'b0100, LSHIPOS = 4'b0000, LSHINEG = 4'b0001, ASHU = 4'b0110, ASHUIPOS = 4'b0010, 
 			ASHUINEG = 4'b0011, LOAD = 4'b0000, STORE = 4'b0100, SCOND = 4'b1101, JCOND = 4'b1100, 
 			JAL = 4'b1000;
+		//Custom Instructions
+		parameter STORI = 8'b10000101;
 		//Wire to hold addition and subtraction results that allows for simple checking of carry
 		reg [(WIDTH) : 0] resWire;
 		//These represent the different conditions we need to report back after computation.
@@ -119,13 +121,13 @@ module ALU
 							zero = 0;
 							negative = 0;
 						end
-//						MOV: begin //MOV HANDLE THIS IN THE CONTROLLER!
-//							resWire = sourceData;
-//							carry = 0;
-//							low = 0;
-//							zero = 0;
-//							negative = 0;
-//						end
+						MOV: begin //MOV HANDLE THIS IN THE CONTROLLER!
+							resWire = sourceData;
+							carry = 0;
+							low = 0;
+							zero = 0;
+							negative = 0;
+						end
 						default: begin
 							carry = 0;
 							low = 0;
@@ -166,33 +168,24 @@ module ALU
 					end
 				endcase
 			end
-//			MEMANDJMP: begin ALL OF THIS SHOULD BE HANDLED IN THE CONTROLLER!
-//				case(operationControl[3:0])
-//					LOAD: begin
-//						resWire = sourceData;
-//					end
-//					STORE: begin
-//						resWire = destData;
-//					end
-//					SCOND: begin
-//						resWire = sourceData;
-//					end
-//					JCOND: begin
-//					
-//					end
-//					JAL: begin
-//					
-//					end
-//					default: begin
-//						carry = 0;
-//						low = 0;
-//						overflow = 0;
-//						zero = 0;
-//						negative = 0;
-//						result = 0;
-//					end
-//				endcase
-//			end
+			MEMANDJMP: begin ALL OF THIS SHOULD BE HANDLED IN THE CONTROLLER!
+				case(operationControl[3:0])
+					LOAD: begin
+						resWire = sourceData;
+					end
+					STORE: begin
+						resWire = destData;
+					end
+					default: begin
+						carry = 0;
+						low = 0;
+						overflow = 0;
+						zero = 0;
+						negative = 0;
+						result = 0;
+					end
+				endcase
+			end
 			ADDI: begin
 				resWire = sourceData + destData;
 				carry = resWire[WIDTH];
@@ -275,9 +268,14 @@ module ALU
 				zero = 0;
 				negative = 0;
 			end
-//			MOVI: begin Handle this in the Controller!
-//				resWire = sourceData;
-//			end
+			MOVI: begin
+				resWire = sourceData;
+				carry = 0;
+				low = 0;
+				overflow = 0;
+				zero = 0;
+				negative = 0;
+			end
 			LUI: begin
 				resWire = sourceData << 8;
 				carry = 0;
@@ -289,6 +287,14 @@ module ALU
 //			BCOND: begin Handle in controller
 			
 //			end
+			STOI[7:4]: begin
+				resWire = sourceData; //Move the source (an immediate) out of the ALU for a store into a specific address in memory.
+				carry = 0;
+				low = 0;
+				overflow = 0;
+				zero = 0;
+				negative = 0;
+			end
 			default: begin
 				//NOT TODAY, LATCHES.
 				carry = 0;
