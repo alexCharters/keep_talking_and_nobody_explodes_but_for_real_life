@@ -1,0 +1,22 @@
+C:/intelFPGA_lite/18.1/I2C/I2C.v {1 {vlog -work I2C_work -stats=none C:/intelFPGA_lite/18.1/I2C/I2C.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module I2C
+
+Top level modules:
+	I2C
+
+} {} {}} C:/intelFPGA_lite/18.1/I2C/bidirec.v {1 {vlog -work I2C_work -stats=none C:/intelFPGA_lite/18.1/I2C/bidirec.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bidirec
+
+Top level modules:
+	bidirec
+
+} {} {}} C:/intelFPGA_lite/18.1/I2C/simulation/modelsim/I2C.vt {1 {vlog -work I2C_work -stats=none C:/intelFPGA_lite/18.1/I2C/simulation/modelsim/I2C.vt
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module I2C_vlg_tst
+
+Top level modules:
+	I2C_vlg_tst
+
+} {} {}}

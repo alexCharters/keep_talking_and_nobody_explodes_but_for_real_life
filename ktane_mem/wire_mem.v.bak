@@ -1,0 +1,45 @@
+module wire_mem(data, addr, we, en, clk, q, wire1, wire2, wire3, wire4, wire5, wire6);
+
+parameter DATA_WIDTH=16, parameter ADDR_WIDTH=16
+
+input [(DATA_WIDTH-1):0] data;
+input [(ADDR_WIDTH-1):0] addr;
+input we, clk, en;
+
+input wire1, wire2, wire3, wire4, wire5, wire6;
+
+reg [6:0] val1, val2, val3, val4, val5, val6;
+
+adc_read wire1(.pin(3'b000), .val(val1));
+adc_read wire2(.pin(3'b001), .val(val2));
+adc_read wire3(.pin(3'b010), .val(val3));
+adc_read wire4(.pin(3'b011), .val(val4));
+adc_read wire5(.pin(3'b100), .val(val5));
+adc_read wire6(.pin(3'b101), .val(val6));
+
+always @ (posedge clk)
+	begin
+		if(en) begin
+			if(addr >= 4'he664 && addr < 4'he886) begin
+
+			end
+			else if(addr >= 4'he886 && addr < 4'heaa8) begin
+
+			end
+			else if(addr >= 4'heaa8 && addr < 4'hecca) begin
+
+			end
+			else if(addr >= 4'hecca && addr < 4'heeec) begin
+
+			end
+			else if(addr >= 4'heeec && addr < 4'hf10e) begin
+
+			end
+			else if(addr >= 4'hf10e && addr < 4'hf330) begin
+
+			end
+		end
+	end
+
+
+endmodule

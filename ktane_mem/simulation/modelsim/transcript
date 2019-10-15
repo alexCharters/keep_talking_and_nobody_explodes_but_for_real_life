@@ -1,0 +1,96 @@
+# Compile of ktane_mem.vt was successful.
+vsim ktane_mem_work.ktane_mem_vlg_tst
+# vsim ktane_mem_work.ktane_mem_vlg_tst 
+# Start time: 11:37:42 on Oct 13,2019
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v(14): [PCDPC] - Port size (7) does not match connection size (1) for port 'sev'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/morse_mem/s1 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v(15): [PCDPC] - Port size (7) does not match connection size (1) for port 'sev'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/morse_mem/s2 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+# Error opening C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/[PCDPC] - Port size (7) does not match connection size 
+# Path name 'C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/[PCDPC] - Port size (7) does not match connection size ' doesn't exist.
+# Compile of morse_mem.v was successful.
+vsim ktane_mem_work.ktane_mem_vlg_tst
+# End time: 11:39:07 on Oct 13,2019, Elapsed time: 0:01:25
+# Errors: 1, Warnings: 2
+# vsim ktane_mem_work.ktane_mem_vlg_tst 
+# Start time: 11:39:08 on Oct 13,2019
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.mux5
+add wave -position insertpoint  \
+sim:/ktane_mem_vlg_tst/writeEn \
+sim:/ktane_mem_vlg_tst/q \
+sim:/ktane_mem_vlg_tst/led2 \
+sim:/ktane_mem_vlg_tst/led1 \
+sim:/ktane_mem_vlg_tst/en \
+sim:/ktane_mem_vlg_tst/data \
+sim:/ktane_mem_vlg_tst/clk \
+sim:/ktane_mem_vlg_tst/addr
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# Compile of ktane_mem.vt was successful.
+restart
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+restart
+# Compile of ktane_mem.vt was successful.
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+vsim ktane_mem_work.ktane_mem_vlg_tst
+# End time: 11:44:11 on Oct 13,2019, Elapsed time: 0:05:03
+# Errors: 0, Warnings: 3
+# vsim ktane_mem_work.ktane_mem_vlg_tst 
+# Start time: 11:44:11 on Oct 13,2019
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.mux5
+add wave -position insertpoint  \
+sim:/ktane_mem_vlg_tst/writeEn \
+sim:/ktane_mem_vlg_tst/led2 \
+sim:/ktane_mem_vlg_tst/led1 \
+sim:/ktane_mem_vlg_tst/en \
+sim:/ktane_mem_vlg_tst/data \
+sim:/ktane_mem_vlg_tst/clk \
+sim:/ktane_mem_vlg_tst/addr
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench

@@ -1,0 +1,18 @@
+module rgb_led(clk, set, .r, .g, .b, .pins);
+
+module pwm(
+    input clk,
+    input [4:0] i_duty,
+    output reg o_state
+    );
+
+    reg [7:0] counter = 0;
+
+    always @ (posedge clk)
+    begin
+        counter <= counter + 1;
+        o_state <= (counter < i_duty);
+    end
+endmodule
+
+endmodule

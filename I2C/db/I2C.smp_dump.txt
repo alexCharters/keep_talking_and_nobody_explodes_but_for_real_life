@@ -1,0 +1,14 @@
+
+State Machine - |I2C|CS
+Name CS.setData CS.ackHoldStage CS.ackBeginStage CS.holdSlave CS.pauseSet CS.setSlave CS.pause CS.stopEnd CS.stopBegin CS.start CS.idle 
+CS.idle 0 0 0 0 0 0 0 0 0 0 0 
+CS.start 0 0 0 0 0 0 0 0 0 1 1 
+CS.stopBegin 0 0 0 0 0 0 0 0 1 0 1 
+CS.stopEnd 0 0 0 0 0 0 0 1 0 0 1 
+CS.pause 0 0 0 0 0 0 1 0 0 0 1 
+CS.setSlave 0 0 0 0 0 1 0 0 0 0 1 
+CS.pauseSet 0 0 0 0 1 0 0 0 0 0 1 
+CS.holdSlave 0 0 0 1 0 0 0 0 0 0 1 
+CS.ackBeginStage 0 0 1 0 0 0 0 0 0 0 1 
+CS.ackHoldStage 0 1 0 0 0 0 0 0 0 0 1 
+CS.setData 1 0 0 0 0 0 0 0 0 0 1 

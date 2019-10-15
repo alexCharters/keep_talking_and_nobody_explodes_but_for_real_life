@@ -1,0 +1,241 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim
+vbutton_mem
+Z1 !s110 1570987776
+!i10b 1
+!s100 Cfg0Xm4OPDSC>=B05Q[T>0
+IDIeP_RTzcU9F1AA<[:YZS3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1570986609
+8C:/intelFPGA_lite/18.1/ktane_mem/button_mem.v
+FC:/intelFPGA_lite/18.1/ktane_mem/button_mem.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1570987776.000000
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/button_mem.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/button_mem.v|
+!i113 1
+Z5 o-work ktane_mem_work
+Z6 tCvgOpt 0
+vdual_port_ram
+R1
+!i10b 1
+!s100 [R=W0hBU;D^dVdA7m_^UR0
+I[8oO^L:SUN?<hQC@bAF[Q0
+R2
+R0
+w1570815878
+8C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v
+FC:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v|
+!i113 1
+R5
+R6
+vextras_mem
+R1
+!i10b 1
+!s100 b9_Qi`4UzXhRCIH7fWU242
+I?oD2^>c]ZHlGIWY1fVWWc2
+R2
+R0
+w1570986407
+8C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v
+FC:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v|
+!i113 1
+R5
+R6
+vkeypad_mem
+Z7 !s110 1570987777
+!i10b 1
+!s100 83d^6Ib1a0_k]fjO:OPVS0
+I0>X4dbL89ZX1M[RD=@[RT3
+R2
+R0
+w1570985978
+8C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v
+FC:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v|
+!i113 1
+R5
+R6
+vktane_mem
+R7
+!i10b 1
+!s100 MBOI2dUnhHCN0Yb19M63W0
+IYVV^[8DaPfdK34;cgM15k1
+R2
+R0
+w1570986903
+8C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v
+FC:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1570987777.000000
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v|
+!i113 1
+R5
+R6
+vktane_mem_vlg_tst
+!s110 1570988627
+!i10b 1
+!s100 NK40T^Q>7Yd5fQ3QiZPme1
+I1a7de_coNVWS`9IM1`Njf2
+R2
+R0
+w1570988601
+8C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt
+FC:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt
+L0 28
+R3
+r1
+!s85 0
+31
+!s108 1570988627.000000
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt|
+!i113 1
+R5
+R6
+vmorse_mem
+!s110 1570988342
+!i10b 1
+!s100 nZXlJ6[<6QV>egN0f;g?D0
+IJ0l1PbhX4XAMKE@>OEU=c1
+R2
+R0
+w1570988327
+8C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v
+FC:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1570988342.000000
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v|
+!i113 1
+R5
+R6
+vmux5
+Z8 !s110 1570987778
+!i10b 1
+!s100 Ua_eZ17f3onEnG_IEkziU1
+Ia^=:dQ<K4oR`1IlC<M3;?1
+R2
+R0
+w1570985333
+8C:/intelFPGA_lite/18.1/ktane_mem/mux5.v
+FC:/intelFPGA_lite/18.1/ktane_mem/mux5.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1570987778.000000
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/mux5.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/mux5.v|
+!i113 1
+R5
+R6
+vrgb_led
+R8
+!i10b 1
+!s100 9FBObFi7FFF3dUhB5WZ8N1
+IKODn41hOh`JPGh0FhmcBO3
+R2
+R0
+w1570916796
+8C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v
+FC:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v|
+!i113 1
+R5
+R6
+vsevseg
+Z10 !s110 1570987775
+!i10b 1
+!s100 bVg1JW?H3VXaQ@;@UXKlE3
+I4iLMQHd9dR4`?`RChJ9@J3
+R2
+R0
+w1570911508
+8C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+FC:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z11 !s108 1570987775.000000
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v|
+!i113 1
+R5
+R6
+vwire_mem
+R10
+!i10b 1
+!s100 feMmHbh:m6T6hNAdOeY=[1
+IEYWF@0KjUAIZ?c_g[dkhX3
+R2
+R0
+w1570986415
+8C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+FC:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v|
+!s90 -reportprogress|300|-work|ktane_mem_work|-stats=none|C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v|
+!i113 1
+R5
+R6

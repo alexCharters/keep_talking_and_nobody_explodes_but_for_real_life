@@ -1,0 +1,120 @@
+module oled_i2c(rw,data,transmit,sda,scl,clk);
+input rw, clk, transmit;
+input [7:0] data;
+parameter [7:0] address = 8'b01111000;
+output reg scl;
+output reg sda;
+
+reg ready;
+
+reg [15:0] capture;
+
+reg [7:0] counter;
+reg [6:0] CS, NS;
+
+parameter [6:0] idle=1, start=2, ss=3, hs=4, rwStage=5, ackStage1=6, sd=7, hd=8, ackStage2= 9, stop=10;
+
+assign scl = clk & ready;
+
+initial begin
+	counter = 0;
+	sda <= 1'b1;
+	CS <= idle;
+	ready <= 0;
+end
+
+always@(negedge clk) begin
+	case(CS)
+		idle: begin
+			ready <=0;
+			sda <= 1;
+			
+			if(transmit) NS<=start;
+			else NS <= idle;
+		end
+		
+		start: begin
+			ready<=1;
+			sda <= 0;
+			counter <= 0;
+			capture <= {address[7:1], rw, data};
+		
+			NS <= ss;
+		end
+		
+		ss: begin
+			$display("enter ss");
+			sda <= capture[15-counter];
+			
+			NS <= hs;
+		end
+		
+		hs: begin
+			sda <= capture[15-counter];
+			$display("enter hs");
+		
+			if(counter == 6) begin
+				NS<=rwStage;
+				counter <= counter + 1;
+				//counter = 0;
+			end
+			else begin
+				NS<=ss;
+				
+				$display(CS);
+				$display(NS);
+				counter <= counter + 1;
+			end
+		end
+		
+		rwStage: begin
+			sda <= capture[15-counter];
+			counter <= counter + 1;
+			
+			NS <= ackStage1;
+		end
+		
+		ackStage1:
+		begin
+			sda <= 1'bz;
+		
+			NS <= sd;
+		end
+		
+		sd: begin
+			sda <= capture[15-counter];
+		
+			NS <= hd;
+		end
+		
+		hd: begin
+		   sda <= capture[15-counter];
+			
+			
+			if(counter == 7) begin
+				NS<=ackStage2;
+				counter = counter+1;
+				//counter = 0;
+			end
+			else begin
+				NS<=sd;
+				counter = counter+1;
+			end
+		end
+		ackStage2: NS <= stop;
+		stop: begin
+			sda <= 0;
+			NS <= idle;
+		end
+		default: NS <= idle;
+	endcase
+end
+
+//update the current state to the next state
+always @(posedge clk) begin
+		CS <= NS;
+end
+
+
+
+endmodule

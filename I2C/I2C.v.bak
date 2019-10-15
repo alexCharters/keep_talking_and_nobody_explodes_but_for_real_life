@@ -1,0 +1,85 @@
+module I2C(clk, SCL, SDA, address, rw, data, dataReady);
+input clk, dataReady;
+input [7:0] data;
+input [6:0] address;
+input rw;
+output reg SCL;
+inout SDA;
+
+reg direction;
+reg inp;
+wire outp;
+reg [7:0] addrw;
+
+reg  [5:0] CS, NS;
+parameter [5:0] idle=1, start=2, pause = 3, setSlave=4, pauseSet=5, holdSlave=6, ackBeginStage=7, ackHoldStage=8, setData=9;
+
+reg [5:0] counter;
+
+bidirec b1(.oe(direction), .clk(clk), .inp(inp), .outp(outp), .bidir(SDA));
+
+initial begin
+ CS <= idle;
+ direction = 1'b1;
+ inp <= 1'b1;
+ counter <= 7;
+end
+
+always @ (*) begin
+	case(CS) 
+		idle: begin
+			NS <= dataReady ? start : idle;
+			direction <= 1;
+			inp <= 1'b1;
+			SCL <= 1'b1;
+			addrw <= {address, rw};
+		end
+		start: begin
+			NS <= pause;
+			inp <= 1'b0;
+			SCL <= 1'b1;
+			counter <= 7;
+			direction <= 1;
+		end
+		pause: begin
+			NS <= setSlave;
+			inp <= 1'b0;
+			SCL <= 1'b1;
+		end
+		setSlave: begin
+			NS <= pauseSet;
+			
+			SCL <= 1'b0;
+			inp <= addrw[counter];
+			if (counter == 6'b111111) direction <= 0;
+		end
+		pauseSet: begin
+			NS <= holdSlave;
+			
+			SCL <= 1'b0;
+			inp <= addrw[counter];
+		end
+		holdSlave: begin
+			NS <= (counter == 6'b111111) ? ackBeginStage : setSlave;
+			SCL <= 1'b1;
+			inp <= addrw[counter];
+			counter = counter - 1;
+			end
+		ackBeginStage: begin
+			NS <= ackHoldStage;
+			SCL <= 0;
+		end
+		ackHoldStage: begin
+			NS <= start;
+			//NS <= (outp == 1'b0) ? setData : start;
+			if (outp != 1'b0 or outp == 1'bz) $display("adress not acknowledged");
+			else $display("acknowledged");
+		end
+	endcase
+end
+
+always @ (posedge clk) begin
+	CS <= NS;
+end
+
+endmodule

@@ -1,0 +1,16 @@
+
+State Machine - |oled_i2c|I2C:U1|CS
+Name CS.holdData CS.pauseSetData CS.setData CS.ackHoldStage CS.ackBeginStage CS.holdSlave CS.pauseSetSlave CS.setSlave CS.pause CS.stopEnd CS.stopBegin CS.start CS.idle 
+CS.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 
+CS.start 0 0 0 0 0 0 0 0 0 0 0 1 1 
+CS.stopBegin 0 0 0 0 0 0 0 0 0 0 1 0 1 
+CS.stopEnd 0 0 0 0 0 0 0 0 0 1 0 0 1 
+CS.pause 0 0 0 0 0 0 0 0 1 0 0 0 1 
+CS.setSlave 0 0 0 0 0 0 0 1 0 0 0 0 1 
+CS.pauseSetSlave 0 0 0 0 0 0 1 0 0 0 0 0 1 
+CS.holdSlave 0 0 0 0 0 1 0 0 0 0 0 0 1 
+CS.ackBeginStage 0 0 0 0 1 0 0 0 0 0 0 0 1 
+CS.ackHoldStage 0 0 0 1 0 0 0 0 0 0 0 0 1 
+CS.setData 0 0 1 0 0 0 0 0 0 0 0 0 1 
+CS.pauseSetData 0 1 0 0 0 0 0 0 0 0 0 0 1 
+CS.holdData 1 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,134 @@
+# Compile of timer.vt was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim timerwork.timer_vlg_tst
+# vsim timerwork.timer_vlg_tst 
+# Start time: 17:48:25 on Oct 13,2019
+# Loading timerwork.timer_vlg_tst
+# Loading timerwork.timer
+# Loading timerwork.sec_to_sevseg
+# ** Error: (vsim-3033) C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(8): Instantiation of 'sevseg' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_vlg_tst/i1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/timer/simulation/modelsim/timerwork
+# ** Error: (vsim-3033) C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(9): Instantiation of 'sevseg' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_vlg_tst/i1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/timer/simulation/modelsim/timerwork
+# ** Error: (vsim-3033) C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(10): Instantiation of 'sevseg' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /timer_vlg_tst/i1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+#         Searched libraries:
+#             C:/intelFPGA_lite/18.1/timer/simulation/modelsim/timerwork
+# Error loading design
+# End time: 17:48:27 on Oct 13,2019, Elapsed time: 0:00:02
+# Errors: 3, Warnings: 0
+# Compile of bcd_to_sevseg.v was successful.
+vsim timerwork.timer_vlg_tst
+# vsim timerwork.timer_vlg_tst 
+# Start time: 17:49:28 on Oct 13,2019
+# Loading timerwork.timer_vlg_tst
+# Loading timerwork.timer
+# Loading timerwork.sec_to_sevseg
+# Loading timerwork.sevseg
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(8): [PCDPC] - Port size (4) does not match connection size (1) for port 'bin'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /timer_vlg_tst/i1/s1/s1 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(9): [PCDPC] - Port size (4) does not match connection size (1) for port 'bin'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /timer_vlg_tst/i1/s1/s2 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(10): [PCDPC] - Port size (4) does not match connection size (1) for port 'bin'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /timer_vlg_tst/i1/s1/s3 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+# Error opening C:/intelFPGA_lite/18.1/timer/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size 
+# Path name 'C:/intelFPGA_lite/18.1/timer/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size ' doesn't exist.
+# Compile of sec_to_sevseg.v was successful.
+vsim timerwork.timer_vlg_tst
+# End time: 17:51:53 on Oct 13,2019, Elapsed time: 0:02:25
+# Errors: 1, Warnings: 3
+# vsim timerwork.timer_vlg_tst 
+# Start time: 17:51:53 on Oct 13,2019
+# Loading timerwork.timer_vlg_tst
+# Loading timerwork.timer
+# Loading timerwork.sec_to_sevseg
+# Loading timerwork.sevseg
+clear
+# invalid command name "clear"
+vsim timerwork.timer_vlg_tst
+# End time: 17:53:18 on Oct 13,2019, Elapsed time: 0:01:25
+# Errors: 1, Warnings: 0
+# vsim timerwork.timer_vlg_tst 
+# Start time: 17:53:19 on Oct 13,2019
+# Loading timerwork.timer_vlg_tst
+# Loading timerwork.timer
+# Loading timerwork.sec_to_sevseg
+# Loading timerwork.sevseg
+add wave -position insertpoint  \
+sim:/timer_vlg_tst/sevseg3 \
+sim:/timer_vlg_tst/sevseg2 \
+sim:/timer_vlg_tst/sevseg1 \
+sim:/timer_vlg_tst/set \
+sim:/timer_vlg_tst/secLeft \
+sim:/timer_vlg_tst/sec \
+sim:/timer_vlg_tst/eachvec \
+sim:/timer_vlg_tst/clk
+run -all
+# Running testbench
+# Compile of timer.vt was successful.
+restart
+# Loading timerwork.timer_vlg_tst
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+add wave -position insertpoint  \
+sim:/timer_vlg_tst/i1/s1/val3 \
+sim:/timer_vlg_tst/i1/s1/val2 \
+sim:/timer_vlg_tst/i1/s1/val1
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+# Compile of timer.vt was successful.
+restart
+# Loading timerwork.timer_vlg_tst
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+add wave -position insertpoint  \
+sim:/timer_vlg_tst/i1/counter
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+# Compile of timer.vt was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading timerwork.timer_vlg_tst
+# Loading timerwork.timer
+# Loading timerwork.sec_to_sevseg
+# Loading timerwork.sevseg
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench

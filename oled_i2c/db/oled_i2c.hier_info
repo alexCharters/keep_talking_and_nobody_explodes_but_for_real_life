@@ -1,0 +1,89 @@
+|oled_i2c
+clk => clk.IN1
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+data[4] => data[4].IN1
+data[5] => data[5].IN1
+data[6] => data[6].IN1
+data[7] => data[7].IN1
+SCL << I2C:U1.SCL
+SDA <> I2C:U1.SDA
+CS[0] << I2C:U1.CS
+CS[1] << I2C:U1.CS
+CS[2] << I2C:U1.CS
+CS[3] << I2C:U1.CS
+CS[4] << I2C:U1.CS
+CS[5] << I2C:U1.CS
+
+
+|oled_i2c|divider:div
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+clock => count[4].CLK
+clock => count[5].CLK
+clock => count[6].CLK
+clock => count[7].CLK
+clock => count[8].CLK
+clock => count[9].CLK
+clock => count[10].CLK
+clock => count[11].CLK
+clock => count[12].CLK
+clock => count[13].CLK
+clock => count[14].CLK
+clock => count[15].CLK
+clock => count[16].CLK
+clock => count[17].CLK
+clock => count[18].CLK
+clock => count[19].CLK
+clock => count[20].CLK
+clock => count[21].CLK
+clock => count[22].CLK
+clock => count[23].CLK
+clock => count[24].CLK
+clock => count[25].CLK
+clock => en~reg0.CLK
+en <= en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|oled_i2c|I2C:U1
+clk => clk.IN1
+SCL <= SCL$latch.DB_MAX_OUTPUT_PORT_TYPE
+SDA <> bidirec:b1.bidir
+address[0] => addrw[1].DATAIN
+address[1] => addrw[2].DATAIN
+address[2] => addrw[3].DATAIN
+address[3] => addrw[4].DATAIN
+address[4] => addrw[5].DATAIN
+address[5] => addrw[6].DATAIN
+address[6] => addrw[7].DATAIN
+rw => addrw[0].DATAIN
+data[0] => Mux1.IN7
+data[1] => Mux1.IN6
+data[2] => Mux1.IN5
+data[3] => Mux1.IN4
+data[4] => Mux1.IN3
+data[5] => Mux1.IN2
+data[6] => Mux1.IN1
+data[7] => Mux1.IN0
+dataReady => Selector15.IN9
+dataReady => Selector13.IN2
+CS[0] <= CS[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CS[1] <= CS[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CS[2] <= CS[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CS[3] <= CS[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CS[4] <= CS[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CS[5] <= CS[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|oled_i2c|I2C:U1|bidirec:b1
+oe => bidir.OE
+clk => a.CLK
+inp => a.DATAIN
+outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
+bidir <> bidir
+
+

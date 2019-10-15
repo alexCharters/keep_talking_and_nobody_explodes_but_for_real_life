@@ -1,0 +1,113 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "10/13/2019 11:20:13"
+                                                                                
+// Verilog Test Bench template for design : ktane_mem
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module ktane_mem_vlg_tst();
+// constants                                           
+// general purpose registers
+// test vector input registers
+reg [15:0] addr;
+reg button;
+reg clk;
+reg [15:0] data;
+reg en;
+reg keypad_LL;
+reg keypad_LR;
+reg keypad_TL;
+reg keypad_TR;
+reg morse_left;
+reg morse_right;
+reg morse_tx;
+reg treg_sda;
+reg writeEn;
+// wires                                               
+wire [3:0]  keypad_leds;
+wire [2:0]  led1;
+wire [2:0]  led2;
+wire morse_led;
+wire [6:0]  morse_sevseg1;
+wire [6:0]  morse_sevseg2;
+wire [15:0]  q;
+wire scl;
+wire sda;
+wire [2:0]  strike_leds;
+wire [6:0]  timer_sevseg1;
+wire [6:0]  timer_sevseg2;
+wire [6:0]  timer_sevseg3;
+
+// assign statements (if any)                          
+assign sda = treg_sda;
+ktane_mem i1 (
+// port map - connection between master ports and signals/registers   
+	.addr(addr),
+	.button(button),
+	.clk(clk),
+	.data(data),
+	.en(en),
+	.keypad_LL(keypad_LL),
+	.keypad_LR(keypad_LR),
+	.keypad_TL(keypad_TL),
+	.keypad_TR(keypad_TR),
+	.keypad_leds(keypad_leds),
+	.led1(led1),
+	.led2(led2),
+	.morse_led(morse_led),
+	.morse_left(morse_left),
+	.morse_right(morse_right),
+	.morse_sevseg1(morse_sevseg1),
+	.morse_sevseg2(morse_sevseg2),
+	.morse_tx(morse_tx),
+	.q(q),
+	.scl(scl),
+	.sda(sda),
+	.strike_leds(strike_leds),
+	.timer_sevseg1(timer_sevseg1),
+	.timer_sevseg2(timer_sevseg2),
+	.timer_sevseg3(timer_sevseg3),
+	.we(writeEn)
+);
+initial                                                
+begin                                                  
+   addr <=  16'hc444;
+	writeEn <= 1'b1;
+	en <= 1'b1;
+	data <= 16'b0111110000011111;
+	clk <= 1'b0;
+	#10
+	en <= 1'b0;
+	#50
+	addr <=  16'hc888;
+	en <= 1'b1;
+	data <= 16'b0100010010000010;
+	#10
+	en<=1'b0;
+	$display("Running testbench");                       
+end 
+
+                                                   
+always #5 clk <= !clk;                                                  
+endmodule
+

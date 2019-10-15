@@ -1,0 +1,59 @@
+module button_mem(data, addr, we, en, clk, q, sda, scl, led1, led2);
+parameter DATA_WIDTH=16, parameter ADDR_WIDTH=16
+
+input [(DATA_WIDTH-1):0] data;
+input [(ADDR_WIDTH-1):0] addr;
+input we, clk, en;
+
+output scl;
+inout sda;
+output [2:0] led1, led2;
+
+reg setWord, setColor, setStrip;
+
+oled_word o1(.set(setWord), .word(data[1:0]), .scl(scl), .sda(sda). .clk(clk));
+rgb_led l1(.set(setColor), .r(data[14:10]), .g(data[9:5]), .b(data[4:0]), .pins(led1));
+rgb_led l2(.set(setStrip), .r(data[14:10]), .g(data[9:5]), .b(data[4:0]), .pins(led1));
+
+always @ (posedge clk)
+	begin
+		if(en) begin
+			// Write
+			if (we) begin
+				if(addr >= 4'hC000 && addr < 4'hC444) begin
+					setWord <= 1;
+					setColor <= 0;
+					setStrip <= 0;
+				end
+				else if(addr >= 4'hC444 && addr < 4'hC888) begin
+					setWord <= 0;
+					setColor <= 1;
+					setStrip <= 0;
+				end
+				else if(addr >= 4'hC888 && addr < 4'hCccc) begin
+					setWord <= 0;
+					setColor <= 0;
+					setStrip <= 1;
+				end
+				else
+					setWord <= 0;
+					setColor <= 0;
+					setStrip <= 0;
+				end	
+			end
+
+			if(addr >= 4'hF330 && addr < 4'hF663) begin
+				q <= secLeft;
+			end
+			else if(addr >= 4'hF330 && addr < 4'hF663) begin
+				q <= numStrikes;
+			end
+			else begin
+				q <= 4'h0000;
+			end
+		end
+	end
+	
+endmodule
+
+endmodule

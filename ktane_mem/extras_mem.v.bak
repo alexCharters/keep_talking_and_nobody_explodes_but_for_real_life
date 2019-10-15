@@ -1,0 +1,31 @@
+module extras(data, addr, we, en, buttons, sevseg1, sevseg2, sevseg3);
+parameter DATA_WIDTH=16, parameter ADDR_WIDTH=16
+
+input [(DATA_WIDTH-1):0] data;
+input [(ADDR_WIDTH-1):0] addr;
+input we, clk, en;
+
+output [6:0] sevseg1, sevseg2, sevseg3;
+
+
+bcd_to_sevseg s1();
+
+always @ (posedge clk)
+	begin
+		if(en) begin
+			// Write
+			if (we)
+				if(addr >= 4'hF330 && addr < 4'hF663)
+					ram[addr] <= data;
+				if(addr >= 4'hF330 && addr < 4'hF663)
+					ram[addr] <= data;
+
+			// Read (if read_addr == write_addr, return OLD data).	To return
+			// NEW data, use = (blocking write) rather than <= (non-blocking write)
+			// in the write assignment.	 NOTE: NEW data may require extra bypass
+			// logic around the RAM.
+			q <= ram[addr];
+		end
+	end
+	
+endmodule
