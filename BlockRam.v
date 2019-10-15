@@ -13,7 +13,9 @@ module BlockRam
 
 	// Declare the RAM variable
 	reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];
-
+	initial begin
+		$readmemh("initialHex.dat", ram);
+	end
 	always @ (posedge clk)
 	begin
 		// Write
