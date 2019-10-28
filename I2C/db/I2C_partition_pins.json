@@ -4,11 +4,103 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "SCL",
+					"name" : "cmd_ready",
 					"strict" : false
 				},
 				{
-					"name" : "SDA",
+					"name" : "data_in_ready",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out_valid",
+					"strict" : false
+				},
+				{
+					"name" : "data_out_last",
+					"strict" : false
+				},
+				{
+					"name" : "scl_o",
+					"strict" : false
+				},
+				{
+					"name" : "scl_t",
+					"strict" : false
+				},
+				{
+					"name" : "sda_o",
+					"strict" : false
+				},
+				{
+					"name" : "sda_t",
+					"strict" : false
+				},
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "bus_control",
+					"strict" : false
+				},
+				{
+					"name" : "bus_active",
+					"strict" : false
+				},
+				{
+					"name" : "missed_ack",
+					"strict" : false
+				},
+				{
+					"name" : "cmd_read",
+					"strict" : false
+				},
+				{
+					"name" : "cmd_write",
+					"strict" : false
+				},
+				{
+					"name" : "cmd_write_multiple",
+					"strict" : false
+				},
+				{
+					"name" : "cmd_valid",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
 					"strict" : false
 				},
 				{
@@ -16,39 +108,159 @@
 					"strict" : false
 				},
 				{
-					"name" : "dataReady",
+					"name" : "cmd_address[5]",
 					"strict" : false
 				},
 				{
-					"name" : "address[4]",
+					"name" : "cmd_address[6]",
 					"strict" : false
 				},
 				{
-					"name" : "address[6]",
+					"name" : "cmd_start",
 					"strict" : false
 				},
 				{
-					"name" : "address[3]",
+					"name" : "cmd_address[0]",
 					"strict" : false
 				},
 				{
-					"name" : "address[5]",
+					"name" : "cmd_address[1]",
 					"strict" : false
 				},
 				{
-					"name" : "address[0]",
+					"name" : "cmd_address[2]",
 					"strict" : false
 				},
 				{
-					"name" : "address[2]",
+					"name" : "cmd_address[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rw",
+					"name" : "cmd_address[4]",
 					"strict" : false
 				},
 				{
-					"name" : "address[1]",
+					"name" : "data_in_valid",
+					"strict" : false
+				},
+				{
+					"name" : "data_out_ready",
+					"strict" : false
+				},
+				{
+					"name" : "stop_on_idle",
+					"strict" : false
+				},
+				{
+					"name" : "cmd_stop",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[11]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[10]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[6]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[7]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[13]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[12]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[15]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[0]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[14]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[1]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[2]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[3]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[4]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[5]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[8]",
+					"strict" : false
+				},
+				{
+					"name" : "prescale[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_last",
+					"strict" : false
+				},
+				{
+					"name" : "scl_i",
+					"strict" : false
+				},
+				{
+					"name" : "sda_i",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[7]",
 					"strict" : false
 				}
 			]

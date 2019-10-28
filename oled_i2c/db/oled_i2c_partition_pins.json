@@ -8,19 +8,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "CS[0]",
+					"name" : "debug_leds[0]",
 					"strict" : false
 				},
 				{
-					"name" : "CS[1]",
+					"name" : "debug_leds[1]",
 					"strict" : false
 				},
 				{
-					"name" : "CS[2]",
+					"name" : "debug_leds[2]",
 					"strict" : false
 				},
 				{
-					"name" : "CS[3]",
+					"name" : "debug_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[6]",
 					"strict" : false
 				},
 				{
@@ -29,38 +37,6 @@
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "data[5]",
-					"strict" : false
-				},
-				{
-					"name" : "data[7]",
-					"strict" : false
-				},
-				{
-					"name" : "data[4]",
-					"strict" : false
-				},
-				{
-					"name" : "data[6]",
-					"strict" : false
-				},
-				{
-					"name" : "data[1]",
-					"strict" : false
-				},
-				{
-					"name" : "data[3]",
-					"strict" : false
-				},
-				{
-					"name" : "data[0]",
-					"strict" : false
-				},
-				{
-					"name" : "data[2]",
 					"strict" : false
 				}
 			]

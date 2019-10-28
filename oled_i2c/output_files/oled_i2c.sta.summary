@@ -3,147 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -5.283
-TNS   : -94.516
-
-Type  : Slow 1100mV 85C Model Setup 'I2C:U1|CS[0]'
-Slack : -3.597
-TNS   : -40.075
+Slack : -5.235
+TNS   : -108.299
 
 Type  : Slow 1100mV 85C Model Setup 'divider:div|en'
-Slack : -2.058
-TNS   : -2.099
+Slack : -3.195
+TNS   : -201.921
 
 Type  : Slow 1100mV 85C Model Hold 'divider:div|en'
-Slack : -0.598
-TNS   : -1.819
+Slack : 0.269
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.383
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'I2C:U1|CS[0]'
-Slack : 0.524
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.448
-TNS   : -18.967
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divider:div|en'
-Slack : -0.394
-TNS   : -2.616
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'I2C:U1|CS[0]'
-Slack : 0.307
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -5.349
-TNS   : -94.172
-
-Type  : Slow 1100mV 0C Model Setup 'I2C:U1|CS[0]'
-Slack : -3.525
-TNS   : -39.613
-
-Type  : Slow 1100mV 0C Model Setup 'divider:div|en'
-Slack : -2.040
-TNS   : -2.225
-
-Type  : Slow 1100mV 0C Model Hold 'divider:div|en'
-Slack : -0.503
-TNS   : -1.387
-
-Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.383
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'I2C:U1|CS[0]'
 Slack : 0.392
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'divider:div|en'
+Slack : -0.394
+TNS   : -42.852
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -23.068
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -5.360
+TNS   : -107.436
+
+Type  : Slow 1100mV 0C Model Setup 'divider:div|en'
+Slack : -3.168
+TNS   : -196.017
+
+Type  : Slow 1100mV 0C Model Hold 'divider:div|en'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.387
+TNS   : 0.000
+
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.443
-TNS   : -20.345
+Slack : -0.419
+TNS   : -24.885
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'divider:div|en'
 Slack : -0.394
-TNS   : -2.590
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'I2C:U1|CS[0]'
-Slack : 0.287
-TNS   : 0.000
+TNS   : -42.338
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.238
-TNS   : -40.864
-
-Type  : Fast 1100mV 85C Model Setup 'I2C:U1|CS[0]'
-Slack : -2.102
-TNS   : -20.558
+Slack : -3.355
+TNS   : -45.779
 
 Type  : Fast 1100mV 85C Model Setup 'divider:div|en'
-Slack : -1.058
-TNS   : -1.058
+Slack : -1.562
+TNS   : -93.669
 
 Type  : Fast 1100mV 85C Model Hold 'divider:div|en'
-Slack : -0.502
-TNS   : -1.690
-
-Type  : Fast 1100mV 85C Model Hold 'I2C:U1|CS[0]'
-Slack : 0.113
+Slack : 0.089
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.203
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.442
-TNS   : -3.631
+Slack : -0.437
+TNS   : -4.256
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'divider:div|en'
-Slack : 0.091
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'I2C:U1|CS[0]'
-Slack : 0.408
+Slack : 0.049
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.706
-TNS   : -35.442
-
-Type  : Fast 1100mV 0C Model Setup 'I2C:U1|CS[0]'
-Slack : -1.832
-TNS   : -18.343
+Slack : -2.832
+TNS   : -39.637
 
 Type  : Fast 1100mV 0C Model Setup 'divider:div|en'
-Slack : -0.896
-TNS   : -0.896
+Slack : -1.398
+TNS   : -81.654
 
 Type  : Fast 1100mV 0C Model Hold 'divider:div|en'
-Slack : -0.457
-TNS   : -1.519
-
-Type  : Fast 1100mV 0C Model Hold 'I2C:U1|CS[0]'
-Slack : 0.047
+Slack : 0.076
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.190
+Slack : 0.197
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.427
-TNS   : -3.546
+Slack : -0.453
+TNS   : -4.245
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'divider:div|en'
-Slack : 0.104
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'I2C:U1|CS[0]'
-Slack : 0.406
+Slack : 0.075
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -1,16 +1,19 @@
 
-State Machine - |oled_i2c|I2C:U1|CS
-Name CS.holdData CS.pauseSetData CS.setData CS.ackHoldStage CS.ackBeginStage CS.holdSlave CS.pauseSetSlave CS.setSlave CS.pause CS.stopEnd CS.stopBegin CS.start CS.idle 
-CS.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 
-CS.start 0 0 0 0 0 0 0 0 0 0 0 1 1 
-CS.stopBegin 0 0 0 0 0 0 0 0 0 0 1 0 1 
-CS.stopEnd 0 0 0 0 0 0 0 0 0 1 0 0 1 
-CS.pause 0 0 0 0 0 0 0 0 1 0 0 0 1 
-CS.setSlave 0 0 0 0 0 0 0 1 0 0 0 0 1 
-CS.pauseSetSlave 0 0 0 0 0 0 1 0 0 0 0 0 1 
-CS.holdSlave 0 0 0 0 0 1 0 0 0 0 0 0 1 
-CS.ackBeginStage 0 0 0 0 1 0 0 0 0 0 0 0 1 
-CS.ackHoldStage 0 0 0 1 0 0 0 0 0 0 0 0 1 
-CS.setData 0 0 1 0 0 0 0 0 0 0 0 0 1 
-CS.pauseSetData 0 1 0 0 0 0 0 0 0 0 0 0 1 
-CS.holdData 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State Machine - |oled_i2c|I2C:U1|phy_state_reg
+Name phy_state_reg.PHY_STATE_STOP_3 phy_state_reg.PHY_STATE_STOP_2 phy_state_reg.PHY_STATE_STOP_1 phy_state_reg.PHY_STATE_READ_BIT_4 phy_state_reg.PHY_STATE_READ_BIT_3 phy_state_reg.PHY_STATE_READ_BIT_2 phy_state_reg.PHY_STATE_READ_BIT_1 phy_state_reg.PHY_STATE_WRITE_BIT_3 phy_state_reg.PHY_STATE_WRITE_BIT_2 phy_state_reg.PHY_STATE_WRITE_BIT_1 phy_state_reg.PHY_STATE_START_2 phy_state_reg.PHY_STATE_START_1 phy_state_reg.PHY_STATE_REPEATED_START_2 phy_state_reg.PHY_STATE_REPEATED_START_1 phy_state_reg.PHY_STATE_ACTIVE phy_state_reg.PHY_STATE_IDLE 
+phy_state_reg.PHY_STATE_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+phy_state_reg.PHY_STATE_ACTIVE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+phy_state_reg.PHY_STATE_REPEATED_START_1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+phy_state_reg.PHY_STATE_REPEATED_START_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+phy_state_reg.PHY_STATE_START_1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+phy_state_reg.PHY_STATE_START_2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+phy_state_reg.PHY_STATE_WRITE_BIT_1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_WRITE_BIT_2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_WRITE_BIT_3 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_READ_BIT_1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_READ_BIT_2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_READ_BIT_3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_READ_BIT_4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_STOP_1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_STOP_2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+phy_state_reg.PHY_STATE_STOP_3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="simulation/DE1_SoC_QSYS.v" type="VERILOG" />
+ <topLevel name="DE1_SoC_QSYS" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="DE1_SoC_QSYS.onchip_memory2"
+   modelPath="DE1_SoC_QSYS.onchip_memory2" />
+</simPackage>

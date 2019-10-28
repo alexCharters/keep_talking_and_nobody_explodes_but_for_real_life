@@ -1,0 +1,27 @@
+# system info DE1_SoC_QSYS on 2019.10.17.09:41:32
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1571326881
+#
+#
+# Files generated for DE1_SoC_QSYS on 2019.10.17.09:41:32
+files:
+filepath,kind,attributes,module,is_top
+simulation/DE1_SoC_QSYS.v,VERILOG,,DE1_SoC_QSYS,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+DE1_SoC_QSYS.adc_ltc2308,DE1_SoC_QSYS_adc_ltc2308
+DE1_SoC_QSYS.jtag_uart,DE1_SoC_QSYS_jtag_uart
+DE1_SoC_QSYS.nios2_gen2_0,DE1_SoC_QSYS_nios2_gen2_0
+DE1_SoC_QSYS.onchip_memory2,DE1_SoC_QSYS_onchip_memory2
+DE1_SoC_QSYS.pll_sys,DE1_SoC_QSYS_pll_sys
+DE1_SoC_QSYS.sw,DE1_SoC_QSYS_sw
+DE1_SoC_QSYS.sysid_qsys,DE1_SoC_QSYS_sysid_qsys
+DE1_SoC_QSYS.mm_interconnect_0,DE1_SoC_QSYS_mm_interconnect_0
+DE1_SoC_QSYS.irq_mapper,DE1_SoC_QSYS_irq_mapper
+DE1_SoC_QSYS.rst_controller,altera_reset_controller
+DE1_SoC_QSYS.rst_controller_001,altera_reset_controller

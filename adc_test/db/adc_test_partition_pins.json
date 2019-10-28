@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "measure_done",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[0]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[1]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[2]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[3]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[4]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[5]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[6]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[7]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[8]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[9]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[10]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_dataread[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDI",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
+					"strict" : false
+				},
+				{
+					"name" : "measure_start",
+					"strict" : false
+				},
+				{
+					"name" : "measure_ch[0]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_ch[1]",
+					"strict" : false
+				},
+				{
+					"name" : "measure_ch[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

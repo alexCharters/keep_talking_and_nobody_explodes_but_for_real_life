@@ -28,32 +28,39 @@
 module oled_i2c_vlg_tst();
 // constants                                           
 // test vector input registers
-reg clk;
+reg clk, dataReady, rst;
 reg [7:0] data;
 // wires                                               
 wire scl;
-reg treg_sda;
+wire treg_sda;
 wire sda;
-wire [5:0] CS;
+wire [3:0] CS, counter;
 
-assign sda = (i1.U1.direction)?1'bz:1'b1;
+assign treg_sda = 1'bz;
+assign sda = treg_sda;
 
 oled_i2c i1 (
 // port map - connection between master ports and signals/registers   
 	.clk(clk),
 	.data(data),
+	.dataReady(dataReady),
 	.SCL(scl),
 	.SDA(sda),
-	.CS(CS)
+	.rst(rst)
 );
 initial                                                
 begin                                                  
 
 clk <= 0;
 data <= 8'b11111111;
+dataReady <= 0;
+rst <= 0;
+
+#5000
+
+dataReady <= 1;
                                            
-$display("Running testbench");
-$display(i1.U1.direction);                
+$display("Running testbench");              
 end
                                                     
 always #5 clk <= !clk;

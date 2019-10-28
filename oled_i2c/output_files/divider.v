@@ -2,7 +2,7 @@ module divider(clock, en);
 input clock;
 output reg en;
 
-reg [25:0] count;
+reg [32:0] count;
 
 initial begin
 en = 0;
@@ -11,7 +11,7 @@ end
 
 always @(posedge clock) begin
 
-	if (count == 2000) begin
+	if (count == 1000000) begin
 		en <= !en;
 		count <= 0;
 	end

@@ -1,4 +1,15 @@
 # Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+vlib work
+vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/I2C/simulation/modelsim/I2C.vt
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:24:26 on Oct 23,2019
+# vlog -reportprogress 300 -work work C:/intelFPGA_lite/18.1/I2C/simulation/modelsim/I2C.vt 
+# -- Compiling module test_i2c_master
+# 
+# Top level modules:
+# 	test_i2c_master
+# End time: 11:24:27 on Oct 23,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 # do I2C_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -12,23 +23,185 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/I2C {C:/intelFPGA_lite/18.1/I2C/I2C.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:39 on Oct 09,2019
+# Start time: 11:24:29 on Oct 23,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/I2C" C:/intelFPGA_lite/18.1/I2C/I2C.v 
 # -- Compiling module I2C
 # 
 # Top level modules:
 # 	I2C
-# End time: 14:03:39 on Oct 09,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/I2C {C:/intelFPGA_lite/18.1/I2C/bidirec.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:03:39 on Oct 09,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/18.1/I2C" C:/intelFPGA_lite/18.1/I2C/bidirec.v 
-# -- Compiling module bidirec
-# 
-# Top level modules:
-# 	bidirec
-# End time: 14:03:40 on Oct 09,2019, Elapsed time: 0:00:01
+# End time: 11:24:29 on Oct 23,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+vsim I2C_work.I2C_vlg_tst
+# vsim I2C_work.I2C_vlg_tst 
+# Start time: 11:24:41 on Oct 23,2019
+# Loading I2C_work.I2C_vlg_tst
+# Loading I2C_work.I2C
+# Loading I2C_work.bidirec
+# Loading I2C_work.sda_write
+run -all
+# Running testbench
+add wave -position insertpoint  \
+sim:/I2C_vlg_tst/treg_SDA \
+sim:/I2C_vlg_tst/rw \
+sim:/I2C_vlg_tst/eachvec \
+sim:/I2C_vlg_tst/dataReady \
+sim:/I2C_vlg_tst/data \
+sim:/I2C_vlg_tst/clk \
+sim:/I2C_vlg_tst/address \
+sim:/I2C_vlg_tst/SDA \
+sim:/I2C_vlg_tst/SCL \
+sim:/I2C_vlg_tst/CS
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Alex  Hostname: ALEXS_PC  ProcessID: 26656
+#           Attempting to use alternate WLF file "./wlftnhmy30".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnhmy30
+restart
+run -all
+# Running testbench
+vsim work.I2C
+# End time: 11:25:46 on Oct 23,2019, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 2
+# vsim work.I2C 
+# Start time: 11:25:46 on Oct 23,2019
+# Loading work.I2C
+add wave -position insertpoint  \
+sim:/I2C/stop_on_idle \
+sim:/I2C/stop_bit \
+sim:/I2C/state_reg \
+sim:/I2C/state_next \
+sim:/I2C/start_bit \
+sim:/I2C/sda_t \
+sim:/I2C/sda_posedge \
+sim:/I2C/sda_o_reg \
+sim:/I2C/sda_o_next \
+sim:/I2C/sda_o \
+sim:/I2C/sda_negedge \
+sim:/I2C/sda_i_reg \
+sim:/I2C/sda_i \
+sim:/I2C/scl_t \
+sim:/I2C/scl_posedge \
+sim:/I2C/scl_o_reg \
+sim:/I2C/scl_o_next \
+sim:/I2C/scl_o \
+sim:/I2C/scl_negedge \
+sim:/I2C/scl_i_reg \
+sim:/I2C/scl_i \
+sim:/I2C/rst \
+sim:/I2C/prescale \
+sim:/I2C/phy_write_bit \
+sim:/I2C/phy_tx_data \
+sim:/I2C/phy_stop_bit \
+sim:/I2C/phy_state_reg \
+sim:/I2C/phy_state_next \
+sim:/I2C/phy_start_bit \
+sim:/I2C/phy_rx_data_reg \
+sim:/I2C/phy_rx_data_next \
+sim:/I2C/phy_release_bus \
+sim:/I2C/phy_read_bit \
+sim:/I2C/mode_write_multiple_reg \
+sim:/I2C/mode_write_multiple_next \
+sim:/I2C/mode_stop_reg \
+sim:/I2C/mode_stop_next \
+sim:/I2C/mode_read_reg \
+sim:/I2C/mode_read_next \
+sim:/I2C/missed_ack_reg \
+sim:/I2C/missed_ack_next \
+sim:/I2C/missed_ack \
+sim:/I2C/last_sda_i_reg \
+sim:/I2C/last_scl_i_reg \
+sim:/I2C/last_reg \
+sim:/I2C/last_next \
+sim:/I2C/delay_sda_reg \
+sim:/I2C/delay_sda_next \
+sim:/I2C/delay_scl_reg \
+sim:/I2C/delay_scl_next \
+sim:/I2C/delay_reg \
+sim:/I2C/delay_next \
+sim:/I2C/data_reg \
+sim:/I2C/data_out_valid_reg \
+sim:/I2C/data_out_valid_next \
+sim:/I2C/data_out_valid \
+sim:/I2C/data_out_reg \
+sim:/I2C/data_out_ready \
+sim:/I2C/data_out_next \
+sim:/I2C/data_out_last_reg \
+sim:/I2C/data_out_last_next \
+sim:/I2C/data_out_last \
+sim:/I2C/data_out \
+sim:/I2C/data_next \
+sim:/I2C/data_in_valid \
+sim:/I2C/data_in_ready_reg \
+sim:/I2C/data_in_ready_next \
+sim:/I2C/data_in_ready \
+sim:/I2C/data_in_last \
+sim:/I2C/data_in \
+sim:/I2C/cmd_write_multiple \
+sim:/I2C/cmd_write \
+sim:/I2C/cmd_valid \
+sim:/I2C/cmd_stop \
+sim:/I2C/cmd_start \
+sim:/I2C/cmd_ready_reg \
+sim:/I2C/cmd_ready_next \
+sim:/I2C/cmd_ready \
+sim:/I2C/cmd_read \
+sim:/I2C/cmd_address \
+sim:/I2C/clk \
+sim:/I2C/busy_reg \
+sim:/I2C/busy \
+sim:/I2C/bus_control_reg \
+sim:/I2C/bus_control_next \
+sim:/I2C/bus_control \
+sim:/I2C/bus_active_reg \
+sim:/I2C/bus_active \
+sim:/I2C/bit_count_reg \
+sim:/I2C/bit_count_next \
+sim:/I2C/addr_reg \
+sim:/I2C/addr_next \
+sim:/I2C/STATE_WRITE_3 \
+sim:/I2C/STATE_WRITE_2 \
+sim:/I2C/STATE_WRITE_1 \
+sim:/I2C/STATE_STOP \
+sim:/I2C/STATE_START_WAIT \
+sim:/I2C/STATE_START \
+sim:/I2C/STATE_READ \
+sim:/I2C/STATE_IDLE \
+sim:/I2C/STATE_ADDRESS_2 \
+sim:/I2C/STATE_ADDRESS_1 \
+sim:/I2C/STATE_ACTIVE_WRITE \
+sim:/I2C/STATE_ACTIVE_READ \
+sim:/I2C/PHY_STATE_WRITE_BIT_3 \
+sim:/I2C/PHY_STATE_WRITE_BIT_2 \
+sim:/I2C/PHY_STATE_WRITE_BIT_1 \
+sim:/I2C/PHY_STATE_STOP_3 \
+sim:/I2C/PHY_STATE_STOP_2 \
+sim:/I2C/PHY_STATE_STOP_1 \
+sim:/I2C/PHY_STATE_START_2 \
+sim:/I2C/PHY_STATE_START_1 \
+sim:/I2C/PHY_STATE_REPEATED_START_2 \
+sim:/I2C/PHY_STATE_REPEATED_START_1 \
+sim:/I2C/PHY_STATE_READ_BIT_4 \
+sim:/I2C/PHY_STATE_READ_BIT_3 \
+sim:/I2C/PHY_STATE_READ_BIT_2 \
+sim:/I2C/PHY_STATE_READ_BIT_1 \
+sim:/I2C/PHY_STATE_IDLE \
+sim:/I2C/PHY_STATE_ACTIVE
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Alex  Hostname: ALEXS_PC  ProcessID: 26656
+#           Attempting to use alternate WLF file "./wlftk80zgr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftk80zgr
+restart
+run -all
+run -all
+vsim I2C_work.I2C_vlg_tst
+# End time: 11:26:32 on Oct 23,2019, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 2
+# vsim I2C_work.I2C_vlg_tst 
+# Start time: 11:26:32 on Oct 23,2019
+# Loading I2C_work.I2C_vlg_tst
+# Loading I2C_work.I2C
+# Loading I2C_work.bidirec
+# Loading I2C_work.sda_write
 # Loading project I2c

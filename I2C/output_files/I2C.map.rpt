@@ -1,5 +1,5 @@
 Analysis & Synthesis report for I2C
-Wed Oct 09 14:02:53 2019
+Wed Oct 23 11:09:30 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,16 +13,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |I2C|CS
-  9. User-Specified and Inferred Latches
+  8. State Machine - |I2C|phy_state_reg
+  9. State Machine - |I2C|state_reg
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |I2C
- 13. Port Connectivity Checks: "bidirec:b1"
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,14 +47,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 09 14:02:53 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 23 11:09:30 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; I2C                                         ;
 ; Top-level Entity Name           ; I2C                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 12                                          ;
-; Total pins                      ; 20                                          ;
+; Total registers                 ; 91                                          ;
+; Total pins                      ; 65                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -172,41 +171,40 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path         ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
-; I2C.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/I2C/I2C.v     ;         ;
-; bidirec.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/I2C/bidirec.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path     ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; I2C.v                            ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/I2C/I2C.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 29         ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 51         ;
-;     -- 7 input functions                    ; 2          ;
-;     -- 6 input functions                    ; 4          ;
-;     -- 5 input functions                    ; 1          ;
-;     -- 4 input functions                    ; 3          ;
-;     -- <=3 input functions                  ; 41         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 12         ;
-;                                             ;            ;
-; I/O pins                                    ; 20         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; CS.setData ;
-; Maximum fan-out                             ; 14         ;
-; Total fan-out                               ; 218        ;
-; Average fan-out                             ; 2.10       ;
-+---------------------------------------------+------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 122       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 172       ;
+;     -- 7 input functions                    ; 14        ;
+;     -- 6 input functions                    ; 46        ;
+;     -- 5 input functions                    ; 38        ;
+;     -- 4 input functions                    ; 28        ;
+;     -- <=3 input functions                  ; 46        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 91        ;
+;                                             ;           ;
+; I/O pins                                    ; 65        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 91        ;
+; Total fan-out                               ; 1159      ;
+; Average fan-out                             ; 2.95      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,83 +212,75 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |I2C                       ; 51 (51)             ; 12 (11)                   ; 0                 ; 0          ; 20   ; 0            ; |I2C                ; I2C         ; work         ;
-;    |bidirec:b1|            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |I2C|bidirec:b1     ; bidirec     ; work         ;
+; |I2C                       ; 172 (172)           ; 91 (91)                   ; 0                 ; 0          ; 65   ; 0            ; |I2C                ; I2C         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |I2C|CS                                                                                                                                                   ;
-+------------------+------------+-----------------+------------------+--------------+-------------+-------------+----------+------------+--------------+----------+---------+
-; Name             ; CS.setData ; CS.ackHoldStage ; CS.ackBeginStage ; CS.holdSlave ; CS.pauseSet ; CS.setSlave ; CS.pause ; CS.stopEnd ; CS.stopBegin ; CS.start ; CS.idle ;
-+------------------+------------+-----------------+------------------+--------------+-------------+-------------+----------+------------+--------------+----------+---------+
-; CS.idle          ; 0          ; 0               ; 0                ; 0            ; 0           ; 0           ; 0        ; 0          ; 0            ; 0        ; 0       ;
-; CS.start         ; 0          ; 0               ; 0                ; 0            ; 0           ; 0           ; 0        ; 0          ; 0            ; 1        ; 1       ;
-; CS.stopBegin     ; 0          ; 0               ; 0                ; 0            ; 0           ; 0           ; 0        ; 0          ; 1            ; 0        ; 1       ;
-; CS.stopEnd       ; 0          ; 0               ; 0                ; 0            ; 0           ; 0           ; 0        ; 1          ; 0            ; 0        ; 1       ;
-; CS.pause         ; 0          ; 0               ; 0                ; 0            ; 0           ; 0           ; 1        ; 0          ; 0            ; 0        ; 1       ;
-; CS.setSlave      ; 0          ; 0               ; 0                ; 0            ; 0           ; 1           ; 0        ; 0          ; 0            ; 0        ; 1       ;
-; CS.pauseSet      ; 0          ; 0               ; 0                ; 0            ; 1           ; 0           ; 0        ; 0          ; 0            ; 0        ; 1       ;
-; CS.holdSlave     ; 0          ; 0               ; 0                ; 1            ; 0           ; 0           ; 0        ; 0          ; 0            ; 0        ; 1       ;
-; CS.ackBeginStage ; 0          ; 0               ; 1                ; 0            ; 0           ; 0           ; 0        ; 0          ; 0            ; 0        ; 1       ;
-; CS.ackHoldStage  ; 0          ; 1               ; 0                ; 0            ; 0           ; 0           ; 0        ; 0          ; 0            ; 0        ; 1       ;
-; CS.setData       ; 1          ; 0               ; 0                ; 0            ; 0           ; 0           ; 0        ; 0          ; 0            ; 0        ; 1       ;
-+------------------+------------+-----------------+------------------+--------------+-------------+-------------+----------+------------+--------------+----------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |I2C|phy_state_reg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++------------------------------------------+--------------------------------+--------------------------------+--------------------------------+------------------------------------+------------------------------------+------------------------------------+------------------------------------+-------------------------------------+-------------------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------+------------------------------------------+--------------------------------+------------------------------+
+; Name                                     ; phy_state_reg.PHY_STATE_STOP_3 ; phy_state_reg.PHY_STATE_STOP_2 ; phy_state_reg.PHY_STATE_STOP_1 ; phy_state_reg.PHY_STATE_READ_BIT_4 ; phy_state_reg.PHY_STATE_READ_BIT_3 ; phy_state_reg.PHY_STATE_READ_BIT_2 ; phy_state_reg.PHY_STATE_READ_BIT_1 ; phy_state_reg.PHY_STATE_WRITE_BIT_3 ; phy_state_reg.PHY_STATE_WRITE_BIT_2 ; phy_state_reg.PHY_STATE_WRITE_BIT_1 ; phy_state_reg.PHY_STATE_START_2 ; phy_state_reg.PHY_STATE_START_1 ; phy_state_reg.PHY_STATE_REPEATED_START_2 ; phy_state_reg.PHY_STATE_REPEATED_START_1 ; phy_state_reg.PHY_STATE_ACTIVE ; phy_state_reg.PHY_STATE_IDLE ;
++------------------------------------------+--------------------------------+--------------------------------+--------------------------------+------------------------------------+------------------------------------+------------------------------------+------------------------------------+-------------------------------------+-------------------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------+------------------------------------------+--------------------------------+------------------------------+
+; phy_state_reg.PHY_STATE_IDLE             ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 0                            ;
+; phy_state_reg.PHY_STATE_ACTIVE           ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 1                              ; 1                            ;
+; phy_state_reg.PHY_STATE_REPEATED_START_1 ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 1                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_REPEATED_START_2 ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 1                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_START_1          ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 1                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_START_2          ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 1                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_WRITE_BIT_1      ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 1                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_WRITE_BIT_2      ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 1                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_WRITE_BIT_3      ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 1                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_READ_BIT_1       ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 1                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_READ_BIT_2       ; 0                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 1                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_READ_BIT_3       ; 0                              ; 0                              ; 0                              ; 0                                  ; 1                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_READ_BIT_4       ; 0                              ; 0                              ; 0                              ; 1                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_STOP_1           ; 0                              ; 0                              ; 1                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_STOP_2           ; 0                              ; 1                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
+; phy_state_reg.PHY_STATE_STOP_3           ; 1                              ; 0                              ; 0                              ; 0                                  ; 0                                  ; 0                                  ; 0                                  ; 0                                   ; 0                                   ; 0                                   ; 0                               ; 0                               ; 0                                        ; 0                                        ; 0                              ; 1                            ;
++------------------------------------------+--------------------------------+--------------------------------+--------------------------------+------------------------------------+------------------------------------+------------------------------------+------------------------------------+-------------------------------------+-------------------------------------+-------------------------------------+---------------------------------+---------------------------------+------------------------------------------+------------------------------------------+--------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; SCL$latch                                           ; SCL                 ; yes                    ;
-; NS.setSlave_363                                     ; CS.setData          ; yes                    ;
-; NS.pauseSet_355                                     ; CS.setData          ; yes                    ;
-; NS.ackBeginStage_339                                ; CS.setData          ; yes                    ;
-; NS.ackHoldStage_331                                 ; CS.setData          ; yes                    ;
-; NS.setData_323                                      ; CS.setData          ; yes                    ;
-; direction                                           ; Selector12          ; yes                    ;
-; counter[4]                                          ; WideOr16            ; yes                    ;
-; counter[3]                                          ; WideOr16            ; yes                    ;
-; counter[2]                                          ; WideOr16            ; yes                    ;
-; counter[1]                                          ; WideOr16            ; yes                    ;
-; counter[0]                                          ; WideOr16            ; yes                    ;
-; counter[5]                                          ; WideOr16            ; yes                    ;
-; inp                                                 ; WideOr13            ; yes                    ;
-; NS.pause_371                                        ; CS.setData          ; yes                    ;
-; NS.holdSlave_347                                    ; CS.setData          ; yes                    ;
-; NS.idle_403                                         ; CS.setData          ; yes                    ;
-; NS.start_395                                        ; CS.setData          ; yes                    ;
-; NS.stopBegin_387                                    ; CS.setData          ; yes                    ;
-; NS.stopEnd_379                                      ; CS.setData          ; yes                    ;
-; addrw[5]                                            ; CS.idle             ; yes                    ;
-; addrw[7]                                            ; CS.idle             ; yes                    ;
-; addrw[4]                                            ; CS.idle             ; yes                    ;
-; addrw[6]                                            ; CS.idle             ; yes                    ;
-; addrw[1]                                            ; CS.idle             ; yes                    ;
-; addrw[3]                                            ; CS.idle             ; yes                    ;
-; addrw[0]                                            ; CS.idle             ; yes                    ;
-; addrw[2]                                            ; CS.idle             ; yes                    ;
-; Number of user-specified and inferred latches = 28  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |I2C|state_reg                                                                                                                                                                                                                                                                                                                            ;
++------------------------------+----------------------+----------------------+-------------------------+-------------------------+-------------------------+---------------------------+---------------------------+-----------------------+----------------------------+-----------------------------+------------------------------+----------------------+
+; Name                         ; state_reg.STATE_STOP ; state_reg.STATE_READ ; state_reg.STATE_WRITE_3 ; state_reg.STATE_WRITE_2 ; state_reg.STATE_WRITE_1 ; state_reg.STATE_ADDRESS_2 ; state_reg.STATE_ADDRESS_1 ; state_reg.STATE_START ; state_reg.STATE_START_WAIT ; state_reg.STATE_ACTIVE_READ ; state_reg.STATE_ACTIVE_WRITE ; state_reg.STATE_IDLE ;
++------------------------------+----------------------+----------------------+-------------------------+-------------------------+-------------------------+---------------------------+---------------------------+-----------------------+----------------------------+-----------------------------+------------------------------+----------------------+
+; state_reg.STATE_IDLE         ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 0                    ;
+; state_reg.STATE_ACTIVE_WRITE ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 1                            ; 1                    ;
+; state_reg.STATE_ACTIVE_READ  ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 1                           ; 0                            ; 1                    ;
+; state_reg.STATE_START_WAIT   ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 1                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_START        ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 1                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_ADDRESS_1    ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 1                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_ADDRESS_2    ; 0                    ; 0                    ; 0                       ; 0                       ; 0                       ; 1                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_WRITE_1      ; 0                    ; 0                    ; 0                       ; 0                       ; 1                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_WRITE_2      ; 0                    ; 0                    ; 0                       ; 1                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_WRITE_3      ; 0                    ; 0                    ; 1                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_READ         ; 0                    ; 1                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
+; state_reg.STATE_STOP         ; 1                    ; 0                    ; 0                       ; 0                       ; 0                       ; 0                         ; 0                         ; 0                     ; 0                          ; 0                           ; 0                            ; 1                    ;
++------------------------------+----------------------+----------------------+-------------------------+-------------------------+-------------------------+---------------------------+---------------------------+-----------------------+----------------------------+-----------------------------+------------------------------+----------------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; CS~2                                  ; Lost fanout        ;
-; CS~3                                  ; Lost fanout        ;
-; CS~4                                  ; Lost fanout        ;
-; CS~5                                  ; Lost fanout        ;
-; CS~6                                  ; Lost fanout        ;
-; CS~7                                  ; Lost fanout        ;
-; Total Number of Removed Registers = 6 ;                    ;
-+---------------------------------------+--------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; phy_state_reg~2                        ; Lost fanout                            ;
+; phy_state_reg~3                        ; Lost fanout                            ;
+; phy_state_reg~4                        ; Lost fanout                            ;
+; phy_state_reg~5                        ; Lost fanout                            ;
+; phy_state_reg~6                        ; Lost fanout                            ;
+; state_reg~2                            ; Lost fanout                            ;
+; state_reg~3                            ; Lost fanout                            ;
+; state_reg~4                            ; Lost fanout                            ;
+; state_reg~5                            ; Lost fanout                            ;
+; state_reg~6                            ; Lost fanout                            ;
+; delay_sda_reg                          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,43 +288,44 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 91    ;
+; Number of registers using Synchronous Clear  ; 36    ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 63    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |I2C ;
-+----------------+--------+-------------------------------------------+
-; Parameter Name ; Value  ; Type                                      ;
-+----------------+--------+-------------------------------------------+
-; idle           ; 000001 ; Unsigned Binary                           ;
-; start          ; 000010 ; Unsigned Binary                           ;
-; stopBegin      ; 000011 ; Unsigned Binary                           ;
-; stopEnd        ; 000100 ; Unsigned Binary                           ;
-; pause          ; 000101 ; Unsigned Binary                           ;
-; setSlave       ; 000110 ; Unsigned Binary                           ;
-; pauseSet       ; 000111 ; Unsigned Binary                           ;
-; holdSlave      ; 001000 ; Unsigned Binary                           ;
-; ackBeginStage  ; 001001 ; Unsigned Binary                           ;
-; ackHoldStage   ; 001010 ; Unsigned Binary                           ;
-; setData        ; 001011 ; Unsigned Binary                           ;
-+----------------+--------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; scl_o_reg                              ; 4       ;
+; sda_o_reg                              ; 4       ;
+; scl_i_reg                              ; 2       ;
+; sda_i_reg                              ; 3       ;
+; last_sda_i_reg                         ; 1       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bidirec:b1"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; outp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |I2C|mode_read_reg         ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |I2C|data_reg[3]           ;
+; 10:1               ; 15 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |I2C|delay_reg[14]         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |I2C|bit_count_reg[2]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |I2C|data_in_ready_next    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |I2C|phy_stop_bit          ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |I2C|phy_state_reg         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |I2C|state_reg             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -342,23 +333,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 12                          ;
-;     plain             ; 12                          ;
-; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 51                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 49                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 20                          ;
+; arriav_ff             ; 91                          ;
+;     ENA               ; 33                          ;
+;     ENA SCLR          ; 22                          ;
+;     ENA SCLR SLD      ; 8                           ;
+;     SCLR              ; 6                           ;
+;     plain             ; 22                          ;
+; arriav_lcell_comb     ; 174                         ;
+;     arith             ; 17                          ;
+;         1 data inputs ; 17                          ;
+;     extend            ; 14                          ;
+;         7 data inputs ; 14                          ;
+;     normal            ; 143                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 28                          ;
+;         5 data inputs ; 38                          ;
+;         6 data inputs ; 46                          ;
+; boundary_port         ; 65                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.97                        ;
+; Average LUT depth     ; 2.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -367,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -377,97 +373,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 09 14:02:33 2019
+    Info: Processing started: Wed Oct 23 11:08:45 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off I2C -c I2C
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file i2c.v
-    Info (12023): Found entity 1: I2C File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 1
+    Info (12023): Found entity 1: I2C File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file bidirec.v
     Info (12023): Found entity 1: bidirec File: C:/intelFPGA_lite/18.1/I2C/bidirec.v Line: 1
 Info (12127): Elaborating entity "I2C" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at I2C.v(66): truncated value with size 32 to match size of target (6) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 66
-Warning (10270): Verilog HDL Case Statement warning at I2C.v(29): incomplete case statement has no default case item File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10264): Verilog HDL Case Statement information at I2C.v(29): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at I2C.v(29): inferring latch(es) for variable "NS", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at I2C.v(29): inferring latch(es) for variable "direction", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at I2C.v(29): inferring latch(es) for variable "inp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at I2C.v(29): inferring latch(es) for variable "SCL", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at I2C.v(29): inferring latch(es) for variable "addrw", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Warning (10240): Verilog HDL Always Construct warning at I2C.v(29): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "counter[0]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "counter[1]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "counter[2]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "counter[3]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "counter[4]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "counter[5]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[0]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[1]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[2]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[3]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[4]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[5]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[6]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "addrw[7]" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "SCL" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "inp" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "direction" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.setData" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.ackHoldStage" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.ackBeginStage" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.holdSlave" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.pauseSet" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.setSlave" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.pause" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.stopEnd" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.stopBegin" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.start" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (10041): Inferred latch for "NS.idle" at I2C.v(29) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-Info (12128): Elaborating entity "bidirec" for hierarchy "bidirec:b1" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 19
-Warning (10036): Verilog HDL or VHDL warning at bidirec.v(12): object "b" assigned a value but never read File: C:/intelFPGA_lite/18.1/I2C/bidirec.v Line: 12
-Warning (13012): Latch direction has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 9
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.setSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
-Warning (13012): Latch counter[4] has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.holdSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
-Warning (13012): Latch counter[3] has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.holdSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
-Warning (13012): Latch counter[2] has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.holdSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
-Warning (13012): Latch counter[1] has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.holdSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
-Warning (13012): Latch counter[0] has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.holdSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
-Warning (13012): Latch counter[5] has unsafe behavior File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 29
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CS.holdSlave File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 14
+Warning (10036): Verilog HDL or VHDL warning at I2C.v(253): object "scl_posedge" assigned a value but never read File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 253
+Warning (10036): Verilog HDL or VHDL warning at I2C.v(254): object "scl_negedge" assigned a value but never read File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 254
+Warning (10230): Verilog HDL assignment warning at I2C.v(455): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 455
+Warning (10230): Verilog HDL assignment warning at I2C.v(504): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 504
+Warning (10230): Verilog HDL assignment warning at I2C.v(535): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 535
+Warning (10230): Verilog HDL assignment warning at I2C.v(599): truncated value with size 32 to match size of target (17) File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 599
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/I2C/output_files/I2C.map.smsg
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "data[0]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[1]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[2]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[3]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[4]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[5]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[6]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-    Warning (15610): No output dependent on input pin "data[7]" File: C:/intelFPGA_lite/18.1/I2C/I2C.v Line: 3
-Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 62 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Wed Oct 09 14:02:53 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:38
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/18.1/I2C/output_files/I2C.map.smsg.
+Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 45 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 200 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Wed Oct 23 11:09:31 2019
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:00:42
 
 
