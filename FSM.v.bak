@@ -1,0 +1,119 @@
+module FSM(clock, reset, opcode, pcEnable, pcIncrementOrWrite, blockRamWriteEnable, registerFileWriteEnable, integerTypeSelectionLine, reg2OrImmediateSelectionLine, 
+    pcOrRegisterSelectionLine, addressFromRegOrDecoderSelectionLine, writeBackToRegRamOrALUSelectionLine, pcOrAluOutputRamReadSelectionLine, 
+    decoderRamWriteAddress, registerWriteAddress, instructionRegisterValue);
+    input clock, reset;
+    input [15:0] opcode; //pass the full instruction to handle addressing
+    reg [1:0] nextState = 0;
+    reg [1:0] currentState = 0;
+    output reg pcIncrementOrWrite, blockRamWriteEnable, registerFileWriteEnable, integerTypeSelectionLine, reg2OrImmediateSelectionLine,
+        pcOrRegisterSelectionLine, addressFromRegOrDecoderSelectionLine, writeBackToRegRamOrALUSelectionLine, pcOrAluOutputRamReadSelectionLine;
+    output reg [15:0] decoderRamWriteAddress, registerWriteAddress, pcEnable;
+    output reg [15:0] instructionRegisterValue;
+    parameter IF = 2'b0, DECODE = 2'b01, EXECUTE = 2'b10, WRITE_BACK = 2'b11;
+    always @(posedge clock) begin
+        if(reset == 1'b0)
+            currentState <= IF;
+        currentState <= nextState;
+    end
+    always @ (*) begin
+        blockRamWriteEnable = 0;
+        registerFileWriteEnable = 0;
+        integerTypeSelectionLine = 0;
+        reg2OrImmediateSelectionLine = 0;
+        pcOrRegisterSelectionLine = 0;
+        addressFromRegOrDecoderSelectionLine = 0;
+        writeBackToRegRamOrALUSelectionLine = 0;
+        pcOrAluOutputRamReadSelectionLine = 0;
+        pcOrAluOutputRamReadSelectionLine = 0;
+        decoderRamWriteAddress = 0;
+        registerWriteAddress = 0;
+        pcEnable = 0;
+        nextState = 0;
+        case (currentState)
+            IF: begin
+                //Tell PC to increment or set to new address
+                //store read value in the IR
+                pcEnable = 0; //if we enable the pc here, it will increment.
+                ramReadEnable = 1;
+                irReadEnable = 1;
+                nextState = DECODE;
+            end
+            DECODE: begin
+                //send instruction from IR to Datapath
+                case (opcode[15:12]) //look at the top half of the instruction
+                    4'b0000: begin //this is an RType instruction
+                        //What to do here
+                        nextState = EXECUTE; //nothing special needs to happen here.
+                    end 
+                    4'b0001: begin //ANDI
+                    end
+                    4'b0010: begin //ORI
+
+                    end
+                    4'b0011: begin //XORI
+
+                    end
+                    4'b0100: begin //LD, Store, Jcond, JAL
+                    end
+                    4'b0101: begin //ADDI
+
+                    end
+                    4'b0110: begin //ADDUI (not needed)
+                    end
+                    4'b0111: begin //ADDCI (not needed)
+                    end
+                    4'b1000: begin //LSH, LSHI, ASH, ASHU, ASHUI
+                    end
+                    4'b1001: begin //SUBI
+                    end
+                    4'b1010: begin //SUBCI (not needed)
+                    end
+                    4'b1011: begin //CMPI
+                    end
+                    4'b1100: begin //Bcond
+                    end
+                    4'b1101: begin //MOVI
+                    end
+                    4'b1110: begin //MULI (not needed)
+                    end
+                    4'b1111: begin //LUI
+                    end
+                    default: nextState <= IF;
+                endcase
+                nextState = EXECUTE;
+            end 
+            EXECUTE: begin
+                // do computation
+                case (opcode[15:12])
+                    4'b0000: begin //RType
+                        pcOrRegisterSelectionLine = 1;
+                        reg2OrImmediateSelectionLine = 0;
+                        registerFileWriteEnable = 0;
+                        //ALU control will select the instruction for the ALU to run, we just need to make sure to provide the sources.
+                        registerWriteAddress = opcode[11:8];
+                        nextState = WRITE_BACK; //We are done with the RType instruction. Write the result
+                    end 
+                    default: nextState <= IF;
+                endcase
+                nextState = WRITE_BACK;
+            end
+            WRITE_BACK: begin
+                // enable correct muxes to write values.
+                case (opcode[15:12])
+                    4'b0000: begin //Rtype
+                        registerFileWriteEnable = 1;
+                        registerWriteAddress = opcode[11:8];
+                        pcEnable = 1;
+                        nextState = IF;
+                        writeBackToRegRamOrALUSelectionLine = 1; //write from ALU
+                    end
+                endcase
+                nextState = IF;
+            end
+            default: begin
+                nextState = IF;
+                instructionRegisterValue = 0;
+            end 
+        endcase
+    end
+endmodule

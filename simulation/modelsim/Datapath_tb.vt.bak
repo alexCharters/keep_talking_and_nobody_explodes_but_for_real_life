@@ -1,0 +1,18 @@
+module Datapath_tb();
+    reg [1:0] state;
+    reg clock, reset;
+    Datapath dp(.currentState(state), .clock(clock), .reset(reset));
+
+    initial begin
+        $display("Begin tests. Any output other than that testing has finished indicates a failed test.");
+        reset = 1'b0;
+        state = 2'b00;
+        clock = 0; //currently, clock isnt used...
+        #1;
+	reset = 1'b1;
+	state = 2'b01;
+	#1;
+	$display("Expect PC to change here.");
+    end
+
+endmodule

@@ -1,0 +1,32 @@
+module IF_vt();
+    reg clock, reset, pcEnable, incOrSet;
+    reg [15:0] pcAddrIn;
+    wire [15:0] instruction, ramReadAddr;
+    ProgramCounter pc(.clock(clock), .reset(reset), .incOrSet(incOrSet), .enable(pcEnable), .newAddress(pcAddrIn), .currentInstruction(ramReadAddr));
+    BlockRam br(.data(0), .read_addr(ramReadAddr), .write_addr(ramReadAddr), .re(1), .we(0), .clk(clock), .q(instruction));
+    reg [15:0] ir;
+    initial begin
+        clock = 0;
+        reset = 0;
+        pcEnable = 0;
+        pcAddrIn = 0;
+        incOrSet = 0;
+        #10;
+        reset = 1;
+        #10;
+        if(ramReadAddr != 0)
+            $display("Ram reading incorrect addr");
+        if(instruction != 16'b1101001100000001)
+            $display("Incorrect instruction given from block ram");
+        ir = instruction;
+        //Check ram increment 
+        pcEnable = 1;
+        #10;
+        if(ramReadAddr != 1)
+            $display("PC not incrementing to next instruction");
+        pcEnable = 0;
+        #10;
+        $stop;
+    end
+    always #5 clock = ~clock;
+endmodule

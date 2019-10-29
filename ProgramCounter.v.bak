@@ -1,0 +1,4 @@
+module ProgramCounter(incOrSet, newAddress, currentInstruction);
+	input incOrSet; //will control if the PC increments or is set to a different address after each operation.
+	
+endmodule

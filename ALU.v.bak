@@ -1,0 +1,3 @@
+//ALU for project. Right now, everything expects 16 bit values
+module ALU
+	#(parameter WIDTH = 16

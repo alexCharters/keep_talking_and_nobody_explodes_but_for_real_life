@@ -1,0 +1,7 @@
+
+State Machine - |CPU|FSM:fsm|currentState
+Name currentState.WRITE_BACK currentState.EXECUTE currentState.DECODE currentState.00 
+currentState.00 0 0 0 0 
+currentState.DECODE 0 0 1 1 
+currentState.EXECUTE 0 1 0 1 
+currentState.WRITE_BACK 1 0 0 1 

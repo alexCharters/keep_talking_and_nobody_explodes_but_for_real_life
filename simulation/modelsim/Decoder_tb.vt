@@ -1,0 +1,432 @@
+module Decoder_tb();
+    reg [15:0] instruction;
+	reg[4:0] PSR;
+    wire [1:0] intSel;
+    wire pcIncWrite, brWe, rfWe, r2ImSel, pcRegSel, addrRegDecSel, rbRamALUSel, pcAluRamReadSel;
+    wire [15:0] ramWriteAddr, instructionOut, jalRegisterValue; 
+	wire [3:0] regWriteAddr;
+    Decoder decode(instruction, PSR, pcIncWrite, brWe, rfWe, intSel, r2ImSel, pcRegSel, addrRegDecSel, rbRamALUSel, pcAluRamReadSel, ramWriteAddr, regWriteAddr, instructionOut, jalRegisterValue);
+    initial begin
+        $display("Testing start");
+		PSR = 5'b00000;
+        instruction = 16'b1101000100000101; //MOVI (5) into reg 1 
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0001)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(intSel != 2)
+	        $display("Wrong type of immediate was selected.");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000001001010001; //ADD r2 r1
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0010)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000011001100010; //ADDU r6 r2
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0110)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000100101110010; //ADDC r9 r2
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1001)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000100111100000; //MUL r9 r0
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1001)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000010110010001; //SUB r5 r1
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0101)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000010010100000; //SUBC r4 r0
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0100)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000110110110000; //CMP r13 r0
+        #1;
+        if(rfWe != 0)
+            $display("Register file should not be enabled for a write back on a compare!");
+        if(brWe != 0)
+            $display("Ram should not be enabled for writing on a compare!");
+        if(pcRegSel != 1)
+            $display("PC selected when reg should be");
+        if(r2ImSel != 0)
+            $display("Immediate being used when reg should be!");
+        instruction = 16'b0000101100010111; //AND r11 r7
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1011)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000111000101111; //OR r14 r15
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1110)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000110000110111; //XOR r12 r7
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1100)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        instruction = 16'b0000111111010000; //MOV r15 r0
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1111)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+		instruction = 16'b1000000101000001; //LSH r1 r1
+		#1;
+		if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0001)
+	        $display("Requested write address LSH is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back LSH to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a LSH");
+	    if(r2ImSel != 0)
+	        $display("Trying to use immediate when register data should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        $display("RType Tests Completed!");
+        instruction = 16'b0101000100000010; // ADDI r1 5
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0001)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 1)
+            $display("Wrong type of immediate used!");
+        instruction = 16'b0110011000001010; //ADDUI r6 10
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0110)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 1)
+            $display("Wrong type of immediate used!");
+        instruction = 16'b1001110100000111; //SUBI r13 7
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b1101)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 1)
+            $display("Wrong type of immediate used!");
+        instruction = 16'b1011010100101010; //CMPI r5 42
+        #1;
+        if(rfWe != 0)
+            $display("Register file should not be enabled for a write back on a compare!");
+        if(brWe != 0)
+            $display("Ram should not be enabled for writing on a compare!");
+        if(pcRegSel != 1)
+            $display("PC selected when reg should be");
+        if(r2ImSel != 1)
+            $display("Reg being used when immediate should be!");
+        if(intSel != 1)
+            $display("Wrong type of immediate used!");
+        instruction = 16'b0001011100000000; //ANDI r11 0
+        #1;
+         if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0111)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 2)
+            $display("Wrong type of immediate used!");
+        instruction = 16'b0010000100001111; //ORI r1 15
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0001)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 2)
+            $display("Wrong type of immediate used!");
+        instruction = 16'b0011011000001110; //XORI r6 14
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0110)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 2)
+            $display("Wrong type of immediate used!");
+		instruction = 16'b1000011100010100; //LSHI r7 -4
+		#1;
+		if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0111)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 0)
+            $display("Wrong type of immediate used!");
+		instruction = 16'b1111010000001011; //LUI r4 11
+		#1;
+		if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	    if(regWriteAddr != 16'b0100)
+	        $display("Requested write address is incorrect!");
+	    if(rfWe != 1)
+	        $display("Failed to enable write back to register file.");
+	    if(brWe == 1)
+	        $display("Block ram was enabled for write when it should not have been for a MOVI");
+	    if(r2ImSel != 1)
+	        $display("Trying to use register data when an immediate should be used.");
+	    if(pcRegSel != 1)
+	        $display("Using value of PC when register data should be used.");
+        if(intSel != 0)
+            $display("Wrong type of immediate used!");
+        $display("ITypes done. Running Jump, Load, Store, and Branch tests");
+        instruction = 16'b0100011100001111; //Load r7 r15
+        #1;
+        if(instructionOut != 16'b0000011101101111)
+			$display("Load is not changing instruction to proper ADDU");
+		if(pcRegSel != 1)
+			$display("Using PC when register should be used.");
+		if(brWe != 0)
+			$display("Block ram's write was enabled when it should not be!");
+		if(rfWe != 1)
+			$display("Expected register file write to be enabled, but it is disabled.");
+		if(intSel != 3)
+			$display("Wrong integer type selected.");
+		$display("Load test done.");
+		instruction = 16'b0100110101000000; //Store r13 r0
+		#1;
+		if(instructionOut != 16'b0000000001101101)
+			$display("Store is not changing instruction to proper ADDU");
+		if(pcRegSel != 1)
+			$display("Using PC when register should be used.");
+		if(brWe != 1)
+			$display("Block ram's write was disabled when it should not be!");
+		if(rfWe != 0)
+			$display("Expected register file write to be disabled, but it is enable.");
+		if(addrRegDecSel != 0)
+			$display("Expected to use register data for store, but the decoder is specifying an address instead...");
+		$display("Store test done.");
+		instruction = 16'b0100000010000000; //JAL r0 r0
+		#1;
+		if(instructionOut != 16'b0000000001100000)
+			$display("Jump not transforming instruction properly when unconditionally jumping.");
+		if(pcRegSel != 1)
+			$display("Jump operating on PC instead of register");
+		if(brWe != 0)
+			$display("Jump is trying to write to block ram");
+		if(rfWe != 0)
+			$display("Jump trying to write to register file!");
+		if(pcIncWrite != 1)
+			$display("Jump has pc set to increment instead of setting the address");
+		if(jalRegisterValue != 0)
+			$display("Incorrect address is being stored for a jump and link!");
+		instruction = 16'b0101101000001111;
+		#1;
+		instruction = 16'b0100101010000000; //JAL r10 r0
+		#1;
+		if(instructionOut != 16'b0000000001100000)
+			$display("Jump not transforming instruction properly when unconditionally jumping.");
+		if(pcRegSel != 1)
+			$display("Jump operating on PC instead of register");
+		if(brWe != 0)
+			$display("Jump is trying to write to block ram");
+		if(rfWe != 0)
+			$display("Jump trying to write to register file!");
+		if(pcIncWrite != 1)
+			$display("Jump has pc set to increment instead of setting the address");
+		if(jalRegisterValue != 4'b1010)
+			$display("Incorrect address is being stored for a jump and link!");
+		$display("JAL tests done.");
+		instruction = 16'b0100011111000000; //JMP to address in 0 unconditionally
+		#1;
+		if(instructionOut != 16'b0000000001100000)
+			$display("Jump not transforming instruction properly when unconditionally jumping.");
+		if(pcRegSel != 1)
+			$display("Jump operating on PC instead of register");
+		if(brWe != 0)
+			$display("Jump is trying to write to block ram");
+		if(rfWe != 0)
+			$display("Jump trying to write to register file!");
+		if(pcIncWrite != 1)
+			$display("Jump has pc set to increment instead of setting the address");
+		instruction = 16'b0100111111000000; //JMP but with don't jump condition
+		#1;
+		if(instructionOut != 16'b0000000000100000)
+			$display("Jump Conditional should have caused a NOP, but is trying to jump instead.");
+		$display("Normal jump tests done.");
+		instruction = 16'b1100111111111111; //Bcond but with don't branch condition
+		#1;
+		if(instructionOut != 16'b0000000000100000)
+			$display("Branch conditional should NOP on don't branch, but is carrying out branch.");
+		instruction = 16'b1100011011101110; //BCond where condition is false.
+		#1;
+		if(instructionOut != 16'b0000000000100000)
+			$display("Branch conditional should NOP on when condition is not met, but is carrying out branch.");
+		PSR[4] = 1'b1;
+		instruction = 16'b1100011011101110;
+		#1;
+		if(instructionOut == 16'b0000000001010000)
+			$display("Branch not transforming instruction properly when condition is met.");
+		if(pcRegSel != 0)
+			$display("Branch operating on register instead of pc");
+		if(brWe != 0)
+			$display("Branch is trying to write to block ram");
+		if(rfWe != 0)
+			$display("Branch trying to write to register file!");
+		if(pcIncWrite != 1)
+			$display("Branch has pc set to increment instead of setting the address");
+		$display("Branch tests are done.");
+		$display("End of Testing.");
+		end
+endmodule

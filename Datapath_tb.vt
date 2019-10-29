@@ -1,0 +1,23 @@
+module Datapath_tb();
+    reg clock, reset;
+    reg [15:0] instruction;
+    wire brWe, brRe, rfWe, pcRegSel, wbRamAlu, pcAluOut, r2Im, addrRegDec;
+    wire [1:0] intSel;
+    wire [15:0] decAddr;
+    wire [3:0] regWriteAddr;
+    Datapath dp(.clock(clock), .reset(reset), .instruction(instruction), .blockRamWriteEnable(brWe), .blockRamReadEnable(brRe), 
+    .registerFileWriteEnable(rfWe), .integerTypeSelectionLine(intSel), .reg2OrImmediateSelectionLine(r2Im), 
+	.pcOrRegisterSelectionLine(pcRegSel), .addressFromRegOrDecoderSelectionLine(addrRegDec), .writeBackToRegRamOrALUSelectionLine(wbRamAlu), 
+    .pcOrAluOutputRamReadSelectionLine(pcAluOut), 
+	.decoderRamWriteAddress(decAddr), .registerWriteAddress(regWriteAddr));
+
+    initial begin
+        $display("Begin tests. Any output other than that testing has finished indicates a failed test.");
+        instruction = 16'b1101000100000011;
+        clock = 0;
+        reset = 0;
+        #10;
+        reset = 1;
+    end
+
+endmodule

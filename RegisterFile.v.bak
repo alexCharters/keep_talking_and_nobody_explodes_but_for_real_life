@@ -1,0 +1,4 @@
+//Register file for default style of cr16 (16bit regs, 16 regs)
+module RegisterFile(readAddresss, writeAddress);
+
+endmodule

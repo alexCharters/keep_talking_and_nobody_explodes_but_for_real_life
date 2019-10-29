@@ -1,0 +1,22 @@
+module CPU_vt();
+    reg clock, reset;
+    CPU cpu(clock, reset);
+    initial begin
+        clock = 0;
+        reset = 0;
+        #10; //Wait for one cycle to reset PC
+        reset = 1;
+        #10;
+        $display("IF");
+        #10;
+        $display("Decode");
+        #10;
+        $display("Execute");
+        #10;
+        $display("Write Back");
+        #10;
+        $stop;
+    end
+    always @ (*)
+        #5 clock = ~clock;
+endmodule

@@ -1,106 +1,33 @@
-module ALUControl(instruction, shftOrNormMuxEnable, regSrcSelect, regDestSelect, regOrImmediateMuxEnable, immediateSignZeroMuxEnable, aluOrOtherMuxEnable, ramOrRegDestMuxEnable);
-	input [7:0] instruction;
-	output shftOrNormMuxEnable, regOrImmediateMuxEnable, aluOrOtherMuxEnable, ramOrRegDestMuxEnable;
-	output [1:0] immediateSignZeroMuxEnable;
-	parameter IMMEDIATE_ONLY = 2'b00, SIGN_EXTEND = 2'b01, ZERO_EXTEND = 2'b10;
+module ALUControl(instruction, out);
+//maybe we send the PSR flags into here?
+	input [15:0] instruction;
+	output reg [7:0] out;
+	parameter ADD = 8'b00000101, ADDUI = 8'b01100000;
 	always @ (*) begin
-		case(instruction[15:12])
-			4'b0000: begin //This is an r type instruction
-						shftOrNormMuxEnable = 1'b1;
-						regOrImmediateMuxEnable = 1'b0;
-						aluOrOtherMuxEnable = 1'b0;
-						ramOrRegDestMuxEnable = 1'b1;
-						regSrcSelect = instruction[3:0];
-			end
-			4'b0101: begin //ADDI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = SIGN_EXTEND;
-			end
-			4'b0110: begin //ADDUI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = SIGN_EXTEND;
-			end
-			4'b1001: begin //SUBI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = SIGN_EXTEND;
-			end
-			4'b1011: begin //CMPI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = SIGN_EXTEND;
-			end
-			4'b0001: begin //ANDI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = ZERO_EXTEND;
-			end
-			4'b0010: begin //ORI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = ZERO_EXTEND;
-			end
-			4'b0011: begin //XORI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = ZERO_EXTEND;
-			end
-			4'b1101: begin //MOVI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = ZERO_EXTEND;
-			end
-			4'b1111: begin //LUI
-				shftOrNormMuxEnable = 1'b1;
-				regOrImmediateMuxEnable = 1'b1;
-				aluOrOtherMuxEnable = 1'b0;
-				ramOrRegDestMuxEnable = 1'b1;
-				immediateSignZeroMuxEnable = IMMEDIATE_ONLY;
-			end
-			4'b0100: begin
-				case(instruction[7:4])
-					4'b0000: begin //LOAD rsrc, rdestAddr
-						shftOrNormMuxEnable = 1'b0; //this is the register holding the source
-						regOrImmediateMuxEnable = 1'b1; //want to be able to set a constant value of zero to add
-						aluOrOtherMuxEnable = 1'b1;
-						ramOrRegDestMuxEnable = 1'b1; //we store the read from ram into the register file
-						immediateSignZeroMuxEnable = IMMEDIATE_ONLY; //We will need to pass a zero into here for the add
-						
-					end
-					4'b0100: begin //STOR
-						shftOrNormMuxEnable = 1'b1; //get the address value of the register's data
-						regOrImmediateMuxEnable = 1'b1;
-					end
-					4'b1000: begin //JAL 
-						shftOrNormMuxEnable = 1'b1;
-						regOrImmediateMuxEnable = 1'b1;
-						aluOrOtherMuxEnable = 1'b0;
-						ramOrRegDestMuxEnable = 1'b1;
-						immediateSignZeroMuxEnable = IMMEDIATE_ONLY;
-					end
-					4'b1100: begin
-
-					end
-				endcase
-			end
-		endcase
+		out = {instruction[15:12], instruction[7:4]}; //this is the case for most instructions.
+		//TODO handle jumps and branches. If the decoder can handle moving source values around, this might be easy!
+		if(instruction[15:12] == 4'b0100) begin //Load or store. Need to change to addu. Decoder should select zero.
+			case(instruction[7:4])
+				4'b0000: begin
+					//Load
+					out = ADDUI;
+				end
+				4'b0100: begin
+					//Store
+					out = ADDUI;
+				end
+				4'b1100: begin
+					//JCond
+					out = ADDUI;
+				end
+				4'b1000: begin
+					//JAL
+					out = ADDUI;
+				end
+			endcase
+		end
+		else if(instruction[15:12] == 4'b1100) begin
+			out = ADD; //signed 2's complement
+		end
 	end
 endmodule

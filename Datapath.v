@@ -1,24 +1,44 @@
-module Datapath(clock, reset);
-	wire [15:0] ramDataInput, ramOutput, ramReadAddr, ramWriteAddr, newPCAddr, currentPCVal, dataline, register1Data, register2Data, aluResult;
-	wire ramWriteEnable, clockSignalLine, pcIncrementOrSet, writeToRegOrRam, shftOrNorm, regOrImmediate;
-	reg [15:0] instructionRegister;
-	reg [15:0] jalLinkedReg; //holds the address to return to after a jal. Need to decide how much depth to allow.
-	reg [7:0] immediateRegister, signExtendedImmediate, zeroExtendedImmediate;
-	reg [4:0] psrRegister; //holds PSR flags
-	//Create the program counter
-	ProgramCounter PC(pcIncrementOrSet, newPCAddr, currentPCVal);
+module Datapath(clock, reset, instruction, blockRamWriteEnable, blockRamReadEnable, registerFileWriteEnable, integerTypeSelectionLine, reg2OrImmediateSelectionLine, 
+	pcOrRegisterSelectionLine, addressFromRegOrDecoderSelectionLine, writeBackToRegRamOrALUSelectionLine, pcOrAluOutputRamReadSelectionLine, 
+	decoderRamWriteAddress, registerWriteAddress);
+	input [15:0] instruction, decoderRamWriteAddress;
+	input clock, reset, reg2OrImmediateSelectionLine, pcOrRegisterSelectionLine, addressFromRegOrDecoderSelectionLine, 
+		writeBackToRegRamOrALUSelectionLine, blockRamWriteEnable, blockRamReadEnable, registerFileWriteEnable, pcOrAluOutputRamReadSelectionLine;
+	input [1:0] integerTypeSelectionLine;
+	//Setup Program Counter
+	reg [15:0] programCounter;
+	wire [15:0] signExtendedImmediate, zeroExtendedImmediate, selectedImmediateType, firstInputToAlu, secondInputToAlu, ramWriteAddress;
+	wire [15:0] reg1Data, reg2Data, ramReadData, aluOutput, regFileInputData, operationControlLine;
+	input [3:0] registerWriteAddress;
+	//Setup all needed muxes
+	mux4to1 integerTypeSelectionMux(.in1(instruction[7:0]), .in2(signExtendedImmediate), .in3(zeroExtendedImmediate), 
+		.in4(0), .select(integerTypeSelectionLine), .out(selectedImmediateType));
+	mux2to1 reg2OrImmediateMux(.in1(reg2Data), .in2(selectedImmediateType), .select(reg2OrImmediateSelectionLine), 
+		.out(secondInputToAlu));
+	mux2to1 pcOrRegisterMux(.in1(programCounter), .in2(reg1Data), .select(pcOrRegisterSelectionLine), 
+		.out(firstInputToAlu));
+	mux2to1 addressFromRegOrDecoderMux(.in1(reg2Data), .in2(decoderRamWriteAddress), .select(addressFromRegOrDecoderSelectionLine), 
+		.out(ramWriteAddress));
+	mux2to1 writeBackToRegRamOrALUMux(.in1(ramReadData), .in2(aluOutput), .select(writeBackToRegRamOrALUSelectionLine), 
+		.out(regFileInputData));
+	mux2to1 pcOrAluOutputRamReadMux(.in1(aluOutput), .in2(programCounter), .select(pcOrAluOutputRamReadSelectionLine), .out(ramReadAddress));
+	//End needed muxes
+	//Sign extender creation
+	SignExtender immediateSignExtender(.immediate(instruction[7:0]), .extended(signExtendedImmediate));
+	ZeroExtender immediateZeroExtender(.immediate(instruction[7:0]), .result(zeroExtendedImmediate));
+	//End extender creation
+	//Register File Creation
+	RegisterFile registerFile(.clock(clock), .shouldWrite(registerFileWriteEnable), .register1Address(instruction[11:7]), .register2Address(instruction[3:0]), 
+		.writeAddress(registerWriteAddress), .register1Data(reg1Data), .register2Data(reg2Data));
+	//End Register File Creation
+	//Begin Alu and controller creation
+	ALUControl controller(.instruction(instruction), .out(operationControlLine));
+	ALU alu(.sourceData(firstInputToAlu), .destData(secondInputToAlu), .operationControl(operationControlLine), .carry(), .low(), .overflow(), 
+		.zero(), .negative(), .result(aluOutput));
+	//End Alu and controller creation
+	//Block Ram Creation
+	BlockRam blockRam(.data(aluOutput), .read_addr(ramReadAddress), .write_addr(ramWriteAddress), .re(blockRamReadEnable), 
+	.we(blockRamWriteEnable), .clk(clock), 
+		.q(ramReadData));
 
-	//need to assign instruction register here. Read from block ram using PC and get next instruction. 
-
-	//Since block ram is a critical component for load, stores, and getting instructions, lets make sure to set it up.
-	BlockRam br(.data(ramDataInput), .read_addr(ramReadAddr), .write_addr(ramWriteAddr),
-		.we(ramWriteEnable), .clk(clockSignalLine), .q(ramOutput));
-	//Create the register file. Register 1 is the RSrc while Register 2 is the Rdest from the ISA
-	RegisterFile regFile(.clock(clock), .shouldWrite(writeToRegOrRam), .register1Address(instructionRegister[3:0]), .register2Address(instructionRegister[11:8]), .writeAddress(instructionRegister[11:8]), .writeData(dataline), .register1Data(register1Data), .register2Data(register2Data));
-	//Create needed sign and zero extenders
-	SignExtender sExtend(.immediate(immediateRegister), .extended(signExtendedImmediate));
-	ZeroExtender zExtend(.immediate(immediateRegister), .result(zeroExtendedImmediate));
-	//ALU and its needed controller
-	ALU alu(.sourceData(register1Data), .destData(register2Data), .operationControl(), .carry(), .low(), .overflow(), .zero(), .negative(), .result(aluResult));
-	ALUControl aluCntl(.instruction(), .shftOrNormMuxEnable(), .regSrcSelect(), .regDestSelect(), .regOrImmediateMuxEnable(), .immediateSignZeroMuxEnable(), .aluOrOtherMuxEnable(), .ramOrRegDestMuxEnable());
 endmodule

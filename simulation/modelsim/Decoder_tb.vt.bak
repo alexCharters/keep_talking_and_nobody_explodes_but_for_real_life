@@ -1,0 +1,27 @@
+module Decoder_tb();
+    reg [15:0] instruction;
+    wire [1:0] intSel;
+    wire pcIncWrite, brWe, rfWe, r2ImSel, pcRegSel, addrRegDecSel, rbRamALUSel, pcAluRamReadSel;
+    wire [15:0] ramWriteAddr, regWriteAddr, instructionOut; 
+    Decoder decode(instruction, pcIncWrite, brWe, rfWe, intSel, r2ImSel, pcRegSel, addrRegDecSel, rbRamALUSel, pcAluRamReadSel, ramWriteAddr, regWriteAddr, instructionOut);
+    initial begin
+        $display("Testing start");
+        instruction = 16'b1101000100000101; //MOVI (5) into reg 1 
+        #1;
+        if(instructionOut != instruction)
+            $display("instructionOut not properly set!");
+	if(regWriteAddr != 4'b0001)
+	    $display("Requested write address is incorrect!");
+	if(rfWe != 1)
+	    $display("Failed to enable write back to register file.");
+	if(brWe == 1)
+	    $display("Block ram was enabled for write when it should not have been for a MOVI");
+	if(intSel != 2)
+	    $display("Wrong type of immediate was selected.");
+	if(r2ImSel != 1)
+	    $display("Trying to use register data when immediate should be used.");
+	if(pcRegSel != 1)
+	    $display("Using value of PC when register data should be used.");
+	
+    end
+endmodule

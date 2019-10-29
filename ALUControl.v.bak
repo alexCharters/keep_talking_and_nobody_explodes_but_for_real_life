@@ -1,0 +1,27 @@
+module ALUControl(instruction, shftOrNormMuxEnable, regOrImmediateMuxEnable, aluOrOtherMuxEnable, ramOrRegDestMuxEnable);
+	input [7:0] instruction;
+	output shftOrNormMuxEnable, regOrImmediateMuxEnable, aluOrOtherMuxEnable, ramOrRegDestMuxEnable;
+	always @ (*) begin
+		case(instruction[7:4])
+			4'b0000: begin //This is an r type instruction
+				case(instruction[3:0]
+					4'b1101: begin //This is the MOV instruction, so there is likely a change needed here.
+						
+					end
+					default: begin
+						shftOrNormMuxEnable = 1'b1;
+						regOrImmediateMuxEnable = 1'b0;
+						aluOrOtherMuxEnable = 1'b0;
+						ramOrRegDestMuxEnable = 1'b1;
+					end
+				endcase
+			end
+			4'b0101: begin //ADDI
+				shftOrNormMuxEnable = 1'b1;
+				regOrImmediateMuxEnable = 1'b1;
+				aluOrOtherMuxEnable = 1'b0;
+				ramOrRegDestMuxEnable = 1'b1;
+			end
+		endcase
+	end
+endmodule

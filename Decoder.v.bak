@@ -1,0 +1,69 @@
+module Decoder(instruction, pcIncrementOrWrite, blockRamWriteEnable, registerFileWriteEnable, integerTypeSelectionLine, reg2OrImmediateSelectionLine, 
+    pcOrRegisterSelectionLine, addressFromRegOrDecoderSelectionLine, writeBackToRegRamOrALUSelectionLine, pcOrAluOutputRamReadSelectionLine, 
+    decoderRamWriteAddress, registerWriteAddress, instructionOut);
+    input [15:0] instruction;
+	 output reg [1:0] integerTypeSelectionLine;
+    output reg blockRamWriteEnable, registerFileWriteEnable, reg2OrImmediateSelectionLine, pcOrRegisterSelectionLine, 
+        addressFromRegOrDecoderSelectionLine, writeBackToRegRamOrALUSelectionLine, pcOrAluOutputRamReadSelectionLine,
+		  pcIncrementOrWrite;
+    output reg [15:0] decoderRamWriteAddress, instructionOut;
+	 output reg [3:0] registerWriteAddress;
+    parameter Enable = 1'b1, Disable = 1'b0;
+    parameter Immediate = 0, SignExtend = 1, ZeroExtend = 2, Zero = 3;
+    always @ (*) begin
+        decoderRamWriteAddress = 8'b0; //by default we don't need to specify the write location unless this is a store.
+        instructionOut = instruction; //shouldn't be needed to change instruction in most case.
+        //disable all enable lines
+        blockRamWriteEnable = Disable;
+        registerFileWriteEnable = Disable;
+        pcIncrementOrWrite = Disable; //Disable is increment
+        //by default, set all control lines to most likely value for muxes
+        addressFromRegOrDecoderSelectionLine = 0;
+        integerTypeSelectionLine = 0;
+        pcOrAluOutputRamReadSelectionLine = 1;
+        pcOrRegisterSelectionLine = 1;
+        reg2OrImmediateSelectionLine = 0;
+        case(instruction[15:12])
+            4'b0000: begin //RType
+                //Since this is an RType, we will always use r1 and r2 for values
+                pcOrRegisterSelectionLine = 1; //use r1data
+                reg2OrImmediateSelectionLine = 0; //use r2data
+                registerFileWriteEnable = Enable; // we need to write the result back into the reg file
+                writeBackToRegRamOrALUSelectionLine = 1; //write back to the register file using data in the ALU
+                registerWriteAddress =  instruction[11:8]; //use instruction[11:8] as write back address for reg file
+                //As there is no need to modify the instruction, we can simply stop here.
+            end
+            4'b0101: begin //ADDI
+                pcOrRegisterSelectionLine = 1;
+                reg2OrImmediateSelectionLine = 1;
+                registerFileWriteEnable = Enable;
+                writeBackToRegRamOrALUSelectionLine = 1;
+                registerWriteAddress = instruction[11:8];
+                //ALU can handle ADDI so stop here
+            end
+            4'b1001: begin //SUBI
+                pcOrRegisterSelectionLine = 1;
+                reg2OrImmediateSelectionLine = 1;
+                registerFileWriteEnable = Enable;
+                writeBackToRegRamOrALUSelectionLine = 1;
+                registerWriteAddress = instruction[11:8];
+            end
+            4'b1011: begin //CMPI
+                pcOrRegisterSelectionLine = 1;
+                reg2OrImmediateSelectionLine = 1;
+                integerTypeSelectionLine = SignExtend; //need sign extended immediate
+                registerFileWriteEnable = Disable; //CMPI should only write to the PSR
+                //Since register write is disabled, we can stop here.
+            end
+            4'b0001: begin //ANDI
+                //because the alu just ands instruction[11:8] with the immediate, 
+                pcOrRegisterSelectionLine = 1;
+                reg2OrImmediateSelectionLine = 1;
+                integerTypeSelectionLine = ZeroExtend;
+                registerFileWriteEnable = Enable;
+                registerWriteAddress = instruction[11:8]; 
+            end
+        endcase
+
+    end
+endmodule
