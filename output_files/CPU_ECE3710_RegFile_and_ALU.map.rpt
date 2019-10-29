@@ -1,0 +1,604 @@
+Analysis & Synthesis report for CPU_ECE3710_RegFile_and_ALU
+Sun Oct 27 13:27:08 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |CPU|FSM:fsm|currentState
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: FSM:fsm
+ 13. Parameter Settings for User Entity Instance: Datapath:dataPath|RegisterFile:registerFile
+ 14. Parameter Settings for User Entity Instance: Datapath:dataPath|ALUControl:controller
+ 15. Parameter Settings for User Entity Instance: Datapath:dataPath|ALU:alu
+ 16. Parameter Settings for User Entity Instance: Datapath:dataPath|BlockRam:blockRam
+ 17. Port Connectivity Checks: "Datapath:dataPath|BlockRam:blockRam"
+ 18. Port Connectivity Checks: "Datapath:dataPath|ALU:alu"
+ 19. Port Connectivity Checks: "Datapath:dataPath|ALUControl:controller"
+ 20. Port Connectivity Checks: "Datapath:dataPath|RegisterFile:registerFile"
+ 21. Port Connectivity Checks: "Datapath:dataPath|mux2to1:pcOrAluOutputRamReadMux"
+ 22. Port Connectivity Checks: "Datapath:dataPath|mux2to1:writeBackToRegRamOrALUMux"
+ 23. Port Connectivity Checks: "Datapath:dataPath|mux4to1:integerTypeSelectionMux"
+ 24. Port Connectivity Checks: "Datapath:dataPath"
+ 25. Port Connectivity Checks: "Decoder:decoder"
+ 26. Port Connectivity Checks: "FSM:fsm"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Oct 27 13:27:08 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; CPU_ECE3710_RegFile_and_ALU                 ;
+; Top-level Entity Name           ; CPU                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 2                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                      ;
++---------------------------------------------------------------------------------+--------------------+-----------------------------+
+; Option                                                                          ; Setting            ; Default Value               ;
++---------------------------------------------------------------------------------+--------------------+-----------------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                             ;
+; Top-level entity name                                                           ; CPU                ; CPU_ECE3710_RegFile_and_ALU ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V                   ;
+; Use smart compilation                                                           ; Off                ; Off                         ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                          ;
+; Enable compact report table                                                     ; Off                ; Off                         ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                        ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                         ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                         ;
+; Preserve fewer node names                                                       ; On                 ; On                          ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable                      ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001                ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993                   ;
+; State Machine Processing                                                        ; Auto               ; Auto                        ;
+; Safe State Machine                                                              ; Off                ; Off                         ;
+; Extract Verilog State Machines                                                  ; On                 ; On                          ;
+; Extract VHDL State Machines                                                     ; On                 ; On                          ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                         ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                        ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                         ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                          ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                          ;
+; Parallel Synthesis                                                              ; On                 ; On                          ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                        ;
+; NOT Gate Push-Back                                                              ; On                 ; On                          ;
+; Power-Up Don't Care                                                             ; On                 ; On                          ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                         ;
+; Remove Duplicate Registers                                                      ; On                 ; On                          ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                         ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                         ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                         ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                         ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                         ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                          ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                         ;
+; Optimization Technique                                                          ; Balanced           ; Balanced                    ;
+; Carry Chain Length                                                              ; 70                 ; 70                          ;
+; Auto Carry Chains                                                               ; On                 ; On                          ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                          ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                         ;
+; Auto ROM Replacement                                                            ; On                 ; On                          ;
+; Auto RAM Replacement                                                            ; On                 ; On                          ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                          ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                        ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                        ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                          ;
+; Strict RAM Replacement                                                          ; Off                ; Off                         ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                          ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                         ;
+; Auto Resource Sharing                                                           ; Off                ; Off                         ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                         ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                         ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                         ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                          ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                         ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                          ;
+; Report Parameter Settings                                                       ; On                 ; On                          ;
+; Report Source Assignments                                                       ; On                 ; On                          ;
+; Report Connectivity Checks                                                      ; On                 ; On                          ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                         ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                           ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation          ;
+; HDL message level                                                               ; Level2             ; Level2                      ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                         ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                        ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                        ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                         ;
+; Clock MUX Protection                                                            ; On                 ; On                          ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                         ;
+; Block Design Naming                                                             ; Auto               ; Auto                        ;
+; SDC constraint protection                                                       ; Off                ; Off                         ;
+; Synthesis Effort                                                                ; Auto               ; Auto                        ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                          ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                         ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium                      ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                        ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                          ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                          ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                         ;
++---------------------------------------------------------------------------------+--------------------+-----------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+; mux4to1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v        ;         ;
+; mux2to1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v        ;         ;
+; RegisterFile.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v   ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/ALU.v            ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v       ;         ;
+; BlockRam.v                       ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v       ;         ;
+; ALUControl.v                     ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v     ;         ;
+; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v ;         ;
+; ZeroExtender.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v   ;         ;
+; SignExtender.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v   ;         ;
+; Decoder.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v        ;         ;
+; CPU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/CPU.v            ;         ;
+; FSM.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710/Project/FSM.v            ;         ;
+; explode.dat                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/kenne/Documents/ECE 3710/Project/explode.dat      ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |CPU                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |CPU                ; CPU         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CPU|FSM:fsm|currentState                                                                        ;
++-------------------------+-------------------------+----------------------+---------------------+-----------------+
+; Name                    ; currentState.WRITE_BACK ; currentState.EXECUTE ; currentState.DECODE ; currentState.00 ;
++-------------------------+-------------------------+----------------------+---------------------+-----------------+
+; currentState.00         ; 0                       ; 0                    ; 0                   ; 0               ;
+; currentState.DECODE     ; 0                       ; 0                    ; 1                   ; 1               ;
+; currentState.EXECUTE    ; 0                       ; 1                    ; 0                   ; 1               ;
+; currentState.WRITE_BACK ; 1                       ; 0                    ; 0                   ; 1               ;
++-------------------------+-------------------------+----------------------+---------------------+-----------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; FSM:fsm|currentState~2                ; Lost fanout        ;
+; FSM:fsm|currentState~3                ; Lost fanout        ;
+; FSM:fsm|currentState.00               ; Lost fanout        ;
+; FSM:fsm|currentState.DECODE           ; Lost fanout        ;
+; FSM:fsm|currentState.EXECUTE          ; Lost fanout        ;
+; FSM:fsm|currentState.WRITE_BACK       ; Lost fanout        ;
+; Total Number of Removed Registers = 6 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                          ;
++------------------------+--------------------+--------------------------------------------------------+
+; Register name          ; Reason for Removal ; Registers Removed due to This Register                 ;
++------------------------+--------------------+--------------------------------------------------------+
+; FSM:fsm|currentState~2 ; Lost Fanouts       ; FSM:fsm|currentState.00, FSM:fsm|currentState.EXECUTE, ;
+;                        ;                    ; FSM:fsm|currentState.WRITE_BACK                        ;
+; FSM:fsm|currentState~3 ; Lost Fanouts       ; FSM:fsm|currentState.DECODE                            ;
++------------------------+--------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM:fsm ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; IF             ; 00    ; Unsigned Binary             ;
+; DECODE         ; 01    ; Unsigned Binary             ;
+; EXECUTE        ; 10    ; Unsigned Binary             ;
+; WRITE_BACK     ; 11    ; Unsigned Binary             ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:dataPath|RegisterFile:registerFile ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                                  ;
+; REGISTER_BITS  ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:dataPath|ALUControl:controller ;
++----------------+----------+----------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                     ;
++----------------+----------+----------------------------------------------------------+
+; ADD            ; 00000101 ; Unsigned Binary                                          ;
+; ADDUI          ; 01100000 ; Unsigned Binary                                          ;
++----------------+----------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:dataPath|ALU:alu ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                ;
+; ctlLen         ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Datapath:dataPath|BlockRam:blockRam ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                                          ;
+; ADDR_WIDTH     ; 16    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|BlockRam:blockRam"                                                                                                                    ;
++-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                             ;
++-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; read_addr ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "read_addr[15..1]" will be connected to GND. ;
+; re        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.        ;
++-----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|ALU:alu"                                                                                                                                                                    ;
++------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                                                                           ;
++------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; operationControl ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; carry            ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
+; low              ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
+; overflow         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
+; zero             ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
+; negative         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
++------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|ALUControl:controller"                                                                                                                               ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out  ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (16 bits) it drives.  The 8 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|RegisterFile:registerFile"                                                                                                                                                ;
++------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; register1Address ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; writeData        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
++------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|mux2to1:pcOrAluOutputRamReadMux"                                                                       ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                  ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; out  ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "out[15..1]" have no fanouts ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|mux2to1:writeBackToRegRamOrALUMux"                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath|mux4to1:integerTypeSelectionMux"                                                                                                                                       ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in1        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "in1[15..8]" will be connected to GND.                                       ;
+; in4        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in4[15..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Datapath:dataPath"                                                                                                                                                          ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                                                                                                                                      ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; instruction          ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "instruction[15..8]" will be connected to GND.        ;
+; registerWriteAddress ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "registerWriteAddress[3..1]" will be connected to GND. ;
++----------------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder:decoder"                                                                                                                                    ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                                ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+; outputInstruction ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "outputInstruction[15..8]" have no fanouts ;
++-------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM:fsm"                                                                                                                                                                                           ;
++-----------------------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                              ; Type   ; Severity ; Details                                                                                                                                                               ;
++-----------------------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; pcIncrementOrWrite                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; integerTypeSelectionLine          ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (2 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; pcOrAluOutputRamReadSelectionLine ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; registerWriteAddress              ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (4 bits) it drives; bit(s) "registerWriteAddress[15..4]" have no fanouts                             ;
+; registerWriteAddress              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; ramReadEnable                     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; irReadEnable                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
+; instructionRegisterValue          ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "instructionRegisterValue[15..1]" have no fanouts                         ;
+; instructionRegisterValue          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
++-----------------------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Oct 27 13:26:57 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU_ECE3710_RegFile_and_ALU -c CPU_ECE3710_RegFile_and_ALU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mux4to1.v
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: Datapath File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file blockram.v
+    Info (12023): Found entity 1: BlockRam File: C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
+    Info (12023): Found entity 1: ALUControl File: C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
+    Info (12023): Found entity 1: ProgramCounter File: C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file zeroextender.v
+    Info (12023): Found entity 1: ZeroExtender File: C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file signextender.v
+    Info (12023): Found entity 1: SignExtender File: C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file luishift.v
+    Info (12023): Found entity 1: LUIShift File: C:/Users/kenne/Documents/ECE 3710/Project/LUIShift.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
+    Info (12023): Found entity 1: Decoder File: C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v Line: 563
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: CPU File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
+    Info (12023): Found entity 1: FSM File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(24): created implicit net for "ramReadAddress" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(13): created implicit net for "pcEnable" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(13): created implicit net for "pcIncrementOrSet" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(15): created implicit net for "ramReadEnable" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(15): created implicit net for "irReadEnable" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(15): created implicit net for "instructionRegisterValue" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(20): created implicit net for "pcAluOut" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(21): created implicit net for "regWriteAddr" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 21
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(10): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 10
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(16): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 16
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(18): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 18
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Warning (10858): Verilog HDL warning at CPU.v(3): object jalRegister used but never assigned File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 3
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(7): object "jalAddrLine" assigned a value but never read File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 7
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 15
+Warning (10270): Verilog HDL Case Statement warning at FSM.v(104): incomplete case statement has no default case item File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 104
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(20): inferring latch(es) for variable "ramReadEnable", which holds its previous value in one or more paths through the always construct File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 20
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(20): inferring latch(es) for variable "irReadEnable", which holds its previous value in one or more paths through the always construct File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 20
+Warning (10034): Output port "instructionRegisterValue" at FSM.v(12) has no driver File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 12
+Info (10041): Inferred latch for "irReadEnable" at FSM.v(20) File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 20
+Info (10041): Inferred latch for "ramReadEnable" at FSM.v(20) File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 20
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:PC" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 16
+Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(9): truncated value with size 32 to match size of target (16) File: C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v Line: 9
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 17
+Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:dataPath" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 21
+Info (12128): Elaborating entity "mux4to1" for hierarchy "Datapath:dataPath|mux4to1:integerTypeSelectionMux" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 15
+Info (12128): Elaborating entity "mux2to1" for hierarchy "Datapath:dataPath|mux2to1:reg2OrImmediateMux" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 17
+Info (12128): Elaborating entity "SignExtender" for hierarchy "Datapath:dataPath|SignExtender:immediateSignExtender" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 27
+Info (12128): Elaborating entity "ZeroExtender" for hierarchy "Datapath:dataPath|ZeroExtender:immediateZeroExtender" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 28
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "Datapath:dataPath|RegisterFile:registerFile" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 32
+Warning (10230): Verilog HDL assignment warning at RegisterFile.v(20): truncated value with size 32 to match size of target (16) File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 20
+Warning (10230): Verilog HDL assignment warning at RegisterFile.v(21): truncated value with size 32 to match size of target (16) File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 21
+Info (12128): Elaborating entity "ALUControl" for hierarchy "Datapath:dataPath|ALUControl:controller" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 35
+Warning (10270): Verilog HDL Case Statement warning at ALUControl.v(10): incomplete case statement has no default case item File: C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v Line: 10
+Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:dataPath|ALU:alu" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 37
+Warning (10272): Verilog HDL Case Statement warning at ALU.v(290): case item expression covers a value already covered by a previous case item File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 290
+Info (12128): Elaborating entity "BlockRam" for hierarchy "Datapath:dataPath|BlockRam:blockRam" File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 41
+Warning (10850): Verilog HDL warning at BlockRam.v(17): number of words (65535) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v Line: 17
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Datapath:dataPath|programCounter[15]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[14]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[13]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[12]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[11]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[10]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[9]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[8]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[7]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[6]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[5]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[4]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[3]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[2]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[1]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|programCounter[0]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 9
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[15]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[14]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[13]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[12]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[11]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[10]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[9]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+    Warning (12110): Net "Datapath:dataPath|operationControlLine[8]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 11
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "intSel[1]" is missing source, defaulting to GND File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 10
+Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 2
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 2
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Sun Oct 27 13:27:08 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
+
+

@@ -7,14 +7,14 @@ module BlockRam
 (
 	input [(DATA_WIDTH-1):0] data,
 	input [(ADDR_WIDTH-1):0] read_addr, write_addr,
-	input we, clk,
+	input we, re, clk,
 	output reg [(DATA_WIDTH-1):0] q
 );
 
 	// Declare the RAM variable
 	reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];
 	initial begin
-		$readmemh("initialHex.dat", ram);
+		$readmemh("explode.dat", ram);
 	end
 	always @ (posedge clk)
 	begin
@@ -26,7 +26,8 @@ module BlockRam
 		// NEW data, use = (blocking write) rather than <= (non-blocking write)
 		// in the write assignment.	 NOTE: NEW data may require extra bypass
 		// logic around the RAM.
-		q <= ram[read_addr];
+		if(re)
+			q <= ram[read_addr];
 	end
 
 endmodule

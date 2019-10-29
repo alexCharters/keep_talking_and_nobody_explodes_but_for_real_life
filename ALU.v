@@ -1,9 +1,10 @@
 //ALU for project. Right now, everything expects 16 bit values
 module ALU
 	#(parameter WIDTH = 16, ctlLen = 8)
-	(sourceData, destData, operationControl, carry, low, overflow, zero, negative, result);
+	(enable, sourceData, destData, operationControl, carry, low, overflow, zero, negative, result);
 		input [(WIDTH - 1) : 0] sourceData, destData;
 		input [(ctlLen - 1) : 0] operationControl;
+		input enable;
 		//Series of valid operation higher order bits (7:4)
 		parameter RTYPE = 4'b0000, ADDI = 4'b0101, ADDUI = 4'b0110, SUBI = 4'b1001, SUBCI = 4'b1010,
 		CMPI = 4'b1011, ANDI = 4'b0001, ORI = 4'b0010, XORI = 4'b0011, MOVI = 4'b1101, LUI = 4'b1111,
@@ -23,6 +24,7 @@ module ALU
 		output reg [(WIDTH - 1): 0] result;
 		//Next, grab the requested operation from the control line (high bits first for determining op)
 		always@(*) begin
+
 		carry = 0;
 		low = 0; 
 		overflow = 0;
@@ -277,7 +279,7 @@ module ALU
 				negative = 0;
 			end
 			LUI: begin
-				resWire = sourceData << 8;
+				resWire = {sourceData, 8'b00000000};
 				carry = 0;
 				low = 0;
 				overflow = 0;
@@ -305,6 +307,7 @@ module ALU
 				resWire = 0;
 			end
 		endcase
-		result = resWire[(WIDTH - 1): 0];
+		if(enable)
+			result = resWire[(WIDTH - 1): 0];
 		end
 endmodule

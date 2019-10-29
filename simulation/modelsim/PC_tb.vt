@@ -1,0 +1,29 @@
+module PC_tb();
+    reg reset, clock;
+    reg incOrSet;
+    reg [15:0] newAddress;
+    wire [15:0] currentInstruction;
+    ProgramCounter PC(.clock(clock), .reset(reset), .incOrSet(incOrSet), .newAddress(newAddress), .currentInstruction(currentInstruction));
+
+    initial begin
+        reset = 0;
+        incOrSet = 0;
+        newAddress = 16'hffff;
+        clock = 0;
+        #1;
+        reset = 1;
+        if(currentInstruction != 0)
+            $display("Initial reset for PC failed.");
+        #1;
+        if(currentInstruction != 1)
+            $display("PC Increment after reset failed.");
+        #1;
+        if(currentInstruction != 2)
+            $display("PC Increment failed on second iteration.");
+        incOrSet = 1;
+        #1;
+        if(currentInstruction != 16'hffff)
+            $display("PC set address failed.");
+    end
+
+endmodule

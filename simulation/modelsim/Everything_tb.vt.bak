@@ -1,0 +1,49 @@
+module Everything();
+wire [15:0] instruction, encryptedInstruction, aluOut, pcIndex, ramReadAddr, ramWriteAddr, r1Data, r2Data, regFileData, aluSrc1, aluSrc2,
+    selectedImmediate, decRamWriteAddr, registerWriteAddress, irRe, irVal, signExtended, zeroExtended;
+wire [7:0] aluOpCode;
+wire psrC, psrL, psrO, psrZ, psrN, r2Im;
+wire [1:0] intSel;
+reg clock, reset;
+wire pcEn, pcIncSet, brWe, brRe, ramReadPCAlu, regFileWriteAluRam, rfWe, pcRegSel, pcAluSel, addrRegDecSel, aluEn;
+reg [4:0] psr = 5'b00000;
+FSM fsm(
+    .clock(clock), .reset(reset), .opcode(instruction), .psr({psrN, psrZ, psrO, psrL, psrC}), .pcEnable(pcEn), .pcIncrementOrWrite(pcIncSet), .blockRamWriteEnable(brWe), 
+    .registerFileWriteEnable(rfWe), .integerTypeSelectionLine(intSel), .reg2OrImmediateSelectionLine(r2Im), 
+    .pcOrRegisterSelectionLine(pcRegSel), .addressFromRegOrDecoderSelectionLine(addrRegDecSel), .writeBackToRegRamOrALUSelectionLine(regFileWriteAluRam), 
+    .pcOrAluOutputRamReadSelectionLine(pcAluSel), 
+    .decoderRamWriteAddress(decRamWriteAddr), .registerWriteAddress(registerWriteAddress), .ramReadEnable(brRe), .irReadEnable(irRe), 
+    .instructionRegisterValue(irVal), .aluEnable(aluEn)
+);
+ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSet), .newAddress(aluOut), .currentInstruction(pcIndex));
+//Need to tie pcIndex, aluOut to ramReadAddr
+mux2to1 ramReadMux(.in1(pcIndex), .in2(aluOut), .select(ramReadPCAlu), .out(ramReadAddr));
+BlockRam ram(.data(aluOut), .read_addr(ramReadAddr), .write_addr(r2Data), .we(brWe), .re(brRe), .clk(clock), .q(encryptedInstruction));
+//select regfile data source mux
+mux2to1 regWriteDataMux(.in1(encryptedInstruction), .in2(aluOut), .select(regFileWriteAluRam), .out(regFileData));
+RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(instruction[11:8]), .register2Address(instruction[3:0]), .writeAddress(instruction[11:8]), 
+    .writeData(regFileData), .register1Data(r1Data), .register2Data(r2Data));
+Decoder decoder(.inputInstruction(encryptedInstruction), .outputInstruction(instruction));
+ALUControl controller(.instruction(instruction), .out(aluOpCode));
+//choose pc or register1 data 
+mux2to1 pcReg1Mux(.in1(pcIndex), .in2(r1Data), .select(pcAluSel), .out(aluSrc1));
+SignExtender sextnd(.immediate(instruction[7:0]), .extended(signExtended));
+ZeroExtender zextnd(.immediate(instruction[7:0]), .result(zeroExtended));
+// choose immediate type
+mux4to1 immediateTypeMux(.in1(instruction[7:0]), .in2(signExtended), .in3(zeroExtended), .in4(0), .select(intSel), .out(selectedImmediate));
+// choose reg2 data or immediate
+mux2to1 reg2ImmMux(.in1(r2Data), .in2(selectedImmediate), .select(r2Im), .out(aluSrc2));
+ALU alu(.enable(aluEn), .sourceData(aluSrc1), .destData(aluSrc2), .operationControl(aluOpCode), .carry(psrC), .low(psrL), .overflow(psrO), .zero(psrZ), 
+    .negative(psrN), .result(aluOut));
+//set psr? How
+//psr = {psrN, psrZ, psrO, psrL, psrC};
+initial begin
+    clock = 0;
+    reset = 0;
+    #10;
+    reset = 1;
+    #30;
+    $stop;
+end
+always #5 clock = ~clock;
+endmodule

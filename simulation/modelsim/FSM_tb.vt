@@ -1,0 +1,41 @@
+/*
+    Please note that this testbench assumes the explode.dat has the contents provided, not something custom.
+*/
+
+module FSM_tb();
+    reg clock, reset;
+    wire [1:0] currentState;
+    wire pcEn, pcIncSet, brWe, rfWe, r2Im, pcRegSel, wbRamAlu, pcAluOut, intSel, ramReadEnable, irReadEnable;
+    wire [15:0] irVal, decRamAddr, addrRegDec, instruction, ramReadAddr;
+    wire [3:0] registerWriteAddress;
+    reg [15:0] opcode;
+    FSM fsm(clock, reset, opcode, pcEn, pcIncSet, brWe, rfWe, intSel, r2Im, 
+    pcRegSel, addrRegDec, wbRamAlu, pcAluOut, 
+    decRamAddr, registerWriteAddress, ramReadEnable, irReadEnable, irVal);
+    ProgramCounter pc(.clock(clock), .reset(reset), .incOrSet(pcIncSet), .enable(pcEn), .newAddress(pcAddrIn), .currentInstruction(ramReadAddr));
+    BlockRam br(.data(0), .read_addr(ramReadAddr), .write_addr(ramReadAddr), .re(ramReadEnable), .we(brWe), .clk(clock), .q(instruction));
+    initial begin
+        clock = 0;
+        reset = 0;
+        #10;
+        reset = 1'b1;
+        #10;
+        //Do IF
+        if(ramReadAddr != 0)
+            $display("Initial ram read address is in a spot other than 0");
+        #10;
+        if(instruction != 16'b1101001100000001)
+            $display("Failed to retrieve instruction from ram.");
+        #10;
+        if(instruction != 16'b1101001100000001)
+            $display("Instruction is mutated when state is changed in the FSM");
+        #10;
+        if(instruction != 16'b1101001100000001)
+            $display("Instruction is mutated when state is changed in the FSM");
+        #10;
+        if(instruction != 16'b1101001100000001)
+            $display("Instruction is mutated when state is changed in the FSM");
+        $stop;
+    end
+    always #5 clock = ~clock;
+endmodule

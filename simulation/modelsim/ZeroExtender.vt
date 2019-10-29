@@ -1,0 +1,17 @@
+`timescale 1 ps / 1 ps
+module ZeroExtenderTest();
+    reg [7:0] immediate;
+    wire [15:0] result;
+    ZeroExtender zx(immediate, result);
+    initial begin
+        immediate = 0;
+        #1;
+        if(result != 0)
+            $display("Failed to reset");
+        immediate = 128;
+        #1;
+        if(result != 16'b0000000010000000)
+            $display("Zero extend did not add zeros!");
+        $display("Testing end.");
+    end
+endmodule

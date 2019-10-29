@@ -1,0 +1,21 @@
+`timescale 1 ps / 1 ps
+module SignExtenderTest();
+    reg [7:0] immediate;
+    wire [15:0] result;
+    SignExtender zx(immediate, result);
+    initial begin
+        immediate = 0;
+        #1;
+        if(result != 0)
+            $display("Failed to reset");
+        immediate = -15;
+        #1;
+        if(result != 16'hFFF1)
+            $display("Sign extend did not add sign!");
+        immediate = 47;
+        #1;
+        if(result != 16'h002f)
+            $display("Sign extend did not add proper sign for positive number.");
+        $display("Testing end.");
+    end
+endmodule
