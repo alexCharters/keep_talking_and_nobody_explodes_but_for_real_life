@@ -571,6 +571,6 @@ module Decoder(inputInstruction, outputInstruction);
             end
         endcase
         if(inputInstruction == 16'b0000000000000000)
-            outputInstruction = 0000000000100000;
+            outputInstruction = 16'b0000000000100000;
     end
 endmodule

@@ -2,7 +2,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
     pcOrRegisterSelectionLine, addressFromRegOrDecoderSelectionLine, writeBackToRegRamOrALUSelectionLine, pcOrAluOutputRamReadSelectionLine, 
     decoderRamWriteAddress, registerWriteAddress, ramReadEnable, irReadEnable, aluEnable, instructionRegisterValue);
     input clock, reset;
-    input [3:0] psr;
+    input [4:0] psr;
     input [15:0] opcode; //pass the full instruction to handle addressing
     reg [2:0] nextState = 0;
     reg [2:0] currentState = 0;
@@ -377,7 +377,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                         nextState = IF;
                         pcIncrementOrWrite = 0;
                         pcEnable = 1;
-                        writeBackToRegRamOrALUSelectionLine = 1; //write from ALU
+                        writeBackToRegRamOrALUSelectionLine = 0; //write from ALU
                     end
                 endcase
                 nextState = IF;

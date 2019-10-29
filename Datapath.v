@@ -8,8 +8,8 @@ module Datapath(clock, reset, instruction, blockRamWriteEnable, blockRamReadEnab
 	//Setup Program Counter
 	reg [15:0] programCounter;
 	wire [15:0] signExtendedImmediate, zeroExtendedImmediate, selectedImmediateType, firstInputToAlu, secondInputToAlu, ramWriteAddress;
-	wire [15:0] reg1Data, reg2Data, ramReadData, aluOutput, regFileInputData, operationControlLine;
-	input [3:0] registerWriteAddress;
+	wire [15:0] reg1Data, reg2Data, ramReadData, aluOutput, regFileInputData, operationControlLine, ramReadAddress;
+	input [3:0] registerWriteAddress;	
 	//Setup all needed muxes
 	mux4to1 integerTypeSelectionMux(.in1(instruction[7:0]), .in2(signExtendedImmediate), .in3(zeroExtendedImmediate), 
 		.in4(0), .select(integerTypeSelectionLine), .out(selectedImmediateType));

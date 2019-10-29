@@ -20,7 +20,7 @@ ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSe
 mux2to1 ramReadMux(.in1(pcIndex), .in2(aluOut), .select(ramReadPCAlu), .out(ramReadAddr));
 BlockRam ram(.data(aluOut), .read_addr(ramReadAddr), .write_addr(r2Data), .we(brWe), .re(brRe), .clk(clock), .q(encryptedInstruction));
 //select regfile data source mux
-mux2to1 regWriteDataMux(.in1(encryptedInstruction), .in2(aluOut), .select(regFileWriteAluRam), .out(regFileData));
+mux2to1 regWriteDataMux(.in1(signExtended), .in2(aluOut), .select(regFileWriteAluRam), .out(regFileData));
 RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(instruction[11:8]), .register2Address(instruction[3:0]), .writeAddress(instruction[11:8]), 
     .writeData(regFileData), .register1Data(r1Data), .register2Data(r2Data));
 Decoder decoder(.inputInstruction(encryptedInstruction), .outputInstruction(instruction));
@@ -42,8 +42,8 @@ initial begin
     reset = 0;
     #10;
     reset = 1;
-    #20;
-    $stop;
+    #50;
+    //$stop;
 end
 always #5 clock = ~clock;
 endmodule
