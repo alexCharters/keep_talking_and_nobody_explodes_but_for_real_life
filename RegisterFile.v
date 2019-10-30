@@ -11,10 +11,10 @@ module RegisterFile
 	//Set the regfile to respond to pos clock edge for handling read and writes
 	integer i = 0;
 	always @ (posedge clock) begin
-		if(reset == 0) begin
-			for(i = 0; i <= (1 << REGISTER_BITS) - 1; i = i + 1)
-				DataBlock[i] = 0;
-		end
+		// if(reset == 0) begin
+		// 	for(i = 0; i <= (1 << REGISTER_BITS) - 1; i = i + 1)
+		// 		DataBlock[i] = 0;
+		// end
 
 		if(shouldWrite)
 			DataBlock[writeAddress] <= writeData;

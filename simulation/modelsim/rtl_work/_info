@@ -7,94 +7,94 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim
+Z0 dC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim
 vALU
-Z1 !s110 1572366579
+Z1 !s110 1572460341
 !i10b 1
 !s100 ?UR8fSC]UMbQ[@JH?cnQk1
-IVcK8EaZTgLJLX1`9];KUd2
+I9fOQ76W<YF`5i0B1`okZn2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1572366078
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
+Z3 w1572460268
+8C:/Users/kenne/Documents/ECE 3710/Project/ALU.v
+FC:/Users/kenne/Documents/ECE 3710/Project/ALU.v
 L0 2
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1572366579.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
+Z5 !s108 1572460341.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
 !i113 1
 Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life
+Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/kenne/Documents/ECE 3710/Project}
 Z8 tCvgOpt 0
 n@a@l@u
 vALUControl
 R1
 !i10b 1
 !s100 `F2<RXN5^gc3OzXfFOhX50
-IVShj6n[h@XESXJX8]i_mQ3
+ITOUW7=_Za]fC>f7g3mdoM2
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v
+w1571333151
+8C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v
+FC:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v|
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v|
 !i113 1
 R6
 R7
 R8
 n@a@l@u@control
 vBlockRam
-!s110 1572366583
+!s110 1572462810
 !i10b 1
 !s100 ?7CVX<3@V5K25@]E_ZXW>0
-I_M13QZ93n8Eg?Q5_`RB]D1
+I0_c^[AeijL[C:IWWZ[SiU0
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v
+w1572206566
+8C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v
+FC:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v
 L0 5
 R4
 r1
 !s85 0
 31
-!s108 1572366581.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v|
+!s108 1572462810.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v|
 !i113 1
 R6
 R7
 R8
 n@block@ram
 vCPU
-Z9 !s110 1572366582
+R1
 !i10b 1
 !s100 ?@aXWQXWE6=d6OPY8c5;@2
-I@zTc02[oG8>baJPMd3z;M3
+I@e9lSCdfYif@HS85GjAPE0
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+w1572282177
+8C:/Users/kenne/Documents/ECE 3710/Project/CPU.v
+FC:/Users/kenne/Documents/ECE 3710/Project/CPU.v
 L0 1
 R4
 r1
 !s85 0
 31
-!s108 1572366578.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
+R5
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/CPU.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/CPU.v|
 !i113 1
 R6
 R7
@@ -103,180 +103,224 @@ n@c@p@u
 vDatapath
 R1
 !i10b 1
-!s100 O4n`f[kXfb:OkaJ4oNCeX1
-IQ3SBYgzD`Z<[UH6JlkG:a1
+!s100 @GOWk;6g_oD5Io`dC^YVf1
+IR^ZzE7J]5zWO7Fz0bmbKi0
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v
+Z9 w1572460271
+8C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v
+FC:/Users/kenne/Documents/ECE 3710/Project/Datapath.v
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v|
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v|
 !i113 1
 R6
 R7
 R8
 n@datapath
-vFSM
-R9
+vDecoder
+!s110 1572460381
 !i10b 1
-!s100 V^f8B<CJ:]NVZi`Cn1>@i0
-I8B5bDVMEK6b4A:TS^bh3G1
+!s100 FW<e=DF`?WWDi_X2gSBk<2
+IlNiP2D4:zH]@3oIoSIgdK3
 R2
 R0
-w1572366285
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
+R9
+8C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v
+FC:/Users/kenne/Documents/ECE 3710/Project/Decoder.v
+L0 563
+R4
+r1
+!s85 0
+31
+!s108 1572460380.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v|
+!i113 1
+Z10 o-work work
+R8
+n@decoder
+vEverything
+!s110 1572462872
+!i10b 1
+!s100 NMfkke6id=8]Edk2bLFWE1
+IejCQZ1jJPFAOD7mIKKToH3
+R2
+R0
+w1572462865
+8C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
+FC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
 L0 1
 R4
 r1
 !s85 0
 31
-!s108 1572366582.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
+!s108 1572462871.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
+!i113 1
+R10
+R8
+n@everything
+vFSM
+!s110 1572462679
+!i10b 1
+!s100 XdCk@WiIIH_WIV04`=aVb2
+I>9C@]9eo^33D0m5eO6O9V3
+R2
+R0
+w1572461590
+8C:/Users/kenne/Documents/ECE 3710/Project/FSM.v
+FC:/Users/kenne/Documents/ECE 3710/Project/FSM.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1572462679.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
 !i113 1
 R6
 R7
 R8
 n@f@s@m
 vmux2to1
-!s110 1572366578
+R1
 !i10b 1
 !s100 J=:?<J[mKCc6;;WiSfo0F1
-Ii51M>9O1Kj1RSTo5kaK;13
+IdMgbPNDJ[VA>TJ_dhfabF1
 R2
 R0
-Z10 w1572366081
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
+w1571002722
+8C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v
+FC:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v
 L0 1
 R4
 r1
 !s85 0
 31
-!s108 1572366576.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
+R5
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v|
 !i113 1
 R6
 R7
 R8
 vmux4to1
-!s110 1572366576
+R1
 !i10b 1
 !s100 YXDHFJF?`VQjNmzhK__m03
-IeacR9A1LkLBjV=0anmFQ`1
+IAZF4UYJm[4=UooBHg]WVl0
 R2
 R0
-R10
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+w1571001117
+8C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v
+FC:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v
 L0 1
 R4
 r1
 !s85 0
 31
-!s108 1572366575.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
+!s108 1572460340.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v|
 !i113 1
 R6
 R7
 R8
 vProgramCounter
-Z11 !s110 1572366580
+R1
 !i10b 1
 !s100 =9a4d_WeA@2kl8Lf?azn92
-IIKk:^ZFh;Bf^3HbF?oGm<1
+IYfDf86HAH[1>MMdP]bP3D1
 R2
 R0
 R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
+8C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v
+FC:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z12 !s108 1572366580.000000
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
+R5
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v|
 !i113 1
 R6
 R7
 R8
 n@program@counter
 vRegisterFile
-R1
+!s110 1572461872
 !i10b 1
-!s100 lPWCf_na9z]2PQUZ^=4EP3
-IN`@F@;]@RkUX2SYz_]TP;0
+!s100 BTc?L250=8i_Y=MnnbNMd0
+Ime:Yf[W_7PClBK1gGM8182
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
+w1572461867
+8C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v
+FC:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v
 L0 2
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
+!s108 1572461872.000000
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v|
 !i113 1
 R6
 R7
 R8
 n@register@file
 vSignExtender
-!s110 1572366581
+R1
 !i10b 1
 !s100 @7ocBgbWCido]F^4?hcVb0
-IBBMEXBih@Yn74dLfhc9kC2
+I4k^_O[9N>m2kLS?P[J:KH0
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
+w1570119844
+8C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v
+FC:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
+R5
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v|
 !i113 1
 R6
 R7
 R8
 n@sign@extender
 vZeroExtender
-R11
+R1
 !i10b 1
 !s100 d[o58A`9?SEL>QTU]XkHn2
-IcNMTG:VCA@0QRI3gbZ<aP2
+IeOMIe_48][J;9M<QZg;XG3
 R2
 R0
-R3
-8C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
-FC:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
+w1570119547
+8C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v
+FC:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
+R5
+!s107 C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v|
+!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v|
 !i113 1
 R6
 R7

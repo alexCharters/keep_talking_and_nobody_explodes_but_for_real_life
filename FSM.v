@@ -46,6 +46,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
             //     nextState <= IF;
             // end
             IF: begin
+                $display("IF");
                 //Tell PC to increment or set to new address
                 //store read value in the IR
                 pcEnable = 0; //if we enable the pc here, it will increment.
@@ -54,6 +55,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                 nextState = DECODE;
             end
             DECODE: begin
+                $display("DECODE");
                 //send instruction from IR to Datapath
                 case (opcode[15:12]) //look at the top half of the instruction
                     4'b0000: begin //this is an RType instruction
@@ -108,8 +110,10 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                 nextState = EXECUTE;
             end 
             EXECUTE: begin
+                $display("EXECUTE");
                 // do computation
                 aluEnable = 1;
+                nextState = WRITE_BACK;
                 case (opcode[15:12])
                     4'b0000: begin //RType
                         pcOrRegisterSelectionLine = 1;
@@ -142,6 +146,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                     end 
                     4'b1101: begin //MOVI
                         pcOrRegisterSelectionLine = 1;
+                        
                         reg2OrImmediateSelectionLine = 1;
                         integerTypeSelectionLine = 2'b10;
                         nextState = WRITE_BACK;
@@ -218,10 +223,10 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                         integerTypeSelectionLine = 0;
                         nextState = WRITE_BACK;
                     end
-                    default: nextState = IF;
                 endcase
             end
             WRITE_BACK: begin
+                $display("WB");
                 // enable correct muxes to write values.
                 case (opcode[15:12])
                     4'b0100: begin
@@ -373,6 +378,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                     end
                     default: begin //Most instructions use the same logic to write
                         registerFileWriteEnable = 1;
+                        $display("Here");
                         registerWriteAddress = opcode[11:8];
                         nextState = IF;
                         pcIncrementOrWrite = 0;
