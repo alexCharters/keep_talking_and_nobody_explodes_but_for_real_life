@@ -146,14 +146,13 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                     end 
                     4'b1101: begin //MOVI
                         pcOrRegisterSelectionLine = 1;
-                        
                         reg2OrImmediateSelectionLine = 1;
                         integerTypeSelectionLine = 2'b10;
                         nextState = WRITE_BACK;
                     end
                     4'b0101: begin //ADDI
                         pcOrRegisterSelectionLine = 1;
-                        reg2OrImmediateSelectionLine = 1;
+                        reg2OrImmediateSelectionLine = 1; //FIXME
                         integerTypeSelectionLine = 1;
                         nextState = WRITE_BACK;
                     end

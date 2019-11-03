@@ -124,7 +124,7 @@ module ALU
 							negative = 0;
 						end
 						MOV: begin //MOV HANDLE THIS IN THE CONTROLLER!
-							resWire = sourceData;
+							resWire = destData;
 							carry = 0;
 							low = 0;
 							zero = 0;
@@ -209,7 +209,7 @@ module ALU
 				negative = 0;
 			end
 			SUBI: begin
-				resWire = destData - sourceData;
+				resWire = sourceData - destData;
 				if(destData[WIDTH-1] == sourceData[WIDTH-1])
 					carry = sourceData > destData;
 				low = 0;
@@ -271,7 +271,7 @@ module ALU
 				negative = 0;
 			end
 			MOVI: begin
-				resWire = sourceData;
+				resWire = destData;
 				carry = 0;
 				low = 0;
 				overflow = 0;

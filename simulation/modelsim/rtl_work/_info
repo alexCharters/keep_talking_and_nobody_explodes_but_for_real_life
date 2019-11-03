@@ -9,320 +9,320 @@ z2
 cModel Technology
 Z0 dC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim
 vALU
-Z1 !s110 1572460341
+!s110 1572819375
 !i10b 1
-!s100 ?UR8fSC]UMbQ[@JH?cnQk1
-I9fOQ76W<YF`5i0B1`okZn2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 d15bVc><PUKQljP<n91P11
+IW7ahiWOj5Q>KaeaRDhE?N1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1572460268
+w1572819358
 8C:/Users/kenne/Documents/ECE 3710/Project/ALU.v
 FC:/Users/kenne/Documents/ECE 3710/Project/ALU.v
 L0 2
-Z4 OV;L;10.5b;63
+Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1572460341.000000
+!s108 1572819375.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/kenne/Documents/ECE 3710/Project}
-Z8 tCvgOpt 0
+Z3 o-vlog01compat -work work
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/kenne/Documents/ECE 3710/Project}
+Z5 tCvgOpt 0
 n@a@l@u
 vALUControl
-R1
+Z6 !s110 1572806353
 !i10b 1
 !s100 `F2<RXN5^gc3OzXfFOhX50
 ITOUW7=_Za]fC>f7g3mdoM2
-R2
+R1
 R0
 w1571333151
 8C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v
 FC:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+Z7 !s108 1572806353.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@a@l@u@control
 vBlockRam
-!s110 1572462810
+Z8 !s110 1572806354
 !i10b 1
 !s100 ?7CVX<3@V5K25@]E_ZXW>0
 I0_c^[AeijL[C:IWWZ[SiU0
-R2
+R1
 R0
 w1572206566
 8C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v
 FC:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v
 L0 5
-R4
+R2
 r1
 !s85 0
 31
-!s108 1572462810.000000
+Z9 !s108 1572806354.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@block@ram
 vCPU
-R1
+R8
 !i10b 1
 !s100 ?@aXWQXWE6=d6OPY8c5;@2
 I@e9lSCdfYif@HS85GjAPE0
-R2
+R1
 R0
 w1572282177
 8C:/Users/kenne/Documents/ECE 3710/Project/CPU.v
 FC:/Users/kenne/Documents/ECE 3710/Project/CPU.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+R9
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/CPU.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/CPU.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@c@p@u
 vDatapath
-R1
+R6
 !i10b 1
 !s100 @GOWk;6g_oD5Io`dC^YVf1
 IR^ZzE7J]5zWO7Fz0bmbKi0
-R2
+R1
 R0
-Z9 w1572460271
+Z10 w1572460271
 8C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v
 FC:/Users/kenne/Documents/ECE 3710/Project/Datapath.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+R7
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@datapath
 vDecoder
-!s110 1572460381
+!s110 1572806385
 !i10b 1
 !s100 FW<e=DF`?WWDi_X2gSBk<2
 IlNiP2D4:zH]@3oIoSIgdK3
-R2
+R1
 R0
-R9
+R10
 8C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v
 FC:/Users/kenne/Documents/ECE 3710/Project/Decoder.v
 L0 563
-R4
+R2
 r1
 !s85 0
 31
-!s108 1572460380.000000
+!s108 1572806385.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v|
 !i113 1
-Z10 o-work work
-R8
+Z11 o-work work
+R5
 n@decoder
 vEverything
-!s110 1572462872
+!s110 1572820467
 !i10b 1
-!s100 NMfkke6id=8]Edk2bLFWE1
-IejCQZ1jJPFAOD7mIKKToH3
-R2
+!s100 ;<DkZlAJQ=GHi1KiQTiD[2
+IBS[aR8Rg]9ez`Y`?>X3Xk1
+R1
 R0
-w1572462865
+w1572820365
 8C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
 FC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
-L0 1
-R4
+L0 2
+R2
 r1
 !s85 0
 31
-!s108 1572462871.000000
+!s108 1572820467.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
 !i113 1
-R10
-R8
+R11
+R5
 n@everything
 vFSM
-!s110 1572462679
+!s110 1572818664
 !i10b 1
-!s100 XdCk@WiIIH_WIV04`=aVb2
-I>9C@]9eo^33D0m5eO6O9V3
-R2
+!s100 eF@ZTS>j?<4HGozIACcSl0
+IkVbVEKf:IW5>gAZ`Ra_OJ2
+R1
 R0
-w1572461590
+w1572818626
 8C:/Users/kenne/Documents/ECE 3710/Project/FSM.v
 FC:/Users/kenne/Documents/ECE 3710/Project/FSM.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-!s108 1572462679.000000
+!s108 1572818664.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@f@s@m
 vmux2to1
-R1
+R6
 !i10b 1
 !s100 J=:?<J[mKCc6;;WiSfo0F1
 IdMgbPNDJ[VA>TJ_dhfabF1
-R2
+R1
 R0
 w1571002722
 8C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v
 FC:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+R7
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 vmux4to1
-R1
+R6
 !i10b 1
 !s100 YXDHFJF?`VQjNmzhK__m03
 IAZF4UYJm[4=UooBHg]WVl0
-R2
+R1
 R0
 w1571001117
 8C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v
 FC:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-!s108 1572460340.000000
+R7
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 vProgramCounter
-R1
+R6
 !i10b 1
 !s100 =9a4d_WeA@2kl8Lf?azn92
 IYfDf86HAH[1>MMdP]bP3D1
-R2
+R1
 R0
-R3
+w1572460268
 8C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v
 FC:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+R7
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@program@counter
 vRegisterFile
-!s110 1572461872
+R6
 !i10b 1
-!s100 BTc?L250=8i_Y=MnnbNMd0
-Ime:Yf[W_7PClBK1gGM8182
-R2
+!s100 ?4g@OSn1>Rde@XZMAYPYf1
+IBRB1<a5m:?<d09Ve2KG^T3
+R1
 R0
-w1572461867
+w1572488593
 8C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v
 FC:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v
 L0 2
-R4
+R2
 r1
 !s85 0
 31
-!s108 1572461872.000000
+R7
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@register@file
 vSignExtender
-R1
+R8
 !i10b 1
 !s100 @7ocBgbWCido]F^4?hcVb0
 I4k^_O[9N>m2kLS?P[J:KH0
-R2
+R1
 R0
 w1570119844
 8C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v
 FC:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+R9
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@sign@extender
 vZeroExtender
-R1
+R6
 !i10b 1
 !s100 d[o58A`9?SEL>QTU]XkHn2
 IeOMIe_48][J;9M<QZg;XG3
-R2
+R1
 R0
 w1570119547
 8C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v
 FC:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
-R5
+R7
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v|
 !i113 1
-R6
-R7
-R8
+R3
+R4
+R5
 n@zero@extender
