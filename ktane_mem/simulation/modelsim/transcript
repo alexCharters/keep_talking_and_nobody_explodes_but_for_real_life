@@ -1,30 +1,123 @@
 # Compile of ktane_mem.vt was successful.
-vsim ktane_mem_work.ktane_mem_vlg_tst
-# vsim ktane_mem_work.ktane_mem_vlg_tst 
-# Start time: 11:37:42 on Oct 13,2019
-# Loading ktane_mem_work.ktane_mem_vlg_tst
-# Loading ktane_mem_work.ktane_mem
-# Loading ktane_mem_work.dual_port_ram
-# Loading ktane_mem_work.button_mem
-# Loading ktane_mem_work.rgb_led
-# Loading ktane_mem_work.keypad_mem
-# Loading ktane_mem_work.morse_mem
-# Loading ktane_mem_work.sevseg
-# Loading ktane_mem_work.wire_mem
-# Loading ktane_mem_work.extras_mem
-# Loading ktane_mem_work.mux5
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v(14): [PCDPC] - Port size (7) does not match connection size (1) for port 'sev'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/morse_mem/s1 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
-# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v(15): [PCDPC] - Port size (7) does not match connection size (1) for port 'sev'. The port definition is at: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/morse_mem/s2 File: C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
-# Error opening C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/[PCDPC] - Port size (7) does not match connection size 
-# Path name 'C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/[PCDPC] - Port size (7) does not match connection size ' doesn't exist.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
 # Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+vlib work
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v failed with 1 errors.
+# Compile of sec_to_sevseg.v failed with 1 errors.
+# 13 compiles, 2 failed with 2 errors.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of sec_to_sevseg.v failed with 2 errors.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
 vsim ktane_mem_work.ktane_mem_vlg_tst
-# End time: 11:39:07 on Oct 13,2019, Elapsed time: 0:01:25
-# Errors: 1, Warnings: 2
 # vsim ktane_mem_work.ktane_mem_vlg_tst 
-# Start time: 11:39:08 on Oct 13,2019
+# Start time: 12:38:34 on Oct 24,2019
 # Loading ktane_mem_work.ktane_mem_vlg_tst
 # Loading ktane_mem_work.ktane_mem
 # Loading ktane_mem_work.dual_port_ram
@@ -35,41 +128,89 @@ vsim ktane_mem_work.ktane_mem_vlg_tst
 # Loading ktane_mem_work.sevseg
 # Loading ktane_mem_work.wire_mem
 # Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
 # Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
 add wave -position insertpoint  \
 sim:/ktane_mem_vlg_tst/writeEn \
+sim:/ktane_mem_vlg_tst/treg_sda \
+sim:/ktane_mem_vlg_tst/timer_sevseg3 \
+sim:/ktane_mem_vlg_tst/timer_sevseg2 \
+sim:/ktane_mem_vlg_tst/timer_sevseg1 \
+sim:/ktane_mem_vlg_tst/strike_leds \
+sim:/ktane_mem_vlg_tst/sda \
+sim:/ktane_mem_vlg_tst/scl \
 sim:/ktane_mem_vlg_tst/q \
+sim:/ktane_mem_vlg_tst/morse_tx \
+sim:/ktane_mem_vlg_tst/morse_sevseg2 \
+sim:/ktane_mem_vlg_tst/morse_sevseg1 \
+sim:/ktane_mem_vlg_tst/morse_right \
+sim:/ktane_mem_vlg_tst/morse_left \
+sim:/ktane_mem_vlg_tst/morse_led \
 sim:/ktane_mem_vlg_tst/led2 \
 sim:/ktane_mem_vlg_tst/led1 \
+sim:/ktane_mem_vlg_tst/keypad_leds \
+sim:/ktane_mem_vlg_tst/keypad_TR \
+sim:/ktane_mem_vlg_tst/keypad_TL \
+sim:/ktane_mem_vlg_tst/keypad_LR \
+sim:/ktane_mem_vlg_tst/keypad_LL \
 sim:/ktane_mem_vlg_tst/en \
 sim:/ktane_mem_vlg_tst/data \
 sim:/ktane_mem_vlg_tst/clk \
+sim:/ktane_mem_vlg_tst/button \
 sim:/ktane_mem_vlg_tst/addr
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Alex  Hostname: ALEXS_PC  ProcessID: 18880
+#           Attempting to use alternate WLF file "./wlftfx83ty".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfx83ty
 run -all
 # ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
 # No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
 #    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
 # Running testbench
 # Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
 restart
-# Loading ktane_mem_work.ktane_mem_vlg_tst
-run -all
-# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
-#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
-# Running testbench
-restart
-# Compile of ktane_mem.vt was successful.
-run -all
-# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
-#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
-# Running testbench
-vsim ktane_mem_work.ktane_mem_vlg_tst
-# End time: 11:44:11 on Oct 13,2019, Elapsed time: 0:05:03
-# Errors: 0, Warnings: 3
-# vsim ktane_mem_work.ktane_mem_vlg_tst 
-# Start time: 11:44:11 on Oct 13,2019
 # Loading ktane_mem_work.ktane_mem_vlg_tst
 # Loading ktane_mem_work.ktane_mem
 # Loading ktane_mem_work.dual_port_ram
@@ -80,17 +221,375 @@ vsim ktane_mem_work.ktane_mem_vlg_tst
 # Loading ktane_mem_work.sevseg
 # Loading ktane_mem_work.wire_mem
 # Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
 # Loading ktane_mem_work.mux5
-add wave -position insertpoint  \
-sim:/ktane_mem_vlg_tst/writeEn \
-sim:/ktane_mem_vlg_tst/led2 \
-sim:/ktane_mem_vlg_tst/led1 \
-sim:/ktane_mem_vlg_tst/en \
-sim:/ktane_mem_vlg_tst/data \
-sim:/ktane_mem_vlg_tst/clk \
-sim:/ktane_mem_vlg_tst/addr
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
 run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 # ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
 # No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
 #    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
 # Running testbench
+# Compile of ktane_mem.vt failed with 1 errors.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 1 failed with 1 error.
+# Error opening C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/(vlog-13069) C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt
+# Path name 'C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/(vlog-13069) C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt' doesn't exist.
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
+# Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+add wave -position insertpoint  \
+sim:/ktane_mem_vlg_tst/i1/extras_mem/t1/set \
+sim:/ktane_mem_vlg_tst/i1/extras_mem/t1/secLeft \
+sim:/ktane_mem_vlg_tst/i1/extras_mem/t1/sec \
+sim:/ktane_mem_vlg_tst/i1/extras_mem/t1/counter
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
+# Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
+run -all
+restart
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
+# Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/ktane_mem_vlg_tst/i1/extras_mem/t1/sec
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
+# Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# Compile of ktane_mem.vt was successful.
+# Compile of wire_mem.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of dual_port_ram.v was successful.
+# Compile of extras_mem.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of timer.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# Loading ktane_mem_work.ktane_mem_vlg_tst
+# Loading ktane_mem_work.ktane_mem
+# Loading ktane_mem_work.dual_port_ram
+# Loading ktane_mem_work.button_mem
+# Loading ktane_mem_work.rgb_led
+# Loading ktane_mem_work.keypad_mem
+# Loading ktane_mem_work.morse_mem
+# Loading ktane_mem_work.sevseg
+# Loading ktane_mem_work.wire_mem
+# Loading ktane_mem_work.extras_mem
+# Loading ktane_mem_work.timer
+# Loading ktane_mem_work.sec_to_sevseg
+# Loading ktane_mem_work.mux5
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Too few port connections. Expected 9, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/wires_mem File: C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v(78): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v(20): [PCDPC] - Port size (16) does not match connection size (1) for port 'secLeft'. The port definition is at: C:/intelFPGA_lite/18.1/timer/timer.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1 File: C:/intelFPGA_lite/18.1/timer/timer.v
+# ** Warning: (vsim-3015) C:/intelFPGA_lite/18.1/timer/timer.v(13): [PCDPC] - Port size (17) does not match connection size (16) for port 'sec'. The port definition is at: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/extras_mem/t1/s1 File: C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "init.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v(19)
+#    Time: 0 ps  Iteration: 0  Instance: /ktane_mem_vlg_tst/i1/ram
+# Running testbench
+# End time: 12:50:51 on Oct 25,2019, Elapsed time: 24:12:17
+# Errors: 1, Warnings: 114

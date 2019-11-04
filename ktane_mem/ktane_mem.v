@@ -1,4 +1,4 @@
-module ktane_mem(//data,
+module ktane_mem(data,
 	//addr,
 	we,
 	en,
@@ -23,14 +23,15 @@ module ktane_mem(//data,
 	timer_sevseg1,
 	timer_sevseg2,
 	timer_sevseg3,
-	strike_leds);
+	strike_leds,
+	debug_leds);
 parameter DATA_WIDTH=16;
 parameter ADDR_WIDTH=16;
 
-//input [(DATA_WIDTH-1):0] data;
+input [(DATA_WIDTH-1):0] data;
 //input [(ADDR_WIDTH-1):0] addr;
-parameter data = 16'b0000000001000011;
-parameter addr = 16'd998;
+//parameter data = 16'b0000000001000011;
+parameter addr = 16'hF330;
 input we, clk, en;
 
 input button, morse_left, morse_right, morse_tx, keypad_TL, keypad_TR, keypad_LL, keypad_LR;
@@ -43,6 +44,7 @@ output [3:0] keypad_leds;
 output [2:0] led1, led2, strike_leds;
 
 output [6:0] morse_sevseg1, morse_sevseg2, timer_sevseg1, timer_sevseg2, timer_sevseg3;
+output [8:0] debug_leds;
 
 reg ram_en, button_en, keypad_en, morse_en, wires_en, extra_en;
 
@@ -135,6 +137,14 @@ always @ (posedge clk) begin
 			extra_en <= 1;
 			output_sel <= 3'b100;
 		end
+	end
+	else begin
+		ram_en <= 0;
+		button_en <= 0;
+		keypad_en <= 0;
+		morse_en <= 0;
+		wires_en <= 0;
+		extra_en <= 0;
 	end
 end
 endmodule

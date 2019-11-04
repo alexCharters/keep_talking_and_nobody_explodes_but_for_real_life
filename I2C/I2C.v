@@ -74,8 +74,8 @@ module I2C (
     input  wire [15:0] prescale,
     input  wire        stop_on_idle,
 	 
-	 output wire [4:0]  state,
-	 output wire [8:0]  debug_leds
+	 output wire [4:0]  state
+	 //output wire [8:0]  debug_leds
 );
 
 /*
@@ -153,7 +153,7 @@ scl_o should not be connected directly to scl_i, only via AND logic or a tristat
 I/O pin.  This would prevent devices from stretching the clock period.
 */
 
-assign debug_leds = {sda_o, scl_o, state_reg};
+//assign debug_leds = {sda_o, scl_o, state_reg};
 
 localparam [4:0]
     STATE_IDLE = 4'd0,

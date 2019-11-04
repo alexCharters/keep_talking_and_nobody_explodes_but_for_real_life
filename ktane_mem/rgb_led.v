@@ -9,9 +9,9 @@ reg [4:0] r_copy, g_copy, b_copy;
 always @ (posedge clk)
 begin
   if(set) begin
-	r_copy <= r;
-	g_copy <= g;
-	b_copy <= b;
+		r_copy <= r;
+		g_copy <= g;
+		b_copy <= b;
   end
 
   counter <= counter + 1;

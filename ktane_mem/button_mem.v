@@ -44,6 +44,11 @@ always @ (posedge clk)
 					setStrip <= 0;
 				end	
 			end
+			else begin
+				setWord <= 0;
+				setColor <= 0;
+				setStrip <= 0;
+			end
 
 			if(addr >= 16'hF330 && addr < 16'hF663) begin
 				q <= {morse_left, morse_right, morse_tx, keypad_TL, keypad_TR, keypad_LL, keypad_LR, button_bigButton, 8'b00000000};
@@ -51,6 +56,11 @@ always @ (posedge clk)
 			else begin
 				q <= 16'h0000;
 			end
+		end
+		else begin
+			setWord <= 0;
+			setColor <= 0;
+			setStrip <= 0;
 		end
 	end
 

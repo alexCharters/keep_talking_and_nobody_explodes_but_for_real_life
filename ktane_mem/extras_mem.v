@@ -17,7 +17,7 @@ reg numStrikes;
 
 assign leds = numStrikes;
 
-timer t1(.sec(data), .set(setTimer), .secLeft(secLeft), .sevseg1(sevseg1), .sevseg2(sevseg2), .sevseg3(sevseg3));
+timer t1(.sec(data), .set(setTimer), .secLeft(secLeft), .clk(clk), .sevseg1(sevseg1), .sevseg2(sevseg2), .sevseg3(sevseg3));
 //strikes s1(.write(data), .set(setStrikes), .leds(numStrikes));
 
 always @ (posedge clk)
@@ -38,6 +38,10 @@ always @ (posedge clk)
 					setTimer <= 0;
 				end	
 			end
+			else begin
+				setStrikes <= 0;
+				setTimer <= 0;
+			end
 
 			if(addr >= 16'hF330 && addr < 16'hF663) begin
 				q <= secLeft;
@@ -48,6 +52,10 @@ always @ (posedge clk)
 			else begin
 				q <= 16'h0000;
 			end
+		end
+		else begin
+			setStrikes <= 0;
+			setTimer <= 0;
 		end
 	end
 	

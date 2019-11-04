@@ -1,0 +1,735 @@
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim oled_i2c_work.oled_i2c_vlg_tst
+# vsim oled_i2c_work.oled_i2c_vlg_tst 
+# Start time: 18:20:28 on Nov 01,2019
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.divider
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/treg_sda \
+sim:/oled_i2c_vlg_tst/sda \
+sim:/oled_i2c_vlg_tst/scl \
+sim:/oled_i2c_vlg_tst/rst \
+sim:/oled_i2c_vlg_tst/dataReady \
+sim:/oled_i2c_vlg_tst/data \
+sim:/oled_i2c_vlg_tst/counter \
+sim:/oled_i2c_vlg_tst/clk \
+sim:/oled_i2c_vlg_tst/CS
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Alex  Hostname: ALEXS_PC  ProcessID: 13432
+#           Attempting to use alternate WLF file "./wlftm8eyfz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm8eyfz
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "glyph1.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+run -all
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/data_counter
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/data_byte_counter
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/data_packet_counter
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v failed with 1 errors.
+# Compile of I2C.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "glyph1.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful with warnings.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "glyph1.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful with warnings.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "glyph1.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful with warnings.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+run -all
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "glyph1.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+# A time value could not be extracted from the current line
+# Compile of oled_i2c.v was successful with warnings.
+restart
+# Loading oled_i2c_work.oled_i2c
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-7) Failed to open readmem file "glyph1.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 35 of file "glyph1.txt". (Current address [34], address range [0:33])    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful with warnings.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 35 of file "glyph1.txt". (Current address [34], address range [0:33])    : C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v(32)
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1
+# Running testbench
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful with warnings.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/CS
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+# Compile of oled_i2c.v was successful.
+restart
+# Loading oled_i2c_work.oled_i2c
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+# Compile of oled_i2c.v was successful.
+restart
+# Loading oled_i2c_work.oled_i2c
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/stop_on_idle \
+sim:/oled_i2c_vlg_tst/i1/state \
+sim:/oled_i2c_vlg_tst/i1/sda_t \
+sim:/oled_i2c_vlg_tst/i1/sda_o \
+sim:/oled_i2c_vlg_tst/i1/sda_i \
+sim:/oled_i2c_vlg_tst/i1/SDA \
+sim:/oled_i2c_vlg_tst/i1/scl_t \
+sim:/oled_i2c_vlg_tst/i1/scl_o \
+sim:/oled_i2c_vlg_tst/i1/scl_i \
+sim:/oled_i2c_vlg_tst/i1/SCL \
+sim:/oled_i2c_vlg_tst/i1/rw \
+sim:/oled_i2c_vlg_tst/i1/rst \
+sim:/oled_i2c_vlg_tst/i1/prescale \
+sim:/oled_i2c_vlg_tst/i1/packetEnded \
+sim:/oled_i2c_vlg_tst/i1/NS \
+sim:/oled_i2c_vlg_tst/i1/missed_ack \
+sim:/oled_i2c_vlg_tst/i1/isStartSeq \
+sim:/oled_i2c_vlg_tst/i1/idle \
+sim:/oled_i2c_vlg_tst/i1/glyph1 \
+sim:/oled_i2c_vlg_tst/i1/end_seq \
+sim:/oled_i2c_vlg_tst/i1/end_data \
+sim:/oled_i2c_vlg_tst/i1/divClk \
+sim:/oled_i2c_vlg_tst/i1/debug_leds \
+sim:/oled_i2c_vlg_tst/i1/dataReady \
+sim:/oled_i2c_vlg_tst/i1/data_packet_counter \
+sim:/oled_i2c_vlg_tst/i1/data_out_valid \
+sim:/oled_i2c_vlg_tst/i1/data_out_ready \
+sim:/oled_i2c_vlg_tst/i1/data_out_last \
+sim:/oled_i2c_vlg_tst/i1/data_out \
+sim:/oled_i2c_vlg_tst/i1/data_in_valid \
+sim:/oled_i2c_vlg_tst/i1/data_in_ready \
+sim:/oled_i2c_vlg_tst/i1/data_in_last \
+sim:/oled_i2c_vlg_tst/i1/data_in \
+sim:/oled_i2c_vlg_tst/i1/data_counter \
+sim:/oled_i2c_vlg_tst/i1/data_byte_counter \
+sim:/oled_i2c_vlg_tst/i1/data \
+sim:/oled_i2c_vlg_tst/i1/curr_data_packet \
+sim:/oled_i2c_vlg_tst/i1/CS \
+sim:/oled_i2c_vlg_tst/i1/cmd_write_multiple \
+sim:/oled_i2c_vlg_tst/i1/cmd_write \
+sim:/oled_i2c_vlg_tst/i1/cmd_valid \
+sim:/oled_i2c_vlg_tst/i1/cmd_stop \
+sim:/oled_i2c_vlg_tst/i1/cmd_start \
+sim:/oled_i2c_vlg_tst/i1/cmd_ready \
+sim:/oled_i2c_vlg_tst/i1/cmd_read \
+sim:/oled_i2c_vlg_tst/i1/cmd_address \
+sim:/oled_i2c_vlg_tst/i1/clk \
+sim:/oled_i2c_vlg_tst/i1/busy \
+sim:/oled_i2c_vlg_tst/i1/bus_control \
+sim:/oled_i2c_vlg_tst/i1/bus_active \
+sim:/oled_i2c_vlg_tst/i1/begin_seq \
+sim:/oled_i2c_vlg_tst/i1/begin_data \
+sim:/oled_i2c_vlg_tst/i1/address
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/U1/stop_on_idle \
+sim:/oled_i2c_vlg_tst/i1/U1/stop_bit \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_WRITE_3 \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_WRITE_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_WRITE_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_STOP \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_START_WAIT \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_START \
+sim:/oled_i2c_vlg_tst/i1/U1/state_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_READ \
+sim:/oled_i2c_vlg_tst/i1/U1/state_next \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_IDLE \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_ADDRESS_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_ADDRESS_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_ACTIVE_WRITE \
+sim:/oled_i2c_vlg_tst/i1/U1/STATE_ACTIVE_READ \
+sim:/oled_i2c_vlg_tst/i1/U1/state \
+sim:/oled_i2c_vlg_tst/i1/U1/start_bit \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_t \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_posedge \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_o_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_o_next \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_o \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_negedge \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_i_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/sda_i \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_t \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_posedge \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_o_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_o_next \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_o \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_negedge \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_i_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/scl_i \
+sim:/oled_i2c_vlg_tst/i1/U1/rst \
+sim:/oled_i2c_vlg_tst/i1/U1/prescale \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_write_bit \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_tx_data \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_stop_bit \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_WRITE_BIT_3 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_WRITE_BIT_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_WRITE_BIT_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_STOP_3 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_STOP_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_STOP_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_START_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_START_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_REPEATED_START_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_REPEATED_START_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_state_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_READ_BIT_4 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_READ_BIT_3 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_READ_BIT_2 \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_READ_BIT_1 \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_state_next \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_IDLE \
+sim:/oled_i2c_vlg_tst/i1/U1/PHY_STATE_ACTIVE \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_start_bit \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_rx_data_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_rx_data_next \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_release_bus \
+sim:/oled_i2c_vlg_tst/i1/U1/phy_read_bit \
+sim:/oled_i2c_vlg_tst/i1/U1/mode_write_multiple_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/mode_write_multiple_next \
+sim:/oled_i2c_vlg_tst/i1/U1/mode_stop_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/mode_stop_next \
+sim:/oled_i2c_vlg_tst/i1/U1/mode_read_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/mode_read_next \
+sim:/oled_i2c_vlg_tst/i1/U1/missed_ack_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/missed_ack_next \
+sim:/oled_i2c_vlg_tst/i1/U1/missed_ack \
+sim:/oled_i2c_vlg_tst/i1/U1/last_sda_i_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/last_scl_i_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/last_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/last_next \
+sim:/oled_i2c_vlg_tst/i1/U1/delay_sda_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/delay_sda_next \
+sim:/oled_i2c_vlg_tst/i1/U1/delay_scl_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/delay_scl_next \
+sim:/oled_i2c_vlg_tst/i1/U1/delay_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/delay_next \
+sim:/oled_i2c_vlg_tst/i1/U1/data_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_valid_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_valid_next \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_valid \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_ready \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_next \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_last_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_last_next \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out_last \
+sim:/oled_i2c_vlg_tst/i1/U1/data_out \
+sim:/oled_i2c_vlg_tst/i1/U1/data_next \
+sim:/oled_i2c_vlg_tst/i1/U1/data_in_valid \
+sim:/oled_i2c_vlg_tst/i1/U1/data_in_ready_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/data_in_ready_next \
+sim:/oled_i2c_vlg_tst/i1/U1/data_in_ready \
+sim:/oled_i2c_vlg_tst/i1/U1/data_in_last \
+sim:/oled_i2c_vlg_tst/i1/U1/data_in \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_write_multiple \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_write \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_valid \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_stop \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_start \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_ready_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_ready_next \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_ready \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_read \
+sim:/oled_i2c_vlg_tst/i1/U1/cmd_address \
+sim:/oled_i2c_vlg_tst/i1/U1/clk \
+sim:/oled_i2c_vlg_tst/i1/U1/busy_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/busy \
+sim:/oled_i2c_vlg_tst/i1/U1/bus_control_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/bus_control_next \
+sim:/oled_i2c_vlg_tst/i1/U1/bus_control \
+sim:/oled_i2c_vlg_tst/i1/U1/bus_active_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/bus_active \
+sim:/oled_i2c_vlg_tst/i1/U1/bit_count_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/bit_count_next \
+sim:/oled_i2c_vlg_tst/i1/U1/addr_reg \
+sim:/oled_i2c_vlg_tst/i1/U1/addr_next
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v failed with 2 errors.
+# Compile of I2C.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+# Warning in wave window restart: (vish-4014) No objects found matching '/oled_i2c_vlg_tst/i1/curr_data_packet'. 
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+# Compile of oled_i2c.v was successful.
+run -all
+add wave -position insertpoint  \
+sim:/oled_i2c_vlg_tst/i1/packet_wait_counter
+restart
+# Loading oled_i2c_work.oled_i2c
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+# Compile of oled_i2c.v was successful.
+run -all
+restart
+# Loading oled_i2c_work.oled_i2c
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+# Compile of oled_i2c.v was successful.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+run -all
+run -all
+run -all
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+run -all
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v failed with 1 errors.
+# Compile of I2C.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+run -all
+restart
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of oled_i2c.vt was successful.
+# Compile of oled_i2c.v was successful.
+# Compile of I2C.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading oled_i2c_work.oled_i2c_vlg_tst
+# Loading oled_i2c_work.oled_i2c
+# Loading oled_i2c_work.I2C
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+run -all
+# Compile of oled_i2c.v was successful.
+restart
+# Loading oled_i2c_work.oled_i2c
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Too few port connections. Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /oled_i2c_vlg_tst/i1 File: C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim/oled_i2c.vt(42): [TFMPC] - Missing connection for port 'debug_leds'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Running testbench
+run -all
+run -all
+# End time: 10:33:14 on Nov 04,2019, Elapsed time: 65:12:46
+# Errors: 2, Warnings: 75

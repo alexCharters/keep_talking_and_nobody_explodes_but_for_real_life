@@ -91,19 +91,13 @@ ktane_mem i1 (
 );
 initial                                                
 begin                                                  
-   addr <=  16'hc444;
+   addr <=  16'hf330;
 	writeEn <= 1'b1;
 	en <= 1'b1;
-	data <= 16'b0111110000011111;
+	data <= 16'b0000000001001011;
 	clk <= 1'b0;
-	#10
-	en <= 1'b0;
 	#50
-	addr <=  16'hc888;
-	en <= 1'b1;
-	data <= 16'b0100010010000010;
-	#10
-	en<=1'b0;
+	en <= 1'b0;
 	$display("Running testbench");                       
 end 
 

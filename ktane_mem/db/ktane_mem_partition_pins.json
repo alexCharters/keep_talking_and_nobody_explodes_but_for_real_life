@@ -8,79 +8,111 @@
 					"strict" : false
 				},
 				{
-					"name" : "q[1]",
+					"name" : "timer_sevseg1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "q[2]",
+					"name" : "timer_sevseg1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "q[3]",
+					"name" : "timer_sevseg1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "q[4]",
+					"name" : "timer_sevseg1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "q[5]",
+					"name" : "timer_sevseg1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "q[6]",
+					"name" : "timer_sevseg1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "q[7]",
+					"name" : "timer_sevseg1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "q[8]",
+					"name" : "timer_sevseg2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "q[9]",
+					"name" : "timer_sevseg2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "q[10]",
+					"name" : "timer_sevseg2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "q[11]",
+					"name" : "timer_sevseg2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "q[12]",
+					"name" : "timer_sevseg2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "q[13]",
+					"name" : "timer_sevseg2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "q[14]",
+					"name" : "timer_sevseg2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "q[15]",
+					"name" : "timer_sevseg3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "led1[1]",
+					"name" : "timer_sevseg3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "led1[2]",
+					"name" : "timer_sevseg3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "led2[1]",
+					"name" : "timer_sevseg3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "led2[2]",
+					"name" : "timer_sevseg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "en",
 					"strict" : false
 				},
 				{
@@ -88,7 +120,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data[15]",
 					"strict" : false
 				}
 			]

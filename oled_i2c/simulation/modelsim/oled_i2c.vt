@@ -52,13 +52,17 @@ initial
 begin                                                  
 
 clk <= 0;
-data <= 8'b11111111;
+data <= 8'b00000001;
 dataReady <= 0;
 rst <= 0;
 
 #5000
 
 dataReady <= 1;
+
+#5000
+
+//dataReady <= 0;
                                            
 $display("Running testbench");              
 end

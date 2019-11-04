@@ -1,30 +1,9 @@
-C:/intelFPGA_lite/18.1/ktane_mem/mux5.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/mux5.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux5
-
-Top level modules:
-	mux5
-
-} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module rgb_led
-
-Top level modules:
-	rgb_led
-
-} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v
+C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/morse_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module morse_mem
 
 Top level modules:
 	morse_mem
-
-} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module keypad_mem
-
-Top level modules:
-	keypad_mem
 
 } {} {}} C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/wire_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -33,19 +12,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	wire_mem
 
-} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v
+} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module dual_port_ram
+-- Compiling module rgb_led
 
 Top level modules:
-	dual_port_ram
-
-} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/simulation/modelsim/ktane_mem.vt
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ktane_mem_vlg_tst
-
-Top level modules:
-	ktane_mem_vlg_tst
+	rgb_led
 
 } {} {}} C:/intelFPGA_lite/18.1/ktane_mem/button_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/button_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -53,5 +25,40 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	button_mem
+
+} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/keypad_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module keypad_mem
+
+Top level modules:
+	keypad_mem
+
+} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/extras_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module extras_mem
+
+Top level modules:
+	extras_mem
+
+} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/mux5.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/mux5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mux5
+
+Top level modules:
+	mux5
+
+} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/bcd_to_sevseg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sevseg
+
+Top level modules:
+	sevseg
+
+} {} {}} C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v {1 {vlog -work ktane_mem_work -stats=none C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dual_port_ram
+
+Top level modules:
+	dual_port_ram
 
 } {} {}}

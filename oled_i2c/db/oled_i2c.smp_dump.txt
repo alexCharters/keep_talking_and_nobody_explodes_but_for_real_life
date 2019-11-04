@@ -17,3 +17,18 @@ phy_state_reg.PHY_STATE_READ_BIT_4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1
 phy_state_reg.PHY_STATE_STOP_1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
 phy_state_reg.PHY_STATE_STOP_2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 phy_state_reg.PHY_STATE_STOP_3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |oled_i2c|I2C:U1|state_reg
+Name state_reg.STATE_STOP state_reg.STATE_READ state_reg.STATE_WRITE_3 state_reg.STATE_WRITE_2 state_reg.STATE_WRITE_1 state_reg.STATE_ADDRESS_2 state_reg.STATE_ADDRESS_1 state_reg.STATE_START state_reg.STATE_START_WAIT state_reg.STATE_ACTIVE_READ state_reg.STATE_ACTIVE_WRITE state_reg.STATE_IDLE 
+state_reg.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+state_reg.STATE_ACTIVE_WRITE 0 0 0 0 0 0 0 0 0 0 1 1 
+state_reg.STATE_ACTIVE_READ 0 0 0 0 0 0 0 0 0 1 0 1 
+state_reg.STATE_START_WAIT 0 0 0 0 0 0 0 0 1 0 0 1 
+state_reg.STATE_START 0 0 0 0 0 0 0 1 0 0 0 1 
+state_reg.STATE_ADDRESS_1 0 0 0 0 0 0 1 0 0 0 0 1 
+state_reg.STATE_ADDRESS_2 0 0 0 0 0 1 0 0 0 0 0 1 
+state_reg.STATE_WRITE_1 0 0 0 0 1 0 0 0 0 0 0 1 
+state_reg.STATE_WRITE_2 0 0 0 1 0 0 0 0 0 0 0 1 
+state_reg.STATE_WRITE_3 0 0 1 0 0 0 0 0 0 0 0 1 
+state_reg.STATE_READ 0 1 0 0 0 0 0 0 0 0 0 1 
+state_reg.STATE_STOP 1 0 0 0 0 0 0 0 0 0 0 1 

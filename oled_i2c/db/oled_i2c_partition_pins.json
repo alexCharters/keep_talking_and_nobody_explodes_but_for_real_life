@@ -24,6 +24,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "debug_leds[4]",
+					"strict" : false
+				},
+				{
 					"name" : "debug_leds[5]",
 					"strict" : false
 				},
@@ -32,7 +36,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "debug_leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[8]",
+					"strict" : false
+				},
+				{
 					"name" : "SDA",
+					"strict" : false
+				},
+				{
+					"name" : "dataReady",
 					"strict" : false
 				},
 				{

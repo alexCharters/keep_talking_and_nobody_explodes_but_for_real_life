@@ -14,5 +14,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/ktane_mem {C:/intel
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/ktane_mem {C:/intelFPGA_lite/18.1/ktane_mem/ktane_mem.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/ktane_mem {C:/intelFPGA_lite/18.1/ktane_mem/rgb_led.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/ktane_mem {C:/intelFPGA_lite/18.1/ktane_mem/mux5.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/timer {C:/intelFPGA_lite/18.1/timer/timer.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/timer {C:/intelFPGA_lite/18.1/timer/sec_to_sevseg.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/ktane_mem {C:/intelFPGA_lite/18.1/ktane_mem/dual_port_ram.v}
 

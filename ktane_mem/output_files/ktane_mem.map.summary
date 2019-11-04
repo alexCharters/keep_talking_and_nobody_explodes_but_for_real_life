@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Oct 13 18:14:20 2019
+Analysis & Synthesis Status : Successful - Thu Oct 24 13:10:30 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ktane_mem
 Top-level Entity Name : ktane_mem
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 9
-Total pins : 78
+Total registers : 51
+Total pins : 94
 Total virtual pins : 0
-Total block memory bits : 32
+Total block memory bits : 0
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

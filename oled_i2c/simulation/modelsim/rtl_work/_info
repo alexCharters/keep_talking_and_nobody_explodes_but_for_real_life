@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/18.1/oled_i2c/simulation/modelsim
 vdivider
-Z1 !s110 1571861892
+Z1 !s110 1572653968
 !i10b 1
-!s100 N2Vz^o;RC6@H]HWR2mMNE2
-IXha<ck:XKVngR0Fia@Pbd2
+!s100 Wh[oMMUW]K5XD;S@iPeC30
+I`_aoXEbjZDzBLMYN?[DC90
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1571801644
+w1572547537
 8C:/intelFPGA_lite/18.1/oled_i2c/output_files/divider.v
 FC:/intelFPGA_lite/18.1/oled_i2c/output_files/divider.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1571861892.000000
+Z4 !s108 1572653968.000000
 !s107 C:/intelFPGA_lite/18.1/oled_i2c/output_files/divider.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/oled_i2c/output_files|C:/intelFPGA_lite/18.1/oled_i2c/output_files/divider.v|
 !i113 1
@@ -33,11 +33,11 @@ Z6 tCvgOpt 0
 vI2C
 R1
 !i10b 1
-!s100 F90>AHCK0ZZoUB?H6j`[k3
-IV8U3<fmg6:mmLo`H]P[ZE2
+!s100 kBf1mRiAFNYhgoP]gY8?S2
+I?]EdPOa79:b^fY33>4=@R0
 R2
 R0
-w1571850487
+w1572464485
 8C:/intelFPGA_lite/18.1/I2C/I2C.v
 FC:/intelFPGA_lite/18.1/I2C/I2C.v
 L0 27
@@ -56,11 +56,11 @@ n@i2@c
 voled_i2c
 R1
 !i10b 1
-!s100 S@X`[Xa0=f:j=`VPKC[<22
-If1@ifSgETz[QD78[V6d1P2
+!s100 @fNZPGI0;XlB8_=dch8S@2
+I[1GJU0mO9m0]?YHzd?NbF3
 R2
 R0
-w1571861408
+w1572653785
 8C:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
 FC:/intelFPGA_lite/18.1/oled_i2c/oled_i2c.v
 L0 1
