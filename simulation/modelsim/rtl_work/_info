@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim
 vALU
-Z1 !s110 1573574699
+Z1 !s110 1573577314
 !i10b 1
-!s100 K;c^@<<V^Y8eaJiYGGD^O0
-I>3KPJCikjQTcYNVIe<g^^0
+!s100 oJ`KaWmI=i<]3HT8^n49P3
+IjdP?:_[nYSbVNSMV?KLmN3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1573574686
+w1573576701
 8C:/Users/kenne/Documents/ECE 3710/Project/ALU.v
 FC:/Users/kenne/Documents/ECE 3710/Project/ALU.v
 L0 2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1573574699.000000
+Z4 !s108 1573577314.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
 !i113 1
@@ -124,13 +124,13 @@ R6
 R7
 n@decoder
 vEverything
-!s110 1573574973
+!s110 1573577396
 !i10b 1
-!s100 CB0kbh<G?GT;U]KilC:KZ2
-I?ceEOh5DQVK0_=4gZO<Qn2
+!s100 aUAD`1^6z2b;96Af4D:?D2
+IQUD4f_a1KFg2^R[E_Zo[b3
 R2
 R0
-w1573574968
+w1573577387
 8C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
 FC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
 L0 2
@@ -138,7 +138,7 @@ R3
 r1
 !s85 0
 31
-!s108 1573574973.000000
+!s108 1573577396.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
 !i113 1
@@ -146,7 +146,7 @@ Z8 o-work work
 R7
 n@everything
 vFSM
-Z9 !s110 1573574700
+Z9 !s110 1573577315
 !i10b 1
 !s100 N?l<h07MUX=39bBlVU74V0
 IJ4_jXR?EeL`zHSSIz^e:B2
@@ -160,7 +160,7 @@ R3
 r1
 !s85 0
 31
-R4
+Z10 !s108 1573577315.000000
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
 !i113 1
@@ -183,7 +183,7 @@ R3
 r1
 !s85 0
 31
-Z10 !s108 1573574700.000000
+R10
 !s107 C:/Users/kenne/Documents/ECE 3710/Project/InstructionRegister.v|
 !s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/InstructionRegister.v|
 !i113 1

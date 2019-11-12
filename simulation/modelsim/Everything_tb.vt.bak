@@ -7,7 +7,7 @@ initial begin
     reset = 0;
     #10;
     reset = 1;
-    #1180;
+    #240;
     $stop;
 end
 always #5 clock = ~clock;

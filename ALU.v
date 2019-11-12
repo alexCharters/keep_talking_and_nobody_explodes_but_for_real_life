@@ -285,7 +285,7 @@ module ALU
 				negative = 0;
 			end
 			LUI: begin
-				resWire = {1'b0, destData, 7'b0};
+				resWire = {1'b0, destData, 8'b0};
 				carry = 0;
 				low = 0;
 				overflow = 0;
