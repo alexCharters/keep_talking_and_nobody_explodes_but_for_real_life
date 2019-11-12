@@ -37,6 +37,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
         pcOrAluOutputRamReadSelectionLine = 0;
 		pcIncrementOrWrite = 0;
         instructionRegisterValue = 0;
+        irReadEnable = 0;
         decoderRamWriteAddress = 0;
         registerWriteAddress = 0;
         pcEnable = 0;
@@ -46,7 +47,6 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
             //     nextState <= IF;
             // end
             IF: begin
-                $display("IF");
                 //Tell PC to increment or set to new address
                 //store read value in the IR
                 pcEnable = 0; //if we enable the pc here, it will increment.
@@ -55,7 +55,6 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                 nextState = DECODE;
             end
             DECODE: begin
-                $display("DECODE");
                 //send instruction from IR to Datapath
                 case (opcode[15:12]) //look at the top half of the instruction
                     4'b0000: begin //this is an RType instruction
@@ -110,7 +109,6 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                 nextState = EXECUTE;
             end 
             EXECUTE: begin
-                $display("EXECUTE");
                 // do computation
                 aluEnable = 1;
                 nextState = WRITE_BACK;
@@ -235,8 +233,8 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                 endcase
             end
             WRITE_BACK: begin
-                $display("WB");
                 // enable correct muxes to write values.
+                pcOrAluOutputRamReadSelectionLine = 0;
                 case (opcode[15:12])
                     4'b0100: begin
                         case(opcode[7:4])
@@ -244,6 +242,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                                 $display("LOAD WB");
                                 registerFileWriteEnable = 1;
                                 pcOrAluOutputRamReadSelectionLine = 1; //Use the alu to load from ram.
+                                writeBackToRegRamOrALUSelectionLine = 1;
                                 ramReadEnable = 1;
                                 pcEnable = 1;
                             end

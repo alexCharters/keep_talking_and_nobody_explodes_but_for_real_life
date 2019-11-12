@@ -10,7 +10,7 @@ module ALUControl(instruction, out);
 			case(instruction[7:4])
 				4'b0000: begin
 					//Load
-					out = ADDUI;
+					out = {instruction[15:12], instruction[7:4]};
 				end
 				4'b0100: begin
 					//Store

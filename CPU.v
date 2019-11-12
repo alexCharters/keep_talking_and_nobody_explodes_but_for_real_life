@@ -1,5 +1,5 @@
 module CPU(clock, reset);
-	wire [15:0] instruction, decodedInstruction, aluOut, pcIndex, ramReadAddr, ramWriteAddr, r1Data, r2Data, regFileData, aluSrc1, aluSrc2,
+	wire [15:0] instructionIn, instruction, decodedInstruction, aluOut, pcIndex, ramReadAddr, ramWriteAddr, r1Data, r2Data, regFileData, aluSrc1, aluSrc2,
     selectedImmediate, decRamWriteAddr, irVal, signExtended, zeroExtended, ramReadData;
 wire [7:0] aluOpCode;
 wire [3:0] registerWriteAddress;
@@ -10,11 +10,12 @@ wire pcEn, pcIncSet, brWe, brRe, ramReadPCAlu, regFileWriteAluRam, rfWe, pcRegSe
 reg [4:0] psr = 5'b00000;
 ProgramCounter pc(.clock(clock), .enable(pcEn), .incOrSet(pcIncSet), .newAddress(aluOut), .reset(reset), .currentInstruction(pcIndex));
 mux2to1 brReadAddrSelectMux(.in1(pcIndex), .in2(aluOut), .select(ramReadPCAlu), .out(ramReadAddr));
-BlockRam br(.data(aluOut), .read_addr(ramReadAddr), .write_addr(ramWriteAddr), .we(brWe), .re(brRe), .clk(clock), .q(instruction));
-Decoder decoder(.inputInstruction(instruction), .outputInstruction(decodedInstruction));
-mux2to1 ramOrAluToRf(.in1(aluOut), .in2(ramReadData), .select(regFileWriteAluRam), .out(regFileData));
-RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(decodedInstruction[11:8]), .register2Address(decodedInstruction[3:0]),
-    .writeAddress(decodedInstruction[11:8]), .writeData(regFileData), .register1Data(r1Data), .register2Data(r2Data));
+BlockRam br(.data(aluOut), .read_addr(ramReadAddr), .write_addr(ramWriteAddr), .we(brWe), .re(brRe), .clk(clock), .q(instructionIn));
+InstructionRegister ir(.instruction(instructionIn), .readEnabled(irRe), .out(instruction));
+Decoder decoder(.inputInstruction(instructionIn), .outputInstruction(decodedInstruction));
+mux2to1 ramOrAluToRf(.in1(aluOut), .in2(instructionIn), .select(regFileWriteAluRam), .out(regFileData));
+RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(decodedInstruction[11:8]), .register2Address(instruction[3:0]),
+    .writeAddress(instruction[11:8]), .writeData(regFileData), .register1Data(r1Data), .register2Data(r2Data));
 mux2to1 pcOrReg1Mux(.in1(pcIndex), .in2(r1Data), .select(pcRegSel), .out(aluSrc1));
 SignExtender signExtender(.immediate(instruction[7:0]), .extended(signExtended));
 ZeroExtender zeroExtender(.immediate(instruction[7:0]), .result(zeroExtended));

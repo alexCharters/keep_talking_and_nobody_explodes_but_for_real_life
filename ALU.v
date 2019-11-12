@@ -172,24 +172,25 @@ module ALU
 					end
 				endcase
 			end
-//			MEMANDJMP: begin ALL OF THIS SHOULD BE HANDLED IN THE CONTROLLER!
-//				case(operationControl[3:0])
-//					LOAD: begin
-//						resWire = sourceData;
-//					end
-//					STORE: begin
-//						resWire = destData;
-//					end
-//					default: begin
-//						carry = 0;
-//						low = 0;
-//						overflow = 0;
-//						zero = 0;
-//						negative = 0;
-//						result = 0;
-//					end
-//				endcase
-//			end
+			MEMANDJMP: begin
+				case(operationControl[3:0])
+					LOAD: begin
+						$display("ALU LOAD HIT");
+						resWire = destData;
+					end
+					STORE: begin
+						resWire = destData;
+					end
+					default: begin
+						carry = 0;
+						low = 0;
+						overflow = 0;
+						zero = 0;
+						negative = 0;
+						result = 0;
+					end
+				endcase
+			end
 			ADDI: begin
 				resWire = sourceData + destData;
 				carry = resWire[WIDTH];
