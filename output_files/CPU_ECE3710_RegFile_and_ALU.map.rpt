@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU_ECE3710_RegFile_and_ALU
-Tue Oct 29 12:22:55 2019
+Mon Nov 11 16:51:54 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,25 +20,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. Registers Packed Into Inferred Megafunctions
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Source assignments for BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated
- 15. Parameter Settings for User Entity Instance: FSM:fsm
- 16. Parameter Settings for User Entity Instance: BlockRam:br
- 17. Parameter Settings for User Entity Instance: Datapath:dp|RegisterFile:registerFile
- 18. Parameter Settings for User Entity Instance: Datapath:dp|ALUControl:controller
- 19. Parameter Settings for User Entity Instance: Datapath:dp|ALU:alu
- 20. Parameter Settings for User Entity Instance: Datapath:dp|BlockRam:blockRam
- 21. Parameter Settings for Inferred Entity Instance: BlockRam:br|altsyncram:ram_rtl_0
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Port Connectivity Checks: "Datapath:dp|ALU:alu"
- 24. Port Connectivity Checks: "Datapath:dp|ALUControl:controller"
- 25. Port Connectivity Checks: "Datapath:dp|RegisterFile:registerFile"
- 26. Port Connectivity Checks: "Datapath:dp|mux2to1:writeBackToRegRamOrALUMux"
- 27. Port Connectivity Checks: "Datapath:dp|mux4to1:integerTypeSelectionMux"
- 28. Port Connectivity Checks: "Datapath:dp"
- 29. Port Connectivity Checks: "FSM:fsm"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
- 33. Analysis & Synthesis Suppressed Messages
+ 15. Parameter Settings for User Entity Instance: BlockRam:br
+ 16. Parameter Settings for User Entity Instance: RegisterFile:rf
+ 17. Parameter Settings for User Entity Instance: ALUControl:aluController
+ 18. Parameter Settings for User Entity Instance: ALU:alu
+ 19. Parameter Settings for User Entity Instance: FSM:fsm
+ 20. Parameter Settings for Inferred Entity Instance: BlockRam:br|altsyncram:ram_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "FSM:fsm"
+ 23. Port Connectivity Checks: "mux4to1:immediateMux"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,7 +58,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 29 12:22:55 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 11 16:51:54 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CPU_ECE3710_RegFile_and_ALU                 ;
 ; Top-level Entity Name           ; CPU                                         ;
@@ -176,8 +170,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -187,38 +181,38 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                ;
-+---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                                      ; Library ;
-+---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; mux4to1.v                                                     ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v                                                     ;         ;
-; mux2to1.v                                                     ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v                                                     ;         ;
-; RegisterFile.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v                                                ;         ;
-; ALU.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v                                                         ;         ;
-; Datapath.v                                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v                                                    ;         ;
-; BlockRam.v                                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v                                                    ;         ;
-; ALUControl.v                                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v                                                  ;         ;
-; ProgramCounter.v                                              ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v                                              ;         ;
-; ZeroExtender.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v                                                ;         ;
-; SignExtender.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v                                                ;         ;
-; CPU.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v                                                         ;         ;
-; FSM.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v                                                         ;         ;
-; explode.dat                                                   ; yes             ; Auto-Found Unspecified File                           ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/explode.dat                                                   ;         ;
-; altsyncram.tdf                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                             ;         ;
-; stratix_ram_block.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                      ;         ;
-; lpm_mux.inc                                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                ;         ;
-; lpm_decode.inc                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                             ;         ;
-; aglobal181.inc                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                             ;         ;
-; a_rdenreg.inc                                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                              ;         ;
-; altrom.inc                                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                                                 ;         ;
-; altram.inc                                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                                                 ;         ;
-; altdpram.inc                                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                               ;         ;
-; db/altsyncram_f3u1.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf                                        ;         ;
-; db/cpu_ece3710_regfile_and_alu.ram0_blockram_6ecff6b0.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/cpu_ece3710_regfile_and_alu.ram0_blockram_6ecff6b0.hdl.mif ;         ;
-; db/decode_dla.tdf                                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/decode_dla.tdf                                             ;         ;
-; db/mux_chb.tdf                                                ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/mux_chb.tdf                                                ;         ;
-+---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                      ;
++---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                            ; Library ;
++---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; mux4to1.v                                                     ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v                                                     ;         ;
+; mux2to1.v                                                     ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v                                                     ;         ;
+; RegisterFile.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v                                                ;         ;
+; ALU.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/ALU.v                                                         ;         ;
+; BlockRam.v                                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v                                                    ;         ;
+; ALUControl.v                                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v                                                  ;         ;
+; ProgramCounter.v                                              ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v                                              ;         ;
+; ZeroExtender.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v                                                ;         ;
+; SignExtender.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v                                                ;         ;
+; Decoder.v                                                     ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v                                                     ;         ;
+; CPU.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/CPU.v                                                         ;         ;
+; FSM.v                                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/kenne/Documents/ECE 3710/Project/FSM.v                                                         ;         ;
+; explode.dat                                                   ; yes             ; Auto-Found Unspecified File                           ; C:/Users/kenne/Documents/ECE 3710/Project/explode.dat                                                   ;         ;
+; altsyncram.tdf                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                   ;         ;
+; stratix_ram_block.inc                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                            ;         ;
+; lpm_mux.inc                                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                      ;         ;
+; lpm_decode.inc                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                   ;         ;
+; aglobal181.inc                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                   ;         ;
+; a_rdenreg.inc                                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                    ;         ;
+; altrom.inc                                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                       ;         ;
+; altram.inc                                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                       ;         ;
+; altdpram.inc                                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                     ;         ;
+; db/altsyncram_f3u1.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf                                        ;         ;
+; db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif ;         ;
+; db/decode_dla.tdf                                             ; yes             ; Auto-Generated Megafunction                           ; C:/Users/kenne/Documents/ECE 3710/Project/db/decode_dla.tdf                                             ;         ;
+; db/mux_chb.tdf                                                ; yes             ; Auto-Generated Megafunction                           ; C:/Users/kenne/Documents/ECE 3710/Project/db/mux_chb.tdf                                                ;         ;
++---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -271,34 +265,369 @@ Encoding Type:  One-Hot
 +-------------------------+-------------------------+----------------------+---------------------+------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                       ;
-+-------------------------------------------------------------------------------------+--------------------+
-; Register name                                                                       ; Reason for Removal ;
-+-------------------------------------------------------------------------------------+--------------------+
-; FSM:fsm|currentState~2                                                              ; Lost fanout        ;
-; FSM:fsm|currentState~3                                                              ; Lost fanout        ;
-; FSM:fsm|currentState~4                                                              ; Lost fanout        ;
-; FSM:fsm|currentState.WRITE_BACK                                                     ; Lost fanout        ;
-; ProgramCounter:pc|currentInstruction[0..15]                                         ; Lost fanout        ;
-; FSM:fsm|currentState.EXECUTE                                                        ; Lost fanout        ;
-; FSM:fsm|currentState.DECODE                                                         ; Lost fanout        ;
-; FSM:fsm|currentState.000                                                            ; Lost fanout        ;
-; BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|address_reg_b[0..2] ; Lost fanout        ;
-; Total Number of Removed Registers = 26                                              ;                    ;
-+-------------------------------------------------------------------------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                          ;
++-------------------------------------------------------------------------------------+---------------------------------------+
+; Register name                                                                       ; Reason for Removal                    ;
++-------------------------------------------------------------------------------------+---------------------------------------+
+; RegisterFile:rf|DataBlock[0][0]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][1]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][2]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][3]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][4]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][5]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][6]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][7]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][8]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][9]                                                     ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][10]                                                    ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][11]                                                    ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][12]                                                    ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][13]                                                    ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][14]                                                    ; Stuck at GND due to stuck port sclear ;
+; RegisterFile:rf|DataBlock[0][15]                                                    ; Stuck at GND due to stuck port sclear ;
+; FSM:fsm|currentState~2                                                              ; Lost fanout                           ;
+; FSM:fsm|currentState~3                                                              ; Lost fanout                           ;
+; FSM:fsm|currentState~4                                                              ; Lost fanout                           ;
+; FSM:fsm|currentState.WRITE_BACK                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][0]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][0]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][0]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][0]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][0]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][0]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][0]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][1]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][1]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][1]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][1]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][1]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][1]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][1]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][2]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][2]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][2]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][2]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][2]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][2]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][2]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][3]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][3]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][3]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][3]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][3]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][3]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][3]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][4]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][4]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][4]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][4]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][4]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][4]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][4]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][5]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][5]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][5]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][5]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][5]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][5]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][5]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][6]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][6]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][6]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][6]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][6]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][6]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][6]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][7]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][7]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][7]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][7]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][7]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][7]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][7]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][8]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][8]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][8]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][8]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][8]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][8]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][8]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][9]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][9]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][9]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][9]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][9]                                                     ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][9]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][9]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][10]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][10]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][10]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][10]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][10]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][10]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][10]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][11]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][11]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][11]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][11]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][11]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][11]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][11]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][12]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][12]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][12]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][12]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][12]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][12]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][12]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][13]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][13]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][13]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][13]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][13]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][13]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][13]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][14]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][14]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][14]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][14]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][14]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][14]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][14]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[1][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[2][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[3][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[4][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[5][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[6][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[7][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[12][15]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[13][15]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[14][15]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[15][15]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[8][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[9][15]                                                    ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[10][15]                                                   ; Lost fanout                           ;
+; RegisterFile:rf|DataBlock[11][15]                                                   ; Lost fanout                           ;
+; ProgramCounter:pc|currentInstruction[0]                                             ; Lost fanout                           ;
+; FSM:fsm|currentState.EXECUTE                                                        ; Lost fanout                           ;
+; ProgramCounter:pc|currentInstruction[1..15]                                         ; Lost fanout                           ;
+; FSM:fsm|currentState.DECODE                                                         ; Lost fanout                           ;
+; FSM:fsm|currentState.000                                                            ; Lost fanout                           ;
+; BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|address_reg_b[0..2] ; Lost fanout                           ;
+; Total Number of Removed Registers = 282                                             ;                                       ;
++-------------------------------------------------------------------------------------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                     ;
-+-----------------------------------------+--------------------+----------------------------------------------------------------------------------+
-; Register name                           ; Reason for Removal ; Registers Removed due to This Register                                           ;
-+-----------------------------------------+--------------------+----------------------------------------------------------------------------------+
-; FSM:fsm|currentState~2                  ; Lost Fanouts       ; FSM:fsm|currentState.EXECUTE, FSM:fsm|currentState.000                           ;
-; FSM:fsm|currentState~3                  ; Lost Fanouts       ; FSM:fsm|currentState.DECODE                                                      ;
-; FSM:fsm|currentState.WRITE_BACK         ; Lost Fanouts       ; BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|address_reg_b[2] ;
-; ProgramCounter:pc|currentInstruction[0] ; Lost Fanouts       ; BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|address_reg_b[1] ;
-+-----------------------------------------+--------------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++----------------------------------+--------------------------+----------------------------------------------------------------------------------+
+; Register name                    ; Reason for Removal       ; Registers Removed due to This Register                                           ;
++----------------------------------+--------------------------+----------------------------------------------------------------------------------+
+; RegisterFile:rf|DataBlock[0][12] ; Stuck at GND             ; RegisterFile:rf|DataBlock[0][13], RegisterFile:rf|DataBlock[0][14],              ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[0][15], RegisterFile:rf|DataBlock[1][12],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[2][12], RegisterFile:rf|DataBlock[3][12],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[4][12], RegisterFile:rf|DataBlock[12][12],             ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[13][12], RegisterFile:rf|DataBlock[1][13],             ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[2][13], RegisterFile:rf|DataBlock[3][13],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[4][13], RegisterFile:rf|DataBlock[12][13],             ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[13][13], RegisterFile:rf|DataBlock[8][13],             ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[9][13], RegisterFile:rf|DataBlock[10][13],             ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[1][14], RegisterFile:rf|DataBlock[2][14],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[3][14], RegisterFile:rf|DataBlock[4][14],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][14], RegisterFile:rf|DataBlock[13][14],            ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[1][15], RegisterFile:rf|DataBlock[2][15],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[3][15], RegisterFile:rf|DataBlock[4][15],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][15], RegisterFile:rf|DataBlock[13][15],            ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][15], RegisterFile:rf|DataBlock[9][15],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][15], ProgramCounter:pc|currentInstruction[12],     ;
+;                                  ;                          ; ProgramCounter:pc|currentInstruction[14]                                         ;
+; RegisterFile:rf|DataBlock[0][0]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][0], RegisterFile:rf|DataBlock[2][0],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][0], RegisterFile:rf|DataBlock[4][0],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][0], RegisterFile:rf|DataBlock[13][0],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][0], RegisterFile:rf|DataBlock[9][0],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][0],                                                ;
+;                                  ;                          ; BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|address_reg_b[1] ;
+; RegisterFile:rf|DataBlock[0][1]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][1], RegisterFile:rf|DataBlock[2][1],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][1], RegisterFile:rf|DataBlock[4][1],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][1], RegisterFile:rf|DataBlock[13][1],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][1], RegisterFile:rf|DataBlock[9][1],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][1]                                                 ;
+; RegisterFile:rf|DataBlock[0][2]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][2], RegisterFile:rf|DataBlock[2][2],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][2], RegisterFile:rf|DataBlock[4][2],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][2], RegisterFile:rf|DataBlock[13][2],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][2], RegisterFile:rf|DataBlock[9][2],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][2]                                                 ;
+; RegisterFile:rf|DataBlock[0][3]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][3], RegisterFile:rf|DataBlock[2][3],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][3], RegisterFile:rf|DataBlock[4][3],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][3], RegisterFile:rf|DataBlock[13][3],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][3], RegisterFile:rf|DataBlock[9][3],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][3]                                                 ;
+; RegisterFile:rf|DataBlock[0][4]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][4], RegisterFile:rf|DataBlock[2][4],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][4], RegisterFile:rf|DataBlock[4][4],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][4], RegisterFile:rf|DataBlock[13][4],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][4], RegisterFile:rf|DataBlock[9][4],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][4]                                                 ;
+; RegisterFile:rf|DataBlock[0][5]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][5], RegisterFile:rf|DataBlock[2][5],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][5], RegisterFile:rf|DataBlock[4][5],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][5], RegisterFile:rf|DataBlock[13][5],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][5], RegisterFile:rf|DataBlock[9][5],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][5]                                                 ;
+; RegisterFile:rf|DataBlock[0][6]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][6], RegisterFile:rf|DataBlock[2][6],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][6], RegisterFile:rf|DataBlock[4][6],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][6], RegisterFile:rf|DataBlock[13][6],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][6], RegisterFile:rf|DataBlock[9][6],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][6]                                                 ;
+; RegisterFile:rf|DataBlock[0][7]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][7], RegisterFile:rf|DataBlock[2][7],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][7], RegisterFile:rf|DataBlock[4][7],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][7], RegisterFile:rf|DataBlock[13][7],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][7], RegisterFile:rf|DataBlock[9][7],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][7]                                                 ;
+; RegisterFile:rf|DataBlock[0][8]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][8], RegisterFile:rf|DataBlock[2][8],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][8], RegisterFile:rf|DataBlock[4][8],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][8], RegisterFile:rf|DataBlock[13][8],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][8], RegisterFile:rf|DataBlock[9][8],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][8]                                                 ;
+; RegisterFile:rf|DataBlock[0][9]  ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][9], RegisterFile:rf|DataBlock[2][9],                ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][9], RegisterFile:rf|DataBlock[4][9],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][9], RegisterFile:rf|DataBlock[13][9],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][9], RegisterFile:rf|DataBlock[9][9],                ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][9]                                                 ;
+; RegisterFile:rf|DataBlock[0][10] ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][10], RegisterFile:rf|DataBlock[2][10],              ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][10], RegisterFile:rf|DataBlock[4][10],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][10], RegisterFile:rf|DataBlock[13][10],            ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][10], RegisterFile:rf|DataBlock[9][10],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][10]                                                ;
+; RegisterFile:rf|DataBlock[0][11] ; Stuck at GND             ; RegisterFile:rf|DataBlock[1][11], RegisterFile:rf|DataBlock[2][11],              ;
+;                                  ; due to stuck port sclear ; RegisterFile:rf|DataBlock[3][11], RegisterFile:rf|DataBlock[4][11],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[12][11], RegisterFile:rf|DataBlock[13][11],            ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[8][11], RegisterFile:rf|DataBlock[9][11],              ;
+;                                  ;                          ; RegisterFile:rf|DataBlock[10][11]                                                ;
+; FSM:fsm|currentState~2           ; Lost Fanouts             ; FSM:fsm|currentState.EXECUTE, FSM:fsm|currentState.000                           ;
+; FSM:fsm|currentState~3           ; Lost Fanouts             ; FSM:fsm|currentState.DECODE                                                      ;
+; FSM:fsm|currentState.WRITE_BACK  ; Lost Fanouts             ; BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|address_reg_b[2] ;
++----------------------------------+--------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -321,7 +650,7 @@ Encoding Type:  One-Hot
 +----------------------+-----------------------+------+
 ; Register Name        ; Megafunction          ; Type ;
 +----------------------+-----------------------+------+
-; BlockRam:br|q[4..15] ; BlockRam:br|ram_rtl_0 ; RAM  ;
+; BlockRam:br|q[0..15] ; BlockRam:br|ram_rtl_0 ; RAM  ;
 +----------------------+-----------------------+------+
 
 
@@ -330,8 +659,16 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|currentInstruction[0] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][4]         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|currentInstruction[9] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|blockRamWriteEnable             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:reg2OrImmediateMux|out[3]       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftLeft0                      ;
+; 17:1               ; 16 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register2Data[14]       ;
+; 18:1               ; 16 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CPU|mux2to1:pcOrReg1Mux|out[14]             ;
+; 36:1               ; 2 bits    ; 48 LEs        ; 34 LEs               ; 14 LEs                 ; No         ; |CPU|ALU:alu|Mux48                           ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 36 LEs               ; 14 LEs                 ; No         ; |CPU|ALU:alu|Mux43                           ;
+; 42:1               ; 2 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |CPU|ALU:alu|Mux35                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -342,6 +679,50 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+--------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                        ;
 +---------------------------------+--------------------+------+--------------------------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BlockRam:br ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                  ;
+; ADDR_WIDTH     ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:rf ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                      ;
+; REGISTER_BITS  ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALUControl:aluController ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; ADD            ; 00000101 ; Unsigned Binary                           ;
+; ADDUI          ; 01100000 ; Unsigned Binary                           ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; WIDTH          ; 16    ; Signed Integer              ;
+; ctlLen         ; 8     ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------+
@@ -371,61 +752,6 @@ Encoding Type:  One-Hot
 ; UC             ; 1110  ; Unsigned Binary             ;
 ; NJ             ; 1111  ; Unsigned Binary             ;
 +----------------+-------+-----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BlockRam:br ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; DATA_WIDTH     ; 16    ; Signed Integer                  ;
-; ADDR_WIDTH     ; 16    ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Datapath:dp|RegisterFile:registerFile ;
-+----------------+-------+-----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                      ;
-+----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 16    ; Signed Integer                                            ;
-; REGISTER_BITS  ; 4     ; Signed Integer                                            ;
-+----------------+-------+-----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Datapath:dp|ALUControl:controller ;
-+----------------+----------+----------------------------------------------------+
-; Parameter Name ; Value    ; Type                                               ;
-+----------------+----------+----------------------------------------------------+
-; ADD            ; 00000101 ; Unsigned Binary                                    ;
-; ADDUI          ; 01100000 ; Unsigned Binary                                    ;
-+----------------+----------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Datapath:dp|ALU:alu ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; WIDTH          ; 16    ; Signed Integer                          ;
-; ctlLen         ; 8     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Datapath:dp|BlockRam:blockRam ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; DATA_WIDTH     ; 16    ; Signed Integer                                    ;
-; ADDR_WIDTH     ; 16    ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -510,80 +836,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:dp|ALU:alu"                                                                                                                                                                          ;
-+------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                                                                                                                           ;
-+------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; operationControl ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; carry            ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
-; low              ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
-; overflow         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
-; zero             ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
-; negative         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                            ;
-; enable           ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                      ;
-+------------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM:fsm"                                                                                                ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                     ; Type   ; Severity ; Details                                                                             ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; registerWriteAddress     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; irReadEnable             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instructionRegisterValue ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:dp|ALUControl:controller"                                                                                                                                     ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; out  ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (16 bits) it drives.  The 8 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:dp|RegisterFile:registerFile"                                                                                                                                                      ;
-+------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port             ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; register1Address ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset            ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
-; writeData        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                     ;
-+------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:dp|mux2to1:writeBackToRegRamOrALUMux"                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:dp|mux4to1:integerTypeSelectionMux"                                                                                                                                             ;
-+------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                             ;
-+------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; in1        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "in1[15..8]" will be connected to GND.                                       ;
-; in4        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; in4[15..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-+------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:dp"                                                                                                                                              ;
-+--------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port               ; Type  ; Severity ; Details                                                                                                                                      ;
-+--------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; blockRamReadEnable ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+--------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FSM:fsm"                                                                                                                     ;
-+--------------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port                     ; Type   ; Severity ; Details                                                                                                  ;
-+--------------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; psr                      ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; irReadEnable             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; instructionRegisterValue ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; aluEnable                ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------------------------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "mux4to1:immediateMux" ;
++------------+-------+----------+------------------+
+; Port       ; Type  ; Severity ; Details          ;
++------------+-------+----------+------------------+
+; in1[15..8] ; Input ; Info     ; Stuck at GND     ;
+; in4        ; Input ; Info     ; Stuck at GND     ;
++------------+-------+----------+------------------+
 
 
 +-----------------------------------------------------+
@@ -603,7 +874,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -613,111 +884,85 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 29 12:22:32 2019
+    Info: Processing started: Mon Nov 11 16:50:16 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU_ECE3710_RegFile_and_ALU -c CPU_ECE3710_RegFile_and_ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mux4to1.v
-    Info (12023): Found entity 1: mux4to1 File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v Line: 1
+    Info (12023): Found entity 1: mux4to1 File: C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v Line: 1
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 2
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 2
+    Info (12023): Found entity 1: ALU File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 1
+    Info (12023): Found entity 1: Datapath File: C:/Users/kenne/Documents/ECE 3710/Project/Datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file blockram.v
-    Info (12023): Found entity 1: BlockRam File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v Line: 5
+    Info (12023): Found entity 1: BlockRam File: C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
-    Info (12023): Found entity 1: ALUControl File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v Line: 1
+    Info (12023): Found entity 1: ALUControl File: C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
-    Info (12023): Found entity 1: ProgramCounter File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v Line: 1
+    Info (12023): Found entity 1: ProgramCounter File: C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file zeroextender.v
-    Info (12023): Found entity 1: ZeroExtender File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v Line: 1
+    Info (12023): Found entity 1: ZeroExtender File: C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file signextender.v
-    Info (12023): Found entity 1: SignExtender File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v Line: 1
+    Info (12023): Found entity 1: SignExtender File: C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file luishift.v
-    Info (12023): Found entity 1: LUIShift File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/LUIShift.v Line: 1
+    Info (12023): Found entity 1: LUIShift File: C:/Users/kenne/Documents/ECE 3710/Project/LUIShift.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
-    Info (12023): Found entity 1: Decoder File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 563
+    Info (12023): Found entity 1: Decoder File: C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v Line: 563
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
-    Info (12023): Found entity 1: CPU File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 1
+    Info (12023): Found entity 1: CPU File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
-    Info (12023): Found entity 1: FSM File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 1
-Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(11): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 11
-Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(17): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 17
-Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(19): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 19
+    Info (12023): Found entity 1: FSM File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(11): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 11
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(17): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 17
+Warning (10222): Verilog HDL Parameter Declaration warning at ALU.v(19): Parameter Declaration in module "ALU" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 19
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at CPU.v(3): object jalRegister used but never assigned File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 3
-Warning (10858): Verilog HDL warning at CPU.v(4): object PSR used but never assigned File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 4
-Warning (10036): Verilog HDL or VHDL warning at CPU.v(9): object "jalAddrLine" assigned a value but never read File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 9
-Warning (10030): Net "PSR" at CPU.v(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 4
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 23
-Warning (10272): Verilog HDL Case Statement warning at FSM.v(103): case item expression covers a value already covered by a previous case item File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 103
-Warning (10240): Verilog HDL Always Construct warning at FSM.v(28): inferring latch(es) for variable "ramReadEnable", which holds its previous value in one or more paths through the always construct File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 28
-Warning (10240): Verilog HDL Always Construct warning at FSM.v(28): inferring latch(es) for variable "irReadEnable", which holds its previous value in one or more paths through the always construct File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 28
-Info (10041): Inferred latch for "irReadEnable" at FSM.v(28) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 28
-Info (10041): Inferred latch for "ramReadEnable" at FSM.v(28) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 28
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 24
-Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(9): truncated value with size 32 to match size of target (16) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v Line: 9
-Info (12128): Elaborating entity "BlockRam" for hierarchy "BlockRam:br" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 25
-Warning (10850): Verilog HDL warning at BlockRam.v(17): number of words (65535) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v Line: 17
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:dp" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 30
-Info (12128): Elaborating entity "mux4to1" for hierarchy "Datapath:dp|mux4to1:integerTypeSelectionMux" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 15
-Info (12128): Elaborating entity "mux2to1" for hierarchy "Datapath:dp|mux2to1:reg2OrImmediateMux" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 17
-Info (12128): Elaborating entity "SignExtender" for hierarchy "Datapath:dp|SignExtender:immediateSignExtender" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 27
-Info (12128): Elaborating entity "ZeroExtender" for hierarchy "Datapath:dp|ZeroExtender:immediateZeroExtender" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 28
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "Datapath:dp|RegisterFile:registerFile" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 32
-Warning (10230): Verilog HDL assignment warning at RegisterFile.v(26): truncated value with size 32 to match size of target (16) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 26
-Warning (10230): Verilog HDL assignment warning at RegisterFile.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 27
-Info (12128): Elaborating entity "ALUControl" for hierarchy "Datapath:dp|ALUControl:controller" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 35
-Warning (10270): Verilog HDL Case Statement warning at ALUControl.v(10): incomplete case statement has no default case item File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v Line: 10
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:dp|ALU:alu" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 37
-Warning (10230): Verilog HDL assignment warning at ALU.v(282): truncated value with size 24 to match size of target (17) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 282
-Warning (10272): Verilog HDL Case Statement warning at ALU.v(292): case item expression covers a value already covered by a previous case item File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 292
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(28): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 28
-Info (10041): Inferred latch for "result[0]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[1]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[2]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[3]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[4]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[5]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[6]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[7]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[8]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[9]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[10]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[11]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[12]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[13]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[14]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Info (10041): Inferred latch for "result[15]" at ALU.v(310) File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v Line: 310
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "Datapath:dp|programCounter[15]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[14]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[13]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[12]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[11]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[10]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[9]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[8]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[7]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[6]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[5]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[4]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[3]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[2]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[1]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|programCounter[0]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 9
-    Warning (12110): Net "Datapath:dp|operationControlLine[15]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[14]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[13]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[12]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[11]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[10]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[9]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
-    Warning (12110): Net "Datapath:dp|operationControlLine[8]" is missing source, defaulting to GND File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/Datapath.v Line: 11
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(10): object "psr" assigned a value but never read File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 10
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 11
+Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(9): truncated value with size 32 to match size of target (16) File: C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v Line: 9
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:brReadAddrSelectMux" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 12
+Info (12128): Elaborating entity "BlockRam" for hierarchy "BlockRam:br" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 13
+Warning (10850): Verilog HDL warning at BlockRam.v(17): number of words (256) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v Line: 17
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 14
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:rf" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 17
+Warning (10036): Verilog HDL or VHDL warning at RegisterFile.v(12): object "i" assigned a value but never read File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 12
+Warning (10230): Verilog HDL assignment warning at RegisterFile.v(27): truncated value with size 32 to match size of target (16) File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 27
+Warning (10230): Verilog HDL assignment warning at RegisterFile.v(28): truncated value with size 32 to match size of target (16) File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 28
+Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:signExtender" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 19
+Info (12128): Elaborating entity "ZeroExtender" for hierarchy "ZeroExtender:zeroExtender" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 20
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:immediateMux" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 21
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:aluController" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 23
+Warning (10270): Verilog HDL Case Statement warning at ALUControl.v(10): incomplete case statement has no default case item File: C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v Line: 10
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 25
+Warning (10230): Verilog HDL assignment warning at ALU.v(285): truncated value with size 24 to match size of target (17) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 285
+Warning (10272): Verilog HDL Case Statement warning at ALU.v(295): case item expression covers a value already covered by a previous case item File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 295
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(28): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 28
+Info (10041): Inferred latch for "result[0]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[1]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[2]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[3]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[4]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[5]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[6]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[7]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[8]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[9]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[10]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[11]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[12]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[13]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[14]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (10041): Inferred latch for "result[15]" at ALU.v(313) File: C:/Users/kenne/Documents/ECE 3710/Project/ALU.v Line: 313
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 32
+Warning (10272): Verilog HDL Case Statement warning at FSM.v(105): case item expression covers a value already covered by a previous case item File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 105
+Warning (10270): Verilog HDL Case Statement warning at FSM.v(117): incomplete case statement has no default case item File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 117
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(28): inferring latch(es) for variable "ramReadEnable", which holds its previous value in one or more paths through the always construct File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(28): inferring latch(es) for variable "irReadEnable", which holds its previous value in one or more paths through the always construct File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 28
+Info (10041): Inferred latch for "irReadEnable" at FSM.v(28) File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 28
+Info (10041): Inferred latch for "ramReadEnable" at FSM.v(28) File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 28
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "BlockRam:br|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -755,164 +1000,177 @@ Info (12133): Instantiated megafunction "BlockRam:br|altsyncram:ram_rtl_0" with 
     Info (12134): Parameter "INIT_FILE" = "db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_f3u1.tdf
-    Info (12023): Found entity 1: altsyncram_f3u1 File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 31
+    Info (12023): Found entity 1: altsyncram_f3u1 File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 31
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710/Project/db/CPU_ECE3710_RegFile_and_ALU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
-    Info (12023): Found entity 1: decode_dla File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/decode_dla.tdf Line: 22
+    Info (12023): Found entity 1: decode_dla File: C:/Users/kenne/Documents/ECE 3710/Project/db/decode_dla.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
-    Info (12023): Found entity 1: mux_chb File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/mux_chb.tdf Line: 22
+    Info (12023): Found entity 1: mux_chb File: C:/Users/kenne/Documents/ECE 3710/Project/db/mux_chb.tdf Line: 22
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a0" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 44
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a1" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 74
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a2" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 104
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a3" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 134
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a16" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 524
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a17" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 554
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a18" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 584
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a19" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 614
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a32" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1004
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a33" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1034
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a34" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1064
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a35" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1094
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a48" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1484
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a49" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1514
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a50" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1544
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a51" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1574
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a64" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1964
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a65" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1994
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a66" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2024
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a67" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2054
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a80" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2444
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a81" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2474
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a82" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2504
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a83" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2534
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a96" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2924
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a97" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2954
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a98" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2984
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a99" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3014
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a112" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3404
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a113" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3434
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a114" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3464
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a115" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3494
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a4" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 164
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a5" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 194
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a6" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 224
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a7" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 254
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a8" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 284
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a9" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 314
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a10" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 344
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a11" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 374
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a12" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 404
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a13" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 434
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a14" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 464
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a15" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 494
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a20" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 644
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a21" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 674
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a22" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 704
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a23" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 734
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a24" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 764
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a25" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 794
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a26" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 824
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a27" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 854
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a28" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 884
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a29" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 914
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a30" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 944
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a31" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 974
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a36" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1124
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a37" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1154
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a38" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1184
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a39" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1214
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a40" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1244
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a41" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1274
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a42" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1304
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a43" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1334
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a44" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1364
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a45" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1394
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a46" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1424
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a47" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1454
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a52" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1604
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a53" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1634
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a54" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1664
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a55" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1694
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a56" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1724
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a57" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1754
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a58" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1784
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a59" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1814
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a60" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1844
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a61" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1874
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a62" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1904
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a63" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 1934
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a68" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2084
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a69" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2114
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a70" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2144
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a71" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2174
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a72" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2204
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a73" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2234
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a74" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2264
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a75" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2294
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a76" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2324
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a77" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2354
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a78" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2384
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a79" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2414
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a84" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2564
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a85" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2594
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a86" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2624
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a87" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2654
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a88" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2684
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a89" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2714
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a90" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2744
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a91" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2774
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a92" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2804
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a93" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2834
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a94" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2864
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a95" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 2894
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a100" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3044
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a101" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3074
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a102" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3104
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a103" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3134
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a104" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3164
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a105" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3194
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a106" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3224
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a107" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3254
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a108" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3284
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a109" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3314
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a110" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3344
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a111" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3374
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a116" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3524
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a117" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3554
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a118" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3584
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a119" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3614
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a120" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3644
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a121" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3674
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a122" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3704
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a123" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3734
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a124" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3764
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a125" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3794
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a126" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3824
-        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a127" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_f3u1.tdf Line: 3854
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 26 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/output_files/CPU_ECE3710_RegFile_and_ALU.map.smsg
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a0" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 44
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a1" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 74
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a2" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 104
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a3" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 134
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a4" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 164
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a5" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 194
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a6" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 224
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a7" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 254
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a8" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 284
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a9" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 314
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a10" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 344
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a11" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 374
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a12" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 404
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a13" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 434
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a14" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 464
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a15" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 494
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a16" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 524
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a17" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 554
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a18" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 584
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a19" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 614
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a20" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 644
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a21" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 674
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a22" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 704
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a23" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 734
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a24" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 764
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a25" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 794
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a26" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 824
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a27" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 854
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a28" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 884
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a29" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 914
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a30" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 944
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a31" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 974
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a32" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1004
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a33" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1034
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a34" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1064
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a35" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1094
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a36" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1124
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a37" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1154
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a38" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1184
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a39" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1214
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a40" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1244
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a41" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1274
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a42" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1304
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a43" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1334
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a44" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1364
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a45" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1394
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a46" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1424
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a47" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1454
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a48" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1484
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a49" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1514
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a50" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1544
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a51" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1574
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a52" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1604
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a53" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1634
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a54" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1664
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a55" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1694
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a56" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1724
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a57" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1754
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a58" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1784
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a59" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1814
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a60" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1844
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a61" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1874
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a62" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1904
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a63" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1934
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a64" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1964
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a65" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 1994
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a66" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2024
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a67" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2054
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a68" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2084
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a69" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2114
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a70" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2144
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a71" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2174
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a72" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2204
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a73" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2234
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a74" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2264
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a75" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2294
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a76" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2324
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a77" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2354
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a78" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2384
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a79" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2414
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a80" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2444
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a81" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2474
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a82" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2504
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a83" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2534
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a84" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2564
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a85" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2594
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a86" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2624
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a87" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2654
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a88" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2684
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a89" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2714
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a90" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2744
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a91" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2774
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a92" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2804
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a93" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2834
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a94" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2864
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a95" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2894
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a96" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2924
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a97" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2954
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a98" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 2984
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a99" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3014
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a100" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3044
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a101" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3074
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a102" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3104
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a103" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3134
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a104" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3164
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a105" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3194
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a106" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3224
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a107" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3254
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a108" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3284
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a109" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3314
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a110" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3344
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a111" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3374
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a112" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3404
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a113" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3434
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a114" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3464
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a115" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3494
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a116" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3524
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a117" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3554
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a118" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3584
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a119" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3614
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a120" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3644
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a121" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3674
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a122" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3704
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a123" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3734
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a124" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3764
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a125" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3794
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a126" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3824
+        Warning (14320): Synthesized away node "BlockRam:br|altsyncram:ram_rtl_0|altsyncram_f3u1:auto_generated|ram_block1a127" File: C:/Users/kenne/Documents/ECE 3710/Project/db/altsyncram_f3u1.tdf Line: 3854
+Info (17049): 266 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/kenne/Documents/ECE 3710/Project/output_files/CPU_ECE3710_RegFile_and_ALU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 2
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 2
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 8
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/kenne/Documents/ECE 3710/Project/CPU.v Line: 8
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 180 warnings
-    Info: Peak virtual memory: 4834 megabytes
-    Info: Processing ended: Tue Oct 29 12:22:55 2019
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:44
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 167 warnings
+    Info: Peak virtual memory: 4982 megabytes
+    Info: Processing ended: Mon Nov 11 16:51:54 2019
+    Info: Elapsed time: 00:01:38
+    Info: Total CPU time (on all processors): 00:01:46
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/output_files/CPU_ECE3710_RegFile_and_ALU.map.smsg.
+The suppressed messages can be found in C:/Users/kenne/Documents/ECE 3710/Project/output_files/CPU_ECE3710_RegFile_and_ALU.map.smsg.
 
 

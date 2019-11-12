@@ -143,22 +143,24 @@ module ALU
 			4'b1000: begin //SHIFT
 				case(operationControl[3:0])
 					LSH: begin
-						resWire = destData << sourceData;
+						resWire = sourceData << destData;
 					end
 					LSHIPOS: begin
-						resWire = destData << 1;
+						resWire = sourceData << 1;
 					end
 					LSHINEG: begin
-						resWire = destData >> 1;
+						$display("NEG");
+						resWire = sourceData >> 1;
 					end
 					ASHU: begin
-						resWire = destData <<< sourceData;
+					$display("ASHU");
+						resWire = sourceData <<< destData;
 					end
 					ASHUIPOS: begin
-						resWire = destData <<< sourceData;
+						resWire = sourceData <<< 1;
 					end
 					ASHUINEG: begin
-						resWire = destData >>> sourceData;
+						resWire = sourceData >>> 1;
 					end
 					default: begin
 						carry = 0;
@@ -247,6 +249,7 @@ module ALU
 				negative = destData < sourceData;
 			end
 			ANDI: begin
+				$display("ANDING!");
 				resWire = destData & sourceData;
 				carry = 0;
 				low = 0;
@@ -279,7 +282,7 @@ module ALU
 				negative = 0;
 			end
 			LUI: begin
-				resWire = {sourceData, 8'b00000000};
+				resWire = {1'b0, destData, 7'b0};
 				carry = 0;
 				low = 0;
 				overflow = 0;

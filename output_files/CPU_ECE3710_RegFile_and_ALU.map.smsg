@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at RegisterFile.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 13
-Info (10281): Verilog HDL Declaration information at FSM.v(4): object "reset" differs only in case from object "RESET" in the same scope File: C:/Users/Alex/source/repos/KTANE/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 4
+Warning (10268): Verilog HDL information at RegisterFile.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v Line: 13
+Info (10281): Verilog HDL Declaration information at FSM.v(4): object "reset" differs only in case from object "RESET" in the same scope File: C:/Users/kenne/Documents/ECE 3710/Project/FSM.v Line: 4

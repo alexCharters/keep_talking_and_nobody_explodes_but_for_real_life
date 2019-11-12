@@ -1,12 +1,13 @@
 `timescale 1 ns/1 ns
 module Everything();
 wire [15:0] instruction, decodedInstruction, aluOut, pcIndex, ramReadAddr, ramWriteAddr, r1Data, r2Data, regFileData, aluSrc1, aluSrc2,
-    selectedImmediate, decRamWriteAddr, registerWriteAddress, irRe, irVal, signExtended, zeroExtended, ramReadData;
+    selectedImmediate, decRamWriteAddr, irVal, signExtended, zeroExtended, ramReadData;
 wire [7:0] aluOpCode;
+wire [3:0] registerWriteAddress;
 wire psrC, psrL, psrO, psrZ, psrN, r2Im;
 wire [1:0] intSel;
 reg clock, reset;
-wire pcEn, pcIncSet, brWe, brRe, ramReadPCAlu, regFileWriteAluRam, rfWe, pcRegSel, pcAluSel, addrRegDecSel, aluEn, brAddrSel;
+wire pcEn, pcIncSet, brWe, brRe, ramReadPCAlu, regFileWriteAluRam, rfWe, pcRegSel, pcAluSel, addrRegDecSel, aluEn, brAddrSel, irRe;
 reg [4:0] psr = 5'b00000;
 ProgramCounter pc(.clock(clock), .enable(pcEn), .incOrSet(pcIncSet), .newAddress(aluOut), .reset(reset), .currentInstruction(pcIndex));
 mux2to1 brReadAddrSelectMux(.in1(pcIndex), .in2(aluOut), .select(ramReadPCAlu), .out(ramReadAddr));
@@ -18,7 +19,7 @@ RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Addr
 mux2to1 pcOrReg1Mux(.in1(pcIndex), .in2(r1Data), .select(pcRegSel), .out(aluSrc1));
 SignExtender signExtender(.immediate(instruction[7:0]), .extended(signExtended));
 ZeroExtender zeroExtender(.immediate(instruction[7:0]), .result(zeroExtended));
-mux4to1 immediateMux(.in1(instruction[7:0]), .in2(signExtended), .in3(zeroExtended), .in4(0), .select(intSel), .out(selectedImmediate));
+mux4to1 immediateMux(.in1({8'b0, instruction[7:0]}), .in2(signExtended), .in3(zeroExtended), .in4(16'b0), .select(intSel), .out(selectedImmediate));
 mux2to1 reg2OrImmediateMux(.in1(r2Data), .in2(selectedImmediate), .select(r2Im), .out(aluSrc2));
 ALUControl aluController(.instruction(decodedInstruction), .out(aluOpCode));
 ALU alu(.enable(aluEn), .sourceData(aluSrc1), .destData(aluSrc2), .operationControl(aluOpCode), .carry(psrC), .low(psrL), .overflow(psrO), 
@@ -35,7 +36,7 @@ initial begin
     reset = 0;
     #10;
     reset = 1;
-    #360;
+    #1080;
     $stop;
 end
 always #5 clock = ~clock;

@@ -565,7 +565,17 @@ module Decoder(inputInstruction, outputInstruction);
     output reg [15:0] outputInstruction;
     always @ (*) begin
         case(inputInstruction[15:12])
-
+            // 4'b0100:
+            //     case(inputInstruction[7:4])
+            //         4'b0000: begin
+            //             $display("Changing load instr");
+            //             outputInstruction = {4'b0101, inputInstruction[3:0], 8'b00000000};
+            //         end
+            //         default: begin
+            //             $display("Warning, fell through to default case in decode");
+            //             outputInstruction = inputInstruction;
+            //         end
+            //     endcase
             default: begin
                 outputInstruction = inputInstruction;
             end

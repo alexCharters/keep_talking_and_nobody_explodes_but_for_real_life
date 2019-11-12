@@ -1,32 +1,33 @@
 module CPU(clock, reset);
-	input clock, reset;
-    reg [15:0] jalRegister;
-    reg [4:0] PSR;
-    wire [4:0] psrFlagLine;
-    wire pcIncOrSet, brWe, rfWe, r2Im, pcRegSel, addrRegDecSel, wbRegRam, pcAluout, brRe, irRe, pcEn;
-    wire [15:0] newPCAddress;
-    wire [15:0] decRamAddr;
-    wire [15:0] instruction, jalAddrLine;
-    wire [7:0] outputInstruction;
-    wire [15:0] irVal;
-    wire [3:0] registerWriteAddress;
-    wire [15:0] ramReadAddress, ramWriteAddr, ramWriteData;
-    wire [1:0] intSel;
-    wire [1:0] currentState;
-	assign jalAddrLine = jalRegister;
-    assign psrFlagLine = PSR;
-	FSM fsm(.clock(clock), .reset(reset), .opcode(instruction), .psr(psrFlagLine), .pcEnable(pcEn), .pcIncrementOrWrite(pcIncOrSet), .blockRamWriteEnable(brWe), 
-    .registerFileWriteEnable(rfWe), .integerTypeSelectionLine(intSel), .reg2OrImmediateSelectionLine(r2Im), 
-    .pcOrRegisterSelectionLine(pcRegSel), .addressFromRegOrDecoderSelectionLine(addrRegDecSel), .writeBackToRegRamOrALUSelectionLine(wbRegRam), 
-    .pcOrAluOutputRamReadSelectionLine(pcAluout), 
-    .decoderRamWriteAddress(decRamAddr), .registerWriteAddress(registerWriteAddress), .ramReadEnable(brRe), .irReadEnable(irRe), 
-    .instructionRegisterValue(irVal));
-    ProgramCounter pc(.clock(clock), .reset(reset), .incOrSet(pcIncOrSet), .enable(pcEn), .newAddress(newPCAddress), .currentInstruction(ramReadAddress));
-    BlockRam br(.data(ramWriteData), .read_addr(ramReadAddress), .write_addr(ramWriteAddr), .re(brRe), .we(brWe), .clk(clock), .q(instruction));
-    Datapath dp(.clock(clock), .reset(reset), .instruction(instruction), .blockRamWriteEnable(brWe), .registerFileWriteEnable(rfWe), 
-    .integerTypeSelectionLine(intSel), .reg2OrImmediateSelectionLine(r2Im), 
-	.pcOrRegisterSelectionLine(pcRegSel), .addressFromRegOrDecoderSelectionLine(addrRegDecSel), .writeBackToRegRamOrALUSelectionLine(wbRegRam), 
-    .pcOrAluOutputRamReadSelectionLine(pcAluout), 
-	.decoderRamWriteAddress(decRamAddr), .registerWriteAddress(registerWriteAddress));
-
+	wire [15:0] instruction, decodedInstruction, aluOut, pcIndex, ramReadAddr, ramWriteAddr, r1Data, r2Data, regFileData, aluSrc1, aluSrc2,
+    selectedImmediate, decRamWriteAddr, irVal, signExtended, zeroExtended, ramReadData;
+wire [7:0] aluOpCode;
+wire [3:0] registerWriteAddress;
+wire psrC, psrL, psrO, psrZ, psrN, r2Im;
+wire [1:0] intSel;
+input clock, reset;
+wire pcEn, pcIncSet, brWe, brRe, ramReadPCAlu, regFileWriteAluRam, rfWe, pcRegSel, pcAluSel, addrRegDecSel, aluEn, brAddrSel, irRe;
+reg [4:0] psr = 5'b00000;
+ProgramCounter pc(.clock(clock), .enable(pcEn), .incOrSet(pcIncSet), .newAddress(aluOut), .reset(reset), .currentInstruction(pcIndex));
+mux2to1 brReadAddrSelectMux(.in1(pcIndex), .in2(aluOut), .select(ramReadPCAlu), .out(ramReadAddr));
+BlockRam br(.data(aluOut), .read_addr(ramReadAddr), .write_addr(ramWriteAddr), .we(brWe), .re(brRe), .clk(clock), .q(instruction));
+Decoder decoder(.inputInstruction(instruction), .outputInstruction(decodedInstruction));
+mux2to1 ramOrAluToRf(.in1(aluOut), .in2(ramReadData), .select(regFileWriteAluRam), .out(regFileData));
+RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(decodedInstruction[11:8]), .register2Address(decodedInstruction[3:0]),
+    .writeAddress(decodedInstruction[11:8]), .writeData(regFileData), .register1Data(r1Data), .register2Data(r2Data));
+mux2to1 pcOrReg1Mux(.in1(pcIndex), .in2(r1Data), .select(pcRegSel), .out(aluSrc1));
+SignExtender signExtender(.immediate(instruction[7:0]), .extended(signExtended));
+ZeroExtender zeroExtender(.immediate(instruction[7:0]), .result(zeroExtended));
+mux4to1 immediateMux(.in1({8'b0, instruction[7:0]}), .in2(signExtended), .in3(zeroExtended), .in4(16'b0), .select(intSel), .out(selectedImmediate));
+mux2to1 reg2OrImmediateMux(.in1(r2Data), .in2(selectedImmediate), .select(r2Im), .out(aluSrc2));
+ALUControl aluController(.instruction(decodedInstruction), .out(aluOpCode));
+ALU alu(.enable(aluEn), .sourceData(aluSrc1), .destData(aluSrc2), .operationControl(aluOpCode), .carry(psrC), .low(psrL), .overflow(psrO), 
+    .zero(psrZ), .negative(psrN), .result(aluOut));
+mux2to1 brWriteAddrMux(.in1(r2Data), .in2(decRamWriteAddr), .select(brAddrSel), .out(ramWriteAddr));
+FSM fsm(.clock(clock), .reset(reset), .opcode(instruction), .psr({psrN, psrZ, psrO, psrL, psrC}), .pcEnable(pcEn), .pcIncrementOrWrite(pcIncSet), 
+    .blockRamWriteEnable(brWe), .registerFileWriteEnable(rfWe), .integerTypeSelectionLine(intSel), .reg2OrImmediateSelectionLine(r2Im), 
+    .pcOrRegisterSelectionLine(pcRegSel), .addressFromRegOrDecoderSelectionLine(brAddrSel), .writeBackToRegRamOrALUSelectionLine(regFileWriteAluRam), 
+    .pcOrAluOutputRamReadSelectionLine(ramReadPCAlu), 
+    .decoderRamWriteAddress(decRamWriteAddr), .registerWriteAddress(registerWriteAddress), .ramReadEnable(brRe), .irReadEnable(irRe), 
+    .aluEnable(aluEn), .instructionRegisterValue(irVal));
 endmodule

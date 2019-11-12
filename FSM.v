@@ -211,7 +211,17 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                             end
                             default: begin //Load and Store
                                 pcOrRegisterSelectionLine = 1;
-                                reg2OrImmediateSelectionLine = 0;
+                                reg2OrImmediateSelectionLine = 1;
+                                if(opcode[7:4] == 4'b0100)
+                                    integerTypeSelectionLine = 3;
+                                else begin
+                                    $display("LOAD DETECTED!");
+                                    integerTypeSelectionLine = 0;
+                                    reg2OrImmediateSelectionLine = 0;
+                                    pcOrAluOutputRamReadSelectionLine = 1;
+                                    ramReadEnable = 1;
+                                    writeBackToRegRamOrALUSelectionLine = 0;
+                                end
                                 nextState = WRITE_BACK;
                             end
                         endcase
@@ -231,12 +241,17 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                     4'b0100: begin
                         case(opcode[7:4])
                             4'b0000: begin //Load
+                                $display("LOAD WB");
                                 registerFileWriteEnable = 1;
                                 pcOrAluOutputRamReadSelectionLine = 1; //Use the alu to load from ram.
+                                ramReadEnable = 1;
+                                pcEnable = 1;
                             end
                             4'b0100: begin //STORE
+                                $display("STORE WB");
                                 blockRamWriteEnable = 1;
                                 addressFromRegOrDecoderSelectionLine = 0;
+                                pcEnable = 1;
                             end
                             4'b1100: begin
                                 //need to check condition vs psr 
