@@ -100,7 +100,8 @@ module ALU
 							carry = 0;
 							low = sourceData > destData;
 							negative = destData < sourceData;
-							zero = (sourceData - destData) == 0;
+							zero = (sourceData - destData) == 0 ? 1'b1 : 1'b0;
+							
 						end
 						AND: begin //AND
 							resWire = sourceData & destData;
@@ -242,6 +243,7 @@ module ALU
 //				negative = 0; //TODO fix this
 //			end
 			CMPI: begin
+				$display("COMPARING INTEGERS!");
 				resWire = 0;
 				carry = 0;
 				low = sourceData > destData;

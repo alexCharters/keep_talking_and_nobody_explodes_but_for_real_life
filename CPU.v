@@ -25,10 +25,13 @@ ALUControl aluController(.instruction(decodedInstruction), .out(aluOpCode));
 ALU alu(.enable(aluEn), .sourceData(aluSrc1), .destData(aluSrc2), .operationControl(aluOpCode), .carry(psrC), .low(psrL), .overflow(psrO), 
     .zero(psrZ), .negative(psrN), .result(aluOut));
 mux2to1 brWriteAddrMux(.in1(r2Data), .in2(decRamWriteAddr), .select(brAddrSel), .out(ramWriteAddr));
-FSM fsm(.clock(clock), .reset(reset), .opcode(instruction), .psr({psrN, psrZ, psrO, psrL, psrC}), .pcEnable(pcEn), .pcIncrementOrWrite(pcIncSet), 
+FSM fsm(.clock(clock), .reset(reset), .opcode(instruction), .psr(psr), .pcEnable(pcEn), .pcIncrementOrWrite(pcIncSet), 
     .blockRamWriteEnable(brWe), .registerFileWriteEnable(rfWe), .integerTypeSelectionLine(intSel), .reg2OrImmediateSelectionLine(r2Im), 
     .pcOrRegisterSelectionLine(pcRegSel), .addressFromRegOrDecoderSelectionLine(brAddrSel), .writeBackToRegRamOrALUSelectionLine(regFileWriteAluRam), 
     .pcOrAluOutputRamReadSelectionLine(ramReadPCAlu), 
     .decoderRamWriteAddress(decRamWriteAddr), .registerWriteAddress(registerWriteAddress), .ramReadEnable(brRe), .irReadEnable(irRe), 
     .aluEnable(aluEn), .instructionRegisterValue(irVal));
+always @ (*) begin
+    psr = {psrN, psrZ, psrO, psrL, psrC};
+end
 endmodule

@@ -71,6 +71,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                         nextState = EXECUTE;
                     end
                     4'b0100: begin //LD, Store, Jcond, JAL
+
                     end
                     4'b0101: begin //ADDI
                         nextState = EXECUTE;
@@ -119,8 +120,10 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                         registerFileWriteEnable = 0;
                         //ALU control will select the instruction for the ALU to run, we just need to make sure to provide the sources.
                         registerWriteAddress = opcode[11:8];
-                        if(opcode[7:4] == 4'b1011)
+                        if(opcode[7:4] == 4'b1011) begin
+                            pcEnable = 1;
                             nextState = IF;
+                        end
                         else
                             nextState = WRITE_BACK; //We are done with the RType instruction. Write the result
                     end
@@ -164,6 +167,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                         pcOrRegisterSelectionLine = 1;
                         reg2OrImmediateSelectionLine = 1;
                         integerTypeSelectionLine = 1;
+                        pcEnable = 1;
                         nextState = IF; //CMPs do not write back to regfile
                     end
                     4'b1111: begin //LUI
@@ -213,7 +217,6 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                                 if(opcode[7:4] == 4'b0100)
                                     integerTypeSelectionLine = 3;
                                 else begin
-                                    $display("LOAD DETECTED!");
                                     integerTypeSelectionLine = 0;
                                     reg2OrImmediateSelectionLine = 0;
                                     pcOrAluOutputRamReadSelectionLine = 1;
@@ -258,6 +261,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                             pcEnable = 1; //still need to move to next instruction
                             case(opcode[11:8])
                                 EQ: begin
+                                    $display("Jumping since values are equal");
                                     if(psr[3] == 1'b1) begin
                                         pcIncrementOrWrite = 1;
                                     end
