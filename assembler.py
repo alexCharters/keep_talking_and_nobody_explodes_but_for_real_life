@@ -61,11 +61,38 @@ RETX 0100 0000 1001 0000
 WAIT 0000 0000 0000 0000
 '''
 
+
 #my regex exists at https://regex101.com/r/PykLIR/1
 
 import re
 import sys
 from ctypes import *
+
+regexStr = r"(\w+:)?\s*(\S+)"
+#regex for finding hexidecimal can be found at https://regex101.com/r/zaY1m1/1
+
+def getOperand(assem_line: str, operand: int):
+    searchResults = assem_regex.finditer(assem_line)
+    firstMatch = next(searchResults)
+    Rsrc_match = next(searchResults)
+    if firstMatch.group(2).lower() != 'j':
+        operand1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", Rsrc_match.group(2), re.MULTILINE).group(0)
+    else:
+        operand1 = Rsrc_match.group(2)
+
+    if (re.match(r'(j[a-z]*)|(b[a-z]+)', firstMatch.group(2).lower()) is None or
+            firstMatch.group(2).lower() == 'jal'):
+        Rdest_match = next(searchResults)
+        operand2 = re.search(r"-?\d{1,2}", Rdest_match.group(2), re.MULTILINE).group(0)
+
+    if operand == 1:
+        return operand1
+    elif operand == 2:
+        return operand2
+
+
+
+
 
 MEM_SIZE = 256 # 16 bit words
 mem_list = []
@@ -75,10 +102,11 @@ for i in range(0,MEM_SIZE):
 inpath = 'explode.asm'
 outpath = 'explode.dat'
 
-regexStr = r"(\w+:)?\s*(\S+)"
+
 assem_regex = re.compile(regexStr, re.MULTILINE | re.VERBOSE)
 
-jumpReg = '$15'
+jumpReg = 'r15'
+linkReg = 'r14'
 
 if len(sys.argv) > 1:
     inpath = sys.argv[1]
@@ -111,28 +139,52 @@ for line in lines:
         Rsrc_match = next(searchResults)
 
         opcode = firstMatch.group(2).lower()
-        if (re.match(r'(j[a-z]*)', opcode) is not None):
-            if opcode == 'jal':
-                Rdest_match = next(searchResults)
-                label = re.search(r'\w+',Rdest_match.group(2)).group(0)
-            else:
-                label = re.search(r'\w+',Rsrc_match.group(2)).group(0)
+        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None):
+            #if opcode == 'jal':
+                # These are commented out since JAL will use a label now
+                #Rdest_match = next(searchResults)
+                #label = re.search(r'\w+',Rdest_match.group(2)).group(0)
+            #else:
+            #    label = re.search(r'\w+',Rsrc_match.group(2)).group(0)
+
+            label = re.search(r'\w+', Rsrc_match.group(2)).group(0)
             '''
             #to jump to 0x02FF
             MOVi r1, FF
             LUI r1, 02
             JEQ r1
             '''
+
+            # remember: in immediate instructions, Immediate comes first.
             lines.remove(line)
             lines.insert(i, 'movi ' + label + ', ' + jumpReg)
             lines.insert(i + 1, 'lui ' + label + ', ' + jumpReg)
-            lastJ = opcode + ' ' + jumpReg
+            if opcode.lower() == 'jal':
+                lastJ = opcode + ' ' + linkReg + ', ' + jumpReg
+            else:
+                lastJ = opcode + ' ' + jumpReg
             lines.insert(i + 2, lastJ)
+
+            '''
+            // move immediate word
+            moviw 0xAABB, r3 translates to:
+            lui 0xAA, r3
+            ori 0xBB, r3
+            '''
+        elif opcode.lower() == 'moviw':
+            immediate = getOperand(line, 1)
+            immediate = int(immediate, 0)
+            reg = getOperand(line, 2)
+
+            lines.insert(i, 'lui ' + str(immediate >> 8) + ' ' + reg)
+            lines.insert(i+1, 'ori ' + str(immediate & 0x00FF) + ' ' + reg)
+            lines.remove(line)
+
     i += 1
 
 
 
-
+i = 0
 # LOOP 2: collect and store program labels
 for line in lines:
     if line[0] == '#' or line.isspace() or line == '':
@@ -148,14 +200,16 @@ for line in lines:
 i = 0
 for line in lines:
     newLine = None
-    restring = r'movi\s+' + '\\' + jumpReg + r', (\w+)'
-    if re.match(r'lui\s+' + "\\" + jumpReg + r", (\w+)", line) is not None:
-        label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
+    #restring = r'movi\s+' + '\\' + jumpReg + r', (\w+)'
+    if re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
+        #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
+        label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
         addr = labelDict[label + ':']
         addr = addr >> 8
         newLine = line.replace(label, str(addr))
-    if re.match(r"movi\s+"  + '\\' + jumpReg + r", (\w+)", line) is not None:
-        label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
+    if re.match(r"movi\s+(\w+), " + jumpReg, line) is not None:
+        #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
+        label = re.match(r"movi\s+(\w+), " + jumpReg, line).group(1)
         addr = labelDict[label + ':']
         addr = addr & 0x00FF
         newLine = line.replace(label, str(addr))
@@ -178,8 +232,8 @@ for line in lines:
         firstMatch = next(searchResults)
         Rsrc_match = next(searchResults)
         if firstMatch.group(2).lower() != 'j':
-            operand1 = re.search(r"-?\d{1,3}", Rsrc_match.group(2), re.MULTILINE).group(0)
-            operand1 = c_ubyte(int(operand1))
+            operand1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", Rsrc_match.group(2), re.MULTILINE).group(0)
+            operand1 = c_ubyte(int(operand1, 0))
         else:
             operand1 = Rsrc_match.group(2)
 
