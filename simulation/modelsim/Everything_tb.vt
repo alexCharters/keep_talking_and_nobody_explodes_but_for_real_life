@@ -1,13 +1,25 @@
 `timescale 1 ns/1 ns
 module Everything();
 reg clock, reset;
-CPU cpu(clock, reset);
+
+reg button, morse_left, morse_right, morse_tx, keypad_TL, keypad_TR, keypad_LL, keypad_LR;
+
+wire scl, morse_led;
+wire sda;
+
+wire [3:0] keypad_leds;
+wire [2:0] led1, led2, strike_leds;
+
+wire [6:0] morse_sevseg1, morse_sevseg2, timer_sevseg1, timer_sevseg2, timer_sevseg3;
+
+
+CPU cpu(clock, reset, sda, scl, led1, led2, button, morse_left, morse_right, morse_tx, morse_led, keypad_TL, keypad_TR, keypad_LL, keypad_LR, keypad_leds, morse_sevseg1, morse_sevseg2, timer_sevseg1, timer_sevseg2, timer_sevseg3, strike_leds);
 initial begin
     clock = 0;
     reset = 0;
     #10;
     reset = 1;
-    #320;
+    #350;
     $stop;
 end
 always #5 clock = ~clock;

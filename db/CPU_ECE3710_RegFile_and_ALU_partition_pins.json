@@ -2,7 +2,272 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "scl",
+					"strict" : false
+				},
+				{
+					"name" : "led1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_led",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sevseg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sevseg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "strike_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "strike_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "strike_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sda",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_LL",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_TR",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_TL",
+					"strict" : false
+				},
+				{
+					"name" : "morse_tx",
+					"strict" : false
+				},
+				{
+					"name" : "morse_right",
+					"strict" : false
+				},
+				{
+					"name" : "morse_left",
+					"strict" : false
+				},
+				{
+					"name" : "button",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_LR",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

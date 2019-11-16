@@ -1,20 +1,20 @@
-Fitter Status : Successful - Mon Nov 11 16:52:23 2019
+Fitter Status : Successful - Fri Nov 15 23:22:22 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CPU_ECE3710_RegFile_and_ALU
 Top-level Entity Name : CPU
 Family : Cyclone V
-Device : 5CGXFC7C7F23C8
+Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 56,480 ( < 1 % )
-Total registers : 0
-Total pins : 2 / 268 ( < 1 % )
+Logic utilization (in ALMs) : 1,570 / 32,070 ( 5 % )
+Total registers : 1664
+Total pins : 70 / 457 ( 15 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 7,024,640 ( 0 % )
-Total RAM Blocks : 0 / 686 ( 0 % )
-Total DSP Blocks : 0 / 156 ( 0 % )
-Total HSSI RX PCSs : 0 / 6 ( 0 % )
-Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
-Total HSSI TX PCSs : 0 / 6 ( 0 % )
-Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
-Total PLLs : 0 / 13 ( 0 % )
+Total block memory bits : 1,055,104 / 4,065,280 ( 26 % )
+Total RAM Blocks : 130 / 397 ( 33 % )
+Total DSP Blocks : 1 / 87 ( 1 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
 Total DLLs : 0 / 4 ( 0 % )

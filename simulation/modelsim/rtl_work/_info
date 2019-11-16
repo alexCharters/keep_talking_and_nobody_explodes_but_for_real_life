@@ -7,94 +7,116 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim
+Z0 dC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim
 vALU
-Z1 !s110 1573577314
+Z1 !s110 1573711388
 !i10b 1
 !s100 oJ`KaWmI=i<]3HT8^n49P3
-IjdP?:_[nYSbVNSMV?KLmN3
+IgO<b0nmg@6IQ7F;WN<DmX1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1573576701
-8C:/Users/kenne/Documents/ECE 3710/Project/ALU.v
-FC:/Users/kenne/Documents/ECE 3710/Project/ALU.v
+w1573578439
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
 L0 2
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1573577314.000000
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALU.v|
+Z4 !s108 1573711388.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
 !i113 1
 Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/kenne/Documents/ECE 3710/Project}
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life
 Z7 tCvgOpt 0
 n@a@l@u
 vALUControl
 R1
 !i10b 1
 !s100 mnRJ;ok[WCh;WK`<lfig73
-I3D^Vc`kA7mP;lL:@6@WB80
+Iil7?]@>Sc;j4fezS6I>k61
 R2
 R0
-w1573518681
-8C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v
-FC:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v
+Z8 w1573524238
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ALUControl.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUControl.v|
 !i113 1
 R5
 R6
 R7
 n@a@l@u@control
 vBlockRam
-R1
+Z9 !s110 1573711389
 !i10b 1
 !s100 ?7CVX<3@V5K25@]E_ZXW>0
-I0_c^[AeijL[C:IWWZ[SiU0
+IflGb8IJRXFKE;>`_n9MWC1
 R2
 R0
-w1572206566
-8C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v
-FC:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v
 L0 5
 R3
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/BlockRam.v|
+Z10 !s108 1573711389.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/BlockRam.v|
 !i113 1
 R5
 R6
 R7
 n@block@ram
-vCPU
-R1
+vbutton_mem
+Z11 !s110 1573711387
 !i10b 1
-!s100 eOJ75664b2[7kQ^EWI3MJ3
-I:LgJ:[]:a`9h`zOgXE5`43
+!s100 AoJ@jEk3;QZ]N]5@??7l72
+IQR<LUP:N^diHW[2Ez4DFb1
 R2
 R0
-w1573571401
-8C:/Users/kenne/Documents/ECE 3710/Project/CPU.v
-FC:/Users/kenne/Documents/ECE 3710/Project/CPU.v
+w1573619830
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/button_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/button_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z12 !s108 1573711387.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/button_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/button_mem.v|
+!i113 1
+R5
+Z13 !s92 -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff
+R7
+vCPU
+R9
+!i10b 1
+!s100 ^D1_z?Pd<4CFJFJR2Eo?z3
+I=zKAkVXWGJnbWTKUGHVZH0
+R2
+R0
+w1573616670
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/CPU.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/CPU.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
 !i113 1
 R5
 R6
@@ -104,223 +126,489 @@ vDecoder
 R1
 !i10b 1
 !s100 NH1=^gWWT=]j7FZS3Tizm3
-IW?HOM@kfT[BBWYmiRkV1[3
+IG0=0@iVTA_G4RjhIDdU8o0
 R2
 R0
-w1572978521
-8C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v
-FC:/Users/kenne/Documents/ECE 3710/Project/Decoder.v
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
 L0 563
 R3
 r1
 !s85 0
 31
 R4
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/Decoder.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v|
 !i113 1
 R5
 R6
 R7
 n@decoder
-vEverything
-!s110 1573577396
+vdivider
+R11
 !i10b 1
-!s100 aUAD`1^6z2b;96Af4D:?D2
-IQUD4f_a1KFg2^R[E_Zo[b3
+!s100 A]:?4[VJa2NRS`D<VA9FO0
+Id4>h[@ddOj692T<J;>YGd2
 R2
 R0
-w1573577387
-8C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
-FC:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt
-L0 2
-R3
-r1
-!s85 0
-31
-!s108 1573577396.000000
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/simulation/modelsim/Everything_tb.vt|
-!i113 1
-Z8 o-work work
-R7
-n@everything
-vFSM
-Z9 !s110 1573577315
-!i10b 1
-!s100 N?l<h07MUX=39bBlVU74V0
-IJ4_jXR?EeL`zHSSIz^e:B2
-R2
-R0
-w1573574053
-8C:/Users/kenne/Documents/ECE 3710/Project/FSM.v
-FC:/Users/kenne/Documents/ECE 3710/Project/FSM.v
+w1573165891
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/divider.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/divider.v
 L0 1
 R3
 r1
 !s85 0
 31
-Z10 !s108 1573577315.000000
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/FSM.v|
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/divider.v|
+!i113 1
+R5
+R13
+R7
+vextras_mem
+R11
+!i10b 1
+!s100 o1znYKFIndGh7bn6YQ4@M0
+IGeVgDzjCISVO7<E1Gg69o2
+R2
+R0
+w1573618285
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/extras_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/extras_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/extras_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/extras_mem.v|
+!i113 1
+R5
+R13
+R7
+vFSM
+R9
+!i10b 1
+!s100 _I`id9dbgac<INnD^kcFz3
+IjLgPo1jNDl6W??N40E3kJ0
+R2
+R0
+w1573619360
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
+L0 1
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
 !i113 1
 R5
 R6
 R7
 n@f@s@m
+vI2C
+R11
+!i10b 1
+!s100 kBf1mRiAFNYhgoP]gY8?S2
+I=Z5TF>A1:Khj]4iige_8n2
+R2
+R0
+w1573165767
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/I2C.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/I2C.v
+L0 27
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/I2C.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/I2C.v|
+!i113 1
+R5
+R13
+R7
+n@i2@c
 vInstructionRegister
 R9
 !i10b 1
-!s100 ]815D`oLAc?<9cm3_[inP0
-IlR5TYJTSUPW]Lk@cWOP[Z2
+!s100 ggSV7]fjRHK=e1hhQGD@Z0
+IRi^mXUZ18>J_>>QM@`j[R0
 R2
 R0
-w1573520285
-8C:/Users/kenne/Documents/ECE 3710/Project/InstructionRegister.v
-FC:/Users/kenne/Documents/ECE 3710/Project/InstructionRegister.v
+w1573616394
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v
 L0 1
 R3
 r1
 !s85 0
 31
 R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/InstructionRegister.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/kenne/Documents/ECE 3710/Project/InstructionRegister.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v|
 !i113 1
-R8
+R5
+R6
 R7
 n@instruction@register
-vmux2to1
-R9
+vkeypad_mem
+R11
 !i10b 1
-!s100 J=:?<J[mKCc6;;WiSfo0F1
-IdMgbPNDJ[VA>TJ_dhfabF1
+!s100 83d^6Ib1a0_k]fjO:OPVS0
+I49Z0[OeSA3RVS9Ed8gLbE1
 R2
 R0
-w1571002722
-8C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v
-FC:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v
+Z14 w1573526108
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/keypad_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/keypad_mem.v
 L0 1
 R3
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/mux2to1.v|
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/keypad_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/keypad_mem.v|
+!i113 1
+R5
+R13
+R7
+vktane_mem
+Z15 !s110 1573711386
+!i10b 1
+!s100 an;idi^R[GmaGX[nP8Eo53
+If5AkmGDjFL1EHOS;X8]7P0
+R2
+R0
+w1573681988
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/ktane_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/ktane_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z16 !s108 1573711386.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/ktane_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/ktane_mem.v|
+!i113 1
+R5
+R13
+R7
+vmorse_mem
+R15
+!i10b 1
+!s100 nZXlJ6[<6QV>egN0f;g?D0
+IF``Ynk4PhN35eMNeiD1@N2
+R2
+R0
+R14
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/morse_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/morse_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/morse_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/morse_mem.v|
+!i113 1
+R5
+R13
+R7
+vmux2to1
+R11
+!i10b 1
+!s100 J=:?<J[mKCc6;;WiSfo0F1
+ITWZPgaLU_HU3D4CD6lF1@0
+R2
+R0
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
 !i113 1
 R5
 R6
 R7
 vmux4to1
-R9
+R11
 !i10b 1
 !s100 YXDHFJF?`VQjNmzhK__m03
-IAZF4UYJm[4=UooBHg]WVl0
+Iek:DUQbga3EZG;F;cfMnS0
 R2
 R0
-w1571001117
-8C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v
-FC:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
 L0 1
 R3
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/mux4to1.v|
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
 !i113 1
 R5
 R6
 R7
-vProgramCounter
-R9
+vmux5
+R15
 !i10b 1
-!s100 =9a4d_WeA@2kl8Lf?azn92
-IYfDf86HAH[1>MMdP]bP3D1
+!s100 Ua_eZ17f3onEnG_IEkziU1
+IaUP7OF[lHB3A=PV9YXZ8L1
 R2
 R0
-w1572460268
-8C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v
-FC:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v
+R14
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/mux5.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/mux5.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/mux5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/mux5.v|
+!i113 1
+R5
+R13
+R7
+voleds
+R9
+!i10b 1
+!s100 _=C@KZDU3`64CWl0n6cLf1
+Iz@maBae>DGGM3Ra23CzT43
+R2
+R0
+w1573538986
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/oleds.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/oleds.v
 L0 1
 R3
 r1
 !s85 0
 31
 R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ProgramCounter.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/oleds.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/oleds.v|
+!i113 1
+R5
+R13
+R7
+vProgramCounter
+R1
+!i10b 1
+!s100 =9a4d_WeA@2kl8Lf?azn92
+I`Nf;fIg=Bc9V0HdK6G>XT2
+R2
+R0
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
 !i113 1
 R5
 R6
 R7
 n@program@counter
 vRegisterFile
-R9
+R1
 !i10b 1
 !s100 ?4g@OSn1>Rde@XZMAYPYf1
-IBRB1<a5m:?<d09Ve2KG^T3
+I1VSod?[nGKkhBgnoLgNTk2
 R2
 R0
-w1572488593
-8C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v
-FC:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
 L0 2
 R3
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/RegisterFile.v|
+R4
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
 !i113 1
 R5
 R6
 R7
 n@register@file
-vSignExtender
-R9
+vrgb_led
+R15
 !i10b 1
-!s100 @7ocBgbWCido]F^4?hcVb0
-I4k^_O[9N>m2kLS?P[J:KH0
+!s100 16WI[IN9RH`7hPGhc<;G33
+Ib>jna@cF1ef]3@2WEl@VL2
 R2
 R0
-w1570119844
-8C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v
-FC:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v
+w1573530196
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/rgb_led.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/rgb_led.v
 L0 1
 R3
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/SignExtender.v|
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/rgb_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/rgb_led.v|
+!i113 1
+R5
+R13
+R7
+vsec_to_sevseg
+R15
+!i10b 1
+!s100 0b]=BF:`Hn7^Ze`:=TmUa2
+I>M;AN0zcNhA0R]^jY5WgH0
+R2
+R0
+w1573539038
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/sec_to_sevseg.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/sec_to_sevseg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/sec_to_sevseg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/sec_to_sevseg.v|
+!i113 1
+R5
+R13
+R7
+vsevseg
+R11
+!i10b 1
+!s100 0:GD<1@@^@bHP3aXhzWh40
+IW>i`BIb^8VnjSeMhc]HUC2
+R2
+R0
+R14
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/bcd_to_sevseg.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/bcd_to_sevseg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/bcd_to_sevseg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/bcd_to_sevseg.v|
+!i113 1
+R5
+R13
+R7
+vSignExtender
+R1
+!i10b 1
+!s100 @7ocBgbWCido]F^4?hcVb0
+Ij0?N4JzNko]<coz29TzQ40
+R2
+R0
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
 !i113 1
 R5
 R6
 R7
 n@sign@extender
-vZeroExtender
-R9
+vtimer
+R15
 !i10b 1
-!s100 d[o58A`9?SEL>QTU]XkHn2
-IeOMIe_48][J;9M<QZg;XG3
+!s100 <ij4z5co:H0^14cfo6@<X3
+Ig4RTD<AaM8HHJ4GCNamjk2
 R2
 R0
-w1570119547
-8C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v
-FC:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v
+w1573526122
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/timer.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/timer.v
 L0 1
 R3
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v|
-!s90 -##implicit##push_minusfile_path##|C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/kenne/Documents/ECE 3710/Project|C:/Users/kenne/Documents/ECE 3710/Project/ZeroExtender.v|
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/timer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/timer.v|
+!i113 1
+R5
+R13
+R7
+vwire_mem
+R15
+!i10b 1
+!s100 [n9bJD53I6;BMmDI8g@a]2
+I?Q[?I9UM89T=MBed[KYoa1
+R2
+R0
+w1573538905
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/wire_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/wire_mem.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/wire_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/alex-stuff/wire_mem.v|
+!i113 1
+R5
+R13
+R7
+vZeroExtender
+R1
+!i10b 1
+!s100 d[o58A`9?SEL>QTU]XkHn2
+I9G6;mB@Ro;3k><TT@TPc_1
+R2
+R0
+R8
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
 !i113 1
 R5
 R6

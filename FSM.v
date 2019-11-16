@@ -13,7 +13,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
     output reg [15:0] decoderRamWriteAddress;
     output reg [3:0] registerWriteAddress;
     output reg [15:0] instructionRegisterValue;
-    parameter IF = 2'b0, DECODE = 2'b01, EXECUTE = 2'b10, WRITE_BACK = 2'b11, RESET = 3'b100;
+    parameter IF = 3'b000, DECODE = 3'b001, EXECUTE = 3'b010, WRITE_BACK = 3'b011, RESET = 3'b100;
     parameter EQ = 4'b0000, NE = 4'b0001, CarrySet = 4'b0010, CarryClear = 4'b0011, 
         HI = 4'b0100, LS = 4'b0101, GT = 4'b0110, LE = 4'b0111,
         FS = 4'b1000, FC = 4'b1001, LO = 4'b1010, HS = 4'b1011,
@@ -35,11 +35,12 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
         writeBackToRegRamOrALUSelectionLine = 0;
         pcOrAluOutputRamReadSelectionLine = 0;
         pcOrAluOutputRamReadSelectionLine = 0;
-		pcIncrementOrWrite = 0;
+		  pcIncrementOrWrite = 0;
         instructionRegisterValue = 0;
         irReadEnable = 0;
         decoderRamWriteAddress = 0;
         registerWriteAddress = 0;
+		  ramReadEnable = 1;
         pcEnable = 0;
         nextState = 0;
         case (currentState)
@@ -55,6 +56,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                 nextState = DECODE;
             end
             DECODE: begin
+					 ramReadEnable = 1;
                 //send instruction from IR to Datapath
                 case (opcode[15:12]) //look at the top half of the instruction
                     4'b0000: begin //this is an RType instruction
@@ -69,9 +71,6 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                     end
                     4'b0011: begin //XORI
                         nextState = EXECUTE;
-                    end
-                    4'b0100: begin //LD, Store, Jcond, JAL
-
                     end
                     4'b0101: begin //ADDI
                         nextState = EXECUTE;
@@ -233,6 +232,7 @@ module FSM(clock, reset, opcode, psr, pcEnable, pcIncrementOrWrite, blockRamWrit
                         integerTypeSelectionLine = 0;
                         nextState = WRITE_BACK;
                     end
+						  default: nextState = IF;
                 endcase
             end
             WRITE_BACK: begin

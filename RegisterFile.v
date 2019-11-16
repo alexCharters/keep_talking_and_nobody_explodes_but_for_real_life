@@ -9,7 +9,6 @@ module RegisterFile
 	reg [(WIDTH-1):0] DataBlock [(1 << REGISTER_BITS) - 1: 0];
 	output [(WIDTH-1) : 0] register1Data, register2Data;
 	//Set the regfile to respond to pos clock edge for handling read and writes
-	integer i = 0;
 	always @ (posedge clock) begin
 		if(reset == 0) begin
 			DataBlock[0] = 0;

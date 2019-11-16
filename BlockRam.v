@@ -28,6 +28,8 @@ module BlockRam
 		// logic around the RAM.
 		if(re)
 			q <= ram[read_addr];
+		else
+		   q <= 16'bzzzzzzzzzzzzzzzz;
 	end
 
 endmodule

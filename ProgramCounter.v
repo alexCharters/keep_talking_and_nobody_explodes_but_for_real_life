@@ -6,7 +6,12 @@ module ProgramCounter(clock, enable, incOrSet, newAddress, reset, currentInstruc
 		if(reset == 0)
 			currentInstruction <= 0;
 		else if(incOrSet == 0 && enable == 1) begin //we are simply incrementing the PC by one.
-			currentInstruction <= currentInstruction + 1;
+			if (currentInstruction != 16'hBFFF) begin
+				currentInstruction <= currentInstruction + 1'b1;
+			end
+			else begin
+			   currentInstruction <= 16'hBFFF;
+			end
 		end
 		else if(enable == 1) begin
 			currentInstruction <= newAddress; //A new address has been provided, so we need to set our counter to it.

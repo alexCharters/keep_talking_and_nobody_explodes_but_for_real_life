@@ -24,6 +24,7 @@ module ALUControl(instruction, out);
 					//JAL
 					out = ADDUI;
 				end
+				default: out = {instruction[15:12], instruction[7:4]};
 			endcase
 		end
 		else if(instruction[15:12] == 4'b1100) begin

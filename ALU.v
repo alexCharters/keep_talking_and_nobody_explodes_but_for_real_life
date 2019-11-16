@@ -1,6 +1,6 @@
 //ALU for project. Right now, everything expects 16 bit values
 module ALU
-	#(parameter WIDTH = 16, ctlLen = 8)
+	#(parameter WIDTH = 16, parameter ctlLen = 8)
 	(enable, sourceData, destData, operationControl, carry, low, overflow, zero, negative, result);
 		input [(WIDTH - 1) : 0] sourceData, destData;
 		input [(ctlLen - 1) : 0] operationControl;
@@ -24,7 +24,8 @@ module ALU
 		output reg [(WIDTH - 1): 0] result;
 		//Next, grab the requested operation from the control line (high bits first for determining op)
 		always@(*) begin
-
+		resWire = 0;
+		
 		carry = 0;
 		low = 0; 
 		overflow = 0;
