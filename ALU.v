@@ -42,11 +42,25 @@ always @ (posedge clock) begin
                         psr[1] <= 1'b0;
                     psr[4] <= rdataA[7] ^ rdataB[7] ^ psr[1];
                 end
+					 4'b1101: begin //MOV
+						  resWire <= rdataB;
+					 end
                 default:
                     resWire <= 17'b0;
             endcase
         end 
-        default:
+		  4'b1000: begin
+				if(opcode[3:0] == 4'b0100)
+					resWire <= rdataA << rdataB;
+				else if(opcode[0] == 1'b0)
+					resWire <= rdataA << 1;
+				else
+					resWire <= rdataA >> 1;
+		  end
+        4'b1111: begin
+				resWire <= {1'b0, rdataB[7:0], 8'b0}; //LUI
+		  end
+		  default:
             resWire <= 17'b0;
     endcase
 	 if(reset == 1'b0) begin
