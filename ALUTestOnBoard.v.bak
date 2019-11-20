@@ -1,0 +1,3 @@
+module ALUTestOnBoard(clock, reset, rdataA, rdataB, psr);
+	ALU alu(.clock(clock), .reset(reset), .opcode(), .rdataA(rdataA), .rdataB(rdataB), .psrOut(psr));
+endmodule
