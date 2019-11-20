@@ -20,6 +20,10 @@ always @ (posedge clock) begin
                 end
                 4'b0101: begin //ADD
                     resWire <= rdataA + rdataB;
+                    if(rdataA[6] == rdataB[6] && resWire[6] != rdataA[6])
+                        psr[2] <= 1'b1;
+                    else
+                        psr[2] <= 1'b0;
                 end
                 4'b0110: begin //ADDU
                     resWire <= rdataA + rdataB;
