@@ -41,9 +41,8 @@ CPU i1 (
 initial begin 
 clock = 0;
 reset = 0;
-#10;
-reset = 1;
-#10; 
+#40;
+reset = 1; 
 $stop;                                                                      
 end
    

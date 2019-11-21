@@ -1,0 +1,9 @@
+MOVI 2, $r1
+MOV $r0, $r6
+ORI 4, $r1
+MOVI 15, $r10
+MOVI 8, $r8
+AND $r8, $r10
+LUI 255, $r2
+ORI 255, $r2
+STOR $r1, $r2

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProjectCPU
-Thu Nov 21 10:20:30 2019
+Thu Nov 21 13:11:35 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,13 +19,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. General Register Statistics
  12. Parameter Settings for User Entity Instance: InstructionMem:instMem
  13. Parameter Settings for User Entity Instance: RegisterFile:rf
- 14. Port Connectivity Checks: "ALU:alu"
- 15. Port Connectivity Checks: "mux4to1:immMux"
- 16. Port Connectivity Checks: "Decoder:decoder"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+ 14. Parameter Settings for User Entity Instance: StorageRam:storeRam
+ 15. Port Connectivity Checks: "ALU:alu"
+ 16. Port Connectivity Checks: "mux4to1:immMux"
+ 17. Port Connectivity Checks: "StorageRam:storeRam"
+ 18. Port Connectivity Checks: "InstructionRegister:ir"
+ 19. Port Connectivity Checks: "Decoder:decoder"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,7 +54,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 21 10:20:30 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 21 13:11:35 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProjectCPU                             ;
 ; Top-level Entity Name           ; CPU                                         ;
@@ -184,6 +187,7 @@ refer to the applicable agreement for further details.
 ; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ProgramCounter.v      ;         ;
 ; InstructionRegister.v            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionRegister.v ;         ;
 ; InstructionMem.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionMem.v      ;         ;
+; StorageRam.v                     ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/StorageRam.v          ;         ;
 ; FSM.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/FSM.v                 ;         ;
 ; CPU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v                 ;         ;
 ; Decoder.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/Decoder.v             ;         ;
@@ -251,8 +255,8 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
+; FSM:fsm|currentState~3                ; Lost fanout        ;
 ; FSM:fsm|currentState~4                ; Lost fanout        ;
-; FSM:fsm|currentState~5                ; Lost fanout        ;
 ; FSM:fsm|currentState.00               ; Lost fanout        ;
 ; FSM:fsm|currentState.01               ; Lost fanout        ;
 ; FSM:fsm|currentState.10               ; Lost fanout        ;
@@ -266,8 +270,8 @@ Encoding Type:  One-Hot
 +------------------------+--------------------+--------------------------------------------------+
 ; Register name          ; Reason for Removal ; Registers Removed due to This Register           ;
 +------------------------+--------------------+--------------------------------------------------+
-; FSM:fsm|currentState~4 ; Lost Fanouts       ; FSM:fsm|currentState.00, FSM:fsm|currentState.10 ;
-; FSM:fsm|currentState~5 ; Lost Fanouts       ; FSM:fsm|currentState.01                          ;
+; FSM:fsm|currentState~3 ; Lost Fanouts       ; FSM:fsm|currentState.00, FSM:fsm|currentState.10 ;
+; FSM:fsm|currentState~4 ; Lost Fanouts       ; FSM:fsm|currentState.01                          ;
 +------------------------+--------------------+--------------------------------------------------+
 
 
@@ -308,6 +312,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: StorageRam:storeRam ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                          ;
+; ADDR_WIDTH     ; 16    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Port Connectivity Checks: "ALU:alu"                 ;
 +--------+--------+----------+------------------------+
@@ -326,6 +341,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; in4  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "in4[15..1]" will be connected to GND. ;
 ; in4  ; Input ; Info     ; Stuck at GND                                                                                                                                  ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "StorageRam:storeRam"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InstructionRegister:ir"                                                                      ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; instr[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -364,7 +397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 21 10:20:20 2019
+    Info: Processing started: Thu Nov 21 13:10:16 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProjectCPU -c FinalProjectCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -402,15 +435,17 @@ Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 9
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 12
 Info (12128): Elaborating entity "InstructionMem" for hierarchy "InstructionMem:instMem" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 14
+Warning (10850): Verilog HDL warning at InstructionMem.v(20): number of words (256) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionMem.v Line: 20
 Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 16
 Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:ir" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 18
 Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:rf" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 21
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:pcOrReg" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 23
-Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:signExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 25
-Info (12128): Elaborating entity "ZeroExtender" for hierarchy "ZeroExtender:zeroExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 27
-Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:immMux" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 29
-Info (12128): Elaborating entity "ALUController" for hierarchy "ALUController:aluCtl" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 33
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 35
+Info (12128): Elaborating entity "StorageRam" for hierarchy "StorageRam:storeRam" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 23
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:pcOrReg" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 25
+Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:signExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 27
+Info (12128): Elaborating entity "ZeroExtender" for hierarchy "ZeroExtender:zeroExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 29
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:immMux" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 31
+Info (12128): Elaborating entity "ALUController" for hierarchy "ALUController:aluCtl" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 35
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 37
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kenne/Documents/ECE 3710 Final Project/output_files/FinalProjectCPU.map.smsg
@@ -422,11 +457,11 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Thu Nov 21 10:20:30 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5012 megabytes
+    Info: Processing ended: Thu Nov 21 13:11:35 2019
+    Info: Elapsed time: 00:01:19
+    Info: Total CPU time (on all processors): 00:01:28
 
 
 +------------------------------------------+

@@ -50,6 +50,11 @@ always @ (posedge clock) begin
                     resWire <= 17'b0;
             endcase
         end 
+		  4'b0100: begin
+				case(opcode[3:0] == 4'b0100)
+					4'b0100: resWire <= rdataA; //STORE
+				endcase
+		  end
 		  4'b1000: begin
 				if(opcode[3:0] == 4'b0100)
 					resWire <= rdataA << rdataB;
@@ -68,9 +73,9 @@ always @ (posedge clock) begin
 		resWire <= 17'b0;
 		psr <= 5'b0;
 	 end
-	 else begin
-		result <= resWire[15:0];
-		psrOut <= psr;
-	 end
+end
+always @ (*) begin
+	result <= resWire[15:0];
+	psrOut <= psr;
 end
 endmodule

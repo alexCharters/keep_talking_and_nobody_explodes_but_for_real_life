@@ -6,8 +6,11 @@ module ALUController(clock, reset, opcode, aluOpcode);
         case (opcode[7:4])
             4'b0000:
                 aluOpcode <= opcode; //RTYPE is unmodified 
-            4'b0100: //LD, STOR, JMP convert to an addu
-                aluOpcode <= 8'b00000110;
+            4'b0100: //JMP convert to an addu
+					 if(opcode[3:0] == 4'b1100 || opcode[3:0] == 4'b1000)
+						aluOpcode <= 8'b00000110;
+					 else
+						aluOpcode <= opcode;
 				4'b1000: //SHIFTS
 					aluOpcode <= opcode;
 				4'b1111: //LUI
