@@ -51,7 +51,7 @@ always @ (posedge clock) begin
             endcase
         end 
 		  4'b0100: begin
-				case(opcode[3:0] == 4'b0100)
+				case(opcode[3:0])
 					4'b0100: resWire <= rdataA; //STORE
 				endcase
 		  end
