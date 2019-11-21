@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at RegisterFile.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/kenne/Documents/ECE 3710 Final Project/RegisterFile.v Line: 11
+Warning (10268): Verilog HDL information at oleds.v(394): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 394
+Warning (10268): Verilog HDL information at RegisterFile.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 11

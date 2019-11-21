@@ -17,35 +17,92 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "11/21/2019 08:19:10"
+// Generated on "11/21/2019 16:02:08"
                                                                                 
 // Verilog Test Bench template for design : CPU
 // 
-// Simulation tool : ModelSim (Verilog)
+// Simulation tool : ModelSim-Altera (Verilog)
 // 
 
 `timescale 1 ps/ 1 ps
 module CPU_vlg_tst();
 // constants                                           
+// general purpose registers
+reg eachvec;
 // test vector input registers
+reg button;
 reg clock;
+reg [3:0] keypad;
+reg morse_left;
+reg morse_right;
+reg morse_tx;
 reg reset;
+reg treg_sda1;
+reg treg_sda2;
+reg treg_sdabutt;
 // wires                                               
+wire [2:0]  butt_color;
+wire [2:0]  butt_strip;
+wire [3:0]  keypad_leds;
+wire morse_led;
+wire [6:0]  morse_sev1;
+wire [6:0]  morse_sev2;
+wire scl1;
+wire scl2;
+wire sclbutt;
+wire sda1;
+wire sda2;
+wire sdabutt;
+wire [2:0]  strike_leds;
+wire [6:0]  timer_min;
+wire [6:0]  timer_sec1;
+wire [6:0]  timer_sec2;
 
 // assign statements (if any)                          
+assign sda1 = treg_sda1;
+assign sda2 = treg_sda2;
+assign sdabutt = treg_sdabutt;
 CPU i1 (
 // port map - connection between master ports and signals/registers   
+	.butt_color(butt_color),
+	.butt_strip(butt_strip),
+	.button(button),
 	.clock(clock),
-	.reset(reset)
+	.keypad(keypad),
+	.keypad_leds(keypad_leds),
+	.morse_led(morse_led),
+	.morse_left(morse_left),
+	.morse_right(morse_right),
+	.morse_sev1(morse_sev1),
+	.morse_sev2(morse_sev2),
+	.morse_tx(morse_tx),
+	.reset(reset),
+	.scl1(scl1),
+	.scl2(scl2),
+	.sclbutt(sclbutt),
+	.sda1(sda1),
+	.sda2(sda2),
+	.sdabutt(sdabutt),
+	.strike_leds(strike_leds),
+	.timer_min(timer_min),
+	.timer_sec1(timer_sec1),
+	.timer_sec2(timer_sec2)
 );
-initial begin 
-clock = 0;
-reset = 0;
-#10;
-reset = 1; 
-$stop;                                                                      
-end
-   
-always #5 clock = ~clock;	
+initial                                                
+begin                                                  
+clock <= 1'b0;
+reset <= 1'b0;
+treg_sdabutt <= 1'bz;
+#1000
+reset <= 1'b1;  
+#100000
+reset <= 1'b0;
+#100
+reset <= 1'b1;   
+#1000000
+reset <= 1'b0;
+#1000000
+reset <= 1'b1;                
+end                                                    
+always #5 clock <= !clock;
 endmodule
-
