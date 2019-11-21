@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Nov 20 01:28:19 2019
+Analysis & Synthesis Status : Successful - Thu Nov 21 10:20:30 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FinalProjectCPU
-Top-level Entity Name : ALUTestOnBoard
+Top-level Entity Name : CPU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 25
-Total pins : 29
+Total registers : 0
+Total pins : 2
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

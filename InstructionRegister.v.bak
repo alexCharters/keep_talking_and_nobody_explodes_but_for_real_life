@@ -1,0 +1,10 @@
+module InstructionRegister(clock, reset, instructionIn, instructionOut);
+    input clock, reset;
+    input [15:0] instructionIn;
+    output reg [15:0] instructionOut;
+    always @ (posedge clock) begin
+        case(instructionIn[15:12])
+            default: instructionOut <= instructionIn;
+        endcase
+    end
+endmodule

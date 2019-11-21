@@ -1,5 +1,5 @@
 Flow report for FinalProjectCPU
-Wed Nov 20 01:29:06 2019
+Thu Nov 21 10:21:08 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 20 01:29:06 2019       ;
+; Flow Status                     ; Successful - Thu Nov 21 10:21:08 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProjectCPU                             ;
-; Top-level Entity Name           ; ALUTestOnBoard                              ;
+; Top-level Entity Name           ; CPU                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 11 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 25                                          ;
-; Total pins                      ; 29 / 457 ( 6 % )                            ;
+; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                        ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 2 / 457 ( < 1 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,29 +67,31 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/20/2019 01:28:10 ;
+; Start date & time ; 11/21/2019 10:20:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FinalProjectCPU     ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                 ;
-+-------------------------------------+----------------------------------------+-----------------+----------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name    ; Section Id     ;
-+-------------------------------------+----------------------------------------+-----------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 929348970054.157423848911040           ; --              ; --             ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --              ; --             ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>          ; --             ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --              ; --             ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --             ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --             ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; ALUTestOnBoard ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; ALUTestOnBoard ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; ALUTestOnBoard ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --             ; --             ;
-; TOP_LEVEL_ENTITY                    ; ALUTestOnBoard                         ; FinalProjectCPU ; --             ; --             ;
-+-------------------------------------+----------------------------------------+-----------------+----------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                              ;
++-------------------------------------+----------------------------------------+-----------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+-----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 929348970054.157435682024788           ; --              ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --              ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>          ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --              ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; CPU         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; CPU         ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; CPU         ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --              ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --              ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --              ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; CPU                                    ; FinalProjectCPU ; --          ; --             ;
++-------------------------------------+----------------------------------------+-----------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4864 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:32     ; 1.0                     ; 6733 MB             ; 00:01:26                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4850 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 5150 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4755 MB             ; 00:00:01                           ;
-; Total                ; 00:00:53     ; --                      ; --                  ; 00:01:56                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4807 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:24     ; 1.0                     ; 6702 MB             ; 00:01:00                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4847 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 5141 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4743 MB             ; 00:00:01                           ;
+; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

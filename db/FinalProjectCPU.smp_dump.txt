@@ -1,0 +1,7 @@
+
+State Machine - |CPU|FSM:fsm|currentState
+Name currentState.11 currentState.10 currentState.01 currentState.00 
+currentState.00 0 0 0 0 
+currentState.01 0 0 1 1 
+currentState.10 0 1 0 1 
+currentState.11 1 0 0 1 

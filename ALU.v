@@ -1,5 +1,6 @@
 module ALU(clock, reset, opcode, rdataA, rdataB, psrOut, result);
-input [7:0] opcode, rdataA, rdataB;
+input [7:0] opcode;
+input [15:0] rdataA, rdataB;
 input clock, reset;
 output reg [4:0] psrOut;
 output reg [15:0] result;
