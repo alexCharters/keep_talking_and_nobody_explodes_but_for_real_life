@@ -1,7 +1,7 @@
-module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2ImSel, immTypeSel, brWe);
+module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2ImSel, immTypeSel, brWe, wbRegAlu);
 	input clock, reset;
 	input [15:0] instruction;
-	output reg pcEn, pcIncOrSet, irEn, rfWe, pcRegSel, r2ImSel, brWe;
+	output reg pcEn, pcIncOrSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu;
 	output reg [1:0] immTypeSel;
 	reg [1:0] currentState = 2'b0, nextState = 2'b0;
 	
@@ -21,6 +21,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 		rfWe = 1'b0;
 		immTypeSel = 1'b0;
 		brWe = 1'b0;
+		wbRegAlu = 1'b1; //By default, write using the result from the ALU
 		case(currentState)
 			2'b00: begin //IF state
 				nextState = 2'b01; //go to decode state
@@ -63,11 +64,15 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 			2'b11: begin //WRITE BACK state
 				pcEn = 1'b1; //enable the program counter
 				rfWe = 1'b1;
+				wbRegAlu = 1'b1;
 				if(instruction[15:12] == 4'b0100)
 					case(instruction[7:4])
 						4'b0100: begin //STORE
 							rfWe = 1'b0;
 							brWe = 1'b1;
+						end
+						4'b0000: begin //LOAD
+							wbRegAlu = 1'b0;
 						end
 						default: ;
 					endcase

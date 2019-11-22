@@ -53,6 +53,9 @@ always @ (posedge clock) begin
 		  4'b0100: begin
 				case(opcode[3:0])
 					4'b0100: resWire <= rdataA; //STORE
+					4'b0000: begin
+					resWire <= rdataA; //LOAD
+					end
 				endcase
 		  end
 		  4'b1000: begin

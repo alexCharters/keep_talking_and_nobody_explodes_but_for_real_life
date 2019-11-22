@@ -1,12 +1,13 @@
 module CPU(clock, reset);
 	wire [15:0] instMemInput, instMemOut, instMemAddr, pcVal, instr, decoderOut, aluOut, r1Data, 
-		r2Data, rdataA, rdataB, signExtended, zeroExtended, immediate, storageOut;
+		r2Data, rdataA, rdataB, signExtended, zeroExtended, immediate, storageOut, regDataIn;
 	wire [7:0] aluOp;
 	input clock, reset;
-	wire instMemWe, pcEn, pcIncSet, irEn, rfWe, pcRegSel, r2ImSel, brWe;
+	wire instMemWe, pcEn, pcIncSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu;
 	wire [1:0] immTypeSel;
 	
-	FSM fsm(.clock(clock), .reset(reset), .instruction(instMemOut), .pcEn(pcEn), .irEn(irEn), .pcIncOrSet(pcIncSet), .rfWe(rfWe), .pcRegSel(pcRegSel), .r2ImSel(r2ImSel), .immTypeSel(immTypeSel), .brWe(brWe));
+	FSM fsm(.clock(clock), .reset(reset), .instruction(instMemOut), .pcEn(pcEn), .irEn(irEn), .pcIncOrSet(pcIncSet), 
+	.rfWe(rfWe), .pcRegSel(pcRegSel), .r2ImSel(r2ImSel), .immTypeSel(immTypeSel), .brWe(brWe), .wbRegAlu(wbRegAlu));
 
 	ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSet), .newValue(pcVal), 
 	.index(instMemAddr));
@@ -18,11 +19,13 @@ module CPU(clock, reset);
 	InstructionRegister ir(.clock(clock), .reset(reset), .enable(irEn), .instructionIn(instMemOut), .instr(instr));
 
 	RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(instr[11:8]), .register2Address(instr[3:0]), 
-		.writeAddress(instr[11:8]), .writeData(aluOut), .register1Data(r1Data), .register2Data(r2Data));
+		.writeAddress(instr[11:8]), .writeData(regDataIn), .register1Data(r1Data), .register2Data(r2Data));
 		
 	StorageRam storeRam(.data(aluOut), .addr(r2Data), .we(brWe), .clk(clock), .q(storageOut));
 		
 	mux2to1 pcOrReg(.in1(instMemAddr), .in2(r1Data), .select(pcRegSel), .out(rdataA));
+	
+	mux2to1 wbRgAlu(.in1(storageOut), .in2(aluOut), .select(wbRegAlu), .out(regDataIn));
 	
 	SignExtender signExt(.immediate(instr[7:0]), .extended(signExtended));
 	
