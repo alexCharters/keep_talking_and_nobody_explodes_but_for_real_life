@@ -37,11 +37,11 @@ always @ (posedge clock) begin
                         psr[3] <= 1'b1;
                     else
                         psr[3] <= 1'b0;
-                    if(rdataB > rdataA)
+                    if(rdataA > rdataB)
                         psr[1] <= 1'b1;
                     else
                         psr[1] <= 1'b0;
-                    psr[4] <= rdataA[7] ^ rdataB[7] ^ psr[1];
+                    psr[4] <= (rdataA[7] & rdataB[7]) ^ psr[1];
                 end
 					 4'b1101: begin //MOV
 						  resWire <= rdataB;
@@ -58,16 +58,22 @@ always @ (posedge clock) begin
 					end
 				endcase
 		  end
-		  4'b1000: begin
-				if(opcode[3:0] == 4'b0100)
-					resWire <= rdataA << rdataB;
+		  4'b1000: begin //LSH FIXME
+				if(opcode[3:0] == 4'b0100) begin
+					if(rdataB[7] == 1'b1) begin
+						$display("Shifting right by %d", (~(rdataB[6:0] - 1'b1)));
+						resWire <= rdataA >> (~(rdataB[6:0] - 1'b1));
+						end
+					else
+						resWire <= rdataA << rdataB[6:0];
+					end
 				else if(opcode[0] == 1'b0)
-					resWire <= rdataA << 1;
+					resWire <= rdataA << rdataB[3:0];
 				else
-					resWire <= rdataA >> 1;
+					resWire <= rdataA >> rdataB[3:0];
 		  end
         4'b1111: begin
-				resWire <= {1'b0, rdataB[7:0], 8'b0}; //LUI
+				resWire <= {1'b0, rdataB[7:0], rdataA[7:0]}; //LUI
 		  end
 		  default:
             resWire <= 17'b0;

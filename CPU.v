@@ -5,18 +5,20 @@ module CPU(clock, reset);
 	input clock, reset;
 	wire instMemWe, pcEn, pcIncSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu;
 	wire [1:0] immTypeSel;
+	wire [4:0] psrOut, flags;
 	
 	FSM fsm(.clock(clock), .reset(reset), .instruction(instMemOut), .pcEn(pcEn), .irEn(irEn), .pcIncOrSet(pcIncSet), 
-	.rfWe(rfWe), .pcRegSel(pcRegSel), .r2ImSel(r2ImSel), .immTypeSel(immTypeSel), .brWe(brWe), .wbRegAlu(wbRegAlu));
+	.rfWe(rfWe), .pcRegSel(pcRegSel), .r2ImSel(r2ImSel), .immTypeSel(immTypeSel), .brWe(brWe), .wbRegAlu(wbRegAlu),
+	.psrEn(psrEn), .psrFlags(psrOut));
 
-	ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSet), .newValue(pcVal), 
+	ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSet), .newValue(aluOut), 
 	.index(instMemAddr));
 	
 	InstructionMem instMem(.data(instMemInput), .clk(clock), .addr(instMemAddr), .we(instMemWe), .q(instMemOut));
 	
-	Decoder decoder(.clock(clock), .reset(reset), .instr(instMemOut), .decoded(decoderOut));
+	Decoder decoder(.clock(clock), .reset(reset), .instr(instMemOut), .flags(psrOut), .decoded(decoderOut));
 	
-	InstructionRegister ir(.clock(clock), .reset(reset), .enable(irEn), .instructionIn(instMemOut), .instr(instr));
+	InstructionRegister ir(.clock(clock), .reset(reset), .enable(irEn), .instructionIn(decoderOut), .instr(instr));
 
 	RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(instr[11:8]), .register2Address(instr[3:0]), 
 		.writeAddress(instr[11:8]), .writeData(regDataIn), .register1Data(r1Data), .register2Data(r2Data));
@@ -31,12 +33,14 @@ module CPU(clock, reset);
 	
 	ZeroExtender zeroExt(.immediate(instr[7:0]), .result(zeroExtended));
 	
-	mux4to1 immMux(.in1(instr[7:0]), .in2(signExtended), .in3(zeroExtended), .in4(1'b0), .select(immTypeSel), .out(immediate));
+	mux4to1 immMux(.in1(instr[7:0]), .in2(signExtended), .in3(zeroExtended), .in4(16'b0), .select(immTypeSel), .out(immediate));
 	
 	mux2to1 r2OrImmediate(.in1(r2Data), .in2(immediate), .select(r2ImSel), .out(rdataB));
 	
 	ALUController aluCtl(.clock(clock), .reset(reset), .opcode({instMemOut[15:12], instMemOut[7:4]}), .aluOpcode(aluOp));
 	
-	ALU alu(.clock(clock), .reset(reset), .opcode(aluOp), .rdataA(rdataA), .rdataB(rdataB), .psrOut(), .result(aluOut));
+	ALU alu(.clock(clock), .reset(reset), .opcode(aluOp), .rdataA(rdataA), .rdataB(rdataB), .psrOut(flags), .result(aluOut));
+	
+	PSR psr(.clock(clock), .reset(reset), .enable(psrEn), .flagsIn(flags), .flagsOut(psrOut));
 	
 endmodule

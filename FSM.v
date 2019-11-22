@@ -1,7 +1,8 @@
-module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2ImSel, immTypeSel, brWe, wbRegAlu);
+module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2ImSel, immTypeSel, brWe, wbRegAlu, psrEn, psrFlags);
 	input clock, reset;
 	input [15:0] instruction;
-	output reg pcEn, pcIncOrSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu;
+	input [4:0] psrFlags;
+	output reg pcEn, pcIncOrSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu, psrEn;
 	output reg [1:0] immTypeSel;
 	reg [1:0] currentState = 2'b0, nextState = 2'b0;
 	
@@ -21,6 +22,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 		rfWe = 1'b0;
 		immTypeSel = 1'b0;
 		brWe = 1'b0;
+		psrEn = 1'b0;
 		wbRegAlu = 1'b1; //By default, write using the result from the ALU
 		case(currentState)
 			2'b00: begin //IF state
@@ -32,10 +34,17 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 			end
 			2'b10: begin //EXECUTE state
 				//set control lines here
+				psrEn = 1'b1;
+				nextState = 2'b11; //go to write back state
 				case(instruction[15:12])
 					4'b0000: begin //Rtypes
 						pcRegSel = 1'b1; //use r1 instead of pc
 						r2ImSel = 1'b0; //use r2 data
+						if(instruction[7:4] == 4'b1011) begin
+							nextState = 2'b00;
+							pcIncOrSet = 1'b0;
+							pcEn = 1'b1;
+						end
 					end
 					4'b0001: begin //ANDI
 						pcRegSel = 1'b1;
@@ -52,15 +61,38 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b10; 
 					end
+					4'b0100: begin
+						if(instruction[7:4] == 4'b1100) begin //JMP
+							pcRegSel = 1'b0;
+							r2ImSel = 1'b1;
+							immTypeSel = 2'b11;
+							pcEn = 1'b1;
+							pcIncOrSet = 1'b1;
+							nextState <= 2'b00;
+						end
+					end
 					4'b0101: begin //ADDI
 						pcRegSel = 1'b1;
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b01; //Sign extended immediate
 					end
+					4'b1000: begin //LSHI
+						pcRegSel = 1'b1;
+						r2ImSel = 1'b1;
+						immTypeSel = 2'b00; //Normal Immediate
+					end
 					4'b1001: begin //SUBI
 						pcRegSel = 1'b1;
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b01;
+					end
+					4'b1011: begin //CMPI
+						pcRegSel = 1'b1;
+						r2ImSel = 1'b1;
+						immTypeSel = 2'b01;
+						pcEn = 1'b1;
+						pcIncOrSet = 1'b1;
+						nextState = 2'b00;
 					end
 					4'b1101: begin //MOVI
 						pcRegSel = 1'b1;
@@ -74,7 +106,6 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 					end
 					default: ;
 				endcase
-				nextState = 2'b11; //go to write back state
 			end
 			2'b11: begin //WRITE BACK state
 				pcEn = 1'b1; //enable the program counter
