@@ -47,6 +47,11 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b10; //Zero extended immediate
 					end
+					4'b0011: begin //XORI
+						pcRegSel = 1'b1;
+						r2ImSel = 1'b1;
+						immTypeSel = 2'b10; 
+					end
 					4'b0101: begin //ADDI
 						pcRegSel = 1'b1;
 						r2ImSel = 1'b1;
