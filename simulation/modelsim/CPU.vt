@@ -93,6 +93,8 @@ begin
 clock <= 1'b0;
 reset <= 1'b0;
 treg_sdabutt <= 1'bz;
+treg_sda1 <= 1'bz;
+treg_sda2 <= 1'bz;
 #1000
 reset <= 1'b1;  
 #100000

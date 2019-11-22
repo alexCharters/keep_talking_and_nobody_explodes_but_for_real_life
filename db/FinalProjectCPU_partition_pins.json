@@ -8,6 +8,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "scl1",
+					"strict" : false
+				},
+				{
+					"name" : "scl2",
+					"strict" : false
+				},
+				{
 					"name" : "timer_min[0]",
 					"strict" : false
 				},
@@ -204,7 +212,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCK",
+					"strict" : false
+				},
+				{
 					"name" : "sdabutt",
+					"strict" : false
+				},
+				{
+					"name" : "sda1",
+					"strict" : false
+				},
+				{
+					"name" : "sda2",
 					"strict" : false
 				},
 				{

@@ -1,4 +1,4 @@
-module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, timer_sec1, timer_sec2, morse_sev1, morse_sev2, morse_led, keypad_leds, butt_strip, butt_color, strike_leds, button, morse_left, morse_right, morse_tx, keypad);
+module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, timer_sec1, timer_sec2, morse_sev1, morse_sev2, morse_led, keypad_leds, butt_strip, butt_color, strike_leds, button, morse_left, morse_right, morse_tx, keypad, ADC_CONVST, ADC_SCK, ADC_SDO, ADC_SDI);
 	wire [15:0] instMemInput, instMemOut, instMemAddr, pcVal, instr, decoderOut, aluOut, r1Data, 
 		r2Data, rdataA, rdataB, signExtended, zeroExtended, immediate, storageOut;
 	wire [7:0] aluOp;
@@ -6,7 +6,11 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	wire instMemWe, pcEn, pcIncSet, irEn, rfWe, pcRegSel, r2ImSel, brWe;
 	wire [1:0] immTypeSel;
 	
-	
+	input		ADC_SDO;
+
+	output	ADC_CONVST;
+	output	ADC_SCK;
+	output	ADC_SDI;
 	
 	output sclbutt, scl1, scl2, morse_led;
 	inout sdabutt, sda1, sda2;
@@ -58,10 +62,12 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	.we(brWe),
 	.clk(clock),
 	.q(storageOut),
-	.sda(sdabutt),
-	.scl(sclbutt),
-	.sda2(sda1),
-	.scl2(scl1),
+	.sdabutt(sdabutt),
+	.sclbutt(sclbutt),
+	.sda1(sda1),
+	.scl1(scl1),
+	.sda2(sda2),
+	.scl2(scl2),
 	.led1(butt_strip),
 	.led2(butt_color),
 	.button(button),
@@ -80,11 +86,10 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	.timer_sevseg2(timer_sec1),
 	.timer_sevseg3(timer_min),
 	.strike_leds(strike_leds),
-	.debug_leds(debug_leds)
-	//ADC_CONVST,
-	//ADC_SCK,
-	//ADC_SDI,
-	//ADC_SDO
+	.ADC_CONVST(ADC_CONVST),
+	.ADC_SCK(ADC_SCK),
+	.ADC_SDI(ADC_SDI),
+	.ADC_SDO(ADC_SDO)
 	);
 	
 endmodule

@@ -11,7 +11,7 @@ end
 
 always @(posedge clock) begin
 
-	if (count == 2000) begin
+	if (count == 20) begin
 		en <= !en;
 		count <= 0;
 	end

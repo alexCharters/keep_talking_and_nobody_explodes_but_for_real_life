@@ -3,8 +3,10 @@ module ktane_mem(data,
 	we,
 	clk,
 	q,
-	sda,
-	scl,
+	sdabutt,
+	sclbutt,
+	sda1,
+	scl1,
 	sda2,
 	scl2,
 	led1,
@@ -25,11 +27,10 @@ module ktane_mem(data,
 	timer_sevseg2,
 	timer_sevseg3,
 	strike_leds,
-	debug_leds
-	//ADC_CONVST,
-	//ADC_SCK,
-	//ADC_SDI,
-	//ADC_SDO
+	ADC_CONVST,
+	ADC_SCK,
+	ADC_SDI,
+	ADC_SDO
 	);
 parameter DATA_WIDTH=16;
 parameter ADDR_WIDTH=16;
@@ -43,17 +44,13 @@ input we, clk;
 input button, morse_left, morse_right, morse_tx, keypad_TL, keypad_TR, keypad_LL, keypad_LR;
 
 output [15:0] q;
-output scl, morse_led;
-inout sda;
-
-output scl2;
-inout sda2;
+output sclbutt, scl1, scl2, morse_led;
+inout sdabutt, sda1, sda2;
 
 output [3:0] keypad_leds;
 output [2:0] led1, led2, strike_leds;
 
 output [6:0] morse_sevseg1, morse_sevseg2, timer_sevseg1, timer_sevseg2, timer_sevseg3;
-output [5:0] debug_leds;
 
 wire button_en, keypad_en, morse_en, wires_en, extra_en;
 
@@ -61,6 +58,12 @@ reg [2:0] output_sel;
 
 
 wire [15:0] ram_out, button_out, keypad_out, wires_out, extra_out;
+
+input		ADC_SDO;
+
+output	ADC_CONVST;
+output	ADC_SCK;
+output	ADC_SDI;
 
 //dual_port_ram ram(.data(data), .read_addr(read_addr), .write_addr(write_addr), .we(we), .re(re), .clk(clk), .q(ram_out));
 BlockRam br(.data(data), .addr(addr), .we(we), .clk(clk), .q(ram_out));
@@ -71,8 +74,8 @@ button_mem button_mem(
 	.clk(clk),
 	.en(button_en),
 	.q(button_out),
-	.sda(sda),
-	.scl(scl),
+	.sda(sdabutt),
+	.scl(sclbutt),
 	.led1(led1),
 	.led2(led2),
 	.morse_left(morse_left),
@@ -82,11 +85,10 @@ button_mem button_mem(
 	.keypad_TR(keypad_TR),
 	.keypad_LL(keypad_LL),
 	.keypad_LR(keypad_LR),
-	.button_bigButton(button),
-	.debug_leds(debug_leds));
-keypad_mem keypad_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(keypad_en), .q(keypad_out), .sda(sda2), .scl(scl2), .leds(keypad_leds));
+	.button_bigButton(button));
+keypad_mem keypad_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(keypad_en), .q(keypad_out), .sda1(sda1), .scl1(scl1), .sda2(sda2), .scl2(scl2), .leds(keypad_leds));
 morse_mem morse_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(morse_en), .morse_led(morse_led), .sevseg1(morse_sevseg1), .sevseg2(morse_sevseg2));
-wire_mem wires_mem(.data(data), .addr(addr), .clk(clk), .en(wires_en), .q(wires_out));// .ADC_CONVST(ADC_CONVST), .ADC_SCK(ADC_SCK), .ADC_SDI(ADC_SDI), ADC_SDO(ADC_SDO));
+wire_mem wires_mem(.data(data), .addr(addr), .clk(clk), .en(wires_en), .q(wires_out), .ADC_CONVST(ADC_CONVST), .ADC_SCK(ADC_SCK), .ADC_SDI(ADC_SDI), .ADC_SDO(ADC_SDO));
 extras_mem extras_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(extra_en), .q(extra_out), .sevseg1(timer_sevseg1), .sevseg2(timer_sevseg2), .sevseg3(timer_sevseg3), .leds(strike_leds));
 
 mux5 output_mux(.a(ram_out), .b(button_out), .c(keypad_out), .d(wires_out), .e(extra_out), .sel(output_sel), .out(q));

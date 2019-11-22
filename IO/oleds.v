@@ -5,18 +5,21 @@ module oleds(
 	SDA,
 	dataReady,
 	rst,
-	debug_leds
+	address_sel
 );
 input clk, dataReady, rst;
 input [15:0] data;
 output SCL;
-output [5:0] debug_leds;
 inout SDA;
 //parameter [7:0] data = 8'b00000001;
-parameter [6:0] address = 7'b1010010;
+parameter [6:0] address1 = 7'b1010010;
+parameter [6:0] address2 = 7'b1010010;
 parameter rw = 1'b0;
+input address_sel;
 
+wire address;
 
+assign address = (address_sel)?address2:address1;
 
 wire divClk;
 
@@ -178,7 +181,6 @@ always@(*) begin
 	cmd_address = 7'b0111100;
 	cmd_start = 1'b1;
 	isStartSeq = 1'b0;
-	packetEnded = 1'b0;
 	cmd_read = 1'b0;
 	cmd_write = 1'b0;
 	cmd_write_multiple = 1'b1;
@@ -291,6 +293,7 @@ always@(*) begin
 			data_in_last = 1'b1;
 			data_in_valid = 1'b0;
 			prescale = 0;
+			packetEnded = 0;
 			stop_on_idle = 1;
 			NS = idle;
 			cmd_start = (dataReady)?1'b1:1'b0;
