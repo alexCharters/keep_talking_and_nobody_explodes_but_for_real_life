@@ -1,5 +1,9 @@
 Assembler report for FinalProjectCPU
+<<<<<<< HEAD
 Fri Nov 22 16:39:40 2019
+=======
+Thu Nov 21 20:15:36 2019
+>>>>>>> final/redoneCPU
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +14,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/kenne/Documents/ECE 3710 Final Project/output_files/FinalProjectCPU.sof
+  5. Assembler Device Options: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/output_files/FinalProjectCPU.sof
   6. Assembler Messages
 
 
@@ -37,7 +41,11 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Assembler Status      ; Successful - Fri Nov 22 16:39:40 2019 ;
+=======
+; Assembler Status      ; Successful - Thu Nov 21 20:15:36 2019 ;
+>>>>>>> final/redoneCPU
 ; Revision Name         ; FinalProjectCPU                       ;
 ; Top-level Entity Name ; CPU                                   ;
 ; Family                ; Cyclone V                             ;
@@ -52,23 +60,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------+
-; Assembler Generated Files                                                        ;
-+----------------------------------------------------------------------------------+
-; File Name                                                                        ;
-+----------------------------------------------------------------------------------+
-; C:/Users/kenne/Documents/ECE 3710 Final Project/output_files/FinalProjectCPU.sof ;
-+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                    ;
++------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/output_files/FinalProjectCPU.sof ;
++------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/kenne/Documents/ECE 3710 Final Project/output_files/FinalProjectCPU.sof ;
-+----------------+-------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                   ;
-+----------------+-------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00AF4BA2                                                                                ;
-; Checksum       ; 0x00AF4BA2                                                                                ;
-+----------------+-------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/output_files/FinalProjectCPU.sof ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                               ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00E80238                                                                                                                            ;
+; Checksum       ; 0x00E80238                                                                                                                            ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +85,25 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Fri Nov 22 16:39:30 2019
+=======
+    Info: Processing started: Thu Nov 21 20:15:21 2019
+>>>>>>> final/redoneCPU
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off FinalProjectCPU -c FinalProjectCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+<<<<<<< HEAD
     Info: Peak virtual memory: 4848 megabytes
     Info: Processing ended: Fri Nov 22 16:39:40 2019
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:07
+=======
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Thu Nov 21 20:15:36 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
+>>>>>>> final/redoneCPU
 
 

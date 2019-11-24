@@ -8,7 +8,6 @@ This will assemble some CR16 instructions.
 '''
 TODO:
 Add another loop to handle pseudo instructions
-
 '''
 
 '''
@@ -94,7 +93,7 @@ def getOperand(assem_line: str, operand: int):
 
 
 
-MEM_SIZE = 256 # 16 bit words
+MEM_SIZE = 2**16 # 16 bit words
 mem_list = []
 
 for i in range(0,MEM_SIZE):
@@ -546,12 +545,3 @@ for code in mem_list:
 fout.close()
 #merph
 print("end")
-
-
-
-
-
-
-
-
-

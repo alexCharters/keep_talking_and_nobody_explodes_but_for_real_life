@@ -1,0 +1,245 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sclbutt",
+					"strict" : false
+				},
+				{
+					"name" : "scl1",
+					"strict" : false
+				},
+				{
+					"name" : "scl2",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_min[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timer_sec2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_sev2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "morse_led",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "butt_strip[0]",
+					"strict" : false
+				},
+				{
+					"name" : "butt_strip[1]",
+					"strict" : false
+				},
+				{
+					"name" : "butt_strip[2]",
+					"strict" : false
+				},
+				{
+					"name" : "butt_color[0]",
+					"strict" : false
+				},
+				{
+					"name" : "butt_color[1]",
+					"strict" : false
+				},
+				{
+					"name" : "butt_color[2]",
+					"strict" : false
+				},
+				{
+					"name" : "strike_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "strike_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "strike_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "sdabutt",
+					"strict" : false
+				},
+				{
+					"name" : "sda1",
+					"strict" : false
+				},
+				{
+					"name" : "sda2",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

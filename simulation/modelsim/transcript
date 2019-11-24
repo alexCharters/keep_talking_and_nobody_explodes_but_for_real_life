@@ -1,0 +1,820 @@
+# Compile of CPU.vt was successful.
+# Compile of ZeroExtender.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUController.v was successful.
+# Compile of ALUTestOnBoard.v was successful.
+# Compile of CPU.v was successful.
+# Compile of Decoder.v was successful.
+# Compile of FSM.v was successful.
+# Compile of InstructionMem.v was successful.
+# Compile of InstructionRegister.v was successful.
+# Compile of mux2to1.v was successful.
+# Compile of mux4to1.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of SignExtender.v was successful.
+# Compile of StorageRam.v was successful.
+# Compile of extras_mem.v was successful with warnings.
+# Compile of I2C.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of morse_mem.v was successful.
+# Compile of mux5.v was successful.
+# Compile of oleds.v was successful.
+# Compile of rgb_led.v was successful.
+# Compile of sec_to_sevseg.v was successful.
+# Compile of timer.v was successful.
+# Compile of wire_mem.v was successful.
+# Compile of adc.v was successful.
+# Compile of bcd_to_sevseg.v was successful.
+# Compile of BlockRam.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of divider.v was successful.
+# Compile of dual_port_ram.v was successful.
+# 33 compiles, 0 failed with no errors.
+# Compile of CPU.vt was successful.
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 15:55:47 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# ** Error: (vsim-3037) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(88): Missing instance name in instantiation of 'ktane_mem'.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# Error loading design
+# End time: 15:55:48 on Nov 21,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of CPU.v was successful.
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 15:56:17 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.BlockRam
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.I2C
+# Loading cpu_work.rgb_led
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.morse_mem
+# Loading cpu_work.sevseg
+# Loading cpu_work.wire_mem
+# Loading cpu_work.extras_mem
+# Loading cpu_work.timer
+# Loading cpu_work.sec_to_sevseg
+# Loading cpu_work.mux5
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_LL' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_LR' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_TL' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_TR' not found in the connected module (6th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'led1' not found in the connected module (8th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'led2' not found in the connected module (9th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'morse_sevseg1' not found in the connected module (13th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'morse_sevseg2' not found in the connected module (14th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'scl' not found in the connected module (17th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'sda' not found in the connected module (18th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg1' not found in the connected module (22nd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg2' not found in the connected module (23rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg3' not found in the connected module (24th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'debug_leds' not found in the connected module (25th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Fatal: (vsim-3365) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Too many port connections. Expected 23, found 25.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:56:17 on Nov 21,2019, Elapsed time: 0:00:00
+# Errors: 15, Warnings: 0
+# Compile of CPU.v was successful.
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 15:59:19 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.BlockRam
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.I2C
+# Loading cpu_work.rgb_led
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.morse_mem
+# Loading cpu_work.sevseg
+# Loading cpu_work.wire_mem
+# Loading cpu_work.extras_mem
+# Loading cpu_work.timer
+# Loading cpu_work.sec_to_sevseg
+# Loading cpu_work.mux5
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_LL' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_LR' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_TL' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_TR' not found in the connected module (6th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'led1' not found in the connected module (8th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'led2' not found in the connected module (9th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'morse_sevseg1' not found in the connected module (13th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'morse_sevseg2' not found in the connected module (14th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'scl' not found in the connected module (17th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'sda' not found in the connected module (18th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg1' not found in the connected module (22nd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg2' not found in the connected module (23rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg3' not found in the connected module (24th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'debug_leds' not found in the connected module (25th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Fatal: (vsim-3365) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Too many port connections. Expected 23, found 25.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:59:20 on Nov 21,2019, Elapsed time: 0:00:01
+# Errors: 15, Warnings: 0
+# A time value could not be extracted from the current line
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 16:03:19 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.BlockRam
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.I2C
+# Loading cpu_work.rgb_led
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.morse_mem
+# Loading cpu_work.sevseg
+# Loading cpu_work.wire_mem
+# Loading cpu_work.extras_mem
+# Loading cpu_work.timer
+# Loading cpu_work.sec_to_sevseg
+# Loading cpu_work.mux5
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_LL' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_LR' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_TL' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'keypad_TR' not found in the connected module (6th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'led1' not found in the connected module (8th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'led2' not found in the connected module (9th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'morse_sevseg1' not found in the connected module (13th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'morse_sevseg2' not found in the connected module (14th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'scl' not found in the connected module (17th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'sda' not found in the connected module (18th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg1' not found in the connected module (22nd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg2' not found in the connected module (23rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'timer_sevseg3' not found in the connected module (24th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Port 'debug_leds' not found in the connected module (25th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Fatal: (vsim-3365) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(64): Too many port connections. Expected 23, found 25.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 16:03:19 on Nov 21,2019, Elapsed time: 0:00:00
+# Errors: 15, Warnings: 0
+# Compile of CPU.vt failed with 1 errors.
+# Compile of ktane_mem.v failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Error opening C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/(vlog-13069) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt
+# Path name 'C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/(vlog-13069) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt' doesn't exist.
+# Compile of CPU.vt was successful.
+# Compile of ktane_mem.v failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of ktane_mem.v was successful.
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 16:04:18 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.BlockRam
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.I2C
+# Loading cpu_work.rgb_led
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.morse_mem
+# Loading cpu_work.sevseg
+# Loading cpu_work.wire_mem
+# Loading cpu_work.extras_mem
+# Loading cpu_work.timer
+# Loading cpu_work.sec_to_sevseg
+# Loading cpu_work.mux5
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+# Error opening C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (16) does not match connection size 
+# Path name 'C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (16) does not match connection size ' doesn't exist.
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/eachvec \
+sim:/CPU_vlg_tst/button \
+sim:/CPU_vlg_tst/clock \
+sim:/CPU_vlg_tst/keypad \
+sim:/CPU_vlg_tst/morse_left \
+sim:/CPU_vlg_tst/morse_right \
+sim:/CPU_vlg_tst/morse_tx \
+sim:/CPU_vlg_tst/reset \
+sim:/CPU_vlg_tst/treg_sda1 \
+sim:/CPU_vlg_tst/treg_sda2 \
+sim:/CPU_vlg_tst/treg_sdabutt \
+sim:/CPU_vlg_tst/butt_color \
+sim:/CPU_vlg_tst/butt_strip \
+sim:/CPU_vlg_tst/keypad_leds \
+sim:/CPU_vlg_tst/morse_led \
+sim:/CPU_vlg_tst/morse_sev1 \
+sim:/CPU_vlg_tst/morse_sev2 \
+sim:/CPU_vlg_tst/scl1 \
+sim:/CPU_vlg_tst/scl2 \
+sim:/CPU_vlg_tst/sclbutt \
+sim:/CPU_vlg_tst/sda1 \
+sim:/CPU_vlg_tst/sda2 \
+sim:/CPU_vlg_tst/sdabutt \
+sim:/CPU_vlg_tst/strike_leds \
+sim:/CPU_vlg_tst/timer_min \
+sim:/CPU_vlg_tst/timer_sec1 \
+sim:/CPU_vlg_tst/timer_sec2
+restart
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+# Compile of CPU.vt was successful.
+restart
+# Loading cpu_work.CPU_vlg_tst
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+run -all
+run -all
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 80259625 ps.
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/button_mem/button_oled/data_latch
+restart
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/rf/DataBlock
+restart
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/button_mem/button_oled/data
+restart
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/button_mem/button_oled/dataReady
+run
+restart
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 80259625 ps.
+run -all
+run -all
+# Compile of rgb_led.v was successful.
+restart
+# Loading cpu_work.rgb_led
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(48): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(56): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+run -all
+# Compile of CPU.v was successful.
+# Compile of keypad_mem.v was successful.
+# Compile of ktane_mem.v failed with 1 errors.
+# Compile of oleds.v was successful.
+# Compile of wire_mem.v failed with 1 errors.
+# Compile of adc.v was successful.
+# Compile of button_mem.v was successful.
+# Compile of divider.v was successful.
+# 8 compiles, 2 failed with 2 errors.
+# Compile of ktane_mem.v was successful.
+# Compile of wire_mem.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading cpu_work.CPU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.wire_mem
+# Loading cpu_work.adc_controller
+# ** Error: (vsim-3033) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v(39): Instantiation of 'adc_ltc2308' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/wires_mem/adc File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v
+#         Searched libraries:
+#             C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/cpu_work
+# Compile of adc_ltc2308.v was successful.
+# Break key hit
+stop
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 16:04:18 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.BlockRam
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.I2C
+# Loading cpu_work.rgb_led
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.morse_mem
+# Loading cpu_work.sevseg
+# Loading cpu_work.wire_mem
+# Loading cpu_work.adc_controller
+# Loading cpu_work.adc_ltc2308
+# Loading cpu_work.extras_mem
+# Loading cpu_work.timer
+# Loading cpu_work.sec_to_sevseg
+# Loading cpu_work.mux5
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(60): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v(19): [PCDPC] - Port size (6) does not match connection size (1) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/keypad_mem/button_oled1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v(20): [PCDPC] - Port size (6) does not match connection size (1) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/keypad_mem/button_oled2 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(60): [PCDPC] - Port size (6) does not match connection size (8) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v(19): [PCDPC] - Port size (6) does not match connection size (1) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/keypad_mem/button_oled1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v(20): [PCDPC] - Port size (6) does not match connection size (1) for port 'debug_leds'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/keypad_mem/button_oled2 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+# Error opening C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (6) does not match connection size 
+# Path name 'C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (6) does not match connection size ' doesn't exist.
+# Error opening C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (6) does not match connection size 
+# Path name 'C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (6) does not match connection size ' doesn't exist.
+# Compile of CPU.v was successful.
+# Compile of ktane_mem.v was successful.
+# Compile of oleds.v was successful.
+# Compile of button_mem.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading cpu_work.CPU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Error: (vsim-3389) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v(19): Port 'debug_leds' not found in the connected module (7th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/keypad_mem/button_oled1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+# ** Fatal: (vsim-3365) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v(19): Too many port connections. Expected 7, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/memory/keypad_mem/button_oled1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+# FATAL ERROR while loading design
+# Error opening C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (16) does not match connection size 
+# Path name 'C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/[PCDPC] - Port size (16) does not match connection size ' doesn't exist.
+# Compile of keypad_mem.v was successful.
+# Break key hit
+vsim cpu_work.CPU_vlg_tst
+# vsim cpu_work.CPU_vlg_tst 
+# Start time: 16:04:18 on Nov 21,2019
+# Loading cpu_work.CPU_vlg_tst
+# Loading cpu_work.CPU
+# Loading cpu_work.FSM
+# Loading cpu_work.ProgramCounter
+# Loading cpu_work.InstructionMem
+# Loading cpu_work.Decoder
+# Loading cpu_work.InstructionRegister
+# Loading cpu_work.RegisterFile
+# Loading cpu_work.mux2to1
+# Loading cpu_work.SignExtender
+# Loading cpu_work.ZeroExtender
+# Loading cpu_work.mux4to1
+# Loading cpu_work.ALUController
+# Loading cpu_work.ALU
+# Loading cpu_work.ktane_mem
+# Loading cpu_work.BlockRam
+# Loading cpu_work.button_mem
+# Loading cpu_work.oleds
+# Loading cpu_work.divider
+# Loading cpu_work.I2C
+# Loading cpu_work.rgb_led
+# Loading cpu_work.keypad_mem
+# Loading cpu_work.morse_mem
+# Loading cpu_work.sevseg
+# Loading cpu_work.wire_mem
+# Loading cpu_work.adc_controller
+# Loading cpu_work.adc_ltc2308
+# Loading cpu_work.extras_mem
+# Loading cpu_work.timer
+# Loading cpu_work.sec_to_sevseg
+# Loading cpu_work.mux5
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+# Compile of CPU.vt was successful.
+restart
+# Loading cpu_work.CPU_vlg_tst
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/keypad_mem/button_oled1/CS
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/button_mem/button_oled/packet_wait_counter
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1437045 ps.
+# Compile of divider.v was successful.
+restart
+# Loading cpu_work.divider
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1833085 ps.
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1833085 ps.
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/keypad_mem/button_oled1/data_latch
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/keypad_mem/button_oled1/dataReady
+add wave -position insertpoint  \
+sim:/CPU_vlg_tst/i1/memory/keypad_mem/button_oled1/data
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+run -all
+# Compile of keypad_mem.v was successful.
+restart
+# Loading cpu_work.keypad_mem
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+run -all
+run -all
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1833085 ps.
+restart
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1833085 ps.
+# Compile of oleds.v was successful.
+restart
+# Loading cpu_work.oleds
+# ** Warning: (vsim-3017) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Too few port connections. Expected 27, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1 File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_CONVST'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SCK'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDO'.
+# ** Warning: (vsim-3722) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt(65): [TFMPC] - Missing connection for port 'ADC_SDI'.
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (8) for port 'in1'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+# ** Warning: (vsim-3015) C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v(52): [PCDPC] - Port size (16) does not match connection size (1) for port 'in4'. The port definition is at: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /CPU_vlg_tst/i1/immMux File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+run -all
+run -all
