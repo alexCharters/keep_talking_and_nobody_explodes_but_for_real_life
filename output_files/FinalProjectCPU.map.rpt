@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProjectCPU
-Thu Nov 21 13:11:35 2019
+Fri Nov 22 16:38:54 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,18 +17,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: InstructionMem:instMem
- 13. Parameter Settings for User Entity Instance: RegisterFile:rf
- 14. Parameter Settings for User Entity Instance: StorageRam:storeRam
- 15. Port Connectivity Checks: "ALU:alu"
- 16. Port Connectivity Checks: "mux4to1:immMux"
- 17. Port Connectivity Checks: "StorageRam:storeRam"
- 18. Port Connectivity Checks: "InstructionRegister:ir"
- 19. Port Connectivity Checks: "Decoder:decoder"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated
+ 15. Parameter Settings for User Entity Instance: InstructionMem:instMem
+ 16. Parameter Settings for User Entity Instance: Decoder:decoder
+ 17. Parameter Settings for User Entity Instance: RegisterFile:rf
+ 18. Parameter Settings for User Entity Instance: StorageRam:storeRam
+ 19. Parameter Settings for Inferred Entity Instance: StorageRam:storeRam|altsyncram:ram_rtl_0
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "mux4to1:immMux"
+ 22. Port Connectivity Checks: "InstructionRegister:ir"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,7 +57,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 21 13:11:35 2019       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 22 16:38:54 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProjectCPU                             ;
 ; Top-level Entity Name           ; CPU                                         ;
@@ -177,27 +180,41 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ALU.v                 ;         ;
-; ALUController.v                  ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ALUController.v       ;         ;
-; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ProgramCounter.v      ;         ;
-; InstructionRegister.v            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionRegister.v ;         ;
-; InstructionMem.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionMem.v      ;         ;
-; StorageRam.v                     ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/StorageRam.v          ;         ;
-; FSM.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/FSM.v                 ;         ;
-; CPU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v                 ;         ;
-; Decoder.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/Decoder.v             ;         ;
-; RegisterFile.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/RegisterFile.v        ;         ;
-; mux2to1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/mux2to1.v             ;         ;
-; mux4to1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/mux4to1.v             ;         ;
-; SignExtender.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/SignExtender.v        ;         ;
-; ZeroExtender.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ZeroExtender.v        ;         ;
-; explode.dat                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/kenne/Documents/ECE 3710 Final Project/explode.dat           ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ALU.v                        ;         ;
+; ALUController.v                  ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ALUController.v              ;         ;
+; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ProgramCounter.v             ;         ;
+; InstructionRegister.v            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionRegister.v        ;         ;
+; InstructionMem.v                 ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionMem.v             ;         ;
+; StorageRam.v                     ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/StorageRam.v                 ;         ;
+; FSM.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/FSM.v                        ;         ;
+; CPU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v                        ;         ;
+; Decoder.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/Decoder.v                    ;         ;
+; RegisterFile.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/RegisterFile.v               ;         ;
+; mux2to1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/mux2to1.v                    ;         ;
+; mux4to1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/mux4to1.v                    ;         ;
+; SignExtender.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/SignExtender.v               ;         ;
+; ZeroExtender.v                   ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/ZeroExtender.v               ;         ;
+; PSR.v                            ; yes             ; User Verilog HDL File        ; C:/Users/kenne/Documents/ECE 3710 Final Project/PSR.v                        ;         ;
+; explode.dat                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/kenne/Documents/ECE 3710 Final Project/explode.dat                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_cr91.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf       ;         ;
+; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/kenne/Documents/ECE 3710 Final Project/db/decode_dla.tdf            ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/kenne/Documents/ECE 3710 Final Project/db/decode_61a.tdf            ;         ;
+; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/kenne/Documents/ECE 3710 Final Project/db/mux_chb.tdf               ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -220,7 +237,7 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
-; Maximum fan-out node                        ; reset ;
+; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 1     ;
 ; Total fan-out                               ; 2     ;
 ; Average fan-out                             ; 0.50  ;
@@ -250,29 +267,371 @@ Encoding Type:  One-Hot
 +-----------------+-----------------+-----------------+-----------------+-----------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; FSM:fsm|currentState~3                ; Lost fanout        ;
-; FSM:fsm|currentState~4                ; Lost fanout        ;
-; FSM:fsm|currentState.00               ; Lost fanout        ;
-; FSM:fsm|currentState.01               ; Lost fanout        ;
-; FSM:fsm|currentState.10               ; Lost fanout        ;
-; FSM:fsm|currentState.11               ; Lost fanout        ;
-; Total Number of Removed Registers = 6 ;                    ;
-+---------------------------------------+--------------------+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++-----------------------------------------+-----------------------------------------------+
+; Register name                           ; Reason for Removal                            ;
++-----------------------------------------+-----------------------------------------------+
+; ALU:alu|psr[0]                          ; Stuck at GND due to stuck port data_in        ;
+; PSR:psr|flagsOut[0]                     ; Stuck at GND due to stuck port data_in        ;
+; ALUController:aluCtl|aluOpcode[2]       ; Merged with ALUController:aluCtl|aluOpcode[3] ;
+; ALUController:aluCtl|aluOpcode[7]       ; Merged with ALUController:aluCtl|aluOpcode[6] ;
+; PSR:psr|flagsOut[1,2,4]                 ; Lost fanout                                   ;
+; ALU:alu|psr[1,2,4]                      ; Lost fanout                                   ;
+; ALU:alu|psr[3]                          ; Stuck at GND due to stuck port data_in        ;
+; PSR:psr|flagsOut[3]                     ; Stuck at GND due to stuck port data_in        ;
+; ALUController:aluCtl|aluOpcode[1,5]     ; Stuck at GND due to stuck port data_in        ;
+; InstructionRegister:ir|instr[1,4,6]     ; Stuck at GND due to stuck port data_in        ;
+; RegisterFile:rf|DataBlock[0][0]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][1]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][2]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][3]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][4]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][5]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][6]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][7]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][8]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][9]         ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][10]        ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][11]        ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][12]        ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][13]        ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][14]        ; Stuck at GND due to stuck port sclear         ;
+; RegisterFile:rf|DataBlock[0][15]        ; Stuck at GND due to stuck port sclear         ;
+; ALUController:aluCtl|aluOpcode[4,6]     ; Stuck at GND due to stuck port data_in        ;
+; FSM:fsm|currentState~2                  ; Lost fanout                                   ;
+; FSM:fsm|currentState~3                  ; Lost fanout                                   ;
+; ALU:alu|resWire[2]                      ; Merged with ALU:alu|resWire[0]                ;
+; ALU:alu|resWire[1,4,6,8,9,11..15]       ; Merged with ALU:alu|resWire[10]               ;
+; InstructionRegister:ir|instr[2,9..11]   ; Merged with InstructionRegister:ir|instr[0]   ;
+; InstructionRegister:ir|instr[8]         ; Merged with InstructionRegister:ir|instr[3]   ;
+; RegisterFile:rf|DataBlock[1][2]         ; Merged with RegisterFile:rf|DataBlock[1][0]   ;
+; RegisterFile:rf|DataBlock[5][2]         ; Merged with RegisterFile:rf|DataBlock[5][0]   ;
+; RegisterFile:rf|DataBlock[9][2]         ; Merged with RegisterFile:rf|DataBlock[9][0]   ;
+; RegisterFile:rf|DataBlock[13][2]        ; Merged with RegisterFile:rf|DataBlock[13][0]  ;
+; RegisterFile:rf|DataBlock[12][2]        ; Merged with RegisterFile:rf|DataBlock[12][0]  ;
+; RegisterFile:rf|DataBlock[4][2]         ; Merged with RegisterFile:rf|DataBlock[4][0]   ;
+; RegisterFile:rf|DataBlock[8][2]         ; Merged with RegisterFile:rf|DataBlock[8][0]   ;
+; RegisterFile:rf|DataBlock[1][11]        ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][12]        ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][13]        ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][14]        ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][15]        ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][1]         ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][4]         ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][6]         ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][8]         ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[1][9]         ; Merged with RegisterFile:rf|DataBlock[1][10]  ;
+; RegisterFile:rf|DataBlock[5][11]        ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][12]        ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][13]        ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][14]        ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][15]        ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][1]         ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][4]         ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][6]         ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][8]         ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[5][9]         ; Merged with RegisterFile:rf|DataBlock[5][10]  ;
+; RegisterFile:rf|DataBlock[9][11]        ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][12]        ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][13]        ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][14]        ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][15]        ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][1]         ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][4]         ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][6]         ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][8]         ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[9][9]         ; Merged with RegisterFile:rf|DataBlock[9][10]  ;
+; RegisterFile:rf|DataBlock[13][11]       ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][12]       ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][13]       ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][14]       ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][15]       ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][1]        ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][4]        ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][6]        ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][8]        ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[13][9]        ; Merged with RegisterFile:rf|DataBlock[13][10] ;
+; RegisterFile:rf|DataBlock[12][11]       ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][12]       ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][13]       ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][14]       ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][15]       ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][1]        ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][4]        ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][6]        ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][8]        ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[12][9]        ; Merged with RegisterFile:rf|DataBlock[12][10] ;
+; RegisterFile:rf|DataBlock[4][11]        ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][12]        ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][13]        ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][14]        ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][15]        ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][1]         ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][4]         ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][6]         ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][8]         ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[4][9]         ; Merged with RegisterFile:rf|DataBlock[4][10]  ;
+; RegisterFile:rf|DataBlock[8][11]        ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][12]        ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][13]        ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][14]        ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][15]        ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][1]         ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][4]         ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][6]         ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][8]         ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[8][9]         ; Merged with RegisterFile:rf|DataBlock[8][10]  ;
+; RegisterFile:rf|DataBlock[2][2]         ; Merged with RegisterFile:rf|DataBlock[2][0]   ;
+; RegisterFile:rf|DataBlock[3][2]         ; Merged with RegisterFile:rf|DataBlock[3][0]   ;
+; RegisterFile:rf|DataBlock[14][2]        ; Merged with RegisterFile:rf|DataBlock[14][0]  ;
+; RegisterFile:rf|DataBlock[15][2]        ; Merged with RegisterFile:rf|DataBlock[15][0]  ;
+; RegisterFile:rf|DataBlock[6][2]         ; Merged with RegisterFile:rf|DataBlock[6][0]   ;
+; RegisterFile:rf|DataBlock[7][2]         ; Merged with RegisterFile:rf|DataBlock[7][0]   ;
+; RegisterFile:rf|DataBlock[10][2]        ; Merged with RegisterFile:rf|DataBlock[10][0]  ;
+; RegisterFile:rf|DataBlock[11][2]        ; Merged with RegisterFile:rf|DataBlock[11][0]  ;
+; RegisterFile:rf|DataBlock[2][11]        ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][12]        ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][13]        ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][14]        ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][15]        ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][1]         ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][4]         ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][6]         ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][8]         ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[2][9]         ; Merged with RegisterFile:rf|DataBlock[2][10]  ;
+; RegisterFile:rf|DataBlock[3][11]        ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][12]        ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][13]        ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][14]        ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][15]        ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][1]         ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][4]         ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][6]         ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][8]         ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[3][9]         ; Merged with RegisterFile:rf|DataBlock[3][10]  ;
+; RegisterFile:rf|DataBlock[14][11]       ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][12]       ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][13]       ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][14]       ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][15]       ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][1]        ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][4]        ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][6]        ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][8]        ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[14][9]        ; Merged with RegisterFile:rf|DataBlock[14][10] ;
+; RegisterFile:rf|DataBlock[15][11]       ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][12]       ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][13]       ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][14]       ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][15]       ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][1]        ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][4]        ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][6]        ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][8]        ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[15][9]        ; Merged with RegisterFile:rf|DataBlock[15][10] ;
+; RegisterFile:rf|DataBlock[6][11]        ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][12]        ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][13]        ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][14]        ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][15]        ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][1]         ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][4]         ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][6]         ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][8]         ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[6][9]         ; Merged with RegisterFile:rf|DataBlock[6][10]  ;
+; RegisterFile:rf|DataBlock[7][11]        ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][12]        ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][13]        ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][14]        ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][15]        ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][1]         ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][4]         ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][6]         ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][8]         ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[7][9]         ; Merged with RegisterFile:rf|DataBlock[7][10]  ;
+; RegisterFile:rf|DataBlock[10][11]       ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][12]       ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][13]       ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][14]       ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][15]       ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][1]        ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][4]        ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][6]        ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][8]        ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[10][9]        ; Merged with RegisterFile:rf|DataBlock[10][10] ;
+; RegisterFile:rf|DataBlock[11][11]       ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][12]       ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][13]       ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][14]       ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][15]       ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][1]        ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][4]        ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][6]        ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][8]        ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[11][9]        ; Merged with RegisterFile:rf|DataBlock[11][10] ;
+; RegisterFile:rf|DataBlock[10][0]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[11][0]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[10][3]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[11][3]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[10][5]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[11][5]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[10][7]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[11][7]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[10][10]       ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[11][10]       ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[5][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[9][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[13][0]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[12][0]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[4][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[8][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[5][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[9][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[13][3]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[12][3]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[4][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[8][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[5][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[9][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[13][5]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[12][5]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[4][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[8][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[5][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[9][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[13][7]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[12][7]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[4][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[8][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[5][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[9][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[13][10]       ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[12][10]       ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[4][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[8][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[2][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[3][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[6][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[7][0]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[2][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[3][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[6][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[7][3]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[2][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[3][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[6][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[7][5]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[2][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[3][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[6][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[7][7]         ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[2][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[3][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[6][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; RegisterFile:rf|DataBlock[7][10]        ; Stuck at GND due to stuck port clock_enable   ;
+; ALU:alu|resWire[0,3,5,7,10]             ; Lost fanout                                   ;
+; InstructionRegister:ir|instr[0]         ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[1][0]         ; Lost fanout                                   ;
+; InstructionRegister:ir|instr[3]         ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[1][10]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[1][3]         ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[1][5]         ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[1][7]         ; Lost fanout                                   ;
+; ALUController:aluCtl|aluOpcode[3]       ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[14][0]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[15][0]        ; Lost fanout                                   ;
+; InstructionMem:instMem|addr_reg[0..15]  ; Lost fanout                                   ;
+; FSM:fsm|currentState.10                 ; Lost fanout                                   ;
+; ALUController:aluCtl|aluOpcode[0]       ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[14][10]       ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[15][10]       ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[14][3]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[15][3]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[14][5]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[15][5]        ; Lost fanout                                   ;
+; InstructionRegister:ir|instr[5]         ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[14][7]        ; Lost fanout                                   ;
+; RegisterFile:rf|DataBlock[15][7]        ; Lost fanout                                   ;
+; InstructionRegister:ir|instr[7]         ; Lost fanout                                   ;
+; FSM:fsm|currentState.01                 ; Lost fanout                                   ;
+; FSM:fsm|currentState.11                 ; Lost fanout                                   ;
+; ProgramCounter:pc|index[0..15]          ; Lost fanout                                   ;
+; FSM:fsm|currentState.00                 ; Lost fanout                                   ;
+; Total Number of Removed Registers = 340 ;                                               ;
++-----------------------------------------+-----------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                    ;
-+------------------------+--------------------+--------------------------------------------------+
-; Register name          ; Reason for Removal ; Registers Removed due to This Register           ;
-+------------------------+--------------------+--------------------------------------------------+
-; FSM:fsm|currentState~3 ; Lost Fanouts       ; FSM:fsm|currentState.00, FSM:fsm|currentState.10 ;
-; FSM:fsm|currentState~4 ; Lost Fanouts       ; FSM:fsm|currentState.01                          ;
-+------------------------+--------------------+--------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                           ;
++-----------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++-----------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; ALU:alu|psr[0]                    ; Stuck at GND              ; PSR:psr|flagsOut[0], PSR:psr|flagsOut[4], ALU:alu|psr[1],                             ;
+;                                   ; due to stuck port data_in ; RegisterFile:rf|DataBlock[0][0], RegisterFile:rf|DataBlock[0][1],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][2], RegisterFile:rf|DataBlock[0][3],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][4], RegisterFile:rf|DataBlock[0][5],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][6], RegisterFile:rf|DataBlock[0][7],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][8], RegisterFile:rf|DataBlock[0][9],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][10], RegisterFile:rf|DataBlock[0][11],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][12], RegisterFile:rf|DataBlock[0][13],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[0][14], RegisterFile:rf|DataBlock[0][15],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[5][0], RegisterFile:rf|DataBlock[9][0],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[13][0], RegisterFile:rf|DataBlock[12][0],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[4][0], RegisterFile:rf|DataBlock[8][0],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[5][3], RegisterFile:rf|DataBlock[9][3],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[13][3], RegisterFile:rf|DataBlock[12][3],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[4][3], RegisterFile:rf|DataBlock[8][3],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[5][5], RegisterFile:rf|DataBlock[9][5],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[13][5], RegisterFile:rf|DataBlock[12][5],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[4][5], RegisterFile:rf|DataBlock[8][5],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[5][7], RegisterFile:rf|DataBlock[9][7],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[13][7], RegisterFile:rf|DataBlock[12][7],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[4][7], RegisterFile:rf|DataBlock[8][7],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[5][10], RegisterFile:rf|DataBlock[9][10],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[13][10], RegisterFile:rf|DataBlock[12][10],                 ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[4][10], RegisterFile:rf|DataBlock[8][10],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[2][0], RegisterFile:rf|DataBlock[3][0],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[6][0], RegisterFile:rf|DataBlock[7][0],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[2][3], RegisterFile:rf|DataBlock[3][3],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[6][3], RegisterFile:rf|DataBlock[7][3],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[2][5], RegisterFile:rf|DataBlock[3][5],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[6][5], RegisterFile:rf|DataBlock[7][5],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[2][7], RegisterFile:rf|DataBlock[3][7],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[6][7], RegisterFile:rf|DataBlock[7][7],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[2][10], RegisterFile:rf|DataBlock[3][10],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[6][10], RegisterFile:rf|DataBlock[7][10],                   ;
+;                                   ;                           ; ALU:alu|resWire[0], ALU:alu|resWire[10], ALU:alu|resWire[3], ALU:alu|resWire[5],      ;
+;                                   ;                           ; ALU:alu|resWire[7], InstructionRegister:ir|instr[0], RegisterFile:rf|DataBlock[1][0], ;
+;                                   ;                           ; InstructionRegister:ir|instr[3], RegisterFile:rf|DataBlock[1][10],                    ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[1][3], RegisterFile:rf|DataBlock[1][5],                     ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[1][7], RegisterFile:rf|DataBlock[14][0],                    ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[15][0], InstructionMem:instMem|addr_reg[0],                 ;
+;                                   ;                           ; InstructionMem:instMem|addr_reg[1], InstructionMem:instMem|addr_reg[2],               ;
+;                                   ;                           ; InstructionMem:instMem|addr_reg[3], InstructionMem:instMem|addr_reg[4],               ;
+;                                   ;                           ; InstructionMem:instMem|addr_reg[5], InstructionMem:instMem|addr_reg[6],               ;
+;                                   ;                           ; InstructionMem:instMem|addr_reg[7], InstructionMem:instMem|addr_reg[8],               ;
+;                                   ;                           ; InstructionMem:instMem|addr_reg[9], RegisterFile:rf|DataBlock[14][3],                 ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[15][3], RegisterFile:rf|DataBlock[14][5],                   ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[15][5], InstructionRegister:ir|instr[5],                    ;
+;                                   ;                           ; InstructionRegister:ir|instr[7]                                                       ;
+; ALUController:aluCtl|aluOpcode[1] ; Stuck at GND              ; ProgramCounter:pc|index[0], ProgramCounter:pc|index[1], ProgramCounter:pc|index[2],   ;
+;                                   ; due to stuck port data_in ; ProgramCounter:pc|index[3], ProgramCounter:pc|index[4], ProgramCounter:pc|index[5],   ;
+;                                   ;                           ; ProgramCounter:pc|index[6], ProgramCounter:pc|index[7], ProgramCounter:pc|index[8],   ;
+;                                   ;                           ; ProgramCounter:pc|index[9], ProgramCounter:pc|index[10], ProgramCounter:pc|index[11], ;
+;                                   ;                           ; ProgramCounter:pc|index[12], ProgramCounter:pc|index[13],                             ;
+;                                   ;                           ; ProgramCounter:pc|index[14], ProgramCounter:pc|index[15]                              ;
+; InstructionRegister:ir|instr[1]   ; Stuck at GND              ; RegisterFile:rf|DataBlock[11][7], RegisterFile:rf|DataBlock[11][10],                  ;
+;                                   ; due to stuck port data_in ; RegisterFile:rf|DataBlock[14][10], RegisterFile:rf|DataBlock[15][10],                 ;
+;                                   ;                           ; RegisterFile:rf|DataBlock[14][7], RegisterFile:rf|DataBlock[15][7]                    ;
+; ALU:alu|psr[4]                    ; Lost Fanouts              ; ALUController:aluCtl|aluOpcode[3], InstructionMem:instMem|addr_reg[10],               ;
+;                                   ;                           ; InstructionMem:instMem|addr_reg[11], InstructionMem:instMem|addr_reg[12]              ;
+; ALU:alu|psr[3]                    ; Stuck at GND              ; PSR:psr|flagsOut[3], ALUController:aluCtl|aluOpcode[0]                                ;
+;                                   ; due to stuck port data_in ;                                                                                       ;
+; FSM:fsm|currentState~2            ; Lost Fanouts              ; FSM:fsm|currentState.10, FSM:fsm|currentState.00                                      ;
+; FSM:fsm|currentState~3            ; Lost Fanouts              ; FSM:fsm|currentState.01                                                               ;
+; RegisterFile:rf|DataBlock[10][0]  ; Lost Fanouts              ; FSM:fsm|currentState.11                                                               ;
++-----------------------------------+---------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -290,6 +649,38 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                               ;
++-------------------------------------+-------------------------------+------+
+; Register Name                       ; Megafunction                  ; Type ;
++-------------------------------------+-------------------------------+------+
+; StorageRam:storeRam|addr_reg[0..15] ; StorageRam:storeRam|ram_rtl_0 ; RAM  ;
++-------------------------------------+-------------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPU|InstructionRegister:ir|instr[2]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[10]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][6]   ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[0]                ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register2Data[13] ;
+; 17:1               ; 16 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register1Data[15] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Source assignments for StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------+
+; Assignment                      ; Value              ; From ; To                               ;
++---------------------------------+--------------------+------+----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
++---------------------------------+--------------------+------+----------------------------------+
+
+
 +---------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: InstructionMem:instMem ;
 +----------------+-------+--------------------------------------------+
@@ -298,6 +689,16 @@ Encoding Type:  One-Hot
 ; DATA_WIDTH     ; 16    ; Signed Integer                             ;
 ; ADDR_WIDTH     ; 16    ; Signed Integer                             ;
 +----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder:decoder ;
++----------------+------------------+--------------------------+
+; Parameter Name ; Value            ; Type                     ;
++----------------+------------------+--------------------------+
+; NOP            ; 0000000000100000 ; Unsigned Binary          ;
++----------------+------------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -323,13 +724,85 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu"                 ;
-+--------+--------+----------+------------------------+
-; Port   ; Type   ; Severity ; Details                ;
-+--------+--------+----------+------------------------+
-; psrOut ; Output ; Info     ; Explicitly unconnected ;
-+--------+--------+----------+------------------------+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: StorageRam:storeRam|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
+; WIDTH_A                            ; 16                   ; Untyped                       ;
+; WIDTHAD_A                          ; 16                   ; Untyped                       ;
+; NUMWORDS_A                         ; 65536                ; Untyped                       ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                       ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; UNUSED               ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_cr91      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                     ;
++-------------------------------------------+------------------------------------------+
+; Name                                      ; Value                                    ;
++-------------------------------------------+------------------------------------------+
+; Number of entity instances                ; 1                                        ;
+; Entity Instance                           ; StorageRam:storeRam|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                              ;
+;     -- WIDTH_A                            ; 16                                       ;
+;     -- NUMWORDS_A                         ; 65536                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                             ;
+;     -- WIDTH_B                            ; 1                                        ;
+;     -- NUMWORDS_B                         ; 1                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                ;
++-------------------------------------------+------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -338,18 +811,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port ; Type  ; Severity ; Details                                                                                                                                       ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; in1  ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "in1[15..8]" will be connected to GND. ;
-; in4  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "in4[15..1]" will be connected to GND. ;
 ; in4  ; Input ; Info     ; Stuck at GND                                                                                                                                  ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "StorageRam:storeRam"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -359,15 +822,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; instr[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Decoder:decoder"                                                                       ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; decoded ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -387,7 +841,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -397,7 +851,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 21 13:10:16 2019
+    Info: Processing started: Fri Nov 22 16:37:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProjectCPU -c FinalProjectCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -431,37 +885,211 @@ Info (12021): Found 1 design units, including 1 entities, in source file signext
     Info (12023): Found entity 1: SignExtender File: C:/Users/kenne/Documents/ECE 3710 Final Project/SignExtender.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file zeroextender.v
     Info (12023): Found entity 1: ZeroExtender File: C:/Users/kenne/Documents/ECE 3710 Final Project/ZeroExtender.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file psr.v
+    Info (12023): Found entity 1: PSR File: C:/Users/kenne/Documents/ECE 3710 Final Project/PSR.v Line: 1
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 9
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 12
-Info (12128): Elaborating entity "InstructionMem" for hierarchy "InstructionMem:instMem" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 14
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 12
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 15
+Info (12128): Elaborating entity "InstructionMem" for hierarchy "InstructionMem:instMem" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 17
 Warning (10850): Verilog HDL warning at InstructionMem.v(20): number of words (256) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionMem.v Line: 20
-Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 16
-Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:ir" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 18
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:rf" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 21
-Info (12128): Elaborating entity "StorageRam" for hierarchy "StorageRam:storeRam" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 23
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:pcOrReg" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 25
-Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:signExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 27
-Info (12128): Elaborating entity "ZeroExtender" for hierarchy "ZeroExtender:zeroExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 29
-Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:immMux" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 31
-Info (12128): Elaborating entity "ALUController" for hierarchy "ALUController:aluCtl" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 35
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 37
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 19
+Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:ir" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 21
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:rf" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 24
+Info (12128): Elaborating entity "StorageRam" for hierarchy "StorageRam:storeRam" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 26
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:pcOrReg" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 28
+Info (12128): Elaborating entity "SignExtender" for hierarchy "SignExtender:signExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 32
+Info (12128): Elaborating entity "ZeroExtender" for hierarchy "ZeroExtender:zeroExt" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 34
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux4to1:immMux" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 36
+Info (12128): Elaborating entity "ALUController" for hierarchy "ALUController:aluCtl" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 40
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 42
+Info (12128): Elaborating entity "PSR" for hierarchy "PSR:psr" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/kenne/Documents/ECE 3710 Final Project/db/FinalProjectCPU.ram0_InstructionMem_c85af554.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "StorageRam:storeRam|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 16
+        Info (286033): Parameter NUMWORDS_A set to 65536
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "StorageRam:storeRam|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "StorageRam:storeRam|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "16"
+    Info (12134): Parameter "NUMWORDS_A" = "65536"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cr91.tdf
+    Info (12023): Found entity 1: altsyncram_cr91 File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
+    Info (12023): Found entity 1: decode_dla File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/decode_dla.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
+    Info (12023): Found entity 1: decode_61a File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/decode_61a.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
+    Info (12023): Found entity 1: mux_chb File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/mux_chb.tdf Line: 22
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a0" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 45
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a1" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 66
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a2" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 87
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a3" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 108
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a4" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 129
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a5" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 150
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a6" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 171
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a7" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 192
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a8" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 213
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a9" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 234
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a10" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 255
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a11" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 276
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a12" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 297
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a13" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 318
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a14" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 339
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a15" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 360
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a16" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 381
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a17" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 402
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a18" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 423
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a19" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 444
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a20" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 465
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a21" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 486
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a22" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 507
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a23" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 528
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a24" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 549
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a25" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 570
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a26" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 591
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a27" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 612
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a28" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 633
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a29" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 654
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a30" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 675
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a31" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 696
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a32" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 717
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a33" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 738
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a34" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 759
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a35" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 780
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a36" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 801
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a37" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 822
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a38" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 843
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a39" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 864
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a40" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 885
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a41" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 906
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a42" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 927
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a43" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 948
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a44" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 969
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a45" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 990
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a46" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1011
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a47" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1032
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a48" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1053
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a49" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1074
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a50" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1095
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a51" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1116
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a52" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1137
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a53" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1158
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a54" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1179
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a55" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1200
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a56" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1221
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a57" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1242
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a58" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1263
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a59" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1284
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a60" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1305
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a61" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1326
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a62" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1347
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a63" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1368
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a64" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1389
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a65" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1410
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a66" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1431
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a67" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1452
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a68" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1473
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a69" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1494
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a70" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1515
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a71" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1536
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a72" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1557
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a73" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1578
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a74" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1599
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a75" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1620
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a76" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1641
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a77" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1662
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a78" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1683
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a79" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1704
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a80" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1725
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a81" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1746
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a82" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1767
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a83" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1788
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a84" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1809
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a85" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1830
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a86" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1851
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a87" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1872
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a88" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1893
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a89" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1914
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a90" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1935
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a91" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1956
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a92" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1977
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a93" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 1998
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a94" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2019
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a95" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2040
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a96" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2061
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a97" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2082
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a98" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2103
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a99" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2124
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a100" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2145
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a101" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2166
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a102" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2187
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a103" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2208
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a104" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2229
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a105" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2250
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a106" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2271
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a107" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2292
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a108" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2313
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a109" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2334
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a110" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2355
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a111" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2376
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a112" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2397
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a113" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2418
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a114" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2439
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a115" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2460
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a116" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2481
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a117" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2502
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a118" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2523
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a119" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2544
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a120" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2565
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a121" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2586
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a122" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2607
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a123" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2628
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a124" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2649
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a125" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2670
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a126" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2691
+        Warning (14320): Synthesized away node "StorageRam:storeRam|altsyncram:ram_rtl_0|altsyncram_cr91:auto_generated|ram_block1a127" File: C:/Users/kenne/Documents/ECE 3710 Final Project/db/altsyncram_cr91.tdf Line: 2712
+Warning (12069): Ignored assignment(s) for "psr[0]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[1]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[2]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[3]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[4]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[0]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[1]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[2]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[3]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (12069): Ignored assignment(s) for "psr[4]" because "psr" is not a bus or array File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (17049): 80 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kenne/Documents/ECE 3710 Final Project/output_files/FinalProjectCPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 5
     Warning (15610): No output dependent on input pin "clock" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 5
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 5
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5012 megabytes
-    Info: Processing ended: Thu Nov 21 13:11:35 2019
-    Info: Elapsed time: 00:01:19
-    Info: Total CPU time (on all processors): 00:01:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 147 warnings
+    Info: Peak virtual memory: 5009 megabytes
+    Info: Processing ended: Fri Nov 22 16:38:54 2019
+    Info: Elapsed time: 00:01:41
+    Info: Total CPU time (on all processors): 00:01:50
 
 
 +------------------------------------------+

@@ -9,6 +9,7 @@ vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\
 vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/ALUController.v}
 vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/ProgramCounter.v}
 vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/InstructionRegister.v}
+vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/StorageRam.v}
 vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/FSM.v}
 vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v}
 vlog -vlog01compat -work work +incdir+C:/Users/kenne/Documents/ECE\ 3710\ Final\ Project {C:/Users/kenne/Documents/ECE 3710 Final Project/Decoder.v}

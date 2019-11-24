@@ -1,5 +1,5 @@
 Timing Analyzer report for FinalProjectCPU
-Thu Nov 21 13:12:12 2019
+Fri Nov 22 16:39:45 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -93,12 +93,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.2%      ;
+;     Processors 2-6         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -292,8 +292,8 @@ No synchronizer chains to report.
 +-------+--------------+-----------------+-----------------+
 ; Pin   ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------+--------------+-----------------+-----------------+
-; reset ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; clock ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; reset ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 +-------+--------------+-----------------+-----------------+
 
 
@@ -363,9 +363,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 21 13:12:08 2019
+    Info: Processing started: Fri Nov 22 16:39:41 2019
 Info: Command: quartus_sta FinalProjectCPU -c FinalProjectCPU
 Info: qsta_default_script.tcl version: #1
+Warning (136023): Incompatible bus dimensions on node name "psr[0]", expecting <= 0 dimension(s)  File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (136023): Incompatible bus dimensions on node name "psr[1]", expecting <= 0 dimension(s)  File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (136023): Incompatible bus dimensions on node name "psr[2]", expecting <= 0 dimension(s)  File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (136023): Incompatible bus dimensions on node name "psr[3]", expecting <= 0 dimension(s)  File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
+Warning (136023): Incompatible bus dimensions on node name "psr[4]", expecting <= 0 dimension(s)  File: C:/Users/kenne/Documents/ECE 3710 Final Project/CPU.v Line: 44
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
@@ -422,10 +427,10 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5144 megabytes
-    Info: Processing ended: Thu Nov 21 13:12:12 2019
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 5142 megabytes
+    Info: Processing ended: Fri Nov 22 16:39:45 2019
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

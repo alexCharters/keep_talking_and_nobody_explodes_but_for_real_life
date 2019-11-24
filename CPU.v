@@ -3,11 +3,11 @@ module CPU(clock, reset);
 		r2Data, rdataA, rdataB, signExtended, zeroExtended, immediate, storageOut, regDataIn;
 	wire [7:0] aluOp;
 	input clock, reset;
-	wire instMemWe, pcEn, pcIncSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu;
+	wire instMemWe, pcEn, pcIncSet, irEn, rfWe, pcRegSel, r2ImSel, brWe, wbRegAlu, psrEn;
 	wire [1:0] immTypeSel;
 	wire [4:0] psrOut, flags;
 	
-	FSM fsm(.clock(clock), .reset(reset), .instruction(instMemOut), .pcEn(pcEn), .irEn(irEn), .pcIncOrSet(pcIncSet), 
+	FSM fsm(.clock(clock), .reset(reset), .instruction(decoderOut), .pcEn(pcEn), .irEn(irEn), .pcIncOrSet(pcIncSet), 
 	.rfWe(rfWe), .pcRegSel(pcRegSel), .r2ImSel(r2ImSel), .immTypeSel(immTypeSel), .brWe(brWe), .wbRegAlu(wbRegAlu),
 	.psrEn(psrEn), .psrFlags(psrOut));
 

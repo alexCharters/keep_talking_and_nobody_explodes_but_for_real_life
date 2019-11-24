@@ -40,7 +40,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 					4'b0000: begin //Rtypes
 						pcRegSel = 1'b1; //use r1 instead of pc
 						r2ImSel = 1'b0; //use r2 data
-						if(instruction[7:4] == 4'b1011) begin
+						if(instruction[7:4] == 4'b1011) begin //CMP
 							nextState = 2'b00;
 							pcIncOrSet = 1'b0;
 							pcEn = 1'b1;
@@ -91,7 +91,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b01;
 						pcEn = 1'b1;
-						pcIncOrSet = 1'b1;
+						pcIncOrSet = 1'b0;
 						nextState = 2'b00;
 					end
 					4'b1101: begin //MOVI
