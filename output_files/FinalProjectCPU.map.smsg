@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-Warning (10268): Verilog HDL information at FSM.v(17): always construct contains both blocking and non-blocking assignments File: C:/Users/kenne/Documents/ECE 3710 Final Project/FSM.v Line: 17
-Warning (10268): Verilog HDL information at RegisterFile.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/kenne/Documents/ECE 3710 Final Project/RegisterFile.v Line: 11
-=======
-Warning (10268): Verilog HDL information at oleds.v(397): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 397
-Warning (10268): Verilog HDL information at RegisterFile.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 11
->>>>>>> final/redoneCPU
+Warning (10268): Verilog HDL information at oleds.v(395): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 395
+Warning (10268): Verilog HDL information at FSM.v(17): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v Line: 17
+Warning (10268): Verilog HDL information at RegisterFile.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v Line: 11

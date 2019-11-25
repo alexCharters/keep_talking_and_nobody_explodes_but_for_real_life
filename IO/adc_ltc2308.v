@@ -81,7 +81,7 @@ begin
     if (!reset_n)
         tick <= 0;
     else if (tick < `tDONE)
-        tick <= tick + 1;
+        tick <= tick + 1'b1;
 end
 
 
@@ -116,12 +116,12 @@ begin
     if (!reset_n)
     begin
         measured_data <= 0;
-        write_pos <= `DATA_BITS_NUM-1;
+        write_pos <= `DATA_BITS_NUM-1'b1;
     end
     else if (clk_enable)
     begin
         measured_data[write_pos] <= ADC_SDO;
-        write_pos <= write_pos - 1;
+        write_pos <= write_pos - 1'b1;
     end
 end
 
@@ -186,7 +186,7 @@ begin
     else if (config_enable)
     begin
         ADC_SDI <= config_cmd[sdi_index];
-        sdi_index <= sdi_index - 1;
+        sdi_index <= sdi_index - 1'b1;
     end
     else if (config_done)
         ADC_SDI <= 1'b0; //

@@ -12,12 +12,12 @@ input [15:0] data;
 output SCL;
 inout SDA;
 //parameter [7:0] data = 8'b00000001;
-parameter [6:0] address1 = 7'b1010010;
-parameter [6:0] address2 = 7'b1010010;
+parameter [6:0] address1 = 7'b0111100;
+parameter [6:0] address2 = 7'b0111101;
 parameter rw = 1'b0;
 input address_sel;
 
-wire address;
+wire [6:0]address;
 
 assign address = (address_sel)?address2:address1;
 
@@ -85,8 +85,6 @@ assign sda_i = SDA;
 assign SDA = (state == 5'b00110 || state == 5'b01001 || state == 5'b00001) ? 1'bz : sda_o;
 
 reg [15:0] data_latch;
-
-assign debug_leds = {dataReady, CS};
 
 divider div(.clock(clk), .en(divClk));
 
@@ -178,7 +176,7 @@ initial begin
 end
 
 always@(*) begin
-	cmd_address = 7'b0111100;
+	cmd_address = address;
 	cmd_start = 1'b1;
 	isStartSeq = 1'b0;
 	cmd_read = 1'b0;

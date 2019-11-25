@@ -1,0 +1,20 @@
+module morse(clk, data, set, morse_led, reset);
+input clk, set;
+input [15:0] data;
+output morse_led;
+
+parameter IDLE=0, LED_SHOW=1, LED_PAUSE=2;
+
+always@(*) begin
+
+end
+
+always@(posedge clk) begin
+	if(~reset)
+		CS<=IDLE;
+	else
+		CS<=NS;
+end
+
+
+endmodule

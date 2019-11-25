@@ -65,7 +65,7 @@ always@ (posedge clk) begin
 end
 
 always @(posedge measure_done) begin
-	measure_ch <= (measure_ch == 5)?0:measure_ch + 1;
+	measure_ch <= (measure_ch == 5)?0:measure_ch + 1'b1;
 end
 
 endmodule

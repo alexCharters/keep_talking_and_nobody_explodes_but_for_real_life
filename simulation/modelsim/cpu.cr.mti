@@ -5,20 +5,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	wire_mem
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module I2C
-
-Top level modules:
-	I2C
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module adc_ltc2308
-
-Top level modules:
-	adc_ltc2308
-
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module divider
@@ -32,20 +18,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	sevseg
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Decoder
-
-Top level modules:
-	Decoder
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module FSM
-
-Top level modules:
-	FSM
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -61,12 +33,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	InstructionRegister
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ktane_mem
+-- Compiling module mux2to1
 
 Top level modules:
-	ktane_mem
+	mux2to1
+
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ProgramCounter
+
+Top level modules:
+	ProgramCounter
+
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sec_to_sevseg
+
+Top level modules:
+	sec_to_sevseg
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -82,33 +68,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	timer
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module sec_to_sevseg
+-- Compiling module InstructionMem
 
 Top level modules:
-	sec_to_sevseg
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ProgramCounter
-
-Top level modules:
-	ProgramCounter
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux2to1
-
-Top level modules:
-	mux2to1
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt {1 {vlog -work cpu_work -stats=none {C:\Users\alexc\OneDrive\Desktop\new_repo\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module CPU_vlg_tst
-
-Top level modules:
-	CPU_vlg_tst
+	InstructionMem
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -117,26 +82,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	button_mem
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt {1 {vlog -work cpu_work -stats=none {C:\Users\alexc\OneDrive\Desktop\new_repo\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module InstructionMem
+-- Compiling module CPU_vlg_tst
 
 Top level modules:
-	InstructionMem
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module BlockRam
-
-Top level modules:
-	BlockRam
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ALU
-
-Top level modules:
-	ALU
+	CPU_vlg_tst
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -145,19 +96,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	mux4to1
 
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BlockRam
+
+Top level modules:
+	BlockRam
+
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module keypad_mem
 
 Top level modules:
 	keypad_mem
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module morse_mem
-
-Top level modules:
-	morse_mem
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v {2 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -167,13 +118,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	extras_mem
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module StorageRam
-
-Top level modules:
-	StorageRam
-
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module RegisterFile
@@ -181,19 +125,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	RegisterFile
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module rgb_led
+-- Compiling module StorageRam
 
 Top level modules:
-	rgb_led
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module mux5
-
-Top level modules:
-	mux5
+	StorageRam
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -202,12 +139,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ALUController
 
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module adc_controller
+-- Compiling module mux5
 
 Top level modules:
-	adc_controller
+	mux5
+
+} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module rgb_led
+
+Top level modules:
+	rgb_led
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -215,13 +159,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	ZeroExtender
-
-} {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v {1 {vlog -work cpu_work -stats=none {C:\Users\alexc\OneDrive\Desktop\new_repo\keep_talking_and_nobody_explodes_but_for_real_life\CPU.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module CPU
-
-Top level modules:
-	CPU
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

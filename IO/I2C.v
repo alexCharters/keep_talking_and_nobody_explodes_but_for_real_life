@@ -229,7 +229,7 @@ reg sda_i_reg = 1'b1;
 reg scl_o_reg = 1'b1, scl_o_next;
 reg sda_o_reg = 1'b1, sda_o_next;
 
-reg last_scl_i_reg = 1'b1;
+//reg last_scl_i_reg = 1'b1;
 reg last_sda_i_reg = 1'b1;
 
 reg busy_reg = 1'b0;
@@ -255,8 +255,8 @@ assign bus_active = bus_active_reg;
 assign bus_control = bus_control_reg;
 assign missed_ack = missed_ack_reg;
 
-wire scl_posedge = scl_i_reg & ~last_scl_i_reg;
-wire scl_negedge = ~scl_i_reg & last_scl_i_reg;
+//wire scl_posedge = scl_i_reg & ~last_scl_i_reg;
+//wire scl_negedge = ~scl_i_reg & last_scl_i_reg;
 wire sda_posedge = sda_i_reg & ~last_sda_i_reg;
 wire sda_negedge = ~sda_i_reg & last_sda_i_reg;
 
@@ -459,7 +459,7 @@ always @* begin
             end
             STATE_ADDRESS_1: begin
                 // send address
-                bit_count_next = bit_count_reg - 1;
+                bit_count_next = bit_count_reg - 1'b1;
                 if (bit_count_reg > 1) begin
                     // send address
                     phy_write_bit = 1'b1;
@@ -507,8 +507,8 @@ always @* begin
                 end
             end
             STATE_WRITE_2: begin
-                // send data
-                bit_count_next = bit_count_reg - 1;
+                // send data'
+                bit_count_next = bit_count_reg - 1'b1;
                 if (bit_count_reg > 0) begin
                     // write data bit
                     phy_write_bit = 1'b1;
@@ -539,7 +539,7 @@ always @* begin
             STATE_READ: begin
                 // read data
 
-                bit_count_next = bit_count_reg - 1;
+                bit_count_next = bit_count_reg - 1'b1;
                 data_next = {data_reg[6:0], phy_rx_data_reg};
                 if (bit_count_reg > 0) begin
                     // read next bit
@@ -603,7 +603,7 @@ always @* begin
         phy_state_next = phy_state_reg;
     end else if (delay_reg > 0) begin
         // time delay
-        delay_next = delay_reg - 1;
+        delay_next = delay_reg - 1'b1;
         phy_state_next = phy_state_reg;
     end else begin
         case (phy_state_reg)
@@ -863,7 +863,7 @@ always @(posedge clk) begin
 
     scl_i_reg <= scl_i;
     sda_i_reg <= sda_i;
-    last_scl_i_reg <= scl_i_reg;
+    //last_scl_i_reg <= scl_i_reg;
     last_sda_i_reg <= sda_i_reg;
 end
 

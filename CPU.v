@@ -97,7 +97,8 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	.ADC_CONVST(ADC_CONVST),
 	.ADC_SCK(ADC_SCK),
 	.ADC_SDI(ADC_SDI),
-	.ADC_SDO(ADC_SDO)
+	.ADC_SDO(ADC_SDO),
+	.reset(reset)
 	);
 	
 endmodule

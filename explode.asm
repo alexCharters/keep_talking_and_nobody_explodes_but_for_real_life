@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-BUC 100000000
-=======
 MOVIW 0xC000, r1
 MOVIW 0xE800, r2
 MOVIW 0xEC00, r3
@@ -19,4 +16,16 @@ MOVIW 0x0003, r6
 STOR r4, r1
 STOR r5, r2
 STOR r6, r3
->>>>>>> final/redoneCPU
+
+
+
+MOVIW 0xD400, r2
+MOVIW 1, r7
+STOR r7, r2
+
+
+
+
+MOVIW 0xCD00, r3
+MOVIW 2, r4
+STOR r4, r3

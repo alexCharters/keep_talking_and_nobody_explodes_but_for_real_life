@@ -238,6 +238,42 @@
 				{
 					"name" : "reset",
 					"strict" : false
+				},
+				{
+					"name" : "morse_tx",
+					"strict" : false
+				},
+				{
+					"name" : "morse_left",
+					"strict" : false
+				},
+				{
+					"name" : "morse_right",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[1]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[3]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[2]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[0]",
+					"strict" : false
+				},
+				{
+					"name" : "button",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDO",
+					"strict" : false
 				}
 			]
 		}

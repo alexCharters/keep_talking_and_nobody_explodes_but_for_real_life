@@ -3,6 +3,7 @@ module ktane_mem(data,
 	we,
 	clk,
 	q,
+	reset,
 	sdabutt,
 	sclbutt,
 	sda1,
@@ -39,7 +40,7 @@ input [(DATA_WIDTH-1):0] data;
 input [(ADDR_WIDTH-1):0] addr;
 //parameter data = 16'b0000000001000011;
 //parameter addr = 16'hF330;
-input we, clk;
+input we, clk, reset;
 
 input button, morse_left, morse_right, morse_tx, keypad_TL, keypad_TR, keypad_LL, keypad_LR;
 
@@ -87,7 +88,7 @@ button_mem button_mem(
 	.keypad_LR(keypad_LR),
 	.button_bigButton(button));
 keypad_mem keypad_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(keypad_en), .q(keypad_out), .sda1(sda1), .scl1(scl1), .sda2(sda2), .scl2(scl2), .leds(keypad_leds));
-morse_mem morse_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(morse_en), .morse_led(morse_led), .sevseg1(morse_sevseg1), .sevseg2(morse_sevseg2));
+morse_mem morse_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(morse_en), .morse_led(morse_led), .sevseg1(morse_sevseg1), .sevseg2(morse_sevseg2), .reset(reset));
 wire_mem wires_mem(.data(data), .addr(addr), .clk(clk), .en(wires_en), .q(wires_out), .ADC_CONVST(ADC_CONVST), .ADC_SCK(ADC_SCK), .ADC_SDI(ADC_SDI), .ADC_SDO(ADC_SDO));
 extras_mem extras_mem(.data(data), .addr(addr), .we(we), .clk(clk), .en(extra_en), .q(extra_out), .sevseg1(timer_sevseg1), .sevseg2(timer_sevseg2), .sevseg3(timer_sevseg3), .leds(strike_leds));
 
