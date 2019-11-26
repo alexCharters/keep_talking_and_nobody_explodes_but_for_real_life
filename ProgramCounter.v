@@ -8,7 +8,7 @@ module ProgramCounter(clock, reset, enable, incOrSet, newValue, index);
         end
         else if(enable == 1'b1) begin
             if(incOrSet == 1'b0)
-                index <= (index==16'hbfff)?16'hbfff:index + 16'b1;
+                index <= index + 16'b1;
             else
                 index <= newValue;
         end

@@ -67,8 +67,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 							r2ImSel = 1'b1;
 							immTypeSel = 2'b11;
 							pcEn = 1'b1;
-							pcIncOrSet = 1'b1;
-							nextState <= 2'b00;
+							$display("JMP EXE");
 						end
 					end
 					4'b0101: begin //ADDI
@@ -119,6 +118,11 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						end
 						4'b0000: begin //LOAD
 							wbRegAlu = 1'b0;
+						end
+						4'b1100: begin //JMP
+							rfWe = 1'b0;
+							pcIncOrSet = 1'b1;
+							nextState = 2'b00;
 						end
 						default: ;
 					endcase

@@ -73,7 +73,7 @@ always @ (posedge clock) begin
 					resWire <= rdataA >> rdataB[3:0];
 		  end
         4'b1111: begin
-				resWire <= {1'b0, rdataB[7:0], rdataA[7:0]}; //LUI
+				resWire <= {1'b0, rdataB[7:0], 8'b0}; //LUI
 		  end
 		  default:
             resWire <= 17'b0;
