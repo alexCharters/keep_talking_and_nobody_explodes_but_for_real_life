@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProjectCPU
-Mon Nov 25 00:48:24 2019
+Tue Nov 26 12:54:27 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -88,13 +88,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 25 00:48:24 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 26 12:54:27 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProjectCPU                             ;
 ; Top-level Entity Name           ; CPU                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 990                                         ;
+; Total registers                 ; 1121                                        ;
 ; Total pins                      ; 69                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,048,576                                   ;
@@ -283,16 +283,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 2088        ;
+; Estimate of Logic utilization (ALMs needed) ; 2263        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 3376        ;
-;     -- 7 input functions                    ; 53          ;
-;     -- 6 input functions                    ; 722         ;
-;     -- 5 input functions                    ; 549         ;
-;     -- 4 input functions                    ; 464         ;
-;     -- <=3 input functions                  ; 1588        ;
+; Combinational ALUT usage for logic          ; 3636        ;
+;     -- 7 input functions                    ; 51          ;
+;     -- 6 input functions                    ; 800         ;
+;     -- 5 input functions                    ; 603         ;
+;     -- 4 input functions                    ; 438         ;
+;     -- <=3 input functions                  ; 1744        ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 990         ;
+; Dedicated logic registers                   ; 1121        ;
 ;                                             ;             ;
 ; I/O pins                                    ; 69          ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -301,9 +301,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 730         ;
-; Total fan-out                               ; 18199       ;
-; Average fan-out                             ; 3.93        ;
+; Maximum fan-out                             ; 861         ;
+; Total fan-out                               ; 19693       ;
+; Average fan-out                             ; 3.92        ;
 +---------------------------------------------+-------------+
 
 
@@ -312,25 +312,25 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                   ; Entity Name         ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |CPU                                               ; 3376 (0)            ; 990 (0)                   ; 1048576           ; 0          ; 69   ; 0            ; |CPU                                                                                                                                                                  ; CPU                 ; work         ;
-;    |ALU:alu|                                       ; 256 (256)           ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALU:alu                                                                                                                                                          ; ALU                 ; work         ;
-;    |ALUController:aluCtl|                          ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALUController:aluCtl                                                                                                                                             ; ALUController       ; work         ;
-;    |Decoder:decoder|                               ; 112 (112)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|Decoder:decoder                                                                                                                                                  ; Decoder             ; work         ;
-;    |FSM:fsm|                                       ; 18 (18)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|FSM:fsm                                                                                                                                                          ; FSM                 ; work         ;
-;    |InstructionMem:instMem|                        ; 99 (99)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionMem:instMem                                                                                                                                           ; InstructionMem      ; work         ;
-;    |InstructionRegister:ir|                        ; 1 (1)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionRegister:ir                                                                                                                                           ; InstructionRegister ; work         ;
-;    |PSR:psr|                                       ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PSR:psr                                                                                                                                                          ; PSR                 ; work         ;
+; |CPU                                               ; 3636 (0)            ; 1121 (0)                  ; 1048576           ; 0          ; 69   ; 0            ; |CPU                                                                                                                                                                  ; CPU                 ; work         ;
+;    |ALU:alu|                                       ; 261 (261)           ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALU:alu                                                                                                                                                          ; ALU                 ; work         ;
+;    |ALUController:aluCtl|                          ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALUController:aluCtl                                                                                                                                             ; ALUController       ; work         ;
+;    |Decoder:decoder|                               ; 206 (206)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|Decoder:decoder                                                                                                                                                  ; Decoder             ; work         ;
+;    |FSM:fsm|                                       ; 20 (20)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|FSM:fsm                                                                                                                                                          ; FSM                 ; work         ;
+;    |InstructionMem:instMem|                        ; 111 (111)           ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionMem:instMem                                                                                                                                           ; InstructionMem      ; work         ;
+;    |InstructionRegister:ir|                        ; 1 (1)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionRegister:ir                                                                                                                                           ; InstructionRegister ; work         ;
+;    |PSR:psr|                                       ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PSR:psr                                                                                                                                                          ; PSR                 ; work         ;
 ;    |ProgramCounter:pc|                             ; 37 (37)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ProgramCounter:pc                                                                                                                                                ; ProgramCounter      ; work         ;
-;    |RegisterFile:rf|                               ; 101 (101)           ; 112 (112)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|RegisterFile:rf                                                                                                                                                  ; RegisterFile        ; work         ;
-;    |ktane_mem:memory|                              ; 2613 (3)            ; 802 (0)                   ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory                                                                                                                                                 ; ktane_mem           ; work         ;
+;    |RegisterFile:rf|                               ; 180 (180)           ; 240 (240)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|RegisterFile:rf                                                                                                                                                  ; RegisterFile        ; work         ;
+;    |ktane_mem:memory|                              ; 2631 (3)            ; 802 (0)                   ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory                                                                                                                                                 ; ktane_mem           ; work         ;
 ;       |BlockRam:br|                                ; 49 (0)              ; 3 (0)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br                                                                                                                                     ; BlockRam            ; work         ;
 ;          |altsyncram:ram_rtl_0|                    ; 49 (0)              ; 3 (0)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0                                                                                                                ; altsyncram          ; work         ;
 ;             |altsyncram_95t1:auto_generated|       ; 49 (0)              ; 3 (3)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated                                                                                 ; altsyncram_95t1     ; work         ;
 ;                |decode_dla:decode2|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated|decode_dla:decode2                                                              ; decode_dla          ; work         ;
 ;                |mux_chb:mux3|                      ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated|mux_chb:mux3                                                                    ; mux_chb             ; work         ;
-;       |button_mem:button_mem|                      ; 654 (7)             ; 274 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem                                                                                                                           ; button_mem          ; work         ;
-;          |oleds:button_oled|                       ; 600 (422)           ; 233 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled                                                                                                         ; oleds               ; work         ;
-;             |I2C:U1|                               ; 144 (144)           ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1                                                                                                  ; I2C                 ; work         ;
+;       |button_mem:button_mem|                      ; 665 (7)             ; 274 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem                                                                                                                           ; button_mem          ; work         ;
+;          |oleds:button_oled|                       ; 611 (422)           ; 233 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled                                                                                                         ; oleds               ; work         ;
+;             |I2C:U1|                               ; 155 (155)           ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1                                                                                                  ; I2C                 ; work         ;
 ;             |divider:div|                          ; 34 (34)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div                                                                                             ; divider             ; work         ;
 ;          |rgb_led:l1|                              ; 26 (26)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|rgb_led:l1                                                                                                                ; rgb_led             ; work         ;
 ;          |rgb_led:l2|                              ; 21 (21)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|rgb_led:l2                                                                                                                ; rgb_led             ; work         ;
@@ -348,24 +348,24 @@ refer to the applicable agreement for further details.
 ;                |sevseg:s1|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s1                                                                                       ; sevseg              ; work         ;
 ;                |sevseg:s2|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s2                                                                                       ; sevseg              ; work         ;
 ;                |sevseg:s3|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s3                                                                                       ; sevseg              ; work         ;
-;       |keypad_mem:keypad_mem|                      ; 1138 (16)           ; 412 (10)                  ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem                                                                                                                           ; keypad_mem          ; work         ;
+;       |keypad_mem:keypad_mem|                      ; 1137 (15)           ; 412 (10)                  ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem                                                                                                                           ; keypad_mem          ; work         ;
 ;          |oleds:button_oled1|                      ; 557 (416)           ; 201 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1                                                                                                        ; oleds               ; work         ;
 ;             |I2C:U1|                               ; 140 (140)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1                                                                                                 ; I2C                 ; work         ;
 ;             |divider:div|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div                                                                                            ; divider             ; work         ;
 ;          |oleds:button_oled2|                      ; 565 (416)           ; 201 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2                                                                                                        ; oleds               ; work         ;
 ;             |I2C:U1|                               ; 140 (140)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1                                                                                                 ; I2C                 ; work         ;
 ;             |divider:div|                          ; 9 (9)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div                                                                                            ; divider             ; work         ;
-;       |morse_mem:morse_mem|                        ; 255 (2)             ; 20 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem                                                                                                                             ; morse_mem           ; work         ;
-;          |morse_blink:blinker|                     ; 239 (239)           ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker                                                                                                         ; morse_blink         ; work         ;
+;       |morse_mem:morse_mem|                        ; 262 (2)             ; 20 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem                                                                                                                             ; morse_mem           ; work         ;
+;          |morse_blink:blinker|                     ; 246 (246)           ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker                                                                                                         ; morse_blink         ; work         ;
 ;          |sevseg:s1|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|sevseg:s1                                                                                                                   ; sevseg              ; work         ;
 ;          |sevseg:s2|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|sevseg:s2                                                                                                                   ; sevseg              ; work         ;
 ;       |mux5:output_mux|                            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|mux5:output_mux                                                                                                                                 ; mux5                ; work         ;
-;       |wire_mem:wires_mem|                         ; 45 (0)              ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem                                                                                                                              ; wire_mem            ; work         ;
+;       |wire_mem:wires_mem|                         ; 46 (1)              ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem                                                                                                                              ; wire_mem            ; work         ;
 ;          |adc_controller:adc|                      ; 45 (0)              ; 45 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc                                                                                                           ; adc_controller      ; work         ;
 ;             |adc_ltc2308:adc|                      ; 45 (45)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc                                                                                           ; adc_ltc2308         ; work         ;
-;    |mux2to1:pcOrReg|                               ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:pcOrReg                                                                                                                                                  ; mux2to1             ; work         ;
-;    |mux2to1:r2OrImmediate|                         ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:r2OrImmediate                                                                                                                                            ; mux2to1             ; work         ;
-;    |mux2to1:wbRgAlu|                               ; 50 (50)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:wbRgAlu                                                                                                                                                  ; mux2to1             ; work         ;
+;    |mux2to1:pcOrReg|                               ; 98 (98)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:pcOrReg                                                                                                                                                  ; mux2to1             ; work         ;
+;    |mux2to1:r2OrImmediate|                         ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:r2OrImmediate                                                                                                                                            ; mux2to1             ; work         ;
+;    |mux2to1:wbRgAlu|                               ; 55 (55)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:wbRgAlu                                                                                                                                                  ; mux2to1             ; work         ;
 ;    |mux4to1:immMux|                                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux4to1:immMux                                                                                                                                                   ; mux4to1             ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -595,6 +595,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
 ; Latch Name                                                           ; Latch Enable Signal                                                  ; Free of Timing Hazards ;
 +----------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|morse_led   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|leds[0]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|leds[1]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|leds[2]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[13]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[14]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[15]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
@@ -627,44 +631,41 @@ Encoding Type:  One-Hot
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[0]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[1]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[2]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[5]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[4]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[0]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector22  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[1]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[2]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[3]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|leds[0]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|leds[1]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|leds[2]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[16] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[15] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[14] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[13] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[12] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[11] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[10] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[9]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[8]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[7]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[6]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[18] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[19] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[20] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[21] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[22] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[23] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[24] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[25] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[26] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[27] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[28] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[29] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[30] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[31] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS          ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[5]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector15  ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[4]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[0]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector21  ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[1]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[2]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector15  ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[3]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector15  ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[15] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[14] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[13] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[12] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[11] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[10] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[9]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[8]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[7]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[6]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[18] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[19] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[20] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[21] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[22] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[23] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[24] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[25] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[26] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[27] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[28] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[29] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[30] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[31] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[16] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector1   ; yes                    ;
 ; ktane_mem:memory|extras_mem:extras_mem|numStrikes[0]                 ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
 ; ktane_mem:memory|extras_mem:extras_mem|numStrikes[1]                 ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; Number of user-specified and inferred latches = 69                   ;                                                                      ;                        ;
+; Number of user-specified and inferred latches = 70                   ;                                                                      ;                        ;
 +----------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -752,10 +753,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|button_mem:button_mem|rgb_led:l2|counter[2]                             ; Merged with ktane_mem:memory|button_mem:button_mem|rgb_led:l1|counter[2]                   ;
 ; ktane_mem:memory|button_mem:button_mem|rgb_led:l2|counter[1]                             ; Merged with ktane_mem:memory|button_mem:button_mem|rgb_led:l1|counter[1]                   ;
 ; ktane_mem:memory|button_mem:button_mem|rgb_led:l2|counter[0]                             ; Merged with ktane_mem:memory|button_mem:button_mem|rgb_led:l1|counter[0]                   ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[4]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[4]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[4]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[4]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[2]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[2]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[2]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[2]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[7]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[7]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[7]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[7]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[6]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[6]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[6]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[6]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[3]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[3]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[3]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[3]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[32]          ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[32] ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[32]          ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[32] ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[31]          ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[31] ;
@@ -806,14 +809,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[9]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[9]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[8]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[8]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[8]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[8]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[7]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[7]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[7]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[7]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[6]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[6]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[6]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[6]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[5]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[5]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[5]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[5]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[3]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[3]  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[3]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[3]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[4]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[4]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[4]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[4]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[2]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[2]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[2]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[2]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[1]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[1]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|count[1]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[1]  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|count[0]           ; Merged with ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|count[0]  ;
@@ -826,137 +827,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_sda_reg           ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_sda_reg           ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_sda_reg            ; Stuck at GND due to stuck port data_in                                                     ;
-; PSR:psr|flagsOut[2]                                                                      ; Lost fanout                                                                                ;
-; ALU:alu|psr[2]                                                                           ; Lost fanout                                                                                ;
-; InstructionRegister:ir|instr[11]                                                         ; Stuck at GND due to stuck port data_in                                                     ;
-; RegisterFile:rf|DataBlock[15][0]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][0]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][0]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][0]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][0]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][0]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][0]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][0]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][1]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][1]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][1]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][1]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][1]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][1]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][1]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][1]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][2]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][2]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][2]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][2]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][2]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][2]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][2]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][2]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][3]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][3]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][3]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][3]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][3]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][3]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][3]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][3]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][4]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][4]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][4]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][4]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][4]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][4]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][4]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][4]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][5]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][5]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][5]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][5]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][5]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][5]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][5]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][5]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][6]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][6]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][6]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][6]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][6]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][6]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][6]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][6]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][7]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][7]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][7]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][7]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][7]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][7]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][7]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][7]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][8]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][8]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][8]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][8]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][8]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][8]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][8]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][8]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][9]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][9]                                                          ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][9]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][9]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][9]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][9]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][9]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][9]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][10]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][10]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][10]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][10]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][10]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][10]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][10]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][10]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][11]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][11]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][11]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][11]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][11]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][11]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][11]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][11]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][12]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][12]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][12]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][12]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][12]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][12]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][12]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][12]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][13]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][13]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][13]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][13]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][13]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][13]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][13]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][13]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][14]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][14]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][14]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][14]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][14]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][14]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][14]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][14]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[8][15]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[9][15]                                                         ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[10][15]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[11][15]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[12][15]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[13][15]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[14][15]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
-; RegisterFile:rf|DataBlock[15][15]                                                        ; Stuck at GND due to stuck port clock_enable                                                ;
 ; RegisterFile:rf|DataBlock[0][0]                                                          ; Stuck at GND due to stuck port sclear                                                      ;
 ; RegisterFile:rf|DataBlock[0][1]                                                          ; Stuck at GND due to stuck port sclear                                                      ;
 ; RegisterFile:rf|DataBlock[0][2]                                                          ; Stuck at GND due to stuck port sclear                                                      ;
@@ -1025,7 +895,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_reg~6              ; Lost fanout                                                                                ;
 ; FSM:fsm|currentState~2                                                                   ; Lost fanout                                                                                ;
 ; FSM:fsm|currentState~3                                                                   ; Lost fanout                                                                                ;
-; Total Number of Removed Registers = 395                                                  ;                                                                                            ;
+; Total Number of Removed Registers = 264                                                  ;                                                                                            ;
 +------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
@@ -1034,102 +904,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 ; Register name                                                                        ; Reason for Removal        ; Registers Removed due to This Register                                               ;
 +--------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
-; ktane_mem:memory|keypad_mem:keypad_mem|q[1]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][1], RegisterFile:rf|DataBlock[14][1],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][1], RegisterFile:rf|DataBlock[12][1],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][1], RegisterFile:rf|DataBlock[10][1],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][1], RegisterFile:rf|DataBlock[8][1],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][1]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[0]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][0], RegisterFile:rf|DataBlock[14][0],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][0], RegisterFile:rf|DataBlock[12][0],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][0], RegisterFile:rf|DataBlock[10][0],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][0], RegisterFile:rf|DataBlock[8][0],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][0]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[2]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][2], RegisterFile:rf|DataBlock[14][2],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][2], RegisterFile:rf|DataBlock[12][2],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][2], RegisterFile:rf|DataBlock[10][2],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][2], RegisterFile:rf|DataBlock[8][2],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][2]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[3]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][3], RegisterFile:rf|DataBlock[14][3],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][3], RegisterFile:rf|DataBlock[12][3],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][3], RegisterFile:rf|DataBlock[10][3],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][3], RegisterFile:rf|DataBlock[8][3],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][3]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[4]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][4], RegisterFile:rf|DataBlock[14][4],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][4], RegisterFile:rf|DataBlock[12][4],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][4], RegisterFile:rf|DataBlock[10][4],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][4], RegisterFile:rf|DataBlock[8][4],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][4]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[5]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][5], RegisterFile:rf|DataBlock[14][5],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][5], RegisterFile:rf|DataBlock[12][5],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][5], RegisterFile:rf|DataBlock[10][5],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][5], RegisterFile:rf|DataBlock[8][5],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][5]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[6]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][6], RegisterFile:rf|DataBlock[14][6],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][6], RegisterFile:rf|DataBlock[12][6],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][6], RegisterFile:rf|DataBlock[10][6],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][6], RegisterFile:rf|DataBlock[8][6],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][6]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[7]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][7], RegisterFile:rf|DataBlock[14][7],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][7], RegisterFile:rf|DataBlock[12][7],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][7], RegisterFile:rf|DataBlock[10][7],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][7], RegisterFile:rf|DataBlock[8][7],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][7]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[8]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[15][8], RegisterFile:rf|DataBlock[14][8],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[13][8], RegisterFile:rf|DataBlock[12][8],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[11][8], RegisterFile:rf|DataBlock[10][8],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[9][8], RegisterFile:rf|DataBlock[8][8],                    ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][8]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[9]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][9], RegisterFile:rf|DataBlock[9][9],                    ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][9], RegisterFile:rf|DataBlock[11][9],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][9], RegisterFile:rf|DataBlock[13][9],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[14][9], RegisterFile:rf|DataBlock[15][9],                  ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][9]                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[10]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][10], RegisterFile:rf|DataBlock[9][10],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][10], RegisterFile:rf|DataBlock[11][10],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][10], RegisterFile:rf|DataBlock[13][10],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[14][10], RegisterFile:rf|DataBlock[15][10],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][10]                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[12]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][12], RegisterFile:rf|DataBlock[9][12],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][12], RegisterFile:rf|DataBlock[11][12],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][12], RegisterFile:rf|DataBlock[13][12],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[14][12], RegisterFile:rf|DataBlock[15][12],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][12]                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[13]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][13], RegisterFile:rf|DataBlock[9][13],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][13], RegisterFile:rf|DataBlock[11][13],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][13], RegisterFile:rf|DataBlock[13][13],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[14][13], RegisterFile:rf|DataBlock[15][13],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][13]                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[11]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][11], RegisterFile:rf|DataBlock[9][11],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][11], RegisterFile:rf|DataBlock[11][11],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][11], RegisterFile:rf|DataBlock[13][11],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[14][11], RegisterFile:rf|DataBlock[0][11]                  ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[14]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][14], RegisterFile:rf|DataBlock[9][14],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][14], RegisterFile:rf|DataBlock[11][14],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][14], RegisterFile:rf|DataBlock[13][14],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[0][14]                                                     ;
-; ALU:alu|psr[0]                                                                       ; Stuck at GND              ; PSR:psr|flagsOut[0], InstructionRegister:ir|instr[11],                               ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[14][14], RegisterFile:rf|DataBlock[15][14],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[13][15], RegisterFile:rf|DataBlock[14][15],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[15][15]                                                    ;
-; ktane_mem:memory|keypad_mem:keypad_mem|q[15]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[8][15], RegisterFile:rf|DataBlock[9][15],                  ;
-;                                                                                      ; due to stuck port data_in ; RegisterFile:rf|DataBlock[10][15], RegisterFile:rf|DataBlock[11][15],                ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[12][15], RegisterFile:rf|DataBlock[0][15]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|measure_done  ; Stuck at VCC              ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[2],                ;
 ;                                                                                      ; due to stuck port data_in ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[1],                ;
 ;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[0],                ;
-;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0],                       ;
-;                                                                                      ;                           ; RegisterFile:rf|DataBlock[15][11]                                                    ;
+;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                        ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|config_cmd[0] ; Stuck at GND              ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|ADC_SDI,      ;
 ;                                                                                      ; due to stuck port clock   ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[2], ;
 ;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[1], ;
 ;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[0]  ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[1]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][1]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[0]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][0]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[2]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][2]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[3]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][3]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[4]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][4]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[5]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][5]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[6]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][6]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[7]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][7]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[8]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][8]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[9]                                          ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][9]                                                      ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[10]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][10]                                                     ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[11]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][11]                                                     ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[12]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][12]                                                     ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[13]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][13]                                                     ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[14]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][14]                                                     ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
+; ktane_mem:memory|keypad_mem:keypad_mem|q[15]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][15]                                                     ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|data_byte_counter[2]       ; Stuck at GND              ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[1]         ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|data_byte_counter[2]       ; Stuck at GND              ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|addr_reg[1]         ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|data_byte_counter[2]        ; Stuck at GND              ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|addr_reg[0]          ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
-; PSR:psr|flagsOut[2]                                                                  ; Lost Fanouts              ; ALU:alu|psr[2]                                                                       ;
+; ALU:alu|psr[0]                                                                       ; Stuck at GND              ; PSR:psr|flagsOut[0]                                                                  ;
+;                                                                                      ; due to stuck port data_in ;                                                                                      ;
 +--------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -1138,12 +960,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 990   ;
-; Number of registers using Synchronous Clear  ; 432   ;
+; Total registers                              ; 1121  ;
+; Number of registers using Synchronous Clear  ; 435   ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 87    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 445   ;
+; Number of registers using Clock Enable       ; 575   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1192,55 +1014,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |CPU|InstructionRegister:ir|instr[0]                                                     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|PSR:psr|flagsOut[3]                                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|secLeft[2]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|mode_stop_reg      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|addr_reg[0]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |CPU|InstructionRegister:ir|instr[0]                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|PSR:psr|flagsOut[1]                                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|secLeft[15]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[0]        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|mode_stop_reg      ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|ALU:alu|psr[3]                                                                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][13]                                                    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][15]                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[1] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|addr_sel1                                    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|addr_sel2                                    ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|setGlyph4                                    ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[13]                                                         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[6]                                                   ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[3]                                                   ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_reg[8]       ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_reg[10]      ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_reg[14]       ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|bit_count_reg[2]   ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|bit_count_reg[2]   ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|bit_count_reg[0]    ;
-; 46:1               ; 3 bits    ; 90 LEs        ; 63 LEs               ; 27 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[4]                                                                  ;
-; 48:1               ; 3 bits    ; 96 LEs        ; 66 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[11]                                                                 ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[7]                                                          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[5]                                                   ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[0]                                                   ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_reg[0]       ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_reg[7]       ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_reg[11]       ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|bit_count_reg[1]   ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|bit_count_reg[0]   ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|bit_count_reg[3]    ;
+; 46:1               ; 3 bits    ; 90 LEs        ; 63 LEs               ; 27 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[6]                                                                  ;
+; 48:1               ; 3 bits    ; 96 LEs        ; 66 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[9]                                                                  ;
 ; 47:1               ; 4 bits    ; 124 LEs       ; 88 LEs               ; 36 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[13]                                                                 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|phy_start_bit      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|phy_stop_bit       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|phy_start_bit      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|phy_stop_bit       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_next          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_next          ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~1                                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|state_next         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_next  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|phy_stop_bit        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|Mux2                                                                        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|pcRegSel                                                                    ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|rfWe                                                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:r2OrImmediate|out[0]                                                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|brWe                                                                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:r2OrImmediate|out[2]                                                        ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftLeft0                                                                  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftRight1                                                                 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftRight0                                                                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector44                 ;
-; 17:1               ; 9 bits    ; 99 LEs        ; 54 LEs               ; 45 LEs                 ; No         ; |CPU|RegisterFile:rf|register2Data[8]                                                    ;
-; 10:1               ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:pcOrReg|out[2]                                                              ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[15]                                                             ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[14]                                                             ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[6]                                                              ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[10]                                                             ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 6 LEs                ; 21 LEs                 ; No         ; |CPU|Decoder:decoder|Mux6                                                                ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 8 LEs                ; 28 LEs                 ; No         ; |CPU|Decoder:decoder|Mux12                                                               ;
-; 15:1               ; 3 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[7]                                                              ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[11]                                                             ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~0                                                        ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~5                                                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector43                 ;
+; 17:1               ; 9 bits    ; 99 LEs        ; 99 LEs               ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register2Data[3]                                                    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector19                 ;
+; 18:1               ; 16 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CPU|mux2to1:pcOrReg|out[4]                                                              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[13]                                                             ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[12]                                                             ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[4]                                                              ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[8]                                                              ;
+; 15:1               ; 3 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[5]                                                              ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[9]                                                              ;
+; 11:1               ; 9 bits    ; 63 LEs        ; 63 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~0                                                        ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; No         ; |CPU|Decoder:decoder|Mux4                                                                ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 8 LEs                ; 56 LEs                 ; No         ; |CPU|Decoder:decoder|Mux14                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
@@ -1654,32 +1475,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 990                         ;
+; arriav_ff             ; 1121                        ;
 ;     CLR SCLR          ; 87                          ;
-;     ENA               ; 348                         ;
-;     ENA SCLR          ; 81                          ;
+;     ENA               ; 477                         ;
+;     ENA SCLR          ; 82                          ;
 ;     ENA SLD           ; 16                          ;
-;     SCLR              ; 264                         ;
-;     plain             ; 194                         ;
+;     SCLR              ; 266                         ;
+;     plain             ; 193                         ;
 ; arriav_io_obuf        ; 3                           ;
-; arriav_lcell_comb     ; 3384                        ;
+; arriav_lcell_comb     ; 3644                        ;
 ;     arith             ; 784                         ;
 ;         0 data inputs ; 53                          ;
 ;         1 data inputs ; 563                         ;
 ;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 87                          ;
-;         4 data inputs ; 41                          ;
-;         5 data inputs ; 31                          ;
-;     extend            ; 53                          ;
-;         7 data inputs ; 53                          ;
-;     normal            ; 2519                        ;
+;         4 data inputs ; 40                          ;
+;         5 data inputs ; 32                          ;
+;     extend            ; 51                          ;
+;         7 data inputs ; 51                          ;
+;     normal            ; 2781                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 49                          ;
-;         2 data inputs ; 339                         ;
-;         3 data inputs ; 467                         ;
-;         4 data inputs ; 423                         ;
-;         5 data inputs ; 518                         ;
-;         6 data inputs ; 722                         ;
+;         1 data inputs ; 48                          ;
+;         2 data inputs ; 329                         ;
+;         3 data inputs ; 634                         ;
+;         4 data inputs ; 398                         ;
+;         5 data inputs ; 571                         ;
+;         6 data inputs ; 800                         ;
 ;     shared            ; 28                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 20                          ;
@@ -1688,7 +1509,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 49.20                       ;
-; Average LUT depth     ; 10.82                       ;
+; Average LUT depth     ; 11.08                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1697,7 +1518,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:38     ;
+; Top            ; 00:00:41     ;
 +----------------+--------------+
 
 
@@ -1707,7 +1528,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 25 00:43:04 2019
+    Info: Processing started: Tue Nov 26 12:49:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProjectCPU -c FinalProjectCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1818,6 +1639,8 @@ Info (12128): Elaborating entity "morse_blink" for hierarchy "ktane_mem:memory|m
 Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(31): inferring latch(es) for variable "timer", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
 Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(31): inferring latch(es) for variable "seq", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
 Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(31): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
+Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(31): inferring latch(es) for variable "morse_led", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
+Info (10041): Inferred latch for "morse_led" at morse_blink.v(31) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
 Info (10041): Inferred latch for "counter[0]" at morse_blink.v(31) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
 Info (10041): Inferred latch for "counter[1]" at morse_blink.v(31) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
 Info (10041): Inferred latch for "counter[2]" at morse_blink.v(31) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
@@ -1944,7 +1767,6 @@ Info (10041): Inferred latch for "timer[30]" at morse_blink.v(31) File: C:/Users
 Info (10041): Inferred latch for "timer[31]" at morse_blink.v(31) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
 Info (12128): Elaborating entity "wire_mem" for hierarchy "ktane_mem:memory|wire_mem:wires_mem" File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 92
 Info (12128): Elaborating entity "adc_controller" for hierarchy "ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc" File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v Line: 36
-Warning (10230): Verilog HDL assignment warning at adc.v(68): truncated value with size 32 to match size of target (3) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v Line: 68
 Info (12128): Elaborating entity "adc_ltc2308" for hierarchy "ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc" File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v Line: 47
 Warning (10230): Verilog HDL assignment warning at adc_ltc2308.v(119): truncated value with size 32 to match size of target (4) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v Line: 119
 Warning (10230): Verilog HDL assignment warning at adc_ltc2308.v(184): truncated value with size 32 to match size of target (3) File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v Line: 184
@@ -2100,15 +1922,11 @@ Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[4] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[0] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[1] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[2] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[3] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[16] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[15] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
@@ -2129,6 +1947,8 @@ Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[7] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[6] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
+Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[18] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
@@ -2158,26 +1978,26 @@ Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[31] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
+Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[16] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 31
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_SDI" is stuck at GND File: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 55 registers lost all their fanouts during netlist optimizations.
+Info (17049): 53 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/output_files/FinalProjectCPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3811 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4198 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 55 output pins
     Info (21060): Implemented 3 bidirectional pins
-    Info (21061): Implemented 3614 logic cells
+    Info (21061): Implemented 4001 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 140 warnings
-    Info: Peak virtual memory: 6239 megabytes
-    Info: Processing ended: Mon Nov 25 00:48:25 2019
-    Info: Elapsed time: 00:05:21
-    Info: Total CPU time (on all processors): 00:05:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 138 warnings
+    Info: Peak virtual memory: 6233 megabytes
+    Info: Processing ended: Tue Nov 26 12:54:27 2019
+    Info: Elapsed time: 00:05:26
+    Info: Total CPU time (on all processors): 00:05:12
 
 
 +------------------------------------------+

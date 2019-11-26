@@ -264,11 +264,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "keypad[0]",
+					"name" : "button",
 					"strict" : false
 				},
 				{
-					"name" : "button",
+					"name" : "keypad[0]",
 					"strict" : false
 				},
 				{

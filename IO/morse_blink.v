@@ -30,11 +30,12 @@ end
 always@(*) begin
 	timer = timer;
 	seq = seq;
-	seq_len = 24;
+	seq_len = 45;
 	counter = counter;
-	morse_led = 0;
+	morse_led = morse_led;
 	case(CS)
 		IDLE: begin
+			counter = 0;
 			timer = 0;
 			if(set)
 				NS = DATA_CAPTURE;
@@ -42,6 +43,7 @@ always@(*) begin
 				NS = IDLE;
 		end
 		DATA_CAPTURE: begin
+			counter = 0;
 			case(data)
 				1: begin
 					seq = 60'b1100000011000000001100110001000011000100001111;
@@ -75,6 +77,7 @@ always@(*) begin
 				NS = IDLE;
 		end
 		TIMER_START: begin
+			counter = counter;
 			case(seq[counter -: 2])
 				2'b00: timer = 10000;
 				2'b01: timer = 20000;
@@ -90,6 +93,7 @@ always@(*) begin
 		end
 		LED_SHOW: begin
 			timer = timer;
+			counter = counter;
 		   $display(seq[counter -: 2]);
 			case(seq[counter -: 2])
 				2'b00: begin
@@ -105,7 +109,11 @@ always@(*) begin
 					    morse_led = 1'b0;
 				end
 				2'b11: morse_led = 1'b0;
-				default: $display("reeeeeeee");	
+				default: begin
+					morse_led = 1'b0;
+					$display("reeeeeeee");
+				end
+							
 			endcase
 			NS = FINISH;
 			if(~reset)

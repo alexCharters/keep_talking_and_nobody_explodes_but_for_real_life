@@ -33,8 +33,7 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	.rfWe(rfWe), .pcRegSel(pcRegSel), .r2ImSel(r2ImSel), .immTypeSel(immTypeSel), .brWe(brWe), .wbRegAlu(wbRegAlu),
 	.psrEn(psrEn), .psrFlags(psrOut));
 
-	ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSet), .newValue(aluOut), 
-	.index(instMemAddr));
+	ProgramCounter pc(.clock(clock), .reset(reset), .enable(pcEn), .incOrSet(pcIncSet), .newValue(aluOut), .index(instMemAddr));
 	
 	InstructionMem instMem(.data(instMemInput), .clk(clock), .addr(instMemAddr), .we(instMemWe), .q(instMemOut));
 	

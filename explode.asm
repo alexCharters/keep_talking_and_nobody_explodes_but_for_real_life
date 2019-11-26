@@ -29,3 +29,6 @@ STOR r7, r2
 MOVIW 0xCD00, r3
 MOVIW 2, r4
 STOR r4, r3
+
+EXIT: OR r0, r0
+JUC EXIT

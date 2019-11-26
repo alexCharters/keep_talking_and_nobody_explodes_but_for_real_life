@@ -95,6 +95,11 @@ reset <= 1'b0;
 treg_sdabutt <= 1'bz;
 treg_sda1 <= 1'bz;
 treg_sda2 <= 1'bz;
+button <= 0;
+[3:0] keypad <= 0;
+morse_left <= 0;
+morse_right <= 0;
+morse_tx <= 0;
 #1000
 reset <= 1'b1;  
 #100000

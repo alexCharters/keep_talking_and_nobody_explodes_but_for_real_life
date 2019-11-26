@@ -394,8 +394,8 @@ end
 
 always@(posedge clk) begin
 	CS <= NS;
-	packet_wait_counter = (CS==end_data || CS==end_seq)?packet_wait_counter+1:0;
-	packet_start_counter = (CS==start_data)?packet_start_counter+1:0;
+	packet_wait_counter <= (CS==end_data || CS==end_seq)?packet_wait_counter+1:0;
+	packet_start_counter <= (CS==start_data)?packet_start_counter+1:0;
 	
 	if(rst) begin
 		packet_wait_counter <= 0;
