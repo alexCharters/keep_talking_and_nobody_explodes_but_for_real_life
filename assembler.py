@@ -157,8 +157,9 @@ for line in lines:
 
             # remember: in immediate instructions, Immediate comes first.
             lines.remove(line)
-            lines.insert(i, 'movi ' + label + ', ' + jumpReg)
-            lines.insert(i + 1, 'lui ' + label + ', ' + jumpReg)
+            lines.insert(i, 'lui ' + label + ', ' + jumpReg)
+            lines.insert(i+1, 'ori ' + label + ', ' + jumpReg)
+
             if opcode.lower() == 'jal':
                 lastJ = opcode + ' ' + linkReg + ', ' + jumpReg
             else:
@@ -180,6 +181,21 @@ for line in lines:
             lines.insert(i+1, 'ori ' + str(immediate & 0x00FF) + ' ' + reg)
             lines.remove(line)
 
+            '''
+            make a no-op with NOPE
+            translates to:
+            ori r0, r0
+            '''
+
+        elif opcode.lower() == 'nope':
+            lines.insert(i, 'ori r0, r0')
+            lines.romove(line)
+
+        elif opcode.lower() == 'noperope':
+            for ind in range(1, int(getOperand(line, 1))):
+                lines.insert(ind, 'ori r0, r0')
+            lines.romove(line)
+
     i += 1
 
 
@@ -196,7 +212,7 @@ for line in lines:
             labelDict[firstMatch.group(1)] = program_counter
         program_counter += 1
 
-# LOOP 3: Replace labels in lui and movi
+# LOOP 3: Replace labels in lui and ori
 i = 0
 for line in lines:
     newLine = None
@@ -207,9 +223,9 @@ for line in lines:
         addr = labelDict[label + ':']
         addr = addr >> 8
         newLine = line.replace(label, str(addr))
-    if re.match(r"movi\s+(\w+), " + jumpReg, line) is not None:
+    if re.match(r"ori\s+(\w+), " + jumpReg, line) is not None:
         #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
-        label = re.match(r"movi\s+(\w+), " + jumpReg, line).group(1)
+        label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
         addr = labelDict[label + ':']
         addr = addr & 0x00FF
         newLine = line.replace(label, str(addr))
@@ -413,6 +429,8 @@ for line in lines:
                 # check if the operand is negative
                 if (operand1.value & 0b10000000) != 0:
                     op1value = operand1.value & 0b00001111
+                    op1value -= 1
+                    op1value = ~op1value
                     temp_op = temp_op | 0b0001
                     temp_op = temp_op << 4
                     temp_op = temp_op | op1value

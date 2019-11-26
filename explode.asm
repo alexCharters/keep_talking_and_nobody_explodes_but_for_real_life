@@ -12,4 +12,5 @@ end: movi 0, r0
 jle end2
 add r3, r3
 end2: movi 1, r1
+BUC 10
 #
