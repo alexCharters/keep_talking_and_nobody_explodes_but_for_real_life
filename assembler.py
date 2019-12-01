@@ -69,6 +69,7 @@ import sys
 from ctypes import *
 
 regexStr = r"(\w+:)?\s*(\S+)"
+assem_regex = re.compile(regexStr, re.MULTILINE | re.VERBOSE)
 #regex for finding hexidecimal can be found at https://regex101.com/r/zaY1m1/1
 
 def getOperand(assem_line: str, operand: int):
@@ -91,6 +92,11 @@ def getOperand(assem_line: str, operand: int):
         return operand2
 
 
+def isJumpToReg(assem_line: str):
+    if re.search(r'r\d{1,2}', getOperand(assem_line, 1)) is not None:
+        return True
+    else:
+        return False
 
 
 
@@ -102,8 +108,6 @@ for i in range(0,MEM_SIZE):
 inpath = 'explode.asm'
 outpath = 'explode.dat'
 
-
-assem_regex = re.compile(regexStr, re.MULTILINE | re.VERBOSE)
 
 jumpReg = 'r15'
 linkReg = 'r14'
@@ -124,7 +128,7 @@ LUI r1, 02
 JEQ r1
 '''
 
-#LOOP 1: Translate pseudo instructions(jxx).
+#LOOP 1: Translate pseudo instructions.
 i = 0
 label = ''
 lastJ = ''
@@ -139,7 +143,7 @@ for line in lines:
         Rsrc_match = next(searchResults)
 
         opcode = firstMatch.group(2).lower()
-        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None):
+        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None) and not isJumpToReg(line):
             #if opcode == 'jal':
                 # These are commented out since JAL will use a label now
                 #Rdest_match = next(searchResults)
@@ -162,9 +166,13 @@ for line in lines:
 
             if opcode.lower() == 'jal':
                 lastJ = opcode + ' ' + linkReg + ', ' + jumpReg
+                # movpc is a special opcode that only the assembler knows about. It puts the program counter + 2
+                # into R14
+                lines.insert(i + 2, 'movpc')
+                lines.insert(i + 3, lastJ)
             else:
                 lastJ = opcode + ' ' + jumpReg
-            lines.insert(i + 2, lastJ)
+                lines.insert(i + 2, lastJ)
 
             '''
             // move immediate word
@@ -480,6 +488,16 @@ for line in lines:
                 temp_op = temp_op | 0b1000
                 temp_op = temp_op << 4
                 temp_op = temp_op | operand2.value
+                mem_list[program_counter] = temp_op
+
+        # MOVPC the fancy one that just puts the program counter into r14
+            elif firstMatch.group(2).lower() == 'movpc':
+                temp_op = 0x40F0
+                mem_list[program_counter] = temp_op
+
+        # RETX; 0100 0000 1001 0000
+            elif firstMatch.group(2).lower() == 'retx':
+                temp_op = 0x4090
                 mem_list[program_counter] = temp_op
 
 
