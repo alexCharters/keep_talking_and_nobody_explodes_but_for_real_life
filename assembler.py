@@ -76,13 +76,13 @@ def getOperand(assem_line: str, operand: int):
     searchResults = assem_regex.finditer(assem_line)
     firstMatch = next(searchResults)
     Rsrc_match = next(searchResults)
-    if firstMatch.group(2).lower() != 'j':
+    if firstMatch.group(2).lower()[0] != 'j':
         operand1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", Rsrc_match.group(2), re.MULTILINE).group(0)
     else:
         operand1 = Rsrc_match.group(2)
 
     if (re.match(r'(j[a-z]*)|(b[a-z]+)', firstMatch.group(2).lower()) is None or
-            firstMatch.group(2).lower() == 'jal'):
+            firstMatch.group(2).lower() == 'jal') and operand == 2:
         Rdest_match = next(searchResults)
         operand2 = re.search(r"-?\d{1,2}", Rdest_match.group(2), re.MULTILINE).group(0)
 
@@ -93,7 +93,7 @@ def getOperand(assem_line: str, operand: int):
 
 
 def isJumpToReg(assem_line: str):
-    if re.search(r'r\d{1,2}', getOperand(assem_line, 1)) is not None:
+    if re.search(r'r\d{1,2}', getOperand(assem_line, 1).lower()) is not None:
         return True
     else:
         return False
@@ -133,7 +133,7 @@ i = 0
 label = ''
 lastJ = ''
 for line in lines:
-    if line[0] == '#' or line == lastJ or line.isspace():
+    if line[0] == '#' or line == lastJ or line.isspace() or line == 'movpc':
         i += 1
         continue
     comment_sep = line.split('#')
@@ -168,7 +168,7 @@ for line in lines:
                 lastJ = opcode + ' ' + linkReg + ', ' + jumpReg
                 # movpc is a special opcode that only the assembler knows about. It puts the program counter + 2
                 # into R14
-                lines.insert(i + 2, 'movpc')
+                lines.insert(i + 2, 'movpc r0, r0')
                 lines.insert(i + 3, lastJ)
             else:
                 lastJ = opcode + ' ' + jumpReg
