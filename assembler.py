@@ -132,7 +132,7 @@ for line in lines:
         i += 1
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] is not "": # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "": # and not re.match(r"^\s+$",comment_sep[0]):
         searchResults = assem_regex.finditer(comment_sep[0])
         firstMatch = next(searchResults)
         Rsrc_match = next(searchResults)
@@ -205,7 +205,7 @@ for line in lines:
     if line[0] == '#' or line.isspace() or line == '':
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] is not "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
         firstMatch = assem_regex.search(comment_sep[0])
         if firstMatch.group(1) is not None:
             labelDict[firstMatch.group(1)] = program_counter
@@ -240,7 +240,7 @@ for line in lines:
     if line[0] == '#' or line.isspace():
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] is not "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
       #  print(comment_sep[0])
 
         searchResults = assem_regex.finditer(comment_sep[0])

@@ -240,31 +240,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "morse_tx",
-					"strict" : false
-				},
-				{
-					"name" : "morse_left",
-					"strict" : false
-				},
-				{
-					"name" : "morse_right",
-					"strict" : false
-				},
-				{
-					"name" : "keypad[1]",
-					"strict" : false
-				},
-				{
-					"name" : "keypad[3]",
-					"strict" : false
-				},
-				{
 					"name" : "keypad[2]",
-					"strict" : false
-				},
-				{
-					"name" : "button",
 					"strict" : false
 				},
 				{
@@ -272,7 +248,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "keypad[3]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[1]",
+					"strict" : false
+				},
+				{
 					"name" : "ADC_SDO",
+					"strict" : false
+				},
+				{
+					"name" : "morse_left",
+					"strict" : false
+				},
+				{
+					"name" : "morse_tx",
+					"strict" : false
+				},
+				{
+					"name" : "button",
+					"strict" : false
+				},
+				{
+					"name" : "morse_right",
 					"strict" : false
 				}
 			]

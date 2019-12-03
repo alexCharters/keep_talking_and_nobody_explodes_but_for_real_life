@@ -24,25 +24,28 @@ CS <= IDLE;
 NS <= IDLE;
 timer <= 0;
 counter <= 0;
+morse_led <= 0;
 end
 
 
 always@(*) begin
-	timer = timer;
+	//timer = 0;
 	seq = seq;
 	seq_len = 45;
-	counter = counter;
-	morse_led = morse_led;
+	//counter = 0;
+	morse_led = 0;
 	case(CS)
 		IDLE: begin
 			counter = 0;
 			timer = 0;
+			morse_led = 0;
 			if(set)
 				NS = DATA_CAPTURE;
 			else
 				NS = IDLE;
 		end
 		DATA_CAPTURE: begin
+			morse_led = 0;
 			counter = 0;
 			case(data)
 				1: begin
@@ -77,6 +80,7 @@ always@(*) begin
 				NS = IDLE;
 		end
 		TIMER_START: begin
+			morse_led = 0;
 			counter = counter;
 			case(seq[counter -: 2])
 				2'b00: timer = 10000;
@@ -120,11 +124,27 @@ always@(*) begin
 				NS = IDLE;
 		end
 		FINISH: begin
-			timer = timer - 1'b1;
-			NS = (timer != 0)?LED_SHOW:TIMER_START;
-			counter = (timer != 0)?counter:(counter == 1)?seq_len:counter-2'b10;
-			if(~reset)
+			morse_led = morse_led;
+			if(~reset) begin
 				NS = IDLE;
+				counter = 0;
+				timer = 0;
+			end
+			else begin
+				timer = timer - 1'b1;
+				NS = (timer != 0)?LED_SHOW:TIMER_START;
+				if(timer == 0) begin
+					if(counter == 1) begin
+						counter = seq_len;
+					end
+					else begin
+						counter = counter - 2'b10;
+					end
+				end
+				else begin
+					counter = counter;
+				end
+			end
 		end
 		default: begin
 			timer = 0;

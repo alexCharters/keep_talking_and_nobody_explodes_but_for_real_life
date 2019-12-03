@@ -12,17 +12,20 @@ output reg [3:0] leds;
 output scl1, scl2;
 inout sda1, sda2;
 
-reg addr_sel1, addr_sel2;
+wire addr_sel1, addr_sel2;
 
-reg setGlyph1, setGlyph2, setGlyph3, setGlyph4; 
+wire setGlyph1, setGlyph2, setGlyph3, setGlyph4; 
 
 oleds button_oled1(.clk(clk), .data(data), .SCL(scl1), .SDA(sda1), .dataReady(setGlyph1 | setGlyph2), .rst(1'b0), .address_sel(addr_sel1));
 oleds button_oled2(.clk(clk), .data(data), .SCL(scl2), .SDA(sda2), .dataReady(setGlyph3 | setGlyph4), .rst(1'b0), .address_sel(addr_sel2));
 
-//assign setGlyph1 = (en && we && addr[10:8] == 3'b100);
-//assign setGlyph2 = (en && we && addr[10:8] == 3'b101);
-//assign setGlyph3 = (en && we && addr[10:8] == 3'b110);
-//assign setGlyph4 = (en && we && addr[10:8] == 3'b111);
+assign setGlyph1 = (en && we && addr[10:8] == 3'b100);
+assign setGlyph2 = (en && we && addr[10:8] == 3'b101);
+assign setGlyph3 = (en && we && addr[10:8] == 3'b110);
+assign setGlyph4 = (en && we && addr[10:8] == 3'b111);
+
+assign addr_sel1 = (en && we && addr[10:8] == 3'b101);
+assign addr_sel2 = (en && we && addr[10:8] == 3'b111);
 
 always @ (posedge clk)
 	begin
@@ -34,38 +37,6 @@ always @ (posedge clk)
 					3'b001: leds[2] <= data[0];
 					3'b010: leds[1] <= data[0];
 					3'b011: leds[0] <= data[0];
-					3'b100: begin
-						setGlyph1 <= 1'b1;
-						setGlyph2 <= 1'b0;
-						setGlyph3 <= 1'b0;
-						setGlyph4 <= 1'b0;
-						addr_sel1 <= 1'b0;
-						addr_sel2 <= 1'b0;
-					end
-					3'b101: begin
-						setGlyph1 <= 1'b0;
-						setGlyph2 <= 1'b1;
-						setGlyph3 <= 1'b0;
-						setGlyph4 <= 1'b0;
-						addr_sel1 <= 1'b1;
-						addr_sel2 <= 1'b0;
-					end
-					3'b110: begin
-						setGlyph1 <= 1'b0;
-						setGlyph2 <= 1'b0;
-						setGlyph3 <= 1'b1;
-						setGlyph4 <= 1'b0;
-						addr_sel1 <= 1'b0;
-						addr_sel2 <= 1'b0;
-					end
-					3'b111: begin
-						setGlyph1 <= 1'b0;
-						setGlyph2 <= 1'b0;
-						setGlyph3 <= 1'b0;
-						setGlyph4 <= 1'b1;
-						addr_sel1 <= 1'b0;
-						addr_sel2 <= 1'b1;
-					end
 					default: begin
 					leds[3] <= leds[3];
 					leds[2] <= leds[2];
@@ -115,12 +86,6 @@ always @ (posedge clk)
 //					setGlyph3 <= 0;
 //					setGlyph4 <= 0;
 //				end	
-			end
-			else begin
-				setGlyph1 <= 0;
-				setGlyph2 <= 0;
-				setGlyph3 <= 0;
-				setGlyph4 <= 0;
 			end
 
 			q <= 16'h0000;

@@ -120,10 +120,10 @@ GND                          : AA11      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 3B        :                
 reset                        : AA14      : input  : 3.3-V LVTTL       :         : 3B        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 3B        :                
-morse_sev2[1]                : AA16      : output : 2.5 V             :         : 4A        : N              
+morse_sev2[0]                : AA15      : output : 2.5 V             :         : 3B        : N              
+keypad[0]                    : AA16      : input  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA17      : power  :                   : 2.5V    : 4A        :                
-morse_left                   : AA18      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 4A        :                
@@ -150,9 +150,9 @@ VCC_AUX                      : AB11      : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 3B        :                
 VCCIO3B                      : AB14      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 3B        :                
+morse_led                    : AB15      : output : 2.5 V             :         : 3B        : N              
 VCC_AUX                      : AB16      : power  :                   : 2.5V    :           :                
-morse_sev2[2]                : AB17      : output : 2.5 V             :         : 4A        : N              
+ADC_CONVST                   : AB17      : output : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : AB18      : power  :                   : 2.5V    : 3B, 4A    :                
 GND                          : AB19      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AB20      : power  :                   : 2.5V    : 3B, 4A    :                
@@ -239,12 +239,12 @@ GND                          : AE10      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE11      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE13      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :         : 3B        :                
+ADC_SDI                      : AE14      : output : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AE15      : power  :                   : 2.5V    : 3B        :                
-morse_sev1[5]                : AE16      : output : 2.5 V             :         : 4A        : N              
-ADC_SDO                      : AE17      : input  : 2.5 V             :         : 4A        : N              
+morse_tx                     : AE16      : input  : 2.5 V             :         : 4A        : N              
+keypad[2]                    : AE17      : input  : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :         : 4A        :                
-morse_right                  : AE19      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
 GND                          : AE20      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AE21      : power  :                   : 2.5V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4A        :                
@@ -268,15 +268,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF11      :        :                   :         : 3B        :                
 GND                          : AF12      : gnd    :                   :         :           :                
-ADC_SDI                      : AF13      : output : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 3B        :                
 clock                        : AF14      : input  : 3.3-V LVTTL       :         : 3B        : Y              
-morse_led                    : AF15      : output : 2.5 V             :         : 3B        : N              
-morse_sev2[3]                : AF16      : output : 2.5 V             :         : 4A        : N              
+morse_sev2[2]                : AF15      : output : 2.5 V             :         : 3B        : N              
+morse_right                  : AF16      : input  : 2.5 V             :         : 4A        : N              
 GND                          : AF17      : gnd    :                   :         :           :                
-morse_sev2[0]                : AF18      : output : 2.5 V             :         : 4A        : N              
-keypad_leds[3]               : AF19      : output : 2.5 V             :         : 4A        : N              
+button                       : AF18      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 4A        :                
-morse_tx                     : AF21      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4A        :                
 VCCIO4A                      : AF22      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF24      :        :                   :         : 4A        :                
@@ -300,15 +300,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG12      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 3B        :                
 GND                          : AG14      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG15      :        :                   :         : 3B        :                
-morse_sev2[4]                : AG16      : output : 2.5 V             :         : 4A        : N              
-ADC_CONVST                   : AG17      : output : 2.5 V             :         : 4A        : N              
-button                       : AG18      : input  : 2.5 V             :         : 4A        : N              
+keypad_leds[0]               : AG15      : output : 2.5 V             :         : 3B        : N              
+morse_left                   : AG16      : input  : 2.5 V             :         : 4A        : N              
+keypad[1]                    : AG17      : input  : 2.5 V             :         : 4A        : N              
+keypad[3]                    : AG18      : input  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AG19      : power  :                   : 2.5V    : 4A        :                
-keypad[3]                    : AG20      : input  : 2.5 V             :         : 4A        : N              
-keypad[0]                    : AG21      : input  : 2.5 V             :         : 4A        : N              
-morse_sev1[0]                : AG22      : output : 2.5 V             :         : 4A        : N              
-keypad_leds[2]               : AG23      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG20      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG21      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG22      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4A        :                
 GND                          : AG24      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4A        :                
@@ -322,24 +322,24 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH4       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH5       :        :                   :         : 3A        :                
 GND                          : AH6       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 3B        :                
+morse_sev1[0]                : AH7       : output : 2.5 V             :         : 3B        : N              
+morse_sev1[3]                : AH8       : output : 2.5 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH10      :        :                   :         : 3B        :                
+morse_sev1[4]                : AH10      : output : 2.5 V             :         : 3B        : N              
 GND                          : AH11      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 3B        :                
+morse_sev1[2]                : AH12      : output : 2.5 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH13      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH14      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH15      :        :                   :         : 3B        :                
+keypad_leds[1]               : AH15      : output : 2.5 V             :         : 3B        : N              
 VCCIO4A                      : AH16      : power  :                   : 2.5V    : 4A        :                
 butt_strip[0]                : AH17      : output : 2.5 V             :         : 4A        : Y              
 butt_color[0]                : AH18      : output : 2.5 V             :         : 4A        : Y              
-morse_sev1[6]                : AH19      : output : 2.5 V             :         : 4A        : N              
-keypad[2]                    : AH20      : input  : 2.5 V             :         : 4A        : N              
+ADC_SCK                      : AH19      : output : 2.5 V             :         : 4A        : N              
+ADC_SDO                      : AH20      : input  : 2.5 V             :         : 4A        : N              
 GND                          : AH21      : gnd    :                   :         :           :                
-morse_sev2[5]                : AH22      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH22      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4A        :                
-keypad_leds[0]               : AH24      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH24      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4A        :                
 VCCIO4A                      : AH26      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
@@ -352,21 +352,21 @@ GND                          : AJ3       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ4       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ5       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ6       :        :                   :         : 3B        :                
-keypad[1]                    : AJ7       : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ7       :        :                   :         : 3B        :                
 VCCIO3B                      : AJ8       : power  :                   : 2.5V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ9       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ10      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ12      :        :                   :         : 3B        :                
+morse_sev1[6]                : AJ10      : output : 2.5 V             :         : 3B        : N              
+morse_sev2[1]                : AJ11      : output : 2.5 V             :         : 3B        : N              
+morse_sev1[1]                : AJ12      : output : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AJ13      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AJ14      :        :                   :         : 3B        :                
+keypad_leds[2]               : AJ14      : output : 2.5 V             :         : 3B        : N              
 VREFB3BN0                    : AJ15      : power  :                   :         : 3B        :                
 butt_strip[1]                : AJ16      : output : 2.5 V             :         : 4A        : Y              
 butt_color[1]                : AJ17      : output : 2.5 V             :         : 4A        : Y              
 GND                          : AJ18      : gnd    :                   :         :           :                
 butt_strip[2]                : AJ19      : output : 2.5 V             :         : 4A        : Y              
-morse_sev1[3]                : AJ20      : output : 2.5 V             :         : 4A        : N              
-morse_sev1[1]                : AJ21      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ20      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ21      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :         : 4A        :                
 VCCIO4A                      : AJ23      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ24      :        :                   :         : 4A        :                
@@ -378,17 +378,17 @@ timer_sec1[0]                : AJ29      : output : 2.5 V             :         
 GND                          : AJ30      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK2       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK3       :        :                   :         : 3B        :                
-ADC_SCK                      : AK4       : output : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK4       :        :                   :         : 3B        :                
 GND                          : AK5       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK6       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK7       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK8       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK9       :        :                   :         : 3B        :                
 VCCIO3B                      : AK10      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK12      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK13      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK14      :        :                   :         : 3B        :                
+morse_sev2[6]                : AK11      : output : 2.5 V             :         : 3B        : N              
+morse_sev2[5]                : AK12      : output : 2.5 V             :         : 3B        : N              
+morse_sev1[5]                : AK13      : output : 2.5 V             :         : 3B        : N              
+morse_sev2[3]                : AK14      : output : 2.5 V             :         : 3B        : N              
 GND                          : AK15      : gnd    :                   :         :           :                
 scl2                         : AK16      : output : 2.5 V             :         : 4A        : Y              
 VREFB4AN0                    : AK17      : power  :                   :         : 4A        :                
@@ -396,7 +396,7 @@ sda2                         : AK18      : bidir  : 2.5 V             :         
 butt_color[2]                : AK19      : output : 2.5 V             :         : 4A        : Y              
 VCCIO4A                      : AK20      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK21      :        :                   :         : 4A        :                
-keypad_leds[1]               : AK22      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK22      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK24      :        :                   :         : 4A        :                
 GND                          : AK25      : gnd    :                   :         :           :                
@@ -928,9 +928,9 @@ GND                          : W11       : gnd    :                   :         
 VCC                          : W12       : power  :                   : 1.1V    :           :                
 GND                          : W13       : gnd    :                   :         :           :                
 VCC                          : W14       : power  :                   : 1.1V    :           :                
-morse_sev2[6]                : W15       : output : 2.5 V             :         : 3B        : N              
+keypad_leds[3]               : W15       : output : 2.5 V             :         : 3B        : N              
 strike_leds[1]               : W16       : output : 2.5 V             :         : 4A        : Y              
-morse_sev1[2]                : W17       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4A        :                
 GND                          : W18       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5A        :                
@@ -959,7 +959,7 @@ GND                          : Y12       : gnd    :                   :         
 VCC                          : Y13       : power  :                   : 1.1V    :           :                
 GND                          : Y14       : gnd    :                   :         :           :                
 GND                          : Y15       : gnd    :                   :         :           :                
-morse_sev1[4]                : Y16       : output : 2.5 V             :         : 3B        : N              
+morse_sev2[4]                : Y16       : output : 2.5 V             :         : 3B        : N              
 sdabutt                      : Y17       : bidir  : 2.5 V             :         : 4A        : Y              
 sda1                         : Y18       : bidir  : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y19       :        :                   :         : 4A        :                

@@ -9,109 +9,109 @@ z2
 cModel Technology
 dC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim
 vadc_controller
-Z0 !s110 1574799505
+Z0 !s110 1575141536
 !i10b 1
-!s100 SX@GkZYlzoUg:0M6:VXn53
-IN<zog<nE<10ldM=I0gSdb3
+!s100 XR<XZBl?jVJCz8<5Y@hzR1
+I8l>jngd6AdQ;VZ`e;TP5G2
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim
-Z3 w1574656462
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v
+Z2 dC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim
+Z3 w1574827586
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1574799505.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v|
+Z5 !s108 1575141536.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v|
 !i113 1
-Z6 o-work cpu_work
+Z6 o-work CPU_work
 Z7 tCvgOpt 0
 vadc_ltc2308
-Z8 !s110 1574799506
+R0
 !i10b 1
 !s100 ekfLzDLI@3<[AKzZc:^Q<0
-I_VCHlaGT3eTFTN`L4fW>P1
+IV7O6V4K_k6X1mJI`g^2J;0
 R1
 R2
 R3
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z9 !s108 1574799506.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v|
+R5
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v|
 !i113 1
 R6
 R7
 vALU
-Z10 !s110 1574799501
+Z8 !s110 1575141531
 !i10b 1
-!s100 k<U4]mUO>P]MST^QFVZFI2
-IO=nj1JmTL13FCPSl@]K0j0
+!s100 CgflR=^nH[5Ck?DA=>Sc;0
+IB0l_Za9T=L;InF^DmU;n[3
 R1
 R2
-Z11 w1574636955
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z12 !s108 1574799501.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
+Z9 !s108 1575141531.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v|
 !i113 1
 R6
 R7
 n@a@l@u
 vALUController
-R10
+Z10 !s110 1575393068
 !i10b 1
-!s100 d0V1[mK[M<eL9aULOKE]j3
-I73R;[I3n7Wc^fb1W>hQ;R3
+!s100 [YNC`LzmD?k0<aiM0lR]z2
+IcX0[z5CU5UdEbl2>m1ZP22
 R1
 R2
-Z13 w1574373435
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v
+w1575392406
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v|
+Z11 !s108 1575393068.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v|
 !i113 1
 R6
 R7
 n@a@l@u@controller
 vALUTestOnBoard
-R10
+Z12 !s110 1575141532
 !i10b 1
 !s100 RCYNkRAnJSnA<fMiTd_Va2
-IPckbWHO68=<i4MG:jLZ_c1
+IGgc@YkWfG7<ESgE28_e:N0
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v|
+R9
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUTestOnBoard.v|
 !i113 1
 R6
 R7
@@ -120,513 +120,535 @@ vBlockRam
 R0
 !i10b 1
 !s100 =a^BTGn<[FIUm9QWPR:o?0
-IDdl5DQ9i5aJL_BfVNC4oL0
+IhFSDC1TI4h[MBFZVNaF6Q2
 R1
 R2
-w1574357065
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v
 L0 5
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v|
 !i113 1
 R6
 R7
 n@block@ram
 vbutton_mem
-R8
+!s110 1575247574
 !i10b 1
-!s100 hZ4XV=ZTDNYOazA[UP0m52
-I<62c:KEDBImh=;2MUDj313
+!s100 7<bTEg79<FLLEYF:HVkUM2
+I=zi`jgTikjXoFWP9;]f9S3
 R1
 R2
-w1574388083
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v
+w1575247229
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v
 L0 1
 R4
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v|
+!s108 1575247574.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v|
 !i113 1
 R6
 R7
 vCPU
-R10
+R12
 !i10b 1
-!s100 BHJH>3d_47;lQ]mgEDBK60
-IZHmUDj;DBk@T4iC>3[5T41
+!s100 :iVW<`>T[9NJzL6PDUzBi0
+IheGRdX?i4No=g9]FFW_Qc1
 R1
 R2
-R11
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
+Z13 !s108 1575141532.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v|
 !i113 1
 R6
 R7
 n@c@p@u
 vCPU_vlg_tst
-Z14 !s110 1574799500
+!s110 1575313479
 !i10b 1
-!s100 g@1Jd2Lm;X[HCD<7knQBl1
-IGeiHDP8]ge:kbZVQHmbcC2
+!s100 E4I0U7LJcT[cz<JLO4I]f0
+IXdl]AmOGnkm^]4S8on>Zz0
 R1
 R2
-w1574388377
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt
+w1575313475
+8C:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt
+FC:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt
 L0 28
 R4
 r1
 !s85 0
 31
-Z15 !s108 1574799500.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/simulation/modelsim/CPU.vt|
+!s108 1575313479.000000
+!s107 C:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt|
 !i113 1
 R6
 R7
 n@c@p@u_vlg_tst
 vDecoder
-R10
+R12
 !i10b 1
-!s100 ;fO_h_F9Y7gK4RTRfFY^=1
-I4R3MWzA;VA9;lAMY>IoU@0
+!s100 8Q^9[cS>`KWY;Q=5dN>Nn3
+IOJH8Ubd53bDW]K8B]V2C?3
 R1
 R2
-R11
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v|
+R13
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v|
 !i113 1
 R6
 R7
 n@decoder
 vdivider
-R8
+!s110 1575145346
 !i10b 1
 !s100 A]:?4[VJa2NRS`D<VA9FO0
-IJihK09Jc_oebPH=cna_IO0
+IolbBLoEi8J[T4SN5z24MY1
 R1
 R2
-w1574389302
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v
+w1575145340
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v
 L0 1
 R4
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v|
+!s108 1575145346.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v|
 !i113 1
 R6
 R7
 vdual_port_ram
-R8
+Z14 !s110 1575141534
 !i10b 1
 !s100 g;N`Z<<M48loWTbVFSeUk0
-Ih7fS4USEQ8Bm^D_Q<g]7l2
+Im<?hh]7PZ`VmEMMLLDEj22
 R1
 R2
-w1573580217
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v
+Z15 w1574827587
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v
 L0 5
 R4
 r1
 !s85 0
 31
-R9
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v|
+Z16 !s108 1575141534.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/dual_port_ram.v|
 !i113 1
 R6
 R7
 vextras_mem
-Z16 !s110 1574799503
+R14
 !i10b 1
 !s100 F`e^0OzY=XDddeH9PBNRl2
-ILa4V5Ka@?LN`>FfJl>95z0
+I<BBNVc082W?Czo:Ia:E[N2
 R1
 R2
-w1574363372
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z17 !s108 1574799503.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v|
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v|
 !i113 1
 R6
 R7
 vFSM
 R10
 !i10b 1
-!s100 TaHJ@0TEzPZn?VX1cibWK1
-I6biUAl^cRnin_bUQiBXBn0
+!s100 OZ6XJMm_2^ko34aX6_KWe0
+I@TZ8BCLP^RZHCmdS;?GIa0
 R1
 R2
-R11
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
+w1575392342
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
+R11
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v|
 !i113 1
 R6
 R7
 n@f@s@m
 vI2C
-R16
+R14
 !i10b 1
 !s100 ?z2CWo:HiLaHil]HnB;]Q3
-IGfNFDoFRdZP>JY?oX7Kc@0
+IilboIg<nT<J<U^zoMazK30
 R1
 R2
-w1574655392
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v
 L0 27
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v|
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v|
 !i113 1
 R6
 R7
 n@i2@c
 vInstructionMem
-R10
+R12
 !i10b 1
 !s100 3QU`IQ;Xb;^=<L0hO?T<]0
-IN=]O^WoY2?G5aZi`nOTiH1
+IYnl;IMNf9zJ47`SVkYY<H1
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v
 L0 4
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v|
+R13
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v|
 !i113 1
 R6
 R7
 n@instruction@mem
 vInstructionRegister
-Z18 !s110 1574799502
+R12
 !i10b 1
 !s100 RRBo3GfR=mgMPJGGlO8Fm3
-Im;c1`9;_]2GZJN;Wfgikj1
+I?LnIXB?`AnMge^9zeNHL?2
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z19 !s108 1574799502.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v|
+R13
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v|
 !i113 1
 R6
 R7
 n@instruction@register
 vkeypad_mem
-R16
+!s110 1575224881
 !i10b 1
-!s100 F3djgRJeWH?@HD]RWh:a73
-I9@`C><l;HF61K2:dGE:`j1
+!s100 kmzo4^Q<e[6JEL]ACZBzc0
+I6i;I6oDV<S[9>T@WcQEPc1
 R1
 R2
-w1574390369
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v
+w1575224869
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v
 L0 1
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v|
+!s108 1575224881.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v|
 !i113 1
 R6
 R7
 vktane_mem
-R16
+Z17 !s110 1575141535
 !i10b 1
 !s100 =90;hD9DG]VGUCiCfMM_^3
-I>ZgU;=5eFE_`P:B3ahjWL0
+IzT>_4Rl[InB0:Lb>@c<^72
 R1
 R2
-w1574629018
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v
 L0 1
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v|
+Z18 !s108 1575141535.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v|
 !i113 1
 R6
 R7
 vmorse_blink
-!s110 1574799507
+R10
 !i10b 1
-!s100 JKdi0k^X>o_XYdV;`A^:f2
-IZU5=em]Q2gMh0_F7eWoX21
+!s100 JY66?UW0J6N>WzO2idHi[3
+IVP6nQ1:cW0S3[4F@KZ4[Z1
 R1
 R2
-w1574794846
-8C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v
-FC:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v
+w1575002739
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v
 L0 1
 R4
 r1
 !s85 0
 31
-!s108 1574799507.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v|
+R11
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v|
 !i113 1
-o-work work
+R6
 R7
 vmorse_mem
-Z20 !s110 1574799504
+R17
 !i10b 1
 !s100 =n=3Zc4T:UZJ:kmJ4`DFb2
-Ik69E_:z;7M1iL[[FG`Yf80
+IzLC^AYZFEzXM6b_YkSPPJ0
 R1
 R2
-w1574630288
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z21 !s108 1574799504.000000
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v|
+R18
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v|
 !i113 1
 R6
 R7
 vmux2to1
-R18
+Z19 !s110 1575141533
 !i10b 1
 !s100 J=:?<J[mKCc6;;WiSfo0F1
-IdGg]ATXG>0iDhL?5:HILP3
+IVl@8V1l?@iPYZgANiAT^d1
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v
 L0 1
 R4
 r1
 !s85 0
 31
-R19
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
+Z20 !s108 1575141533.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
 !i113 1
 R6
 R7
 vmux4to1
-R18
+R19
 !i10b 1
 !s100 YXDHFJF?`VQjNmzhK__m03
-IOa8i`@Tcmb8?`2Q6F@l`W2
+I5a5fGQQ<=V1W3b26fPCK61
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v
 L0 1
 R4
 r1
 !s85 0
 31
-R19
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
+R20
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
 !i113 1
 R6
 R7
 vmux5
-R20
+R17
 !i10b 1
 !s100 Ua_eZ17f3onEnG_IEkziU1
-Ik;d5J_CKW?bmLM]i_JDV[0
+I^5CdVkRcfhVY5c[i@YU5T1
 R1
 R2
-Z22 w1573526108
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
 L0 1
 R4
 r1
 !s85 0
 31
-R21
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v|
+R18
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v|
 !i113 1
 R6
 R7
 voleds
-R20
+!s110 1575227343
 !i10b 1
-!s100 jPIKA=hXA4?Mi4k=cYLS50
-I8k0Yg75_;2OnRP`@UMK>E3
+!s100 Gz]mU;EJfQWiA`LQbf`7]2
+I4;`BcZ_XELjj9jJHIlZEN3
 R1
 R2
-w1574655231
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+w1575227293
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
 L0 1
 R4
 r1
 !s85 0
 31
-R21
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v|
+!s108 1575227343.000000
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v|
 !i113 1
 R6
 R7
 vProgramCounter
-R18
+R19
 !i10b 1
-!s100 aV_67:=g3NPcha:f?KK5Q1
-ImUDTg?ZJTgjXS6]fE3mYC2
+!s100 SFKdUXALET7;SgWC[>fX@3
+I65f7BY3d0]:Gl8<ON3@Sn3
 R1
 R2
-w1574375497
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v
 L0 1
 R4
 r1
 !s85 0
 31
-R19
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
+R20
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
 !i113 1
 R6
 R7
 n@program@counter
-vRegisterFile
-R16
+vPSR
+R19
 !i10b 1
-!s100 65nWN4dfGOf5b_X4^i^i`2
-IJ[0Pe[oP6>9@2`U@28:Ue0
+!s100 N9HFO:oNLU;1bZf2:Ja520
+I?k`SNj7ZV8S`1`:fmj@JS0
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v
 L0 1
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
+R20
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v|
+!i113 1
+R6
+R7
+n@p@s@r
+vRegisterFile
+R19
+!i10b 1
+!s100 65nWN4dfGOf5b_X4^i^i`2
+IknKfbBe6X6>=Oc6lBXoI[2
+R1
+R2
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v
+L0 1
+R4
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
 !i113 1
 R6
 R7
 n@register@file
 vrgb_led
-R20
+R17
 !i10b 1
 !s100 1jz=;AG1`fiX?2H3I9cKN0
-I?F0Z4=<EHGaeQ9:Vknh]F1
+I?0@=k=B0AF7R[3c^Y;ke;1
 R1
 R2
-w1574379215
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v
 L0 1
 R4
 r1
 !s85 0
 31
-R21
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v|
+R18
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v|
 !i113 1
 R6
 R7
 vsec_to_sevseg
-R0
+R17
 !i10b 1
 !s100 0b]=BF:`Hn7^Ze`:=TmUa2
-I18D_9:h_3h27:QaJC[3X>2
+IASK>fiCK5T7jD9c9nU>E^3
 R1
 R2
-w1573539038
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v
 L0 1
 R4
 r1
 !s85 0
 31
-R21
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v|
+R18
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v|
 !i113 1
 R6
 R7
@@ -634,63 +656,63 @@ vsevseg
 R0
 !i10b 1
 !s100 0:GD<1@@^@bHP3aXhzWh40
-IUQBM2OSRL=@@h3R_Z6l2f3
+I>jD9VHzZXTDL@[E@HHl?e3
 R1
 R2
-R22
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v
+R3
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v|
 !i113 1
 R6
 R7
 vSignExtender
-R16
+R19
 !i10b 1
 !s100 @7ocBgbWCido]F^4?hcVb0
-Ik=;bDHU7EmA;jI@DBk9WU1
+IO]VQl]iW7CW@2DW;F4Z`D0
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v
 L0 1
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
+R20
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
 !i113 1
 R6
 R7
 n@sign@extender
 vStorageRam
-R16
+R14
 !i10b 1
 !s100 foYR_HJ?lLC7<1<ZKa9f<3
-I20KI];AHnedAIlKmPV>cJ2
+Iig3YWA4d9im?Z7Bn9T`5a3
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v
 L0 1
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v|
+R16
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/StorageRam.v|
 !i113 1
 R6
 R7
@@ -699,20 +721,20 @@ vtimer
 R0
 !i10b 1
 !s100 ;CBfAQ>VHQ:HgXF2Y7O3M2
-Ioz:?iN=njm[UEO8dQC6[m0
+Ik7oWZh7J`55PmV:k78Kzo0
 R1
 R2
-w1573717944
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v
 L0 1
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v|
+R18
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v|
 !i113 1
 R6
 R7
@@ -720,41 +742,41 @@ vwire_mem
 R0
 !i10b 1
 !s100 JVJ0=9:2b^lHUXKlUQC2c1
-IS_dgkAT1>OQeYUHE8`n>G2
+I<kTTbVIeELmP<RGZl7X>:3
 R1
 R2
-w1574387819
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v|
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v|
 !i113 1
 R6
 R7
 vZeroExtender
-R14
+R8
 !i10b 1
 !s100 d[o58A`9?SEL>QTU]XkHn2
-IR0Wg94dF>gSh;in87J_5f2
+I180K7LFjlo]OJ0L>G100V0
 R1
 R2
-R13
-8C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
-FC:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
+R15
+8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
+FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v
 L0 1
 R4
 r1
 !s85 0
 31
-R15
-!s107 C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
-!s90 -reportprogress|300|-work|cpu_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
+R9
+!s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
+!s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v|
 !i113 1
 R6
 R7

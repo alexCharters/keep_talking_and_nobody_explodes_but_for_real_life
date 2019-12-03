@@ -10,326 +10,326 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:03 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v 
+# Start time: 10:06:41 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v 
 # -- Compiling module wire_mem
 # 
 # Top level modules:
 # 	wire_mem
-# End time: 00:57:03 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:41 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:03 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v 
+# Start time: 10:06:41 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/timer.v 
 # -- Compiling module timer
 # 
 # Top level modules:
 # 	timer
-# End time: 00:57:03 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:42 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:03 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v 
+# Start time: 10:06:42 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/sec_to_sevseg.v 
 # -- Compiling module sec_to_sevseg
 # 
 # Top level modules:
 # 	sec_to_sevseg
-# End time: 00:57:03 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:42 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:03 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v 
+# Start time: 10:06:42 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/rgb_led.v 
 # -- Compiling module rgb_led
 # 
 # Top level modules:
 # 	rgb_led
-# End time: 00:57:04 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:42 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:04 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v 
+# Start time: 10:06:42 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v 
 # -- Compiling module mux5
 # 
 # Top level modules:
 # 	mux5
-# End time: 00:57:04 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:42 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:04 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v 
+# Start time: 10:06:42 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v 
 # -- Compiling module morse_mem
 # 
 # Top level modules:
 # 	morse_mem
-# End time: 00:57:04 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:43 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:04 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v 
+# Start time: 10:06:43 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v 
 # -- Compiling module ktane_mem
 # 
 # Top level modules:
 # 	ktane_mem
-# End time: 00:57:05 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:43 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:05 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v 
+# Start time: 10:06:43 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/keypad_mem.v 
 # -- Compiling module keypad_mem
 # 
 # Top level modules:
 # 	keypad_mem
-# End time: 00:57:06 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:44 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:06 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v 
+# Start time: 10:06:44 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/I2C.v 
 # -- Compiling module I2C
 # 
 # Top level modules:
 # 	I2C
-# End time: 00:57:06 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:44 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:06 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v 
+# Start time: 10:06:44 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v 
 # -- Compiling module extras_mem
-# ** Warning: C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v(33): (vlog-2182) 'numStrikes' might be read before written in always_comb or always @* block.
+# ** Warning: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v(33): (vlog-2182) 'numStrikes' might be read before written in always_comb or always @* block.
 # 
 # Top level modules:
 # 	extras_mem
-# End time: 00:57:06 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:44 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:06 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v 
+# Start time: 10:06:44 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/divider.v 
 # -- Compiling module divider
 # 
 # Top level modules:
 # 	divider
-# End time: 00:57:06 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:45 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:06 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v 
+# Start time: 10:06:45 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v 
 # -- Compiling module button_mem
 # 
 # Top level modules:
 # 	button_mem
-# End time: 00:57:08 on Nov 25,2019, Elapsed time: 0:00:02
+# End time: 10:06:45 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:08 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v 
+# Start time: 10:06:45 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/bcd_to_sevseg.v 
 # -- Compiling module sevseg
 # 
 # Top level modules:
 # 	sevseg
-# End time: 00:57:08 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:45 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:08 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v 
+# Start time: 10:06:45 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v 
 # -- Compiling module adc_controller
 # 
 # Top level modules:
 # 	adc_controller
-# End time: 00:57:09 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:45 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:09 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v 
+# Start time: 10:06:45 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 00:57:09 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:46 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:09 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v 
+# Start time: 10:06:46 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v 
 # -- Compiling module ALUController
 # 
 # Top level modules:
 # 	ALUController
-# End time: 00:57:10 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:46 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:10 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v 
+# Start time: 10:06:46 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v 
 # -- Compiling module ProgramCounter
 # 
 # Top level modules:
 # 	ProgramCounter
-# End time: 00:57:10 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:46 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:10 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v 
+# Start time: 10:06:46 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionRegister.v 
 # -- Compiling module InstructionRegister
 # 
 # Top level modules:
 # 	InstructionRegister
-# End time: 00:57:10 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:46 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:10 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v 
+# Start time: 10:06:46 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 00:57:10 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:46 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:10 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v 
+# Start time: 10:06:46 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v 
 # -- Compiling module CPU
 # 
 # Top level modules:
 # 	CPU
-# End time: 00:57:10 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:47 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:10 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v 
+# Start time: 10:06:47 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v 
 # -- Compiling module Decoder
 # 
 # Top level modules:
 # 	Decoder
-# End time: 00:57:10 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:47 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:10 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v 
+# Start time: 10:06:47 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v 
 # -- Compiling module RegisterFile
 # 
 # Top level modules:
 # 	RegisterFile
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:47 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v 
+# Start time: 10:06:47 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v 
 # -- Compiling module mux2to1
 # 
 # Top level modules:
 # 	mux2to1
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:47 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v 
+# Start time: 10:06:47 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v 
 # -- Compiling module mux4to1
 # 
 # Top level modules:
 # 	mux4to1
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:47 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v 
+# Start time: 10:06:47 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v 
 # -- Compiling module SignExtender
 # 
 # Top level modules:
 # 	SignExtender
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:47 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v 
+# Start time: 10:06:47 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ZeroExtender.v 
 # -- Compiling module ZeroExtender
 # 
 # Top level modules:
 # 	ZeroExtender
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:48 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v 
+# Start time: 10:06:48 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v 
 # -- Compiling module PSR
 # 
 # Top level modules:
 # 	PSR
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:48 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v 
+# Start time: 10:06:48 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v 
 # -- Compiling module adc_ltc2308
 # 
 # Top level modules:
 # 	adc_ltc2308
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:48 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v 
+# Start time: 10:06:48 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v 
 # -- Compiling module morse_blink
 # 
 # Top level modules:
 # 	morse_blink
-# End time: 00:57:11 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:48 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:11 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v 
+# Start time: 10:06:48 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v 
 # -- Compiling module oleds
 # 
 # Top level modules:
 # 	oleds
-# End time: 00:57:12 on Nov 25,2019, Elapsed time: 0:00:01
+# End time: 10:06:49 on Dec 03,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:12 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v 
+# Start time: 10:06:49 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v 
 # -- Compiling module BlockRam
 # 
 # Top level modules:
 # 	BlockRam
-# End time: 00:57:12 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:49 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/Newest\ Freaking\ Repo/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life {C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:57:12 on Nov 25,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/Newest Freaking Repo/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v 
+# Start time: 10:06:49 on Dec 03,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life" C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v 
 # -- Compiling module InstructionMem
 # 
 # Top level modules:
 # 	InstructionMem
-# End time: 00:57:12 on Nov 25,2019, Elapsed time: 0:00:00
+# End time: 10:06:49 on Dec 03,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # Loading project cpu

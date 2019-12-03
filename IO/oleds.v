@@ -85,6 +85,7 @@ assign sda_i = SDA;
 assign SDA = (state == 5'b00110 || state == 5'b01001 || state == 5'b00001) ? 1'bz : sda_o;
 
 reg [15:0] data_latch;
+reg [6:0] address_latch;
 
 divider div(.clock(clk), .en(divClk));
 
@@ -176,7 +177,7 @@ initial begin
 end
 
 always@(*) begin
-	cmd_address = address;
+	cmd_address = address_latch;
 	cmd_start = 1'b1;
 	isStartSeq = 1'b0;
 	cmd_read = 1'b0;
@@ -390,6 +391,7 @@ end
 
 always@(negedge dataReady) begin
 	data_latch <= data;
+	address_latch <= address;
 end
 
 always@(posedge clk) begin

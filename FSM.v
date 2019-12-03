@@ -63,11 +63,9 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 					end
 					4'b0100: begin
 						if(instruction[7:4] == 4'b1100) begin //JMP
-							pcRegSel = 1'b0;
-							r2ImSel = 1'b1;
+							pcRegSel = 1'b1;
+							r2ImSel = 1'b0;
 							immTypeSel = 2'b11;
-							pcEn = 1'b1;
-							$display("JMP EXE");
 						end
 					end
 					4'b0101: begin //ADDI
@@ -82,6 +80,11 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 					end
 					4'b1001: begin //SUBI
 						pcRegSel = 1'b1;
+						r2ImSel = 1'b1;
+						immTypeSel = 2'b01;
+					end
+					4'b1100: begin //BCOND
+						pcRegSel = 1'b0;
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b01;
 					end
@@ -126,6 +129,10 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						end
 						default: ;
 					endcase
+				else if(instruction[15:12] == 4'b1100) begin
+					pcIncOrSet = 1'b1;
+					rfWe = 1'b0;
+				end
 				else
 					pcIncOrSet = 1'b0;
 				nextState = 2'b00; //get next instruction for IF.

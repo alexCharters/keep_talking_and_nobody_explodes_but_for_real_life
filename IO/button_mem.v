@@ -23,8 +23,29 @@ assign setColor = (en && we && addr[10:9] == 2'b01);
 assign setStrip = (en && we && addr[10:9] == 2'b10);
 
 always@(*) begin
-	if(addr[10:9] == 2'b00) begin
-		q <= {morse_left, morse_right, morse_tx, keypad_TL, keypad_TR, keypad_LL, keypad_LR, button_bigButton, 8'b00000000};
+	if(addr[10:8] == 3'b000) begin
+		q <= {15'b000000000000000, button_bigButton};
+	end
+	else if(addr[10:8] == 3'b001) begin
+		q <= {15'b000000000000000, morse_left};
+	end
+	else if(addr[10:8] == 3'b010) begin
+		q <= {15'b000000000000000, morse_right};
+	end
+	else if(addr[10:8] == 3'b011) begin
+		q <= {15'b000000000000000, morse_tx};
+	end
+	else if(addr[10:8] == 3'b100) begin
+		q <= {15'b000000000000000, keypad_TL};
+	end
+	else if(addr[10:8] == 3'b101) begin
+		q <= {15'b000000000000000, keypad_TR};
+	end
+	else if(addr[10:8] == 3'b110) begin
+		q <= {15'b000000000000000, keypad_LL};
+	end
+	else if(addr[10:8] == 3'b111) begin
+		q <= {15'b000000000000000, keypad_LR};
 	end
 	else begin
 		q <= 16'b1111111111111111;

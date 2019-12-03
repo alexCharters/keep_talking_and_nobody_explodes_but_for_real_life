@@ -13,6 +13,8 @@ module ALUController(clock, reset, opcode, aluOpcode);
 						aluOpcode <= opcode;
 				4'b1000: //SHIFTS
 					aluOpcode <= opcode;
+				4'b1100: //BCond
+					aluOpcode <= 8'b00000110;
 				4'b1111: //LUI
 					aluOpcode <= opcode;
             default: 
