@@ -76,8 +76,12 @@ def getOperand(assem_line: str, operand: int):
     search_results = assem_regex.finditer(assem_line)
     first_match = next(search_results)
     rsrc_match = next(search_results)
-    if first_match.group(2).lower()[0] != 'j':
-        operand_1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", rsrc_match.group(2), re.MULTILINE).group(0)
+    first_opstr = first_match.group(2).lower()
+    if first_opstr[0] != 'j':
+        try:
+            operand_1 = re.search(r"(r\d{1,2})|(0x[A-F0-9]+)|(-?\d{1,3})", rsrc_match.group(2), re.MULTILINE|re.IGNORECASE).group(0)
+        except:
+            operand_1 = rsrc_match.group(2)
     else:
         operand_1 = rsrc_match.group(2)
 
@@ -107,7 +111,7 @@ def getOpcode(assem_line: str):
     return op_code
 
 
-def isJumpToReg(assem_line: str):
+def hasRegOperand(assem_line: str):
     if re.search(r'r\d{1,2}', getOperand(assem_line, 1).lower()) is not None:
         return True
     else:
@@ -155,12 +159,14 @@ for line in lines:
     if comment_sep[0] != "": # and not re.match(r"^\s+$",comment_sep[0]):
         searchResults = assem_regex.finditer(comment_sep[0])
         firstMatch = next(searchResults)
-        Rsrc_match = next(searchResults)
-
         opcode = firstMatch.group(2).lower()
+        if opcode != "nope" and opcode != "noperope":
+            Rsrc_match = next(searchResults)
+
+
         line_label = getLabel(line) # This label corresponds to the label at the beginning a line (example: )
 
-        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None) and not isJumpToReg(line):
+        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None) and not hasRegOperand(line):
             #if opcode == 'jal':
                 # These are commented out since JAL will use a label now
                 #Rdest_match = next(searchResults)
@@ -214,12 +220,12 @@ for line in lines:
 
         elif opcode.lower() == 'nope':
             lines.insert(i, line_label + 'ori r0, r0')
-            lines.romove(line)
+            lines.remove(line)
 
         elif opcode.lower() == 'noperope':
             for ind in range(1, int(getOperand(line, 1))):
                 lines.insert(ind, line_label + 'ori r0, r0')
-            lines.romove(line)
+            lines.remove(line)
 
     i += 1
 
@@ -243,24 +249,27 @@ i = 0
 for line in lines:
     newLine = None
     #restring = r'movi\s+' + '\\' + jumpReg + r', (\w+)'
-    if re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
-        #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
-        label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
-        addr = labelDict[label + ':']
-        addr = addr >> 8
-        newLine = line.replace(label, str(addr))
-    if re.match(r"ori\s+(\w+), " + jumpReg, line) is not None:
-        #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
-        label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
-        addr = labelDict[label + ':']
-        addr = addr & 0x00FF
-        newLine = line.replace(label, str(addr))
+   # if re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
+    if not hasRegOperand(line):
+        if getOpcode(line).lower() == "lui":
+            #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
+            label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
+            addr = labelDict[label + ':']
+            addr = addr >> 8
+            newLine = line.replace(label, str(addr))
+        if getOpcode(line).lower() == "ori":
+            #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
+            label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
+            addr = labelDict[label + ':']
+            addr = addr & 0x00FF
+            newLine = line.replace(label, str(addr))
 
-    if newLine is not None:
-        lines.insert(i, newLine)
-        lines.remove(line)
+        if newLine is not None:
+            lines.insert(i, newLine)
+            lines.remove(line)
     i += 1
-
+for line in lines:
+    print(line.rstrip())
 #LOOP 4: begin parsing codes
 program_counter = 0
 for line in lines:
