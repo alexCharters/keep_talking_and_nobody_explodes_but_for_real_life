@@ -251,16 +251,24 @@ for line in lines:
     #restring = r'movi\s+' + '\\' + jumpReg + r', (\w+)'
    # if re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
     if not hasRegOperand(line):
-        if getOpcode(line).lower() == "lui":
+        if getOpcode(line).lower() == "lui" and re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
             #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
             label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
-            addr = labelDict[label + ':']
+            try:
+                addr = labelDict[label + ':']
+            except:
+                print("ERROR! label " + label + " does not exist!")
+                exit(-1)
             addr = addr >> 8
             newLine = line.replace(label, str(addr))
-        if getOpcode(line).lower() == "ori":
+        if getOpcode(line).lower() == "ori" and re.match(r"ori\s+(\w+), " + jumpReg, line) is not None:
             #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
             label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
-            addr = labelDict[label + ':']
+            try:
+                addr = labelDict[label + ':']
+            except:
+                print("ERROR! label " + label + " does not exist!")
+                exit(-1)
             addr = addr & 0x00FF
             newLine = line.replace(label, str(addr))
 
@@ -268,8 +276,11 @@ for line in lines:
             lines.insert(i, newLine)
             lines.remove(line)
     i += 1
+
 for line in lines:
     print(line.rstrip())
+
+
 #LOOP 4: begin parsing codes
 program_counter = 0
 for line in lines:
