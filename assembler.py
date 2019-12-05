@@ -247,9 +247,11 @@ for line in lines:
 # LOOP 3: Replace labels in lui and ori
 i = 0
 for line in lines:
+    if line[0] == '#' or line.isspace() or line == '':
+        continue
+    line = line.split('#')[0]
     newLine = None
-    #restring = r'movi\s+' + '\\' + jumpReg + r', (\w+)'
-   # if re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
+
     if not hasRegOperand(line):
         if getOpcode(line).lower() == "lui" and re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
             #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
