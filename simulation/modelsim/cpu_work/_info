@@ -182,13 +182,13 @@ R6
 R7
 n@c@p@u
 vCPU_vlg_tst
-!s110 1575313479
+!s110 1575563550
 !i10b 1
-!s100 E4I0U7LJcT[cz<JLO4I]f0
-IXdl]AmOGnkm^]4S8on>Zz0
+!s100 @kadT^D1T_LgIN8z[kN_02
+I^KZY3Eeo>9LV_Sa4Ab5oH0
 R1
 R2
-w1575313475
+w1575563539
 8C:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt
 FC:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt
 L0 28
@@ -196,7 +196,7 @@ R4
 r1
 !s85 0
 31
-!s108 1575313479.000000
+!s108 1575563550.000000
 !s107 C:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:\Users\alexc\OneDrive\Desktop\keep_talking_and_nobody_explodes_but_for_real_life\simulation\modelsim\CPU.vt|
 !i113 1
@@ -419,13 +419,13 @@ Z18 !s108 1575141535.000000
 R6
 R7
 vmorse_blink
-R10
+Z19 !s110 1575582573
 !i10b 1
 !s100 JY66?UW0J6N>WzO2idHi[3
 IVP6nQ1:cW0S3[4F@KZ4[Z1
 R1
 R2
-w1575002739
+w1575574747
 8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v
 FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v
 L0 1
@@ -433,7 +433,7 @@ R4
 r1
 !s85 0
 31
-R11
+!s108 1575582572.000000
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v|
 !i113 1
@@ -461,7 +461,7 @@ R18
 R6
 R7
 vmux2to1
-Z19 !s110 1575141533
+Z20 !s110 1575141533
 !i10b 1
 !s100 J=:?<J[mKCc6;;WiSfo0F1
 IVl@8V1l?@iPYZgANiAT^d1
@@ -475,14 +475,14 @@ R4
 r1
 !s85 0
 31
-Z20 !s108 1575141533.000000
+Z21 !s108 1575141533.000000
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux2to1.v|
 !i113 1
 R6
 R7
 vmux4to1
-R19
+R20
 !i10b 1
 !s100 YXDHFJF?`VQjNmzhK__m03
 I5a5fGQQ<=V1W3b26fPCK61
@@ -496,7 +496,7 @@ R4
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/mux4to1.v|
 !i113 1
@@ -524,13 +524,13 @@ R18
 R6
 R7
 voleds
-!s110 1575227343
+R19
 !i10b 1
-!s100 Gz]mU;EJfQWiA`LQbf`7]2
-I4;`BcZ_XELjj9jJHIlZEN3
+!s100 <Tm9UH_D[fbJM?mX>FYd23
+IDMTRXfGjEEAi??P<0`NmO0
 R1
 R2
-w1575227293
+w1575581355
 8C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
 FC:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
 L0 1
@@ -538,14 +538,14 @@ R4
 r1
 !s85 0
 31
-!s108 1575227343.000000
+!s108 1575582573.000000
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v|
 !i113 1
 R6
 R7
 vProgramCounter
-R19
+R20
 !i10b 1
 !s100 SFKdUXALET7;SgWC[>fX@3
 I65f7BY3d0]:Gl8<ON3@Sn3
@@ -559,7 +559,7 @@ R4
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ProgramCounter.v|
 !i113 1
@@ -567,7 +567,7 @@ R6
 R7
 n@program@counter
 vPSR
-R19
+R20
 !i10b 1
 !s100 N9HFO:oNLU;1bZf2:Ja520
 I?k`SNj7ZV8S`1`:fmj@JS0
@@ -581,7 +581,7 @@ R4
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v|
 !i113 1
@@ -589,7 +589,7 @@ R6
 R7
 n@p@s@r
 vRegisterFile
-R19
+R20
 !i10b 1
 !s100 65nWN4dfGOf5b_X4^i^i`2
 IknKfbBe6X6>=Oc6lBXoI[2
@@ -603,7 +603,7 @@ R4
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/RegisterFile.v|
 !i113 1
@@ -674,7 +674,7 @@ R5
 R6
 R7
 vSignExtender
-R19
+R20
 !i10b 1
 !s100 @7ocBgbWCido]F^4?hcVb0
 IO]VQl]iW7CW@2DW;F4Z`D0
@@ -688,7 +688,7 @@ R4
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
 !s90 -reportprogress|300|-work|CPU_work|-stats=none|C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/SignExtender.v|
 !i113 1

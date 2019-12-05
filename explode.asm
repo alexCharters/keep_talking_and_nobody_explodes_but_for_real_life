@@ -1,6 +1,17 @@
+main: NOPE
+JAL setup
+
+#write to strikes (in seconds)
+MOVIW 0xE400, r1
+MOVIW 3, r2
+STOR r2, r1
+
+
+
+setup: NOPE
 #write to button
 MOVIW 0xC000, r1
-MOVIW 1, r2
+MOVIW 30, r2
 STOR r2, r1
 
 #write to button color
@@ -69,7 +80,7 @@ MOVIW 180, r2
 STOR r2, r1
 
 TIMERDONE: OR r0, r0
-#write to strikes (in seconds)
+#write to strikes
 MOVIW 0xE400, r1
 MOVIW 1, r2
 STOR r2, r1
@@ -99,7 +110,7 @@ STOR r2, r1
 
 #write to glyph4
 MOVIW 0xCF00, r1
-MOVIW 5, r2
+MOVIW 1, r2
 STOR r2, r1
 
 

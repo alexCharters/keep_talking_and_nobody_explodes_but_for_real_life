@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProjectCPU
-Tue Dec 03 10:10:47 2019
+Thu Dec 05 14:38:42 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -88,7 +88,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec 03 10:10:47 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 05 14:38:41 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProjectCPU                             ;
 ; Top-level Entity Name           ; CPU                                         ;
@@ -250,9 +250,15 @@ refer to the applicable agreement for further details.
 ; IO/adc_ltc2308.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v                                  ;         ;
 ; IO/morse_blink.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v                                  ;         ;
 ; explode.dat                                       ; yes             ; Auto-Found Unspecified File                           ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/explode.dat                                       ;         ;
+; glyph28.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph28.txt                                       ;         ;
+; glyph10.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph10.txt                                       ;         ;
+; glyph9.txt                                        ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph9.txt                                        ;         ;
 ; glyph3.txt                                        ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph3.txt                                        ;         ;
+; glyph29.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph29.txt                                       ;         ;
+; glyph30.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph30.txt                                       ;         ;
 ; glyph1.txt                                        ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph1.txt                                        ;         ;
 ; glyph2.txt                                        ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph2.txt                                        ;         ;
+; glyph12.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph12.txt                                       ;         ;
 ; altsyncram.tdf                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                ;         ;
 ; stratix_ram_block.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                         ;         ;
 ; lpm_mux.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                   ;         ;
@@ -283,14 +289,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 2342        ;
+; Estimate of Logic utilization (ALMs needed) ; 4767        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 3742        ;
-;     -- 7 input functions                    ; 54          ;
-;     -- 6 input functions                    ; 849         ;
-;     -- 5 input functions                    ; 540         ;
-;     -- 4 input functions                    ; 450         ;
-;     -- <=3 input functions                  ; 1849        ;
+; Combinational ALUT usage for logic          ; 7382        ;
+;     -- 7 input functions                    ; 277         ;
+;     -- 6 input functions                    ; 1836        ;
+;     -- 5 input functions                    ; 1733        ;
+;     -- 4 input functions                    ; 596         ;
+;     -- <=3 input functions                  ; 2940        ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 1117        ;
 ;                                             ;             ;
@@ -302,8 +308,8 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 855         ;
-; Total fan-out                               ; 20104       ;
-; Average fan-out                             ; 3.92        ;
+; Total fan-out                               ; 37346       ;
+; Average fan-out                             ; 4.26        ;
 +---------------------------------------------+-------------+
 
 
@@ -312,25 +318,25 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                   ; Entity Name         ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |CPU                                               ; 3742 (0)            ; 1117 (0)                  ; 1048576           ; 0          ; 69   ; 0            ; |CPU                                                                                                                                                                  ; CPU                 ; work         ;
-;    |ALU:alu|                                       ; 225 (225)           ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALU:alu                                                                                                                                                          ; ALU                 ; work         ;
-;    |ALUController:aluCtl|                          ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALUController:aluCtl                                                                                                                                             ; ALUController       ; work         ;
-;    |Decoder:decoder|                               ; 195 (195)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|Decoder:decoder                                                                                                                                                  ; Decoder             ; work         ;
-;    |FSM:fsm|                                       ; 17 (17)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|FSM:fsm                                                                                                                                                          ; FSM                 ; work         ;
-;    |InstructionMem:instMem|                        ; 249 (249)           ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionMem:instMem                                                                                                                                           ; InstructionMem      ; work         ;
-;    |InstructionRegister:ir|                        ; 6 (6)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionRegister:ir                                                                                                                                           ; InstructionRegister ; work         ;
+; |CPU                                               ; 7382 (0)            ; 1117 (0)                  ; 1048576           ; 0          ; 69   ; 0            ; |CPU                                                                                                                                                                  ; CPU                 ; work         ;
+;    |ALU:alu|                                       ; 315 (315)           ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALU:alu                                                                                                                                                          ; ALU                 ; work         ;
+;    |ALUController:aluCtl|                          ; 10 (10)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALUController:aluCtl                                                                                                                                             ; ALUController       ; work         ;
+;    |Decoder:decoder|                               ; 331 (331)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|Decoder:decoder                                                                                                                                                  ; Decoder             ; work         ;
+;    |FSM:fsm|                                       ; 18 (18)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|FSM:fsm                                                                                                                                                          ; FSM                 ; work         ;
+;    |InstructionMem:instMem|                        ; 962 (962)           ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionMem:instMem                                                                                                                                           ; InstructionMem      ; work         ;
+;    |InstructionRegister:ir|                        ; 18 (18)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionRegister:ir                                                                                                                                           ; InstructionRegister ; work         ;
 ;    |PSR:psr|                                       ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PSR:psr                                                                                                                                                          ; PSR                 ; work         ;
 ;    |ProgramCounter:pc|                             ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ProgramCounter:pc                                                                                                                                                ; ProgramCounter      ; work         ;
-;    |RegisterFile:rf|                               ; 188 (188)           ; 240 (240)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|RegisterFile:rf                                                                                                                                                  ; RegisterFile        ; work         ;
-;    |ktane_mem:memory|                              ; 2672 (4)            ; 798 (0)                   ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory                                                                                                                                                 ; ktane_mem           ; work         ;
+;    |RegisterFile:rf|                               ; 186 (186)           ; 240 (240)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|RegisterFile:rf                                                                                                                                                  ; RegisterFile        ; work         ;
+;    |ktane_mem:memory|                              ; 5330 (4)            ; 798 (0)                   ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory                                                                                                                                                 ; ktane_mem           ; work         ;
 ;       |BlockRam:br|                                ; 39 (0)              ; 3 (0)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br                                                                                                                                     ; BlockRam            ; work         ;
 ;          |altsyncram:ram_rtl_0|                    ; 39 (0)              ; 3 (0)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0                                                                                                                ; altsyncram          ; work         ;
 ;             |altsyncram_95t1:auto_generated|       ; 39 (0)              ; 3 (3)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated                                                                                 ; altsyncram_95t1     ; work         ;
 ;                |decode_dla:decode2|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated|decode_dla:decode2                                                              ; decode_dla          ; work         ;
 ;                |mux_chb:mux3|                      ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated|mux_chb:mux3                                                                    ; mux_chb             ; work         ;
-;       |button_mem:button_mem|                      ; 658 (6)             ; 274 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem                                                                                                                           ; button_mem          ; work         ;
-;          |oleds:button_oled|                       ; 605 (422)           ; 233 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled                                                                                                         ; oleds               ; work         ;
-;             |I2C:U1|                               ; 149 (149)           ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1                                                                                                  ; I2C                 ; work         ;
+;       |button_mem:button_mem|                      ; 1548 (6)            ; 274 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem                                                                                                                           ; button_mem          ; work         ;
+;          |oleds:button_oled|                       ; 1495 (1285)         ; 233 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled                                                                                                         ; oleds               ; work         ;
+;             |I2C:U1|                               ; 176 (176)           ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1                                                                                                  ; I2C                 ; work         ;
 ;             |divider:div|                          ; 34 (34)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div                                                                                             ; divider             ; work         ;
 ;          |rgb_led:l1|                              ; 26 (26)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|rgb_led:l1                                                                                                                ; rgb_led             ; work         ;
 ;          |rgb_led:l2|                              ; 21 (21)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|rgb_led:l2                                                                                                                ; rgb_led             ; work         ;
@@ -348,24 +354,24 @@ refer to the applicable agreement for further details.
 ;                |sevseg:s1|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s1                                                                                       ; sevseg              ; work         ;
 ;                |sevseg:s2|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s2                                                                                       ; sevseg              ; work         ;
 ;                |sevseg:s3|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s3                                                                                       ; sevseg              ; work         ;
-;       |keypad_mem:keypad_mem|                      ; 1174 (10)           ; 408 (4)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem                                                                                                                           ; keypad_mem          ; work         ;
-;          |oleds:button_oled1|                      ; 578 (422)           ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1                                                                                                        ; oleds               ; work         ;
-;             |I2C:U1|                               ; 155 (155)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1                                                                                                 ; I2C                 ; work         ;
+;       |keypad_mem:keypad_mem|                      ; 2943 (10)           ; 408 (4)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem                                                                                                                           ; keypad_mem          ; work         ;
+;          |oleds:button_oled1|                      ; 1463 (1285)         ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1                                                                                                        ; oleds               ; work         ;
+;             |I2C:U1|                               ; 177 (177)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1                                                                                                 ; I2C                 ; work         ;
 ;             |divider:div|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div                                                                                            ; divider             ; work         ;
-;          |oleds:button_oled2|                      ; 586 (422)           ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2                                                                                                        ; oleds               ; work         ;
-;             |I2C:U1|                               ; 155 (155)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1                                                                                                 ; I2C                 ; work         ;
-;             |divider:div|                          ; 9 (9)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div                                                                                            ; divider             ; work         ;
-;       |morse_mem:morse_mem|                        ; 286 (2)             ; 20 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem                                                                                                                             ; morse_mem           ; work         ;
-;          |morse_blink:blinker|                     ; 270 (270)           ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker                                                                                                         ; morse_blink         ; work         ;
+;          |oleds:button_oled2|                      ; 1470 (1285)         ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2                                                                                                        ; oleds               ; work         ;
+;             |I2C:U1|                               ; 177 (177)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1                                                                                                 ; I2C                 ; work         ;
+;             |divider:div|                          ; 8 (8)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div                                                                                            ; divider             ; work         ;
+;       |morse_mem:morse_mem|                        ; 285 (2)             ; 20 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem                                                                                                                             ; morse_mem           ; work         ;
+;          |morse_blink:blinker|                     ; 269 (269)           ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker                                                                                                         ; morse_blink         ; work         ;
 ;          |sevseg:s1|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|sevseg:s1                                                                                                                   ; sevseg              ; work         ;
 ;          |sevseg:s2|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|sevseg:s2                                                                                                                   ; sevseg              ; work         ;
 ;       |wire_mem:wires_mem|                         ; 45 (0)              ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem                                                                                                                              ; wire_mem            ; work         ;
 ;          |adc_controller:adc|                      ; 45 (0)              ; 45 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc                                                                                                           ; adc_controller      ; work         ;
 ;             |adc_ltc2308:adc|                      ; 45 (45)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc                                                                                           ; adc_ltc2308         ; work         ;
-;    |mux2to1:pcOrReg|                               ; 80 (80)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:pcOrReg                                                                                                                                                  ; mux2to1             ; work         ;
-;    |mux2to1:r2OrImmediate|                         ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:r2OrImmediate                                                                                                                                            ; mux2to1             ; work         ;
-;    |mux2to1:wbRgAlu|                               ; 62 (62)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:wbRgAlu                                                                                                                                                  ; mux2to1             ; work         ;
-;    |mux4to1:immMux|                                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux4to1:immMux                                                                                                                                                   ; mux4to1             ; work         ;
+;    |mux2to1:pcOrReg|                               ; 99 (99)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:pcOrReg                                                                                                                                                  ; mux2to1             ; work         ;
+;    |mux2to1:r2OrImmediate|                         ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:r2OrImmediate                                                                                                                                            ; mux2to1             ; work         ;
+;    |mux2to1:wbRgAlu|                               ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:wbRgAlu                                                                                                                                                  ; mux2to1             ; work         ;
+;    |mux4to1:immMux|                                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux4to1:immMux                                                                                                                                                   ; mux4to1             ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -677,17 +683,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|measure_done      ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|config_cmd[0..5]  ; Stuck at GND due to stuck port clock                                                       ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|q[0..15]                                          ; Stuck at GND due to stuck port data_in                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|data_byte_counter[0..2]        ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[2]               ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[1]               ; Stuck at GND due to stuck port data_in                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[2..5]            ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|data_byte_counter[0..2]        ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[3..5]            ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[6]               ; Stuck at GND due to stuck port data_in                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|data_byte_counter[0..2]        ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|address_latch[2]               ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|address_latch[1]               ; Stuck at GND due to stuck port data_in                                                     ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|address_latch[2..5]            ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|data_byte_counter[0..2]        ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|address_latch[3..5]            ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|address_latch[6]               ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[2]                ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[1]                ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|data_byte_counter[0..2]         ; Stuck at GND due to stuck port data_in                                                     ;
-; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[0,1]              ; Stuck at GND due to stuck port data_in                                                     ;
-; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[2..5]             ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[0]                ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[3..5]             ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[6]                ; Stuck at GND due to stuck port data_in                                                     ;
 ; ALU:alu|psr[0]                                                                           ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[0..2]                  ; Stuck at GND due to stuck port clock                                                       ;
@@ -852,7 +862,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; RegisterFile:rf|DataBlock[0][15]                                                         ; Stuck at GND due to stuck port sclear                                                      ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|ADC_SDI           ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[0..2]   ; Lost fanout                                                                                ;
-; ALUController:aluCtl|aluOpcode[4]                                                        ; Merged with ALUController:aluCtl|aluOpcode[7]                                              ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS~2                            ; Lost fanout                                                                                ;
 ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS~3                            ; Lost fanout                                                                                ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS~2                           ; Lost fanout                                                                                ;
@@ -902,6 +911,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_reg~6              ; Lost fanout                                                                                ;
 ; FSM:fsm|currentState~2                                                                   ; Lost fanout                                                                                ;
 ; FSM:fsm|currentState~3                                                                   ; Lost fanout                                                                                ;
+; ALUController:aluCtl|aluOpcode[5]                                                        ; Merged with ALUController:aluCtl|aluOpcode[4]                                              ;
 ; Total Number of Removed Registers = 283                                                  ;                                                                                            ;
 +------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
@@ -951,9 +961,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|q[15]                                         ; Stuck at GND              ; RegisterFile:rf|DataBlock[0][15]                                                     ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|data_byte_counter[2]       ; Stuck at GND              ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[1]         ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[1]           ; Stuck at GND              ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[1]         ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
-; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|data_byte_counter[2]       ; Stuck at GND              ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|addr_reg[1]         ;
+; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|address_latch[1]           ; Stuck at GND              ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|addr_reg[1]         ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|data_byte_counter[2]        ; Stuck at GND              ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|addr_reg[0]          ;
 ;                                                                                      ; due to stuck port data_in ;                                                                                      ;
@@ -968,7 +978,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 1117  ;
-; Number of registers using Synchronous Clear  ; 431   ;
+; Number of registers using Synchronous Clear  ; 425   ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 87    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -1021,52 +1031,55 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CPU|InstructionRegister:ir|instr[3]                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|InstructionRegister:ir|instr[7]                                                     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|PSR:psr|flagsOut[4]                                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|secLeft[1]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[0]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|secLeft[14]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|mode_stop_reg      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|mode_stop_reg      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|ALU:alu|psr[3]                                                                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][0]                                                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|ALU:alu|psr[4]                                                                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][11]                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CPU|InstructionRegister:ir|instr[9]                                                     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[8]                                                          ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[5]                                                   ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[3]                                                   ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_reg[2]       ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_reg[10]      ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_reg[11]       ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|bit_count_reg[2]   ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|bit_count_reg[0]   ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|bit_count_reg[3]    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CPU|InstructionRegister:ir|instr[0]                                                     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[6]                                                          ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 24 LEs               ; 20 LEs                 ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[4]                                                   ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[0]                                                   ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_reg[5]       ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_reg[13]      ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_reg[12]       ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|bit_count_reg[0]   ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|bit_count_reg[2]   ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|bit_count_reg[2]    ;
+; 28:1               ; 4 bits    ; 72 LEs        ; 16 LEs               ; 56 LEs                 ; Yes        ; |CPU|InstructionRegister:ir|instr[11]                                                    ;
 ; 46:1               ; 3 bits    ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[5]                                                                  ;
-; 48:1               ; 3 bits    ; 96 LEs        ; 66 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[11]                                                                 ;
+; 48:1               ; 3 bits    ; 96 LEs        ; 66 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[10]                                                                 ;
 ; 47:1               ; 4 bits    ; 124 LEs       ; 88 LEs               ; 36 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[12]                                                                 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|phy_start_bit      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|phy_stop_bit       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|state_next         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|state_next         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_next          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_next          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~1                                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|state_next         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|phy_start_bit      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|phy_stop_bit       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_next  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|phy_stop_bit        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~2                                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~11                                                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|wbRegAlu                                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|rfWe                                                                        ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[31]                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:r2OrImmediate|out[1]                                                        ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[6]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:r2OrImmediate|out[5]                                                        ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftLeft0                                                                  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftRight1                                                                 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftRight0                                                                 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~8                                                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~10                                                       ;
 ; 17:1               ; 8 bits    ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register2Data[1]                                                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector44                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector43                 ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[15]                                                             ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[12]                                                             ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector33                 ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[14]                                                             ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~8                                                        ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~3                                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector34                 ;
 ; 18:1               ; 16 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CPU|mux2to1:pcOrReg|out[3]                                                              ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[10]                                                             ;
-; 10:1               ; 11 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~2                                                        ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[2]                                                              ;
 ; 16:1               ; 5 bits    ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |CPU|mux2to1:wbRgAlu|out[3]                                                              ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 8 LEs                ; 56 LEs                 ; No         ; |CPU|Decoder:decoder|Mux10                                                               ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 8 LEs                ; 56 LEs                 ; No         ; |CPU|Decoder:decoder|Mux8                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
@@ -1479,14 +1492,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 1117                        ;
 ;     CLR SCLR          ; 87                          ;
-;     ENA               ; 475                         ;
-;     ENA SCLR          ; 62                          ;
+;     ENA               ; 481                         ;
+;     ENA SCLR          ; 56                          ;
 ;     ENA SCLR SLD      ; 16                          ;
 ;     ENA SLD           ; 16                          ;
 ;     SCLR              ; 266                         ;
 ;     plain             ; 195                         ;
 ; arriav_io_obuf        ; 3                           ;
-; arriav_lcell_comb     ; 3750                        ;
+; arriav_lcell_comb     ; 7390                        ;
 ;     arith             ; 784                         ;
 ;         0 data inputs ; 53                          ;
 ;         1 data inputs ; 563                         ;
@@ -1494,16 +1507,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 87                          ;
 ;         4 data inputs ; 40                          ;
 ;         5 data inputs ; 32                          ;
-;     extend            ; 54                          ;
-;         7 data inputs ; 54                          ;
-;     normal            ; 2884                        ;
+;     extend            ; 277                         ;
+;         7 data inputs ; 277                         ;
+;     normal            ; 6301                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 48                          ;
-;         2 data inputs ; 298                         ;
-;         3 data inputs ; 770                         ;
-;         4 data inputs ; 410                         ;
-;         5 data inputs ; 508                         ;
-;         6 data inputs ; 849                         ;
+;         2 data inputs ; 335                         ;
+;         3 data inputs ; 1824                        ;
+;         4 data inputs ; 556                         ;
+;         5 data inputs ; 1701                        ;
+;         6 data inputs ; 1836                        ;
 ;     shared            ; 28                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 20                          ;
@@ -1512,7 +1525,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 49.20                       ;
-; Average LUT depth     ; 11.29                       ;
+; Average LUT depth     ; 11.71                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1521,7 +1534,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:37     ;
+; Top            ; 00:03:15     ;
 +----------------+--------------+
 
 
@@ -1531,7 +1544,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 03 10:06:18 2019
+    Info: Processing started: Thu Dec 05 14:31:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProjectCPU -c FinalProjectCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1609,6 +1622,7 @@ Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 34
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 36
 Info (12128): Elaborating entity "InstructionMem" for hierarchy "InstructionMem:instMem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 38
+Warning (10850): Verilog HDL warning at InstructionMem.v(20): number of words (65000) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 20
 Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 40
 Warning (10240): Verilog HDL Always Construct warning at Decoder.v(9): inferring latch(es) for variable "newInstr", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
 Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:ir" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 42
@@ -1622,6 +1636,7 @@ Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/al
 Info (12128): Elaborating entity "PSR" for hierarchy "PSR:psr" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 65
 Info (12128): Elaborating entity "ktane_mem" for hierarchy "ktane_mem:memory" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 101
 Info (12128): Elaborating entity "BlockRam" for hierarchy "ktane_mem:memory|BlockRam:br" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 70
+Warning (10850): Verilog HDL warning at BlockRam.v(18): number of words (65000) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v Line: 18
 Info (12128): Elaborating entity "button_mem" for hierarchy "ktane_mem:memory|button_mem:button_mem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 89
 Info (12128): Elaborating entity "oleds" for hierarchy "ktane_mem:memory|button_mem:button_mem|oleds:button_oled" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v Line: 17
 Warning (10030): Net "glyph1.data_a" at oleds.v(43) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 43
@@ -1630,11 +1645,29 @@ Warning (10030): Net "glyph2.data_a" at oleds.v(44) has no driver or initial val
 Warning (10030): Net "glyph2.waddr_a" at oleds.v(44) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 44
 Warning (10030): Net "glyph3.data_a" at oleds.v(45) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 45
 Warning (10030): Net "glyph3.waddr_a" at oleds.v(45) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 45
+Warning (10030): Net "glyph9.data_a" at oleds.v(51) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 51
+Warning (10030): Net "glyph9.waddr_a" at oleds.v(51) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 51
+Warning (10030): Net "glyph10.data_a" at oleds.v(52) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 52
+Warning (10030): Net "glyph10.waddr_a" at oleds.v(52) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 52
+Warning (10030): Net "glyph12.data_a" at oleds.v(54) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 54
+Warning (10030): Net "glyph12.waddr_a" at oleds.v(54) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 54
+Warning (10030): Net "glyph28.data_a" at oleds.v(70) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
+Warning (10030): Net "glyph28.waddr_a" at oleds.v(70) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
+Warning (10030): Net "glyph29.data_a" at oleds.v(71) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
+Warning (10030): Net "glyph29.waddr_a" at oleds.v(71) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
+Warning (10030): Net "glyph30.data_a" at oleds.v(72) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
+Warning (10030): Net "glyph30.waddr_a" at oleds.v(72) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
 Warning (10030): Net "glyph1.we_a" at oleds.v(43) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 43
 Warning (10030): Net "glyph2.we_a" at oleds.v(44) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 44
 Warning (10030): Net "glyph3.we_a" at oleds.v(45) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 45
-Info (12128): Elaborating entity "divider" for hierarchy "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 90
-Info (12128): Elaborating entity "I2C" for hierarchy "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 126
+Warning (10030): Net "glyph9.we_a" at oleds.v(51) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 51
+Warning (10030): Net "glyph10.we_a" at oleds.v(52) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 52
+Warning (10030): Net "glyph12.we_a" at oleds.v(54) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 54
+Warning (10030): Net "glyph28.we_a" at oleds.v(70) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
+Warning (10030): Net "glyph29.we_a" at oleds.v(71) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
+Warning (10030): Net "glyph30.we_a" at oleds.v(72) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
+Info (12128): Elaborating entity "divider" for hierarchy "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 93
+Info (12128): Elaborating entity "I2C" for hierarchy "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 129
 Info (12128): Elaborating entity "rgb_led" for hierarchy "ktane_mem:memory|button_mem:button_mem|rgb_led:l1" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v Line: 18
 Info (12128): Elaborating entity "keypad_mem" for hierarchy "ktane_mem:memory|keypad_mem:keypad_mem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 90
 Info (12128): Elaborating entity "morse_mem" for hierarchy "ktane_mem:memory|morse_mem:morse_mem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 91
@@ -1819,16 +1852,35 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer Decoder:decoder|decoded[7] File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 7
     Warning (19017): Found clock multiplexer Decoder:decoder|Mux20 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 36
     Warning (19017): Found clock multiplexer Decoder:decoder|Mux4 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 13
-Info (276014): Found 9 instances of uninferred RAM logic
+Info (276014): Found 27 instances of uninferred RAM logic
     Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph1" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 43
     Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph2" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 44
     Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph3" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 45
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph9" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 51
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph10" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 52
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph12" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 54
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph28" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph29" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|glyph30" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
     Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph1" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 43
     Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph2" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 44
     Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph3" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 45
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph9" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 51
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph10" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 52
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph12" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 54
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph28" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph29" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
+    Info (276004): RAM logic "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|glyph30" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
     Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph1" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 43
     Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph2" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 44
     Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph3" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 45
+    Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph9" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 51
+    Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph10" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 52
+    Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph12" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 54
+    Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph28" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
+    Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph29" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
+    Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph30" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_InstructionMem_c85af554.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~1 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
@@ -1841,11 +1893,13 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~8 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~9 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~10 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
+    Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~11 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer Decoder:decoder|Selector3~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
-    Warning (19017): Found clock multiplexer Decoder:decoder|Selector2~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
+    Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~12 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
     Warning (19017): Found clock multiplexer Decoder:decoder|Selector1~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
     Warning (19017): Found clock multiplexer Decoder:decoder|Selector0~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
+    Warning (19017): Found clock multiplexer Decoder:decoder|Selector2~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
+    Warning (19017): Found clock multiplexer Decoder:decoder|Selector3~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
     Warning (19017): Found clock multiplexer Decoder:decoder|Selector7~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
     Warning (19017): Found clock multiplexer Decoder:decoder|Selector6~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
     Warning (19017): Found clock multiplexer Decoder:decoder|Selector5~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
@@ -1890,6 +1944,8 @@ Info (12133): Instantiated megafunction "ktane_mem:memory|BlockRam:br|altsyncram
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_95t1.tdf
     Info (12023): Found entity 1: altsyncram_95t1 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_95t1.tdf Line: 31
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
     Info (12023): Found entity 1: decode_dla File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/decode_dla.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
@@ -1992,17 +2048,17 @@ Info (17049): 53 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/output_files/FinalProjectCPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4301 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7937 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 55 output pins
     Info (21060): Implemented 3 bidirectional pins
-    Info (21061): Implemented 4104 logic cells
+    Info (21061): Implemented 7740 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
-    Info: Peak virtual memory: 6251 megabytes
-    Info: Processing ended: Tue Dec 03 10:10:47 2019
-    Info: Elapsed time: 00:04:29
-    Info: Total CPU time (on all processors): 00:04:33
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 166 warnings
+    Info: Peak virtual memory: 6384 megabytes
+    Info: Processing ended: Thu Dec 05 14:38:42 2019
+    Info: Elapsed time: 00:07:13
+    Info: Total CPU time (on all processors): 00:07:15
 
 
 +------------------------------------------+

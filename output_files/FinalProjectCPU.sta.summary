@@ -2,724 +2,724 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'FSM:fsm|currentState.11'
-Slack : -18.812
-TNS   : -228.694
-
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -17.837
-TNS   : -496.176
+Slack : -21.081
+TNS   : -556.794
+
+Type  : Slow 1100mV 85C Model Setup 'FSM:fsm|currentState.11'
+Slack : -20.750
+TNS   : -224.498
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -16.041
-TNS   : -32720.991
+Slack : -18.878
+TNS   : -35770.864
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -15.159
-TNS   : -565.646
+Slack : -18.377
+TNS   : -597.553
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -15.110
-TNS   : -589.664
+Slack : -18.208
+TNS   : -603.824
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : -10.084
-TNS   : -193.382
+Slack : -10.836
+TNS   : -202.202
 
 Type  : Slow 1100mV 85C Model Setup 'reset'
-Slack : -8.468
-TNS   : -229.099
-
-Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -5.692
-TNS   : -127.278
+Slack : -9.093
+TNS   : -240.484
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -5.354
-TNS   : -119.884
-
-Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : -4.874
-TNS   : -32.757
+Slack : -5.916
+TNS   : -118.281
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -4.806
-TNS   : -131.150
+Slack : -5.578
+TNS   : -136.958
+
+Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -4.481
+TNS   : -113.957
+
+Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : -3.343
+TNS   : -26.874
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : -4.104
-TNS   : -30.982
+Slack : -2.662
+TNS   : -24.998
 
 Type  : Slow 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : -2.748
-TNS   : -24.441
-
-Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : -0.394
-TNS   : -0.744
-
-Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : 0.066
-TNS   : 0.000
+Slack : -2.385
+TNS   : -20.773
 
 Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : 0.074
-TNS   : 0.000
+Slack : -0.055
+TNS   : -0.068
 
 Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : 0.132
+Slack : -0.035
+TNS   : -0.085
+
+Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
+Slack : 0.065
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : 0.117
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.278
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.278
+Slack : 0.159
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
 Slack : 0.283
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : 0.587
+Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.284
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'reset'
-Slack : 0.787
+Slack : 0.594
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : 0.872
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.935
+Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : 0.648
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : 1.040
+Slack : 0.660
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'FSM:fsm|currentState.11'
-Slack : 1.631
+Slack : 0.845
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -5.602
-TNS   : -158.327
+Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : 0.868
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
+Slack : 1.009
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -5.430
-TNS   : -148.679
+Slack : -5.780
+TNS   : -166.942
 
 Type  : Slow 1100mV 85C Model Recovery 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -4.749
-TNS   : -137.381
+Slack : -5.363
+TNS   : -154.013
 
-Type  : Slow 1100mV 85C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.434
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -4.552
+TNS   : -128.043
 
 Type  : Slow 1100mV 85C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : 0.639
+Slack : 0.695
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.923
+Slack : 0.722
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.942
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -2.636
-TNS   : -21016.084
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -0.442
-TNS   : -50.792
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -0.394
-TNS   : -53.452
+TNS   : -21003.628
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -0.394
-TNS   : -43.970
+Slack : -0.492
+TNS   : -46.319
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM:fsm|currentState.11'
-Slack : -0.394
-TNS   : -29.914
+Slack : -0.470
+TNS   : -34.845
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
+Slack : -0.467
+TNS   : -50.345
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : -0.459
+TNS   : -8.301
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
+Slack : -0.420
+TNS   : -51.276
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -0.394
-TNS   : -23.286
+Slack : -0.410
+TNS   : -25.374
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
 Slack : -0.394
-TNS   : -21.028
+TNS   : -21.804
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
 Slack : -0.394
-TNS   : -19.090
+TNS   : -18.339
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
 Slack : -0.394
-TNS   : -6.529
+TNS   : -6.508
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
 Slack : -0.394
-TNS   : -5.837
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : -0.394
-TNS   : -5.444
+TNS   : -5.397
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'reset'
-Slack : -0.229
-TNS   : -1.834
+Slack : -0.217
+TNS   : -5.954
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.293
+Slack : 0.184
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'FSM:fsm|currentState.11'
-Slack : -18.446
-TNS   : -235.977
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -17.637
-TNS   : -491.685
+Slack : -20.812
+TNS   : -549.505
+
+Type  : Slow 1100mV 0C Model Setup 'FSM:fsm|currentState.11'
+Slack : -20.352
+TNS   : -227.684
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -15.444
-TNS   : -31275.971
-
-Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -15.116
-TNS   : -587.641
+Slack : -18.365
+TNS   : -34282.299
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -15.024
-TNS   : -561.289
+Slack : -18.152
+TNS   : -588.022
+
+Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
+Slack : -18.059
+TNS   : -597.417
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : -9.910
-TNS   : -192.592
+Slack : -10.646
+TNS   : -201.013
 
 Type  : Slow 1100mV 0C Model Setup 'reset'
-Slack : -8.335
-TNS   : -224.135
-
-Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -5.680
-TNS   : -128.135
+Slack : -8.970
+TNS   : -238.003
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -5.293
-TNS   : -120.299
+Slack : -5.809
+TNS   : -118.372
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -4.785
-TNS   : -131.534
+Slack : -5.596
+TNS   : -137.483
+
+Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -4.470
+TNS   : -115.064
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : -4.730
-TNS   : -32.248
+Slack : -3.255
+TNS   : -26.286
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : -4.014
-TNS   : -30.241
+Slack : -2.549
+TNS   : -24.668
 
 Type  : Slow 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : -2.708
-TNS   : -24.060
+Slack : -2.310
+TNS   : -20.802
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : -0.500
-TNS   : -0.968
+Slack : -0.161
+TNS   : -0.569
 
 Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : 0.072
-TNS   : 0.000
+Slack : -0.060
+TNS   : -0.060
 
 Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : 0.154
-TNS   : 0.000
+Slack : -0.024
+TNS   : -0.024
 
 Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : 0.165
+Slack : 0.110
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.278
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.278
+Slack : 0.143
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
 Slack : 0.281
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : 0.582
+Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.283
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'reset'
-Slack : 0.590
+Slack : 0.357
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : 0.858
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.910
+Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : 0.647
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : 0.977
+Slack : 0.655
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
+Slack : 0.924
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'FSM:fsm|currentState.11'
-Slack : 1.718
+Slack : 0.929
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -5.620
-TNS   : -158.882
-
 Type  : Slow 1100mV 0C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -5.433
-TNS   : -148.899
+Slack : -5.730
+TNS   : -165.492
 
 Type  : Slow 1100mV 0C Model Recovery 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -4.762
-TNS   : -137.728
+Slack : -5.385
+TNS   : -154.423
 
-Type  : Slow 1100mV 0C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.378
+Type  : Slow 1100mV 0C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -4.584
+TNS   : -128.876
+
+Type  : Slow 1100mV 0C Model Removal 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
+Slack : 0.660
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : 0.579
+Slack : 0.662
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Removal 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.856
+Type  : Slow 1100mV 0C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.893
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -2.636
-TNS   : -20932.404
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -0.445
-TNS   : -51.756
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -0.394
-TNS   : -50.698
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -0.394
-TNS   : -42.982
+TNS   : -20925.266
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM:fsm|currentState.11'
-Slack : -0.394
-TNS   : -29.698
+Slack : -0.465
+TNS   : -34.099
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
+Slack : -0.444
+TNS   : -49.881
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
+Slack : -0.442
+TNS   : -44.730
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : -0.421
+TNS   : -7.913
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
+Slack : -0.407
+TNS   : -50.461
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
 Slack : -0.394
-TNS   : -22.607
+TNS   : -24.114
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
 Slack : -0.394
-TNS   : -20.569
+TNS   : -21.524
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
 Slack : -0.394
-TNS   : -18.933
+TNS   : -18.315
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
 Slack : -0.394
-TNS   : -6.215
+TNS   : -6.350
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
 Slack : -0.394
-TNS   : -5.875
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : -0.394
-TNS   : -5.348
+TNS   : -5.381
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'reset'
-Slack : -0.226
-TNS   : -2.408
+Slack : -0.254
+TNS   : -6.241
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.291
+Slack : 0.171
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'FSM:fsm|currentState.11'
-Slack : -11.390
-TNS   : -128.873
+Slack : -12.490
+TNS   : -127.413
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -10.243
-TNS   : -261.988
+Slack : -12.030
+TNS   : -306.076
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -9.543
-TNS   : -18723.382
+Slack : -11.086
+TNS   : -20797.264
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -8.344
-TNS   : -312.208
+Slack : -10.250
+TNS   : -328.973
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -8.287
-TNS   : -316.199
+Slack : -10.070
+TNS   : -333.495
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : -5.710
-TNS   : -98.973
+Slack : -6.154
+TNS   : -99.879
 
 Type  : Fast 1100mV 85C Model Setup 'reset'
-Slack : -4.896
-TNS   : -131.869
-
-Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -3.135
-TNS   : -58.833
+Slack : -5.313
+TNS   : -133.864
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -2.937
-TNS   : -53.454
-
-Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : -2.786
-TNS   : -17.242
+Slack : -3.309
+TNS   : -52.221
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -2.561
-TNS   : -61.821
+Slack : -2.993
+TNS   : -64.563
+
+Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -2.323
+TNS   : -49.014
+
+Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : -1.756
+TNS   : -13.947
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : -2.384
-TNS   : -16.770
+Slack : -1.339
+TNS   : -11.303
 
 Type  : Fast 1100mV 85C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : -1.431
-TNS   : -12.323
-
-Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : -0.264
-TNS   : -0.512
-
-Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -0.139
-TNS   : -0.578
+Slack : -1.179
+TNS   : -9.024
 
 Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -0.122
-TNS   : -0.953
+Slack : -0.300
+TNS   : -4.505
+
+Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
+Slack : -0.211
+TNS   : -1.498
 
 Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -0.063
-TNS   : -0.309
+Slack : -0.169
+TNS   : -3.838
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : -0.008
+TNS   : -0.008
 
 Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.091
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.091
+Slack : 0.037
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
 Slack : 0.093
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : 0.264
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : 0.445
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'reset'
-Slack : 0.510
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : 0.543
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.556
+Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.095
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'FSM:fsm|currentState.11'
-Slack : 0.838
+Slack : 0.240
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -3.076
-TNS   : -86.307
+Type  : Fast 1100mV 85C Model Hold 'reset'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : 0.328
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
+Slack : 0.552
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -2.960
-TNS   : -79.751
+Slack : -3.307
+TNS   : -94.773
 
 Type  : Fast 1100mV 85C Model Recovery 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -2.543
-TNS   : -73.419
+Slack : -2.885
+TNS   : -82.060
 
-Type  : Fast 1100mV 85C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.091
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -2.354
+TNS   : -66.414
 
 Type  : Fast 1100mV 85C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : 0.309
+Slack : 0.293
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Removal 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.440
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.410
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -2.636
-TNS   : -21100.218
+TNS   : -21090.999
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'reset'
-Slack : -0.441
-TNS   : -20.342
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -0.211
-TNS   : -3.597
+Slack : -0.443
+TNS   : -24.811
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM:fsm|currentState.11'
-Slack : -0.151
-TNS   : -1.733
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -0.111
-TNS   : -5.809
+Slack : -0.271
+TNS   : -5.927
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -0.083
-TNS   : -0.097
+Slack : -0.237
+TNS   : -1.029
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
+Slack : -0.230
+TNS   : -3.709
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : -0.172
+TNS   : -1.540
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -0.074
-TNS   : -1.567
+Slack : -0.168
+TNS   : -3.805
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : -0.028
-TNS   : -0.216
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
+Slack : -0.164
+TNS   : -3.387
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -0.015
-TNS   : -0.276
+Slack : -0.014
+TNS   : -0.296
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
+Slack : -0.006
+TNS   : -0.045
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : 0.050
+Slack : 0.000
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.055
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : 0.064
+Slack : 0.074
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.355
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'FSM:fsm|currentState.11'
-Slack : -10.260
-TNS   : -122.065
+Slack : -11.330
+TNS   : -119.781
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -9.258
-TNS   : -238.737
+Slack : -10.959
+TNS   : -277.364
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -8.425
-TNS   : -16068.927
+Slack : -9.868
+TNS   : -17859.712
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -7.606
-TNS   : -282.193
+Slack : -9.375
+TNS   : -298.142
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -7.593
-TNS   : -288.180
+Slack : -9.229
+TNS   : -302.077
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : -5.020
-TNS   : -92.949
+Slack : -5.502
+TNS   : -93.651
 
 Type  : Fast 1100mV 0C Model Setup 'reset'
-Slack : -4.295
-TNS   : -114.518
-
-Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -2.863
-TNS   : -55.662
+Slack : -4.698
+TNS   : -118.382
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -2.662
-TNS   : -50.631
-
-Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : -2.413
-TNS   : -14.953
+Slack : -2.975
+TNS   : -49.503
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -2.348
-TNS   : -58.755
+Slack : -2.754
+TNS   : -61.006
+
+Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -2.143
+TNS   : -47.326
+
+Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : -1.526
+TNS   : -12.027
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : -2.070
-TNS   : -14.450
+Slack : -1.143
+TNS   : -9.748
 
 Type  : Fast 1100mV 0C Model Setup 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : -1.221
-TNS   : -10.472
-
-Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : -0.369
-TNS   : -0.738
-
-Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -0.130
-TNS   : -0.583
+Slack : -1.002
+TNS   : -7.805
 
 Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -0.126
-TNS   : -1.309
+Slack : -0.281
+TNS   : -4.156
+
+Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
+Slack : -0.218
+TNS   : -1.740
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : -0.189
+TNS   : -0.445
 
 Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -0.058
-TNS   : -0.307
+Slack : -0.166
+TNS   : -3.825
 
 Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.079
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.079
+Slack : 0.022
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
 Slack : 0.080
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : 0.237
+Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.082
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'reset'
-Slack : 0.376
+Slack : 0.231
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : 0.408
+Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : 0.301
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : 0.474
+Slack : 0.313
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.505
+Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'FSM:fsm|currentState.11'
-Slack : 0.869
+Slack : 0.364
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : -2.820
-TNS   : -79.116
+Type  : Fast 1100mV 0C Model Hold 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
+Slack : 0.502
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -2.706
-TNS   : -72.983
+Slack : -2.995
+TNS   : -85.601
 
 Type  : Fast 1100mV 0C Model Recovery 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : -2.340
-TNS   : -67.581
+Slack : -2.655
+TNS   : -75.485
 
-Type  : Fast 1100mV 0C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : 0.031
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Recovery 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
+Slack : -2.175
+TNS   : -61.342
 
 Type  : Fast 1100mV 0C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : 0.226
+Slack : 0.229
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.345
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
+Slack : 0.320
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -2.636
-TNS   : -21454.711
+TNS   : -21445.702
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'reset'
-Slack : -0.465
-TNS   : -23.775
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
-Slack : -0.145
-TNS   : -1.976
+Slack : -0.460
+TNS   : -27.249
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM:fsm|currentState.11'
-Slack : -0.100
-TNS   : -0.677
+Slack : -0.188
+TNS   : -3.319
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div|en'
-Slack : -0.043
-TNS   : -1.717
+Slack : -0.151
+TNS   : -2.169
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div|en'
-Slack : -0.025
-TNS   : -0.025
+Slack : -0.137
+TNS   : -0.308
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
+Slack : -0.113
+TNS   : -0.975
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div|en'
+Slack : -0.096
+TNS   : -1.313
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|data_in_ready_reg'
-Slack : -0.018
-TNS   : -0.181
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
-Slack : 0.014
-TNS   : 0.000
+Slack : -0.081
+TNS   : -1.726
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|data_in_ready_reg'
-Slack : 0.023
+Slack : 0.013
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|CS.end_data'
-Slack : 0.065
+Slack : 0.024
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|CS.end_data'
+Slack : 0.031
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_reg'
-Slack : 0.076
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|CS.end_data'
-Slack : 0.093
+Slack : 0.088
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW'
-Slack : 0.378
+Slack : 0.291
 TNS   : 0.000
 
 ------------------------------------------------------------

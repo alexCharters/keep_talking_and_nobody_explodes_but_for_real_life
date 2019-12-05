@@ -8,6 +8,7 @@ This will assemble some CR16 instructions.
 '''
 TODO:
 Add another loop to handle pseudo instructions
+
 '''
 
 '''
@@ -68,32 +69,57 @@ import sys
 from ctypes import *
 
 regexStr = r"(\w+:)?\s*(\S+)"
+assem_regex = re.compile(regexStr, re.MULTILINE | re.VERBOSE)
 #regex for finding hexidecimal can be found at https://regex101.com/r/zaY1m1/1
 
 def getOperand(assem_line: str, operand: int):
-    searchResults = assem_regex.finditer(assem_line)
-    firstMatch = next(searchResults)
-    Rsrc_match = next(searchResults)
-    if firstMatch.group(2).lower() != 'j':
-        operand1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", Rsrc_match.group(2), re.MULTILINE).group(0)
+    search_results = assem_regex.finditer(assem_line)
+    first_match = next(search_results)
+    rsrc_match = next(search_results)
+    first_opstr = first_match.group(2).lower()
+    if first_opstr[0] != 'j':
+        try:
+            operand_1 = re.search(r"(r\d{1,2})|(0x[A-F0-9]+)|(-?\d{1,3})", rsrc_match.group(2), re.MULTILINE|re.IGNORECASE).group(0)
+        except:
+            operand_1 = rsrc_match.group(2)
     else:
-        operand1 = Rsrc_match.group(2)
+        operand_1 = rsrc_match.group(2)
 
-    if (re.match(r'(j[a-z]*)|(b[a-z]+)', firstMatch.group(2).lower()) is None or
-            firstMatch.group(2).lower() == 'jal'):
-        Rdest_match = next(searchResults)
-        operand2 = re.search(r"-?\d{1,2}", Rdest_match.group(2), re.MULTILINE).group(0)
+    if (re.match(r'(j[a-z]*)|(b[a-z]+)', first_match.group(2).lower()) is None or
+        first_match.group(2).lower() == 'jal') and operand == 2:
+        rdest_match = next(search_results)
+        operand_2 = re.search(r"-?\d{1,2}", rdest_match.group(2), re.MULTILINE).group(0)
 
     if operand == 1:
-        return operand1
+        return operand_1
     elif operand == 2:
-        return operand2
+        return operand_2
+
+
+def getLabel(assem_line: str):
+    assem_line = assem_line.split('#')
+    _label = assem_regex.search(assem_line[0]).group(1);
+    if _label is not None:
+        return _label + " "
+    else:
+        return ""
+def getOpcode(assem_line: str):
+    assem_line = assem_line.split('#')
+    search_results = assem_regex.finditer(assem_line[0])
+    first_match = next(search_results)
+    op_code = first_match.group(2).lower()
+    return op_code
+
+
+def hasRegOperand(assem_line: str):
+    if re.search(r'r\d{1,2}', getOperand(assem_line, 1).lower()) is not None:
+        return True
+    else:
+        return False
 
 
 
-
-
-MEM_SIZE = 65536 # 16 bit words
+MEM_SIZE = 65000 # 16 bit words
 mem_list = []
 
 for i in range(0,MEM_SIZE):
@@ -101,8 +127,6 @@ for i in range(0,MEM_SIZE):
 inpath = 'explode.asm'
 outpath = 'explode.dat'
 
-
-assem_regex = re.compile(regexStr, re.MULTILINE | re.VERBOSE)
 
 jumpReg = 'r15'
 linkReg = 'r14'
@@ -123,22 +147,26 @@ LUI r1, 02
 JEQ r1
 '''
 
-#LOOP 1: Translate pseudo instructions(jxx).
+#LOOP 1: Translate pseudo instructions.
 i = 0
 label = ''
 lastJ = ''
 for line in lines:
-    if line[0] == '#' or line == lastJ or line.isspace():
+    if line[0] == '#' or line == lastJ or line.isspace() or line == 'movpc':
         i += 1
         continue
     comment_sep = line.split('#')
     if comment_sep[0] != "": # and not re.match(r"^\s+$",comment_sep[0]):
         searchResults = assem_regex.finditer(comment_sep[0])
         firstMatch = next(searchResults)
-        Rsrc_match = next(searchResults)
-
         opcode = firstMatch.group(2).lower()
-        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None):
+        if opcode != "nope" and opcode != "noperope":
+            Rsrc_match = next(searchResults)
+
+
+        line_label = getLabel(line) # This label corresponds to the label at the beginning a line (example: )
+
+        if (re.match(r'(j[a-z]*)', opcode.lower()) is not None) and not hasRegOperand(line):
             #if opcode == 'jal':
                 # These are commented out since JAL will use a label now
                 #Rdest_match = next(searchResults)
@@ -156,14 +184,18 @@ for line in lines:
 
             # remember: in immediate instructions, Immediate comes first.
             lines.remove(line)
-            lines.insert(i, 'lui ' + label + ', ' + jumpReg)
+            lines.insert(i, line_label + 'lui ' + label + ', ' + jumpReg)
             lines.insert(i+1, 'ori ' + label + ', ' + jumpReg)
 
             if opcode.lower() == 'jal':
                 lastJ = opcode + ' ' + linkReg + ', ' + jumpReg
+                # movpc is a special opcode that only the assembler knows about. It puts the program counter + 2
+                # into R14
+                lines.insert(i + 2, 'movpc r0, r0')
+                lines.insert(i + 3, lastJ)
             else:
                 lastJ = opcode + ' ' + jumpReg
-            lines.insert(i + 2, lastJ)
+                lines.insert(i + 2, lastJ)
 
             '''
             // move immediate word
@@ -176,7 +208,7 @@ for line in lines:
             immediate = int(immediate, 0)
             reg = getOperand(line, 2)
 
-            lines.insert(i, 'lui ' + str(immediate >> 8) + ' ' + reg)
+            lines.insert(i, line_label + 'lui ' + str(immediate >> 8) + ' ' + reg)
             lines.insert(i+1, 'ori ' + str(immediate & 0x00FF) + ' ' + reg)
             lines.remove(line)
 
@@ -187,13 +219,13 @@ for line in lines:
             '''
 
         elif opcode.lower() == 'nope':
-            lines.insert(i, 'ori r0, r0')
-            lines.romove(line)
+            lines.insert(i, line_label + 'ori r0, r0')
+            lines.remove(line)
 
         elif opcode.lower() == 'noperope':
             for ind in range(1, int(getOperand(line, 1))):
-                lines.insert(ind, 'ori r0, r0')
-            lines.romove(line)
+                lines.insert(ind, line_label + 'ori r0, r0')
+            lines.remove(line)
 
     i += 1
 
@@ -205,6 +237,7 @@ for line in lines:
     if line[0] == '#' or line.isspace() or line == '':
         continue
     comment_sep = line.split('#')
+    #print(line.rstrip())
     if comment_sep[0] != "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
         firstMatch = assem_regex.search(comment_sep[0])
         if firstMatch.group(1) is not None:
@@ -214,25 +247,41 @@ for line in lines:
 # LOOP 3: Replace labels in lui and ori
 i = 0
 for line in lines:
+    if line[0] == '#' or line.isspace() or line == '':
+        continue
+    line = line.split('#')[0]
     newLine = None
-    #restring = r'movi\s+' + '\\' + jumpReg + r', (\w+)'
-    if re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
-        #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
-        label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
-        addr = labelDict[label + ':']
-        addr = addr >> 8
-        newLine = line.replace(label, str(addr))
-    if re.match(r"ori\s+(\w+), " + jumpReg, line) is not None:
-        #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
-        label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
-        addr = labelDict[label + ':']
-        addr = addr & 0x00FF
-        newLine = line.replace(label, str(addr))
 
-    if newLine is not None:
-        lines.insert(i, newLine)
-        lines.remove(line)
+    if not hasRegOperand(line):
+        if getOpcode(line).lower() == "lui" and re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
+            #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
+            label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
+            try:
+                addr = labelDict[label + ':']
+            except:
+                print("ERROR! label " + label + " does not exist!")
+                exit(-1)
+            addr = addr >> 8
+            newLine = line.replace(label, str(addr))
+        if getOpcode(line).lower() == "ori" and re.match(r"ori\s+(\w+), " + jumpReg, line) is not None:
+            #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
+            label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
+            try:
+                addr = labelDict[label + ':']
+            except:
+                print("ERROR! label " + label + " does not exist!")
+                exit(-1)
+            addr = addr & 0x00FF
+            newLine = line.replace(label, str(addr))
+
+        if newLine is not None:
+            lines.insert(i, newLine)
+            lines.remove(line)
     i += 1
+
+for line in lines:
+    print(line.rstrip())
+
 
 #LOOP 4: begin parsing codes
 program_counter = 0
@@ -481,6 +530,16 @@ for line in lines:
                 temp_op = temp_op | operand2.value
                 mem_list[program_counter] = temp_op
 
+        # MOVPC the fancy one that just puts the program counter into r14
+            elif firstMatch.group(2).lower() == 'movpc':
+                temp_op = 0x40F0
+                mem_list[program_counter] = temp_op
+
+        # RETX; 0100 0000 1001 0000
+            elif firstMatch.group(2).lower() == 'retx':
+                temp_op = 0x4090
+                mem_list[program_counter] = temp_op
+
 
         # Bcond and Jcond
             elif re.search(r'(j[a-z]+)|(b[a-z]+)', firstMatch.group(2).lower()) is not None:
@@ -563,3 +622,11 @@ for code in mem_list:
 fout.close()
 #merph
 print("end")
+
+
+
+
+
+
+
+
