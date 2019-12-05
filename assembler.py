@@ -92,6 +92,14 @@ def getOperand(assem_line: str, operand: int):
         return operand2
 
 
+def getLabel(assem_line: str):
+    label = assem_regex.search(assem_line).group(1);
+    if label is not None:
+        return label
+    else:
+        return ""
+
+
 def isJumpToReg(assem_line: str):
     if re.search(r'r\d{1,2}', getOperand(assem_line, 1).lower()) is not None:
         return True
@@ -143,6 +151,8 @@ for line in lines:
         Rsrc_match = next(searchResults)
 
         opcode = firstMatch.group(2).lower()
+        label = getLabel(line)
+
         if (re.match(r'(j[a-z]*)', opcode.lower()) is not None) and not isJumpToReg(line):
             #if opcode == 'jal':
                 # These are commented out since JAL will use a label now
