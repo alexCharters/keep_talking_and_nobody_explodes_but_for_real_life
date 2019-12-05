@@ -5,7 +5,6 @@ MOVIW 0xBBBB, R13 #loads # passed modules
 LOAD R1, R13
 CMPi 4, R1 #while( )
 JEQ ending #while is done and jumps to ending sequence
-# JAL time
 JAL button
 JAL wires
 JAL passcode
@@ -38,8 +37,7 @@ MOVIW 2, r2
 STOR r2, r1
 MOVIW 0xCE00, r1 #write to glyph3
 MOVIW 4, r2
-STOR r2, r1
-#must wait about 327,675Ã¢â‚¬Â¬ cycles between a write to glyph1 then glyph2 or glyph3 then glyph4
+STOR r2, r1 #must wait about 327,675â€¬ cycles between a write to glyph1 then glyph2 or glyph3 then glyph4
 MOVIW 5, r3
 BUSYLOOP: OR r0, r0
 MOVIW 0xFFFF, r4
@@ -55,8 +53,7 @@ MOVIW 3, r2
 STOR r2, r1
 MOVIW 0xCF00, r1 #write to glyph4
 MOVIW 5, r2
-STOR r2, r1
-#write to morse sev-segs bits 7:4 is left number, bits 3:0 is right number
+STOR r2, r1 #write to morse sev-segs bits 7:4 is left number, bits 3:0 is right number
 MOVIW 0xD000, r1
 MOVIW 0x0025, r2
 STOR r2, r1
@@ -69,7 +66,7 @@ STOR r2, r1
 MOVIW 0xE400, r1 #write to strikes (in seconds)
 MOVIW 1, r2
 STOR r2, r1
-JUMP R14
+JUC R14
 button: OR R0, R0
 MOVIW 0x0000, R13 #address of save if complete
 MOVIW 0x0001, R12 #a one in for a cmp
