@@ -73,31 +73,38 @@ assem_regex = re.compile(regexStr, re.MULTILINE | re.VERBOSE)
 #regex for finding hexidecimal can be found at https://regex101.com/r/zaY1m1/1
 
 def getOperand(assem_line: str, operand: int):
-    searchResults = assem_regex.finditer(assem_line)
-    firstMatch = next(searchResults)
-    Rsrc_match = next(searchResults)
-    if firstMatch.group(2).lower()[0] != 'j':
-        operand1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", Rsrc_match.group(2), re.MULTILINE).group(0)
+    search_results = assem_regex.finditer(assem_line)
+    first_match = next(search_results)
+    rsrc_match = next(search_results)
+    if first_match.group(2).lower()[0] != 'j':
+        operand_1 = re.search(r"(0x[A-F0-9]+)|(-?\d{1,3})", rsrc_match.group(2), re.MULTILINE).group(0)
     else:
-        operand1 = Rsrc_match.group(2)
+        operand_1 = rsrc_match.group(2)
 
-    if (re.match(r'(j[a-z]*)|(b[a-z]+)', firstMatch.group(2).lower()) is None or
-            firstMatch.group(2).lower() == 'jal') and operand == 2:
-        Rdest_match = next(searchResults)
-        operand2 = re.search(r"-?\d{1,2}", Rdest_match.group(2), re.MULTILINE).group(0)
+    if (re.match(r'(j[a-z]*)|(b[a-z]+)', first_match.group(2).lower()) is None or
+        first_match.group(2).lower() == 'jal') and operand == 2:
+        rdest_match = next(search_results)
+        operand_2 = re.search(r"-?\d{1,2}", rdest_match.group(2), re.MULTILINE).group(0)
 
     if operand == 1:
-        return operand1
+        return operand_1
     elif operand == 2:
-        return operand2
+        return operand_2
 
 
 def getLabel(assem_line: str):
-    label = assem_regex.search(assem_line).group(1);
-    if label is not None:
-        return label
+    assem_line = assem_line.split('#')
+    _label = assem_regex.search(assem_line[0]).group(1);
+    if _label is not None:
+        return _label + " "
     else:
         return ""
+def getOpcode(assem_line: str):
+    assem_line = assem_line.split('#')
+    search_results = assem_regex.finditer(assem_line[0])
+    first_match = next(search_results)
+    op_code = first_match.group(2).lower()
+    return op_code
 
 
 def isJumpToReg(assem_line: str):
@@ -108,7 +115,7 @@ def isJumpToReg(assem_line: str):
 
 
 
-MEM_SIZE = 256 # 16 bit words
+MEM_SIZE = 65000 # 16 bit words
 mem_list = []
 
 for i in range(0,MEM_SIZE):
@@ -145,13 +152,13 @@ for line in lines:
         i += 1
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] is not "": # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "": # and not re.match(r"^\s+$",comment_sep[0]):
         searchResults = assem_regex.finditer(comment_sep[0])
         firstMatch = next(searchResults)
         Rsrc_match = next(searchResults)
 
         opcode = firstMatch.group(2).lower()
-        label = getLabel(line)
+        line_label = getLabel(line) # This label corresponds to the label at the beginning a line (example: )
 
         if (re.match(r'(j[a-z]*)', opcode.lower()) is not None) and not isJumpToReg(line):
             #if opcode == 'jal':
@@ -171,7 +178,7 @@ for line in lines:
 
             # remember: in immediate instructions, Immediate comes first.
             lines.remove(line)
-            lines.insert(i, 'lui ' + label + ', ' + jumpReg)
+            lines.insert(i, line_label + 'lui ' + label + ', ' + jumpReg)
             lines.insert(i+1, 'ori ' + label + ', ' + jumpReg)
 
             if opcode.lower() == 'jal':
@@ -195,7 +202,7 @@ for line in lines:
             immediate = int(immediate, 0)
             reg = getOperand(line, 2)
 
-            lines.insert(i, 'lui ' + str(immediate >> 8) + ' ' + reg)
+            lines.insert(i, line_label + 'lui ' + str(immediate >> 8) + ' ' + reg)
             lines.insert(i+1, 'ori ' + str(immediate & 0x00FF) + ' ' + reg)
             lines.remove(line)
 
@@ -206,12 +213,12 @@ for line in lines:
             '''
 
         elif opcode.lower() == 'nope':
-            lines.insert(i, 'ori r0, r0')
+            lines.insert(i, line_label + 'ori r0, r0')
             lines.romove(line)
 
         elif opcode.lower() == 'noperope':
             for ind in range(1, int(getOperand(line, 1))):
-                lines.insert(ind, 'ori r0, r0')
+                lines.insert(ind, line_label + 'ori r0, r0')
             lines.romove(line)
 
     i += 1
@@ -224,7 +231,8 @@ for line in lines:
     if line[0] == '#' or line.isspace() or line == '':
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] is not "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
+    #print(line.rstrip())
+    if comment_sep[0] != "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
         firstMatch = assem_regex.search(comment_sep[0])
         if firstMatch.group(1) is not None:
             labelDict[firstMatch.group(1)] = program_counter
@@ -259,7 +267,7 @@ for line in lines:
     if line[0] == '#' or line.isspace():
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] is not "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
       #  print(comment_sep[0])
 
         searchResults = assem_regex.finditer(comment_sep[0])
