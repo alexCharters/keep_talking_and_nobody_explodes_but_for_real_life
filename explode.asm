@@ -38,7 +38,7 @@ STOR r2, r1
 MOVIW 0xCE00, r1 #write to glyph3
 MOVIW 12, r2
 STOR r2, r1
-#must wait about 327,675â€¬ cycles between a write to glyph1 then glyph2 or glyph3 then glyph4
+#must wait about 327,675Ã¢â‚¬Â¬ cycles between a write to glyph1 then glyph2 or glyph3 then glyph4
 MOVIW 5, r3
 BUSYLOOP: OR r0, r0
 MOVIW 0xFFFF, r4
@@ -83,17 +83,17 @@ STOR R5, R1
 STOR R6, R2
 STOR R7, R3
 STOR R8, R4
-JUC R14
+JUC mloop
 button: OR R0, R0
 MOVIW 0x0000, R13 #address of save if complete
 MOVIW 0x0001, R12 #a one in for a cmp
-LOAD R1, R13 #load from address in r13 
+LOAD R1, R13 #load from address in r13
 CMP R1, R12 #is this module already complete?
-JEQ R14 #yes leave, no procede
+JEQ wires #yes leave, no procede
 MOVIW 0x0001, R13 #load address for button pushed last time
 MOVIW 0xC000, R12 #i/o read on button
-LOAD R1, R13 
-LOAD R2, R12 
+LOAD R1, R13
+LOAD R2, R12
 MOVIW 0x0001, R3
 CMP R2, R3 #is the button pushed?
 JLT letgo #nope move along
@@ -103,7 +103,7 @@ JUC buttonheld #previously pushed
 letgo: OR R0, R0
 CMP R1, R3 #held before but now let go of
 JLT check
-JUC R14
+JUC wires
 buttonpushed: OR R0, R0
 MOVIW 0xF330, R13
 MOVIW 0x0001, R12
@@ -112,9 +112,9 @@ MOVIW 0xE000, R10
 LOAD R13, R3 #load in the time
 STOR R11, R12 #store the button being pushed
 STOR R3, R10 #store time when button first pushed
-JUC R14
+JUC wires
 buttonheld: OR R0, R0
-JUC R14
+JUC wires
 check: OR R0, R0
 MOVIW 0x0001, R13
 MOVIW 0xC000, R12
@@ -131,15 +131,15 @@ MOVIW 0xE400, R9 #address to failure
 LOAD R1, R9
 ADDi 1, R1
 STOR R1, R9 #record failure
-JUC R14
+JUC wires
 wires: OR R0, R0
-JUC R14
+JUC passcode
 passcode: OR R0, R0
 MOVIW 0x0020, R13 #loads if this has passed already
 LOAD R1, R13
 CMPi 1, R1
 BNE 3
-JUC R14
+JUC morsecode
 MOVIW 0x0025, R12 #number of entries when it hits 4 check answer
 LOAD R12, R13 #13 is number of entries, 12 is address array calc
 but1: OR R0, R0
@@ -156,7 +156,8 @@ JUC but2
 CMP R1, R2 #it is pushed
 BNE 2 #it was not previously pushed
 JUC but2 #previously pushed
-STORi 1, R11 #saves that this button was pushed
+MOVIW 0x0001, R5
+STOR R5, R11 #saves that this button was pushed
 ADDi 1, R13
 ADD R13, R12 #address of the array of answers
 MOVIW 10, R11 #what button 1 is aka what glyph it is
@@ -175,8 +176,9 @@ STOR R0, R11
 JUC but3
 CMP R1, R2 #it is pushed
 BNE 2 #it was not previously pushed
-JUC but2 #previously pushed
-STORi 1, R11 #saves that this button was pushed
+JUC but3 #previously pushed
+MOVIW 0x0001, R5
+STOR R5, R11 #saves that this button was pushed
 ADDi 1, R13
 ADD R13, R12 #address of the array of answers
 MOVIW 3, R11 #what button 2 is aka what glyph it is
@@ -195,8 +197,9 @@ STOR R0, R11
 JUC but4
 CMP R1, R2 #it is pushed
 BNE 2 #it was not previously pushed
-JUC but2 #previously pushed
-STORi 1, R11 #saves that this button was pushed
+JUC but4 #previously pushed
+MOVIW 0x0001, R5
+STOR R5, R11 #saves that this button was pushed
 ADDi 1, R13
 ADD R13, R12 #address of the array of answers
 MOVIW 12, R11 #what button 3 is aka what glyph it is
@@ -215,8 +218,9 @@ STOR R0, R11
 JUC passcodecheck
 CMP R1, R2 #it is pushed
 BNE 2 #it was not previously pushed
-JUC but2 #previously pushed
-STORi 1, R11 #saves that this button was pushed
+JUC passcodecheck #previously pushed
+MOVIW 0x0001, R5
+STOR R5, R11 #saves that this button was pushed
 ADDi 1, R13
 ADD R13, R12 #address of the array of answers
 MOVIW 9, R11 #what button 4 is aka what glyph it is
@@ -226,7 +230,7 @@ passcodecheck: OR R0, R0
 LOAD 0x0025, R8
 STOR R13, R8
 CMPi 4, R13 #4 means all entries tried
-JNE R14
+JNE morsecode
 STOR R0, R8 #sets input # to 0
 MOVIW 0x0026, R13 #input[1]
 LOAD R1, R13
@@ -238,7 +242,7 @@ MOVIW 0xE400, R11 #address to failures
 LOAD R1, R11
 ADDi 1, R1 #failed this module
 STOR R1, r11
-JUC R14
+JUC morsecode
 MOVIW 0x0027, R13 #input[2]
 LOAD R1, R13
 MOVIW 0x0022, R12 #answer[2]
@@ -249,7 +253,7 @@ MOVIW 0xE400, R11 #address to failures
 LOAD R1, R11
 ADDi 1, R1 #failed this module
 STOR R1, r11
-JUC R14
+JUC morsecode
 MOVIW 0x0028, R13 #input[3]
 LOAD R1, R13
 MOVIW 0x0023, R12 #answer[3]
@@ -260,7 +264,7 @@ MOVIW 0xE400, R11 #address to failures
 LOAD R1, R11
 ADDi 1, R1 #failed this module
 STOR R1, r11
-JUC R14
+JUC morsecode
 MOVIW 0x0029, R13 #input[4]
 LOAD R1, R13
 MOVIW 0x0024, R12 #answer[4]
@@ -271,18 +275,18 @@ MOVIW 0xE400, R11 #address to failures
 LOAD R1, R11
 ADDi 1, R1 #failed this module
 STOR R1, r11
-JUC R14
+JUC morsecode
 MOVIW 0x0020, R10 #module passed
 LOAD R4, R10
 ADDi 1, R4
 STOR R4, R10 #module passed
-JUC R14
+JUC morsecode
 morsecode: OR R0, R0
 MOVIW 0x0040, R13 #loads if this has passed already
 LOAD R1, R13
 CMPi 0x0001, R1
 BNE 4
-JUC R14
+JUC mloop
 up: OR R0, R0
 MOVIW 0x0042, R13 #button held last time save
 MOVIW 0xC200, R12 #io for up button
@@ -292,10 +296,10 @@ CMP 0x0001, R4 #is the button pushed?
 JLT moveup #nope move along
 CMP R2, R4 #it is pushed
 BNE 3 #it was not previously pushed
-JUC R14 #previously pushed
+JUC mloop #previously pushed
 MOVIW 1, R1
 STOR R1, R13 #saves that this button was pushed
-JUC R14
+JUC mloop
 down: OR R0, R0
 MOVIW 0x0043, R13 #button held last time save
 MOVIW 0xC100, R12 #io for down button
@@ -305,10 +309,10 @@ CMP R4, 1 #is the button pushed?
 JLT movedown #nope move along
 CMP R2, R4 #it is pushed
 BNE 3 #it was not previously pushed
-JUC R14 #previously pushed
+JUC mloop #previously pushed
 MOVIW 1, R1
 STOR R1, R13 #saves that this button was pushed
-JUC R14
+JUC mloop
 enter: OR R0, R0
 MOVIW 0x0043, R13 #button held last time save
 MOVIW 0xC300, R12 #io for enter button
@@ -318,13 +322,13 @@ CMP R4, 1 #is the button pushed?
 JLT mccheck #nope move along
 CMP R2, R4 #it is pushed
 BNE 3 #it was not previously pushed
-JUC R14 #previously pushed
+JUC mloop #previously pushed
 MOVIW 1, R1
 STOR R1, R13 #saves that this button was pushed
-JUC R14
+JUC mloop
 mccheck: OR R0, R0
 CMPi 0x0001, R2 #button held last time
-JNE R14 #if not go away
+JNE mloop #if not go away
 STOR R0, R13 #button held last time now cleared
 MOVIW 0x0045, R11
 MOVIW 0x0044, R10
@@ -340,10 +344,10 @@ MOVIW 0x0040, R8
 LOAD R3, R8 #load passed
 ADDi 1, R3 #this has now passed
 STOR R3, R8 #save that it has passed
-JUC R14
+JUC mloop
 moveup: OR R0, R0
 CMP 1, R2 #button held last time
-JNE R14 #if not go away
+JNE mloop #if not go away
 STOR R0, R13 #button held last time now cleared
 MOVIW 0x0044, R9 #my save for freq
 MOVIW 0xD000, R8 #write to 7seg
@@ -352,10 +356,10 @@ LOAD R6, R8
 ADDi 1, R5
 STOR R5, R9
 STOR R5, R9
-JUC R14
+JUC mloop
 movedown: OR R0, R0
 CMP 1, R2 #button held last time
-JNE R14 #if not go away
+JNE mloop #if not go away
 STOR R0, R13 #button held last time now cleared
 MOVIW 0x0041, R9 #my save for freq
 MOVIW 0xD000, R8 #write to 7seg
@@ -364,5 +368,5 @@ LOAD R6, R8
 SUBi 1, R5
 STOR R5, R9
 STOR R5, R9
-JUC R14
+JUC mloop
 ending: OR R0, R0 #the end
