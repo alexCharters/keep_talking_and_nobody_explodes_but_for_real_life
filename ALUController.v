@@ -9,6 +9,8 @@ module ALUController(clock, reset, opcode, aluOpcode);
             4'b0100: //JMP convert to an addu
 					 if(opcode[3:0] == 4'b1100 || opcode[3:0] == 4'b1000)
 						aluOpcode <= 8'b00000110;
+					 else if(opcode[3:0] == 4'b1111)
+						aluOpcode <= 8'b01001111;
 					 else
 						aluOpcode <= opcode;
 				4'b1000: //SHIFTS
