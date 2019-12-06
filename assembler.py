@@ -285,8 +285,8 @@ for line in lines:
 
     i += 1
 
-for line in lines:
-    print(line.rstrip())
+# for line in lines:
+#     print(line.rstrip())
 
 #LOOP 4: begin parsing codes
 program_counter = 0
@@ -616,6 +616,7 @@ for line in lines:
                 mem_list[program_counter] = temp_op
             else:
                 print('Unknown: ' + line)
+                exit(-1)
 
             program_counter += 1
 
