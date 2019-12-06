@@ -54,12 +54,12 @@ end
 always@ (posedge clk) begin
 	if(measure_done) begin
     case(measure_ch)
-        0: ch0 <= measure_dataread;
-        1: ch1 <= measure_dataread;
-        2: ch2 <= measure_dataread;
-        3: ch3 <= measure_dataread;
-        4: ch4 <= measure_dataread;
-        5: ch5 <= measure_dataread;
+        0: ch0 <= measure_dataread[11:4];
+        1: ch1 <= measure_dataread[11:4];
+        2: ch2 <= measure_dataread[11:4];
+        3: ch3 <= measure_dataread[11:4];
+        4: ch4 <= measure_dataread[11:4];
+        5: ch5 <= measure_dataread[11:4];
     endcase
 	end
 end

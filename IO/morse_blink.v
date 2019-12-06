@@ -124,7 +124,7 @@ always@(*) begin
 	endcase
 end
 
-always@(posedge slow_clock) begin
+always@(posedge clk) begin
 	if(set_counter) begin
 		case(data)
 			1: begin

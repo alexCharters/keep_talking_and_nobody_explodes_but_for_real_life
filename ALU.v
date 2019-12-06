@@ -56,6 +56,9 @@ always @ (posedge clock) begin
 					4'b0000: begin
 					resWire <= rdataA; //LOAD
 					end
+					4'b1111: begin
+					resWire <= rdataA + 2'b10;
+					end
 				endcase
 		  end
 		  4'b1000: begin //LSH FIXME

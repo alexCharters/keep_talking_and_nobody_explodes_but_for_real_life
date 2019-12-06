@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProjectCPU
-Thu Dec 05 15:33:10 2019
+Thu Dec 05 23:00:53 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,16 +53,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  45. Parameter Settings for Inferred Entity Instance: ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|lpm_divide:Div0
  46. Parameter Settings for Inferred Entity Instance: ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|lpm_divide:Div1
  47. altsyncram Parameter Settings by Entity Instance
- 48. Port Connectivity Checks: "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2"
- 49. Port Connectivity Checks: "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1"
- 50. Port Connectivity Checks: "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1"
- 51. Port Connectivity Checks: "ktane_mem:memory|button_mem:button_mem|oleds:button_oled"
- 52. Port Connectivity Checks: "mux4to1:immMux"
- 53. Port Connectivity Checks: "InstructionRegister:ir"
- 54. Post-Synthesis Netlist Statistics for Top Partition
- 55. Elapsed Time Per Partition
- 56. Analysis & Synthesis Messages
- 57. Analysis & Synthesis Suppressed Messages
+ 48. Port Connectivity Checks: "ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc"
+ 49. Port Connectivity Checks: "ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|morse_divider:div"
+ 50. Port Connectivity Checks: "ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker"
+ 51. Port Connectivity Checks: "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2"
+ 52. Port Connectivity Checks: "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1"
+ 53. Port Connectivity Checks: "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1"
+ 54. Port Connectivity Checks: "ktane_mem:memory|button_mem:button_mem|oleds:button_oled"
+ 55. Port Connectivity Checks: "mux4to1:immMux"
+ 56. Port Connectivity Checks: "InstructionRegister:ir"
+ 57. Post-Synthesis Netlist Statistics for Top Partition
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
+ 60. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -88,13 +91,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 05 15:33:10 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 05 23:00:53 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; FinalProjectCPU                             ;
 ; Top-level Entity Name           ; CPU                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1117                                        ;
+; Total registers                 ; 1173                                        ;
 ; Total pins                      ; 69                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,048,576                                   ;
@@ -249,6 +252,7 @@ refer to the applicable agreement for further details.
 ; PSR.v                                             ; yes             ; User Verilog HDL File                                 ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/PSR.v                                             ;         ;
 ; IO/adc_ltc2308.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v                                  ;         ;
 ; IO/morse_blink.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v                                  ;         ;
+; IO/morse_divider.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_divider.v                                ;         ;
 ; explode.dat                                       ; yes             ; Auto-Found Unspecified File                           ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/explode.dat                                       ;         ;
 ; glyph28.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph28.txt                                       ;         ;
 ; glyph10.txt                                       ; yes             ; Auto-Found File                                       ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/glyph10.txt                                       ;         ;
@@ -269,7 +273,7 @@ refer to the applicable agreement for further details.
 ; altram.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                                    ;         ;
 ; altdpram.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                  ;         ;
 ; db/altsyncram_95t1.tdf                            ; yes             ; Auto-Generated Megafunction                           ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_95t1.tdf                            ;         ;
-; db/FinalProjectCPU.ram0_BlockRam_6ecff6b0.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_BlockRam_6ecff6b0.hdl.mif ;         ;
+; db/finalprojectcpu.ram0_blockram_6ecff6b0.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/finalprojectcpu.ram0_blockram_6ecff6b0.hdl.mif ;         ;
 ; db/decode_dla.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/decode_dla.tdf                                 ;         ;
 ; db/mux_chb.tdf                                    ; yes             ; Auto-Generated Megafunction                           ; C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/mux_chb.tdf                                    ;         ;
 ; lpm_divide.tdf                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                                ;         ;
@@ -289,16 +293,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 4273        ;
+; Estimate of Logic utilization (ALMs needed) ; 4104        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 6438        ;
-;     -- 7 input functions                    ; 280         ;
-;     -- 6 input functions                    ; 1790        ;
-;     -- 5 input functions                    ; 1686        ;
-;     -- 4 input functions                    ; 557         ;
-;     -- <=3 input functions                  ; 2125        ;
+; Combinational ALUT usage for logic          ; 6190        ;
+;     -- 7 input functions                    ; 268         ;
+;     -- 6 input functions                    ; 1712        ;
+;     -- 5 input functions                    ; 1649        ;
+;     -- 4 input functions                    ; 552         ;
+;     -- <=3 input functions                  ; 2009        ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 1117        ;
+; Dedicated logic registers                   ; 1173        ;
 ;                                             ;             ;
 ; I/O pins                                    ; 69          ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -307,9 +311,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 855         ;
-; Total fan-out                               ; 34329       ;
-; Average fan-out                             ; 4.39        ;
+; Maximum fan-out                             ; 911         ;
+; Total fan-out                               ; 33460       ;
+; Average fan-out                             ; 4.38        ;
 +---------------------------------------------+-------------+
 
 
@@ -318,29 +322,29 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                   ; Entity Name         ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |CPU                                               ; 6438 (0)            ; 1117 (0)                  ; 1048576           ; 0          ; 69   ; 0            ; |CPU                                                                                                                                                                  ; CPU                 ; work         ;
-;    |ALU:alu|                                       ; 229 (229)           ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALU:alu                                                                                                                                                          ; ALU                 ; work         ;
+; |CPU                                               ; 6190 (0)            ; 1173 (0)                  ; 1048576           ; 0          ; 69   ; 0            ; |CPU                                                                                                                                                                  ; CPU                 ; work         ;
+;    |ALU:alu|                                       ; 237 (237)           ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALU:alu                                                                                                                                                          ; ALU                 ; work         ;
 ;    |ALUController:aluCtl|                          ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ALUController:aluCtl                                                                                                                                             ; ALUController       ; work         ;
-;    |Decoder:decoder|                               ; 195 (195)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|Decoder:decoder                                                                                                                                                  ; Decoder             ; work         ;
-;    |FSM:fsm|                                       ; 17 (17)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|FSM:fsm                                                                                                                                                          ; FSM                 ; work         ;
-;    |InstructionMem:instMem|                        ; 270 (270)           ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionMem:instMem                                                                                                                                           ; InstructionMem      ; work         ;
-;    |InstructionRegister:ir|                        ; 6 (6)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionRegister:ir                                                                                                                                           ; InstructionRegister ; work         ;
+;    |Decoder:decoder|                               ; 204 (204)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|Decoder:decoder                                                                                                                                                  ; Decoder             ; work         ;
+;    |FSM:fsm|                                       ; 18 (18)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|FSM:fsm                                                                                                                                                          ; FSM                 ; work         ;
+;    |InstructionMem:instMem|                        ; 235 (235)           ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionMem:instMem                                                                                                                                           ; InstructionMem      ; work         ;
+;    |InstructionRegister:ir|                        ; 5 (5)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|InstructionRegister:ir                                                                                                                                           ; InstructionRegister ; work         ;
 ;    |PSR:psr|                                       ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|PSR:psr                                                                                                                                                          ; PSR                 ; work         ;
 ;    |ProgramCounter:pc|                             ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ProgramCounter:pc                                                                                                                                                ; ProgramCounter      ; work         ;
 ;    |RegisterFile:rf|                               ; 187 (187)           ; 240 (240)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|RegisterFile:rf                                                                                                                                                  ; RegisterFile        ; work         ;
-;    |ktane_mem:memory|                              ; 5333 (5)            ; 798 (0)                   ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory                                                                                                                                                 ; ktane_mem           ; work         ;
+;    |ktane_mem:memory|                              ; 5103 (4)            ; 854 (0)                   ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory                                                                                                                                                 ; ktane_mem           ; work         ;
 ;       |BlockRam:br|                                ; 39 (0)              ; 3 (0)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br                                                                                                                                     ; BlockRam            ; work         ;
 ;          |altsyncram:ram_rtl_0|                    ; 39 (0)              ; 3 (0)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0                                                                                                                ; altsyncram          ; work         ;
 ;             |altsyncram_95t1:auto_generated|       ; 39 (0)              ; 3 (3)                     ; 1048576           ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated                                                                                 ; altsyncram_95t1     ; work         ;
 ;                |decode_dla:decode2|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated|decode_dla:decode2                                                              ; decode_dla          ; work         ;
 ;                |mux_chb:mux3|                      ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|BlockRam:br|altsyncram:ram_rtl_0|altsyncram_95t1:auto_generated|mux_chb:mux3                                                                    ; mux_chb             ; work         ;
-;       |button_mem:button_mem|                      ; 1547 (6)            ; 274 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem                                                                                                                           ; button_mem          ; work         ;
-;          |oleds:button_oled|                       ; 1494 (1286)         ; 233 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled                                                                                                         ; oleds               ; work         ;
-;             |I2C:U1|                               ; 174 (174)           ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1                                                                                                  ; I2C                 ; work         ;
+;       |button_mem:button_mem|                      ; 1522 (7)            ; 274 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem                                                                                                                           ; button_mem          ; work         ;
+;          |oleds:button_oled|                       ; 1468 (1288)         ; 233 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled                                                                                                         ; oleds               ; work         ;
+;             |I2C:U1|                               ; 146 (146)           ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1                                                                                                  ; I2C                 ; work         ;
 ;             |divider:div|                          ; 34 (34)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|divider:div                                                                                             ; divider             ; work         ;
 ;          |rgb_led:l1|                              ; 26 (26)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|rgb_led:l1                                                                                                                ; rgb_led             ; work         ;
 ;          |rgb_led:l2|                              ; 21 (21)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|button_mem:button_mem|rgb_led:l2                                                                                                                ; rgb_led             ; work         ;
-;       |extras_mem:extras_mem|                      ; 466 (8)             ; 48 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem                                                                                                                           ; extras_mem          ; work         ;
+;       |extras_mem:extras_mem|                      ; 467 (9)             ; 48 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem                                                                                                                           ; extras_mem          ; work         ;
 ;          |timer:t1|                                ; 458 (57)            ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1                                                                                                                  ; timer               ; work         ;
 ;             |sec_to_sevseg:s1|                     ; 401 (36)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1                                                                                                 ; sec_to_sevseg       ; work         ;
 ;                |lpm_divide:Div0|                   ; 166 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
@@ -354,24 +358,24 @@ refer to the applicable agreement for further details.
 ;                |sevseg:s1|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s1                                                                                       ; sevseg              ; work         ;
 ;                |sevseg:s2|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s2                                                                                       ; sevseg              ; work         ;
 ;                |sevseg:s3|                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|sec_to_sevseg:s1|sevseg:s3                                                                                       ; sevseg              ; work         ;
-;       |keypad_mem:keypad_mem|                      ; 2946 (10)           ; 408 (4)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem                                                                                                                           ; keypad_mem          ; work         ;
-;          |oleds:button_oled1|                      ; 1464 (1286)         ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1                                                                                                        ; oleds               ; work         ;
-;             |I2C:U1|                               ; 177 (177)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1                                                                                                 ; I2C                 ; work         ;
+;       |keypad_mem:keypad_mem|                      ; 2903 (11)           ; 408 (4)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem                                                                                                                           ; keypad_mem          ; work         ;
+;          |oleds:button_oled1|                      ; 1442 (1288)         ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1                                                                                                        ; oleds               ; work         ;
+;             |I2C:U1|                               ; 153 (153)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1                                                                                                 ; I2C                 ; work         ;
 ;             |divider:div|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|divider:div                                                                                            ; divider             ; work         ;
-;          |oleds:button_oled2|                      ; 1472 (1286)         ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2                                                                                                        ; oleds               ; work         ;
-;             |I2C:U1|                               ; 177 (177)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1                                                                                                 ; I2C                 ; work         ;
+;          |oleds:button_oled2|                      ; 1450 (1288)         ; 202 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2                                                                                                        ; oleds               ; work         ;
+;             |I2C:U1|                               ; 153 (153)           ; 72 (72)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1                                                                                                 ; I2C                 ; work         ;
 ;             |divider:div|                          ; 9 (9)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|divider:div                                                                                            ; divider             ; work         ;
-;       |morse_mem:morse_mem|                        ; 285 (2)             ; 20 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem                                                                                                                             ; morse_mem           ; work         ;
-;          |morse_blink:blinker|                     ; 269 (269)           ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker                                                                                                         ; morse_blink         ; work         ;
+;       |morse_mem:morse_mem|                        ; 130 (2)             ; 84 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem                                                                                                                             ; morse_mem           ; work         ;
+;          |morse_blink:blinker|                     ; 114 (114)           ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker                                                                                                         ; morse_blink         ; work         ;
 ;          |sevseg:s1|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|sevseg:s1                                                                                                                   ; sevseg              ; work         ;
 ;          |sevseg:s2|                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|morse_mem:morse_mem|sevseg:s2                                                                                                                   ; sevseg              ; work         ;
-;       |wire_mem:wires_mem|                         ; 45 (0)              ; 45 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem                                                                                                                              ; wire_mem            ; work         ;
-;          |adc_controller:adc|                      ; 45 (0)              ; 45 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc                                                                                                           ; adc_controller      ; work         ;
-;             |adc_ltc2308:adc|                      ; 45 (45)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc                                                                                           ; adc_ltc2308         ; work         ;
+;       |wire_mem:wires_mem|                         ; 38 (0)              ; 37 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem                                                                                                                              ; wire_mem            ; work         ;
+;          |adc_controller:adc|                      ; 38 (0)              ; 37 (8)                    ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc                                                                                                           ; adc_controller      ; work         ;
+;             |adc_ltc2308:adc|                      ; 38 (38)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc                                                                                           ; adc_ltc2308         ; work         ;
 ;    |mux2to1:pcOrReg|                               ; 80 (80)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:pcOrReg                                                                                                                                                  ; mux2to1             ; work         ;
-;    |mux2to1:r2OrImmediate|                         ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:r2OrImmediate                                                                                                                                            ; mux2to1             ; work         ;
-;    |mux2to1:wbRgAlu|                               ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:wbRgAlu                                                                                                                                                  ; mux2to1             ; work         ;
-;    |mux4to1:immMux|                                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux4to1:immMux                                                                                                                                                   ; mux4to1             ; work         ;
+;    |mux2to1:r2OrImmediate|                         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:r2OrImmediate                                                                                                                                            ; mux2to1             ; work         ;
+;    |mux2to1:wbRgAlu|                               ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux2to1:wbRgAlu                                                                                                                                                  ; mux2to1             ; work         ;
+;    |mux4to1:immMux|                                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|mux4to1:immMux                                                                                                                                                   ; mux4to1             ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -595,82 +599,18 @@ Encoding Type:  One-Hot
 +-----------------+-----------------+-----------------+-----------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                                  ;
-+----------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
-; Latch Name                                                           ; Latch Enable Signal                                                  ; Free of Timing Hazards ;
-+----------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[16]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[15]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[14]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[13]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[18]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[19]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[20]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[21]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[22]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[23]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[24]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[25]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[26]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[27]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[28]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[29]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[30]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[31]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[17]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[12]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[11]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[10]   ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[9]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[8]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[7]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[6]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[5]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[4]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[3]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[2]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[1]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[0]    ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.LED_SHOW ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[4]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[5]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector71  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[0]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector69  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[1]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[2]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector71  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[3]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector71  ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|leds[0]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|leds[1]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|leds[2]                       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[6]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[7]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[8]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[9]  ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[10] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[11] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[12] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[13] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[14] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[15] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[16] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[18] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[19] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[20] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[21] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[22] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[23] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[24] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[25] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[26] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[27] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[28] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[29] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[30] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[31] ; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector70  ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|numStrikes[0]                 ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; ktane_mem:memory|extras_mem:extras_mem|numStrikes[1]                 ; ktane_mem:memory|extras_mem:extras_mem|setStrikes                    ; yes                    ;
-; Number of user-specified and inferred latches = 69                   ;                                                                      ;                        ;
-+----------------------------------------------------------------------+----------------------------------------------------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                               ;
++------------------------------------------------------+---------------------------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal                               ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------------------------------------+------------------------+
+; ktane_mem:memory|extras_mem:extras_mem|leds[0]       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|leds[1]       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|leds[2]       ; ktane_mem:memory|extras_mem:extras_mem|setStrikes ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|numStrikes[0] ; ktane_mem:memory|extras_mem:extras_mem|setStrikes ; yes                    ;
+; ktane_mem:memory|extras_mem:extras_mem|numStrikes[1] ; ktane_mem:memory|extras_mem:extras_mem|setStrikes ; yes                    ;
+; Number of user-specified and inferred latches = 5    ;                                                   ;                        ;
++------------------------------------------------------+---------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -682,6 +622,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|pre_measure_start ; Lost fanout                                                                                ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|measure_done      ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|config_cmd[0..5]  ; Stuck at GND due to stuck port clock                                                       ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq_len[0]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq_len[1]                      ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq_len[2,3]                    ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq_len[4]                      ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq_len[5]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq_len[6..31]                  ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[0..3]                       ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[4..7]                       ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[8]                          ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[9..11]                      ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[12,13]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[14..17]                     ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[18]                         ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[19..21]                     ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[22,23]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[24,25]                      ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[26,27]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[28..35]                     ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[36,37]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[38..43]                     ; Stuck at GND due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[44,45]                      ; Stuck at VCC due to stuck port data_in                                                     ;
+; ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|seq[46..59]                     ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|q[0..15]                                          ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[2]               ; Stuck at VCC due to stuck port data_in                                                     ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|address_latch[1]               ; Stuck at GND due to stuck port data_in                                                     ;
@@ -701,58 +663,60 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|address_latch[6]                ; Stuck at GND due to stuck port data_in                                                     ;
 ; ALU:alu|psr[0]                                                                           ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[0..2]                  ; Stuck at GND due to stuck port clock                                                       ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch0[8..11]                        ; Stuck at GND due to stuck port data_in                                                     ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[2,10]                         ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[6]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[6]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[6]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[2]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[2,8]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[0,4]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[8]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[8]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[4]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[0]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[0]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[4]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[0]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[8]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[4,5,7]                        ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[1,7]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[1]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[2]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[0,6]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[1]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[0]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[9]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[4]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[9]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[8]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[0]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[4]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[8]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[1,8]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[4,5]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[8]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[1]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[10]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[9]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[0]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[9]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[2]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch4[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[2]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[1]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[1]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[4]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[5]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[7]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[9]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[1]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[2,8]                          ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch2[4]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[6]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[6]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[9]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[2]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch5[11]                           ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[3]                            ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch3[3,6,8]                        ; Merged with ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                  ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[6]             ; Merged with ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[1]   ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|mode_read_reg           ; Merged with ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[1]   ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[3..5]          ; Merged with ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[2]   ;
@@ -912,7 +876,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_reg~6              ; Lost fanout                                                                                ;
 ; FSM:fsm|currentState~2                                                                   ; Lost fanout                                                                                ;
 ; FSM:fsm|currentState~3                                                                   ; Lost fanout                                                                                ;
-; Total Number of Removed Registers = 283                                                  ;                                                                                            ;
+; Total Number of Removed Registers = 379                                                  ;                                                                                            ;
 +------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
@@ -924,6 +888,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|measure_done  ; Stuck at VCC              ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[2],                ;
 ;                                                                                      ; due to stuck port data_in ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[1],                ;
 ;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|measure_ch[0],                ;
+;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch0[11],                      ;
+;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch0[10],                      ;
+;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch0[9],                       ;
+;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch0[8],                       ;
 ;                                                                                      ;                           ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|ch1[0]                        ;
 ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|config_cmd[0] ; Stuck at GND              ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|ADC_SDI,      ;
 ;                                                                                      ; due to stuck port clock   ; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[2], ;
@@ -977,12 +945,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1117  ;
-; Number of registers using Synchronous Clear  ; 431   ;
+; Total registers                              ; 1173  ;
+; Number of registers using Synchronous Clear  ; 489   ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 87    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 569   ;
+; Number of registers using Clock Enable       ; 631   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1010,9 +978,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|last_sda_i_reg     ; 1       ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|sda_i_reg          ; 3       ;
 ; ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|last_sda_i_reg     ; 1       ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|write_pos[1] ; 13      ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|write_pos[0] ; 14      ;
-; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|write_pos[3] ; 6       ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|write_pos[1] ; 11      ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|write_pos[0] ; 12      ;
+; ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|write_pos[3] ; 3       ;
 ; Total number of inverted registers = 21                                             ;         ;
 +-------------------------------------------------------------------------------------+---------+
 
@@ -1031,51 +999,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CPU|InstructionRegister:ir|instr[3]                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |CPU|InstructionRegister:ir|instr[2]                                                     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|PSR:psr|flagsOut[2]                                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|secLeft[1]                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|mode_stop_reg      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|extras_mem:extras_mem|timer:t1|secLeft[13]                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|addr_reg[0]        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|mode_stop_reg      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|ALU:alu|psr[4]                                                                      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][2]                                                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |CPU|ALU:alu|psr[1]                                                                      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|RegisterFile:rf|DataBlock[0][15]                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc|sdi_index[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CPU|InstructionRegister:ir|instr[9]                                                     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[7]                                                          ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[10]                  ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 0 LEs                ; 44 LEs                 ; Yes        ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|timer[0]                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[5]                 ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[18]                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CPU|InstructionRegister:ir|instr[11]                                                    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |CPU|ProgramCounter:pc|index[12]                                                         ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[5]                                                   ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[0]                                                   ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_reg[11]      ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_reg[8]       ;
-; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_reg[11]       ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|bit_count_reg[2]   ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |CPU|ALUController:aluCtl|aluOpcode[1]                                                   ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|delay_reg[10]      ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|delay_reg[3]       ;
+; 11:1               ; 17 bits   ; 119 LEs       ; 0 LEs                ; 119 LEs                ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|delay_reg[12]       ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|bit_count_reg[1]   ;
 ; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|bit_count_reg[2]   ;
 ; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|bit_count_reg[3]    ;
-; 46:1               ; 3 bits    ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[4]                                                                  ;
+; 46:1               ; 3 bits    ; 90 LEs        ; 60 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[6]                                                                  ;
 ; 48:1               ; 3 bits    ; 96 LEs        ; 66 LEs               ; 30 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[11]                                                                 ;
 ; 47:1               ; 4 bits    ; 124 LEs       ; 88 LEs               ; 36 LEs                 ; Yes        ; |CPU|ALU:alu|resWire[14]                                                                 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|phy_start_bit      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|state_next         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|state_next         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|state_next         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|phy_start_bit       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|phy_stop_bit        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2|I2C:U1|phy_stop_bit       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|phy_start_bit      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled1|I2C:U1|phy_stop_bit       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|data_in_ready_next  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|button_mem:button_mem|oleds:button_oled|I2C:U1|state_next          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~8                                                        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~6                                                        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|brWe                                                                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|rfWe                                                                        ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17]                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:r2OrImmediate|out[6]                                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|FSM:fsm|pcIncOrSet                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:r2OrImmediate|out[0]                                                        ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftLeft0                                                                  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftRight1                                                                 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ALU:alu|ShiftRight0                                                                 ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register2Data[6]                                                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector44                 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[15]                                                             ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[14]                                                             ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|Selector34                 ;
-; 18:1               ; 16 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CPU|mux2to1:pcOrReg|out[6]                                                              ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[8]                                                              ;
-; 10:1               ; 11 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~9                                                        ;
-; 16:1               ; 5 bits    ; 50 LEs        ; 40 LEs               ; 10 LEs                 ; No         ; |CPU|mux2to1:wbRgAlu|out[5]                                                              ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 8 LEs                ; 56 LEs                 ; No         ; |CPU|Decoder:decoder|Mux9                                                                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |CPU|ktane_mem:memory|mux5:output_mux|Mux14                                              ;
+; 17:1               ; 8 bits    ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |CPU|RegisterFile:rf|register2Data[3]                                                    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[13]                                                             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[14]                                                             ;
+; 18:1               ; 16 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CPU|mux2to1:pcOrReg|out[7]                                                              ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[2]                                                              ;
+; 10:1               ; 11 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |CPU|InstructionMem:instMem|ram~4                                                        ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |CPU|mux2to1:wbRgAlu|out[3]                                                              ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 8 LEs                ; 56 LEs                 ; No         ; |CPU|Decoder:decoder|Mux10                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
@@ -1412,6 +1383,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc"                            ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; measured_data[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|morse_divider:div"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; en   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker"                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                  ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; debug_leds ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ktane_mem:memory|keypad_mem:keypad_mem|oleds:button_oled2" ;
 +------+-------+----------+-------------------------------------------------------------+
@@ -1486,16 +1484,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1117                        ;
+; arriav_ff             ; 1173                        ;
 ;     CLR SCLR          ; 87                          ;
-;     ENA               ; 475                         ;
-;     ENA SCLR          ; 62                          ;
+;     ENA               ; 478                         ;
+;     ENA SCLR          ; 121                         ;
 ;     ENA SCLR SLD      ; 16                          ;
 ;     ENA SLD           ; 16                          ;
-;     SCLR              ; 266                         ;
-;     plain             ; 195                         ;
+;     SCLR              ; 265                         ;
+;     plain             ; 190                         ;
 ; arriav_io_obuf        ; 3                           ;
-; arriav_lcell_comb     ; 6446                        ;
+; arriav_lcell_comb     ; 6198                        ;
 ;     arith             ; 784                         ;
 ;         0 data inputs ; 53                          ;
 ;         1 data inputs ; 563                         ;
@@ -1503,16 +1501,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 87                          ;
 ;         4 data inputs ; 40                          ;
 ;         5 data inputs ; 32                          ;
-;     extend            ; 280                         ;
-;         7 data inputs ; 280                         ;
-;     normal            ; 5354                        ;
+;     extend            ; 268                         ;
+;         7 data inputs ; 268                         ;
+;     normal            ; 5118                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 48                          ;
-;         2 data inputs ; 283                         ;
-;         3 data inputs ; 1061                        ;
-;         4 data inputs ; 517                         ;
-;         5 data inputs ; 1654                        ;
-;         6 data inputs ; 1790                        ;
+;         2 data inputs ; 280                         ;
+;         3 data inputs ; 948                         ;
+;         4 data inputs ; 512                         ;
+;         5 data inputs ; 1617                        ;
+;         6 data inputs ; 1712                        ;
 ;     shared            ; 28                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 20                          ;
@@ -1521,7 +1519,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 49.20                       ;
-; Average LUT depth     ; 9.86                        ;
+; Average LUT depth     ; 9.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1530,7 +1528,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:03:43     ;
+; Top            ; 00:03:13     ;
 +----------------+--------------+
 
 
@@ -1540,7 +1538,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 05 15:23:59 2019
+    Info: Processing started: Thu Dec 05 22:53:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProjectCPU -c FinalProjectCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1614,11 +1612,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file io/adc_
     Info (12023): Found entity 1: adc_ltc2308 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc_ltc2308.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file io/morse_blink.v
     Info (12023): Found entity 1: morse_blink File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file io/morse_divider.v
+    Info (12023): Found entity 1: morse_divider File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_divider.v Line: 1
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 34
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:pc" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 36
 Info (12128): Elaborating entity "InstructionMem" for hierarchy "InstructionMem:instMem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 38
-Warning (10850): Verilog HDL warning at InstructionMem.v(20): number of words (65000) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 20
 Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 40
 Warning (10240): Verilog HDL Always Construct warning at Decoder.v(9): inferring latch(es) for variable "newInstr", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/Decoder.v Line: 9
 Info (12128): Elaborating entity "InstructionRegister" for hierarchy "InstructionRegister:ir" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 42
@@ -1632,7 +1631,6 @@ Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/al
 Info (12128): Elaborating entity "PSR" for hierarchy "PSR:psr" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 65
 Info (12128): Elaborating entity "ktane_mem" for hierarchy "ktane_mem:memory" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 101
 Info (12128): Elaborating entity "BlockRam" for hierarchy "ktane_mem:memory|BlockRam:br" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 70
-Warning (10850): Verilog HDL warning at BlockRam.v(18): number of words (65000) in memory file does not match the number of elements in the address range [0:65535] File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/BlockRam.v Line: 18
 Info (12128): Elaborating entity "button_mem" for hierarchy "ktane_mem:memory|button_mem:button_mem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 89
 Info (12128): Elaborating entity "oleds" for hierarchy "ktane_mem:memory|button_mem:button_mem|oleds:button_oled" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/button_mem.v Line: 17
 Warning (10030): Net "glyph1.data_a" at oleds.v(43) has no driver or initial value, using a default initial value '0' File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 43
@@ -1669,133 +1667,7 @@ Info (12128): Elaborating entity "keypad_mem" for hierarchy "ktane_mem:memory|ke
 Info (12128): Elaborating entity "morse_mem" for hierarchy "ktane_mem:memory|morse_mem:morse_mem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 91
 Info (12128): Elaborating entity "sevseg" for hierarchy "ktane_mem:memory|morse_mem:morse_mem|sevseg:s1" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v Line: 16
 Info (12128): Elaborating entity "morse_blink" for hierarchy "ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_mem.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(33): inferring latch(es) for variable "seq", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(33): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Warning (10240): Verilog HDL Always Construct warning at morse_blink.v(33): inferring latch(es) for variable "timer", which holds its previous value in one or more paths through the always construct File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[0]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[1]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[2]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[3]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[4]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[5]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[6]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[7]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[8]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[9]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[10]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[11]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[12]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[13]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[14]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[15]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[16]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[17]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[18]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[19]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[20]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[21]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[22]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[23]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[24]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[25]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[26]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[27]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[28]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[29]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[30]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "timer[31]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[0]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[1]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[2]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[3]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[4]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[5]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[6]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[7]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[8]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[9]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[10]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[11]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[12]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[13]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[14]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[15]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[16]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[17]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[18]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[19]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[20]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[21]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[22]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[23]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[24]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[25]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[26]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[27]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[28]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[29]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[30]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "counter[31]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[0]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[1]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[2]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[3]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[4]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[5]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[6]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[7]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[8]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[9]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[10]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[11]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[12]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[13]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[14]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[15]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[16]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[17]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[18]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[19]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[20]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[21]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[22]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[23]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[24]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[25]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[26]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[27]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[28]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[29]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[30]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[31]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[32]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[33]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[34]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[35]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[36]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[37]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[38]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[39]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[40]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[41]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[42]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[43]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[44]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[45]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[46]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[47]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[48]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[49]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[50]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[51]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[52]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[53]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[54]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[55]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[56]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[57]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[58]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-Info (10041): Inferred latch for "seq[59]" at morse_blink.v(33) File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
+Info (12128): Elaborating entity "morse_divider" for hierarchy "ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|morse_divider:div" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Info (12128): Elaborating entity "wire_mem" for hierarchy "ktane_mem:memory|wire_mem:wires_mem" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/ktane_mem.v Line: 92
 Info (12128): Elaborating entity "adc_controller" for hierarchy "ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/wire_mem.v Line: 36
 Info (12128): Elaborating entity "adc_ltc2308" for hierarchy "ktane_mem:memory|wire_mem:wires_mem|adc_controller:adc|adc_ltc2308:adc" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/adc.v Line: 47
@@ -1876,7 +1748,6 @@ Info (276014): Found 27 instances of uninferred RAM logic
     Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph28" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 70
     Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph29" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 71
     Info (276004): RAM logic "ktane_mem:memory|button_mem:button_mem|oleds:button_oled|glyph30" is uninferred due to inappropriate RAM size File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v Line: 72
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_InstructionMem_c85af554.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~0 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
     Warning (19017): Found clock multiplexer InstructionMem:instMem|ram~1 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/InstructionMem.v Line: 14
@@ -1938,8 +1809,6 @@ Info (12133): Instantiated megafunction "ktane_mem:memory|BlockRam:br|altsyncram
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_95t1.tdf
     Info (12023): Found entity 1: altsyncram_95t1 File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/altsyncram_95t1.tdf Line: 31
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/FinalProjectCPU.ram0_BlockRam_6ecff6b0.hdl.mif" contains "don't care" values -- overwriting them with 0s File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
     Info (12023): Found entity 1: decode_dla File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/decode_dla.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
@@ -1968,73 +1837,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
     Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/db/alt_u_div_mve.tdf Line: 22
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "ktane_mem:memory|extras_mem:extras_mem|numStrikes[1]" merged with LATCH primitive "ktane_mem:memory|extras_mem:extras_mem|leds[1]" File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/extras_mem.v Line: 47
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[4] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[5] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 5
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[0] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 5
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[1] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[2] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 5
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[3] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 5
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[6] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[7] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[8] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[9] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[10] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[11] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[12] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[13] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[14] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[15] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[16] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[17] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[18] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[19] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[20] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[21] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[22] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[23] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[24] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[25] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[26] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[27] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[28] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[29] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[30] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
-Warning (13012): Latch ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|counter[31] has unsafe behavior File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 33
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ktane_mem:memory|morse_mem:morse_mem|morse_blink:blinker|CS.FINISH File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/morse_blink.v Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_SDI" is stuck at GND File: C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
@@ -2042,17 +1847,17 @@ Info (17049): 53 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/output_files/FinalProjectCPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6997 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6751 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 55 output pins
     Info (21060): Implemented 3 bidirectional pins
-    Info (21061): Implemented 6800 logic cells
+    Info (21061): Implemented 6554 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 164 warnings
-    Info: Peak virtual memory: 6261 megabytes
-    Info: Processing ended: Thu Dec 05 15:33:11 2019
-    Info: Elapsed time: 00:09:12
-    Info: Total CPU time (on all processors): 00:08:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 6273 megabytes
+    Info: Processing ended: Thu Dec 05 23:00:53 2019
+    Info: Elapsed time: 00:07:18
+    Info: Total CPU time (on all processors): 00:07:29
 
 
 +------------------------------------------+

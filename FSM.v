@@ -67,6 +67,11 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 							r2ImSel = 1'b0;
 							immTypeSel = 2'b11;
 						end
+						else if(instruction[7:4] == 4'b1111) begin //JMP CUST
+							pcRegSel = 1'b0;
+							r2ImSel = 1'b1;
+							immTypeSel = 2'b11;
+						end
 					end
 					4'b0101: begin //ADDI
 						pcRegSel = 1'b1;
@@ -125,6 +130,11 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						4'b1100: begin //JMP
 							rfWe = 1'b0;
 							pcIncOrSet = 1'b1;
+							nextState = 2'b00;
+						end
+						4'b1111: begin //CUST JUMP
+							rfWe = 1'b1;
+							pcIncOrSet = 1'b0;
 							nextState = 2'b00;
 						end
 						default: ;

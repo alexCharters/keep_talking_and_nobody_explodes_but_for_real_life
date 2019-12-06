@@ -119,7 +119,7 @@ def hasRegOperand(assem_line: str):
 
 
 
-MEM_SIZE = 65000 # 16 bit words
+MEM_SIZE = 65536 # 16 bit words
 mem_list = []
 
 for i in range(0,MEM_SIZE):
@@ -229,6 +229,8 @@ for line in lines:
 
     i += 1
 
+#for line in lines:
+#    print(line.rstrip())
 
 
 i = 0
@@ -244,18 +246,21 @@ for line in lines:
             labelDict[firstMatch.group(1)] = program_counter
         program_counter += 1
 
+#for line in lines:
+#    print(line.rstrip())
 # LOOP 3: Replace labels in lui and ori
 i = 0
 for line in lines:
     if line[0] == '#' or line.isspace() or line == '':
+        i += 1
         continue
     line = line.split('#')[0]
     newLine = None
 
     if not hasRegOperand(line):
-        if getOpcode(line).lower() == "lui" and re.match(r"lui\s+(\w+), " + jumpReg, line) is not None:
+        if getOpcode(line).lower() == "lui" and re.match(r"lui\s+([a-zA-Z]\w*), " + jumpReg, line) is not None:
             #label = re.match(r"lui\s+" + '\\' + jumpReg +  r", (\w+)", line).group(1)
-            label = re.match(r"lui\s+(\w+), " + jumpReg, line).group(1)
+            label = re.match(r"lui\s+([a-zA-Z]\w*), " + jumpReg, line).group(1)
             try:
                 addr = labelDict[label + ':']
             except:
@@ -263,9 +268,9 @@ for line in lines:
                 exit(-1)
             addr = addr >> 8
             newLine = line.replace(label, str(addr))
-        if getOpcode(line).lower() == "ori" and re.match(r"ori\s+(\w+), " + jumpReg, line) is not None:
+        if getOpcode(line).lower() == "ori" and re.match(r"ori\s+([a-zA-Z]\w*), " + jumpReg, line) is not None:
             #label = re.match(r"movi\s+" + '\\' + jumpReg + r", (\w+)", line).group(1)
-            label = re.match(r"ori\s+(\w+), " + jumpReg, line).group(1)
+            label = re.match(r"ori\s+([a-zA-Z]\w*), " + jumpReg, line).group(1)
             try:
                 addr = labelDict[label + ':']
             except:
@@ -275,13 +280,13 @@ for line in lines:
             newLine = line.replace(label, str(addr))
 
         if newLine is not None:
-            lines.insert(i, newLine)
             lines.remove(line)
+            lines.insert(i, newLine)
+
     i += 1
 
-for line in lines:
-    print(line.rstrip())
-
+# for line in lines:
+#     print(line.rstrip())
 
 #LOOP 4: begin parsing codes
 program_counter = 0
@@ -520,19 +525,20 @@ for line in lines:
                 mem_list[program_counter] = temp_op
 
         # JAL Rlink, Rtarget; 0100 Rlink 1000 Rtarget
+        # This has been changed to replicate JUC
             elif firstMatch.group(2).lower() == 'jal':
                 temp_op = 0b0100
                 temp_op = temp_op << 4
-                temp_op = temp_op | operand1.value
+                temp_op = temp_op | 0b1110
                 temp_op = temp_op << 4
-                temp_op = temp_op | 0b1000
+                temp_op = temp_op | 0b1100
                 temp_op = temp_op << 4
                 temp_op = temp_op | operand2.value
                 mem_list[program_counter] = temp_op
 
         # MOVPC the fancy one that just puts the program counter into r14
             elif firstMatch.group(2).lower() == 'movpc':
-                temp_op = 0x40F0
+                temp_op = 0x4EF0 # E is r14
                 mem_list[program_counter] = temp_op
 
         # RETX; 0100 0000 1001 0000
@@ -610,6 +616,7 @@ for line in lines:
                 mem_list[program_counter] = temp_op
             else:
                 print('Unknown: ' + line)
+                exit(-1)
 
             program_counter += 1
 
