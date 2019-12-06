@@ -1,4 +1,4 @@
-main: NOPE
+main: OR r0, r0
 JAL setup
 
 #write to strikes (in seconds)
@@ -6,9 +6,14 @@ MOVIW 0xE400, r1
 MOVIW 3, r2
 STOR r2, r1
 
+EXIT: OR r0, r0
+JUC EXIT
 
 
-setup: NOPE
+
+
+
+setup: OR r0, r0
 #write to button
 MOVIW 0xC000, r1
 MOVIW 30, r2
@@ -113,6 +118,4 @@ MOVIW 0xCF00, r1
 MOVIW 1, r2
 STOR r2, r1
 
-
-EXIT: OR r0, r0
-JUC EXIT
+JUC r14

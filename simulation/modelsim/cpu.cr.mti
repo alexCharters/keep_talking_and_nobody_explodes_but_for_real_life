@@ -19,6 +19,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ALUTestOnBoard
 
+} {} {}} C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v {1 {vlog -work CPU_work -stats=none C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/ALUController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALUController
+
+Top level modules:
+	ALUController
+
+} {} {}} C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v {1 {vlog -work CPU_work -stats=none C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/oleds.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module oleds
+
+Top level modules:
+	oleds
+
 } {} {}} C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v {1 {vlog -work CPU_work -stats=none C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/IO/mux5.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module mux5
@@ -454,6 +468,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	adc_controller
+
+} {} {}} C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v {1 {vlog -work CPU_work -stats=none C:/Users/alexc/OneDrive/Desktop/keep_talking_and_nobody_explodes_but_for_real_life/FSM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FSM
+
+Top level modules:
+	FSM
 
 } {} {}} C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v {1 {vlog -work cpu_work -stats=none C:/Users/alexc/OneDrive/Desktop/new_repo/keep_talking_and_nobody_explodes_but_for_real_life/CPU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
