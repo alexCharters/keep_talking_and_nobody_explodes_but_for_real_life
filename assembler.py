@@ -134,11 +134,12 @@ linkReg = 'r14'
 if len(sys.argv) > 1:
     inpath = sys.argv[1]
 
-lines = list(open(inpath))
+file_lines = list(open(inpath))
 
 program_counter = 0
-labelDict = {'pgm_begin' : 0}
-
+labelDict = {'pgm_begin': 0}
+lines = ["nothing"]
+lines.remove("nothing")
 '''
 WARNING: This was copied from Hari's email and the operands are flipped.
 to jump to 0x02FF
@@ -146,7 +147,15 @@ MOVi r1, FF
 LUI r1, 02
 JEQ r1
 '''
+#LOOP 0: Get rid off blank and comment lines and remove surrounding white space.
+for file_line in file_lines:
+    file_line = file_line.strip()
+    if file_line.startswith("#") or file_line.isspace() or file_line == "":
+        continue
+    lines.append(file_line)
 
+#for line in lines:
+#    print(line)
 #LOOP 1: Translate pseudo instructions.
 i = 0
 label = ''
@@ -156,7 +165,7 @@ for line in lines:
         i += 1
         continue
     comment_sep = line.split('#')
-    if comment_sep[0] != "": # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "" and not comment_sep[0].isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
         searchResults = assem_regex.finditer(comment_sep[0])
         firstMatch = next(searchResults)
         opcode = firstMatch.group(2).lower()
@@ -240,7 +249,7 @@ for line in lines:
         continue
     comment_sep = line.split('#')
     #print(line.rstrip())
-    if comment_sep[0] != "" and not line.isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
+    if comment_sep[0] != "" and not comment_sep[0].isspace(): # and not re.match(r"^\s+$",comment_sep[0]):
         firstMatch = assem_regex.search(comment_sep[0])
         if firstMatch.group(1) is not None:
             labelDict[firstMatch.group(1)] = program_counter
@@ -285,8 +294,8 @@ for line in lines:
 
     i += 1
 
-# for line in lines:
-#     print(line.rstrip())
+for line in lines:
+    print(line.rstrip())
 
 #LOOP 4: begin parsing codes
 program_counter = 0
