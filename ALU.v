@@ -33,7 +33,7 @@ always @ (posedge clock) begin
                     resWire <= rdataA - rdataB;
                 end
                 4'b1011: begin //CMP
-                    if(rdataA - rdataB == 8'b0)
+                    if(rdataA == rdataB)
                         psr[3] <= 1'b1;
                     else
                         psr[3] <= 1'b0;
@@ -57,7 +57,7 @@ always @ (posedge clock) begin
 					resWire <= rdataA; //LOAD
 					end
 					4'b1111: begin
-					resWire <= rdataA;
+					resWire <= rdataA - 1'b1;
 					end
 				endcase
 		  end

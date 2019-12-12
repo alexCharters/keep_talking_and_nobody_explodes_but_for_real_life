@@ -40,10 +40,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						pcRegSel = 1'b1; //use r1 instead of pc
 						r2ImSel = 1'b0; //use r2 data
 						if(instruction[7:4] == 4'b1011) begin //CMP
-							pcIncOrSet = 1'b0;
 							psrEn = 1'b1;
-							pcEn = 1'b1;
-							nextState = 2'b00;
 						end
 					end
 					4'b0001: begin //ANDI
@@ -97,10 +94,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						pcRegSel = 1'b1;
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b01;
-						pcIncOrSet = 1'b0;
-						pcEn = 1'b1;
 						psrEn = 1'b1;
-						nextState = 2'b00;
 					end
 					4'b1101: begin //MOVI
 						pcRegSel = 1'b1;
@@ -133,27 +127,27 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						4'b1100: begin //JMP
 							rfWe = 1'b0;
 							//pcIncOrSet = ((psrFlags!=5'b00000 && instruction[11:8]==5'b00000) || (psrFlags!=5'b00001 &&  instruction[11:8]==5'b00001))?1'b1:1'b0;
-							$display("reeeeeee");
 							
-							case(instruction[11:8])
-								4'b0000: pcIncOrSet = (psrFlags[3] == 1'b1) ? 1'b0 : 1'b1;
-								4'b0001: pcIncOrSet = (psrFlags[3] == 1'b0) ? 1'b0 : 1'b1;
-								4'b0010: pcIncOrSet = (psrFlags[0] == 1'b1) ? 1'b0 : 1'b1;
-								4'b0011: pcIncOrSet = (psrFlags[0] == 1'b0) ? 1'b0 : 1'b1;
-								4'b0100: pcIncOrSet = (psrFlags[1] == 1'b1) ? 1'b0 : 1'b1; 
-								4'b0101: pcIncOrSet = (psrFlags[1] == 1'b0) ? 1'b0 : 1'b1;
-								4'b0110: pcIncOrSet = (psrFlags[4] == 1'b1) ? 1'b0 : 1'b1;
-								4'b0111: pcIncOrSet = (psrFlags[4] == 1'b0) ? 1'b0 : 1'b1;
-								4'b1000: pcIncOrSet = (psrFlags[2] == 1'b1) ? 1'b0 : 1'b1;
-								4'b1001: pcIncOrSet = (psrFlags[2] == 1'b0) ? 1'b0 : 1'b1;
-								4'b1010: pcIncOrSet = ((psrFlags[3] == 1'b0 && psrFlags[1] == 1'b0) ? 1'b0 : 1'b1);
-								4'b1011: pcIncOrSet = ((psrFlags[3] == 1'b1 || psrFlags[1] == 1'b1) ? 1'b0 : 1'b1);
-								4'b1100: pcIncOrSet = ((psrFlags[4] == 1'b0 && psrFlags[0] == 1'b0) ? 1'b0 : 1'b1);
-								4'b1101: pcIncOrSet = ((psrFlags[4] == 1'b1 || psrFlags[0] == 1'b1) ? 1'b0 : 1'b1);
-								4'b1110: pcIncOrSet = 1'b1;
-								4'b1111: pcIncOrSet = 1'b0;
-								default: pcIncOrSet = 1'b0;
-							endcase	
+//							case(instruction[11:8])
+//								4'b0000: pcIncOrSet = (psrFlags[3] == 1'b1) ? 1'b1 : 1'b0;
+//								4'b0001: pcIncOrSet = (psrFlags[3] == 1'b0) ? 1'b0 : 1'b1;
+//								4'b0010: pcIncOrSet = (psrFlags[0] == 1'b1) ? 1'b0 : 1'b1;
+//								4'b0011: pcIncOrSet = (psrFlags[0] == 1'b0) ? 1'b0 : 1'b1;
+//								4'b0100: pcIncOrSet = (psrFlags[1] == 1'b1) ? 1'b0 : 1'b1; 
+//								4'b0101: pcIncOrSet = (psrFlags[1] == 1'b0) ? 1'b0 : 1'b1;
+//								4'b0110: pcIncOrSet = (psrFlags[4] == 1'b1) ? 1'b0 : 1'b1;
+//								4'b0111: pcIncOrSet = (psrFlags[4] == 1'b0) ? 1'b0 : 1'b1;
+//								4'b1000: pcIncOrSet = (psrFlags[2] == 1'b1) ? 1'b0 : 1'b1;
+//								4'b1001: pcIncOrSet = (psrFlags[2] == 1'b0) ? 1'b0 : 1'b1;
+//								4'b1010: pcIncOrSet = ((psrFlags[3] == 1'b0 && psrFlags[1] == 1'b0) ? 1'b0 : 1'b1);
+//								4'b1011: pcIncOrSet = ((psrFlags[3] == 1'b1 || psrFlags[1] == 1'b1) ? 1'b0 : 1'b1);
+//								4'b1100: pcIncOrSet = ((psrFlags[4] == 1'b0 && psrFlags[0] == 1'b0) ? 1'b0 : 1'b1);
+//								4'b1101: pcIncOrSet = ((psrFlags[4] == 1'b1 || psrFlags[0] == 1'b1) ? 1'b0 : 1'b1);
+//								4'b1110: pcIncOrSet = 1'b1;
+//								4'b1111: pcIncOrSet = 1'b0;
+//								default: pcIncOrSet = 1'b0;
+//							endcase	
+							pcIncOrSet = 1'b1;
 							
 							nextState = 2'b00;
 						end
@@ -172,6 +166,9 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 					pcIncOrSet = 1'b0;
 					rfWe = 1'b0;
 					pcEn = 1'b1;
+				end
+				else if(instruction[15:12] == 4'b1011 || instruction[7:4] == 4'b1011) begin //handle compares
+					psrEn = 1'b1;
 				end
 				else
 					pcIncOrSet = 1'b0;
