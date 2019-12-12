@@ -57,7 +57,7 @@ always @ (posedge clock) begin
 					resWire <= rdataA; //LOAD
 					end
 					4'b1111: begin
-					resWire <= rdataA + 2'b10;
+					resWire <= rdataA;
 					end
 				endcase
 		  end

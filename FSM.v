@@ -149,14 +149,13 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 								4'b1110: pcIncOrSet = 1'b1;
 								4'b1111: pcIncOrSet = 1'b0;
 								default: pcIncOrSet = 1'b0;
-							endcase
-							
+							endcase	
 							
 							nextState = 2'b00;
 						end
 						4'b1111: begin //CUST JUMP
 							rfWe = 1'b1;
-							pcIncOrSet = 1'b1;
+							pcIncOrSet = 1'b0;
 							nextState = 2'b00;
 						end
 						default: ;
