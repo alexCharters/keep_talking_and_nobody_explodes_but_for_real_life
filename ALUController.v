@@ -18,7 +18,7 @@ module ALUController(clock, reset, opcode, aluOpcode);
 				4'b1100: //BCond
 					aluOpcode <= 8'b00000110;
 				4'b1111: //LUI
-					aluOpcode <= opcode;
+					aluOpcode <= 8'b11110000;
             default: 
                 aluOpcode <= {4'b0, opcode[7:4]}; //ITYPE assumed in the default case. Convert to RTYPE instruction.
         endcase

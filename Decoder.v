@@ -7,7 +7,7 @@ module Decoder(clock, reset, instr, flags, decoded);
 	output reg [15:0] decoded;
 	always @ (*) begin
 		case({instr[15:12], instr[7:4]})
-			8'b00000000: decoded = 16'b10000000;
+			8'b00000000: decoded = 16'b0000000000100000;
 			8'b01001100: begin
 				newInstr = {instr[15:12], 4'b0, instr[7:0]};
 				case(instr[11:8])

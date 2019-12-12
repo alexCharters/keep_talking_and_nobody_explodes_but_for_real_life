@@ -34,7 +34,6 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 			end
 			2'b10: begin //EXECUTE state
 				//set control lines here
-				psrEn = 1'b1;
 				nextState = 2'b11; //go to write back state
 				case(instruction[15:12])
 					4'b0000: begin //Rtypes
@@ -42,6 +41,9 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						r2ImSel = 1'b0; //use r2 data
 						if(instruction[7:4] == 4'b1011) begin //CMP
 							pcIncOrSet = 1'b0;
+							psrEn = 1'b1;
+							pcEn = 1'b1;
+							nextState = 2'b00;
 						end
 					end
 					4'b0001: begin //ANDI
@@ -95,8 +97,10 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						pcRegSel = 1'b1;
 						r2ImSel = 1'b1;
 						immTypeSel = 2'b01;
-						pcEn = 1'b1;
 						pcIncOrSet = 1'b0;
+						pcEn = 1'b1;
+						psrEn = 1'b1;
+						nextState = 2'b00;
 					end
 					4'b1101: begin //MOVI
 						pcRegSel = 1'b1;
