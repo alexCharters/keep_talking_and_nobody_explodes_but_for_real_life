@@ -1,3 +1,9 @@
+/*
+	Holds the status flags for the processor.
+	Flag ordering is
+					Negative Equal Overflow Low Carry
+
+*/
 module PSR(clock, enable, reset, flagsIn, flagsOut);
 	input [4:0] flagsIn;
 	input clock, enable, reset;

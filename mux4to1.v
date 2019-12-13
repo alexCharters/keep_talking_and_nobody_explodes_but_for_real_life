@@ -1,3 +1,4 @@
+// Standard 4 to 1 multiplexor. 0 gives in1, 1 gives in2, etc.
 module mux4to1(in1, in2, in3, in4, select, out);
     input [15:0] in1, in2, in3, in4;
     input [1:0] select;

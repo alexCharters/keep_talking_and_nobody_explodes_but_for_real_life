@@ -1,3 +1,8 @@
+/*
+	This is the main file that controlls the CPU. If something goes wrong, start here first!
+	Navigates through four stages to perform, in this exact order, Instruction Fetch, Decode, Execute, and Write Back.
+	Check the FSM diagram in the documentation for more details on which instructions go where.
+*/
 module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2ImSel, immTypeSel, brWe, wbRegAlu, psrEn, psrFlags);
 	input clock, reset;
 	input [15:0] instruction;
@@ -14,6 +19,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 	end
 	
 	always @ (*) begin
+		//set everything to its most likely values
 		pcEn = 1'b0;
 		pcIncOrSet = 1'b0;
 		irEn = 1'b0;
@@ -114,7 +120,7 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 				rfWe = 1'b1;
 				wbRegAlu = 1'b1;
 				psrEn = 1'b0;
-				pcIncOrSet = 1'b0;
+				pcIncOrSet = 1'b0; //we most likely want to increment the pc by one. Certain instructions will change this.
 				if(instruction[15:12] == 4'b0100)
 					case(instruction[7:4])
 						4'b0100: begin //STORE
@@ -158,17 +164,17 @@ module FSM(clock, reset, instruction, pcEn, irEn, pcIncOrSet, rfWe, pcRegSel, r2
 						end
 						default: ;
 					endcase
-				else if(instruction[15:12] == 4'b1100) begin
-					pcIncOrSet = 1'b1;
-					rfWe = 1'b0;
+				else if(instruction[15:12] == 4'b1100) begin //Logic for branches
+					pcIncOrSet = 1'b1; //we are setting the pc to a new value
+					rfWe = 1'b0; //there is no write back into a register in the register file.
 				end
-				else if(instruction[15:12] == 4'b0000 && instruction[7:4] == 4'b0010) begin
+				else if(instruction[15:12] == 4'b0000 && instruction[7:4] == 4'b0010) begin //Or instruction handling.
 					pcIncOrSet = 1'b0;
 					rfWe = 1'b0;
 					pcEn = 1'b1;
 				end
 				else if(instruction[15:12] == 4'b1011 || instruction[7:4] == 4'b1011) begin //handle compares
-					psrEn = 1'b1;
+					psrEn = 1'b1; //allow new flags to be written to the PSR.
 				end
 				else
 					pcIncOrSet = 1'b0;

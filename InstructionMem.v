@@ -1,5 +1,7 @@
 // Quartus Prime Verilog Template
 // Single port RAM with single read/write address 
+// Holds the instructions for the program, with an absolute max of 65536 instructions.
+// This is all based on 16-bit values for each address.
 
 module InstructionMem 
 #(parameter DATA_WIDTH=16, parameter ADDR_WIDTH=16)

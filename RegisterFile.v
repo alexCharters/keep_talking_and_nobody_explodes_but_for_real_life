@@ -1,3 +1,10 @@
+/*
+	Creates the processor registers.
+	There are 16 registers, each being 16 bits wide.
+	In practice, registers 14 and 15 should not be accessed by
+	the program unless jumps or jals occur.
+	Register 0 can be written to, but will always give a value of 0 back.
+*/
 module RegisterFile
 	#(parameter WIDTH = 16, REGISTER_BITS = 4)
 	(clock, reset, shouldWrite, register1Address, register2Address, writeAddress, writeData, register1Data, register2Data);

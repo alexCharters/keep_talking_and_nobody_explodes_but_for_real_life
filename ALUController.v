@@ -1,3 +1,6 @@
+/*
+    Handles translating an instruction's opcode into the appropriate value for the alu's operation.
+*/
 module ALUController(clock, reset, opcode, aluOpcode);
     input clock, reset;
     input [7:0] opcode;

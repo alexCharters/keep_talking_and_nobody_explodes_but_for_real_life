@@ -1,3 +1,8 @@
+/*
+	Takes in a given instruction, and produces the appropriate decoded instruction based on
+	PSR flags, and the input instruction as well. Any instruction which should not be taken
+	will be converted into a NOP.
+*/
 module Decoder(clock, reset, instr, flags, decoded);
 	input clock, reset;
 	input [15:0] instr;
@@ -7,10 +12,10 @@ module Decoder(clock, reset, instr, flags, decoded);
 	output reg [15:0] decoded;
 	always @ (*) begin
 		case({instr[15:12], instr[7:4]})
-			8'b00000000: decoded = 16'b0000000000100000;
+			8'b00000000: decoded = 16'b0000000000100000; //empty line in file, so make it a NOP
 			8'b01001100: begin
 				newInstr = {instr[15:12], 4'b0, instr[7:0]};
-				case(instr[11:8])
+				case(instr[11:8]) //for each case, ensure the proper flags are set. If not, return a NOP as the decoded instruction.
 					4'b0000: decoded = (flags[3] == 1'b1 ? newInstr : NOP);
 					4'b0001: decoded = (flags[3] == 1'b0 ? newInstr : NOP);
 					4'b0010: decoded = (flags[0] == 1'b1 ? newInstr : NOP);
@@ -33,7 +38,7 @@ module Decoder(clock, reset, instr, flags, decoded);
 			default: decoded = instr;
 		endcase
 		if(instr[15:12] == 4'b1100) begin
-			case(instr[11:8])
+			case(instr[11:8]) //for each case, ensure the proper flags are set. If not, return a NOP as the decoded instruction.
 					4'b0000: decoded = (flags[3] == 1'b1 ? instr : NOP);
 					4'b0001: decoded = (flags[3] == 1'b0 ? instr : NOP);
 					4'b0010: decoded = (flags[0] == 1'b1 ? instr : NOP);

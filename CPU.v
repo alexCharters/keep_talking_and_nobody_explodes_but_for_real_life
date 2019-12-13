@@ -1,3 +1,6 @@
+/*
+	Creates the Hierarchical layout for the CPU. This is also the main place where IO and the CPU are combined.
+*/
 module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, timer_sec1, timer_sec2, morse_sev1, morse_sev2, morse_led, keypad_leds, butt_strip, butt_color, strike_leds, button, morse_left, morse_right, morse_tx, keypad, ADC_CONVST, ADC_SCK, ADC_SDO, ADC_SDI);
 	wire [15:0] instMemInput, instMemOut, instMemAddr, pcVal, instr, decoderOut, aluOut, r1Data, 
 		r2Data, rdataA, rdataB, signExtended, zeroExtended, immediate, storageOut, regDataIn;
@@ -44,7 +47,7 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	RegisterFile rf(.clock(clock), .reset(reset), .shouldWrite(rfWe), .register1Address(instr[11:8]), .register2Address(instr[3:0]), 
 		.writeAddress(instr[11:8]), .writeData(regDataIn), .register1Data(r1Data), .register2Data(r2Data));
 		
-	//StorageRam storeRam(.data(aluOut), .addr(r2Data), .we(brWe), .clk(clock), .q(storageOut));
+	//StorageRam storeRam(.data(aluOut), .addr(r2Data), .we(brWe), .clk(clock), .q(storageOut)); We now can transition over to Alex's ram for output.
 		
 	mux2to1 pcOrReg(.in1(instMemAddr), .in2(r1Data), .select(pcRegSel), .out(rdataA));
 	
@@ -64,6 +67,7 @@ module CPU(clock, reset, sclbutt, sdabutt, scl1, sda1, scl2, sda2, timer_min, ti
 	
 	PSR psr(.clock(clock), .reset(reset), .enable(psrEn), .flagsIn(flags), .flagsOut(psrOut));
 	
+	//Setup all necessary wires for interacting with memory
 	ktane_mem memory(.data(aluOut),
 	.addr(r2Data),
 	.we(brWe),

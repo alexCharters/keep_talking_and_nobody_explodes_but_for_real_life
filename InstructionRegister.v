@@ -1,3 +1,6 @@
+/*
+    Very basic module to hold a previously fetched instruction. This is needed for stability while handling a particular instruction.
+*/
 module InstructionRegister(clock, reset, enable, instructionIn, instr);
     input clock, reset, enable;
     input [15:0] instructionIn;
