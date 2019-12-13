@@ -40,18 +40,18 @@ wire [4:0] state;
 
 reg [4:0] CS, NS;
 
-reg [255:0] glyph1 [0:31];
-reg [255:0] glyph2 [0:31];
-reg [255:0] glyph3 [0:31];
+//reg [255:0] glyph1 [0:31];
+//reg [255:0] glyph2 [0:31];
+//reg [255:0] glyph3 [0:31];
 //reg [255:0] glyph4 [0:31];
 //reg [255:0] glyph5 [0:31];
 //reg [255:0] glyph6 [0:31];
 //reg [255:0] glyph7 [0:31];
 //reg [255:0] glyph8 [0:31];
-reg [255:0] glyph9 [0:31];
-reg [255:0] glyph10 [0:31];
+//reg [255:0] glyph9 [0:31];
+//reg [255:0] glyph10 [0:31];
 //reg [255:0] glyph11 [0:31];
-reg [255:0] glyph12 [0:31];
+//reg [255:0] glyph12 [0:31];
 //reg [255:0] glyph13 [0:31];
 //reg [255:0] glyph14 [0:31];
 //reg [255:0] glyph15 [0:31];
@@ -67,9 +67,9 @@ reg [255:0] glyph12 [0:31];
 //reg [255:0] glyph25 [0:31];
 //reg [255:0] glyph26 [0:31];
 //reg [255:0] glyph27 [0:31];
-reg [255:0] glyph28 [0:31];
-reg [255:0] glyph29 [0:31];
-reg [255:0] glyph30 [0:31];
+//reg [255:0] glyph28 [0:31];
+//reg [255:0] glyph29 [0:31];
+//reg [255:0] glyph30 [0:31];
 
 
 reg isStartSeq;
@@ -150,18 +150,18 @@ initial begin
 	CS = idle;
 	NS = idle;
 	
-	$readmemb("glyph1.txt", glyph1);
-	$readmemb("glyph2.txt", glyph2);
-	$readmemb("glyph3.txt", glyph3);
+//	$readmemb("glyph1.txt", glyph1);
+//	$readmemb("glyph2.txt", glyph2);
+//	$readmemb("glyph3.txt", glyph3);
 //	$readmemb("glyph4.txt", glyph4);
 //	$readmemb("glyph5.txt", glyph5);
 //	$readmemb("glyph6.txt", glyph6);
 //	$readmemb("glyph7.txt", glyph7);
 //	$readmemb("glyph8.txt", glyph8);
-	$readmemb("glyph9.txt", glyph9);
-	$readmemb("glyph10.txt", glyph10);
+//	$readmemb("glyph9.txt", glyph9);
+//	$readmemb("glyph10.txt", glyph10);
 //	$readmemb("glyph11.txt", glyph11);
-	$readmemb("glyph12.txt", glyph12);
+//	$readmemb("glyph12.txt", glyph12);
 //	$readmemb("glyph13.txt", glyph13);
 //	$readmemb("glyph14.txt", glyph14);
 //	$readmemb("glyph15.txt", glyph15);
@@ -177,9 +177,9 @@ initial begin
 //	$readmemb("glyph25.txt", glyph25);
 //	$readmemb("glyph26.txt", glyph26);
 //	$readmemb("glyph27.txt", glyph27);
-	$readmemb("glyph28.txt", glyph28);
-	$readmemb("glyph29.txt", glyph29);
-	$readmemb("glyph30.txt", glyph30);
+//	$readmemb("glyph28.txt", glyph28);
+//	$readmemb("glyph29.txt", glyph29);
+//	$readmemb("glyph30.txt", glyph30);
 end
 
 always@(*) begin
@@ -346,18 +346,18 @@ always@(*) begin
 	else begin
 		case(data_latch)
 //			0: data_in = (data_byte_counter==8)?8'h40:8'hAA;
-			1: data_in = (data_byte_counter==8)?8'h40:glyph1[data_packet_counter][data_byte_counter-9 -: 8];
-			2: data_in = (data_byte_counter==8)?8'h40:glyph2[data_packet_counter][data_byte_counter-9 -: 8];
-			3: data_in = (data_byte_counter==8)?8'h40:glyph3[data_packet_counter][data_byte_counter-9 -: 8];
+//			1: data_in = (data_byte_counter==8)?8'h40:glyph1[data_packet_counter][data_byte_counter-9 -: 8];
+//			2: data_in = (data_byte_counter==8)?8'h40:glyph2[data_packet_counter][data_byte_counter-9 -: 8];
+//			3: data_in = (data_byte_counter==8)?8'h40:glyph3[data_packet_counter][data_byte_counter-9 -: 8];
 //			4: data_in = (data_byte_counter==8)?8'h40:glyph4[data_packet_counter][data_byte_counter-9 -: 8];
 //			5: data_in = (data_byte_counter==8)?8'h40:glyph5[data_packet_counter][data_byte_counter-9 -: 8];
 //			6: data_in = (data_byte_counter==8)?8'h40:glyph6[data_packet_counter][data_byte_counter-9 -: 8];
 //			7: data_in = (data_byte_counter==8)?8'h40:glyph7[data_packet_counter][data_byte_counter-9 -: 8];
 //			8: data_in = (data_byte_counter==8)?8'h40:glyph8[data_packet_counter][data_byte_counter-9 -: 8];
-			9: data_in = (data_byte_counter==8)?8'h40:glyph9[data_packet_counter][data_byte_counter-9 -: 8];
-			10: data_in = (data_byte_counter==8)?8'h40:glyph10[data_packet_counter][data_byte_counter-9 -: 8];
+//			9: data_in = (data_byte_counter==8)?8'h40:glyph9[data_packet_counter][data_byte_counter-9 -: 8];
+//			10: data_in = (data_byte_counter==8)?8'h40:glyph10[data_packet_counter][data_byte_counter-9 -: 8];
 //			11: data_in = (data_byte_counter==8)?8'h40:glyph11[data_packet_counter][data_byte_counter-9 -: 8];
-			12: data_in = (data_byte_counter==8)?8'h40:glyph12[data_packet_counter][data_byte_counter-9 -: 8];
+//			12: data_in = (data_byte_counter==8)?8'h40:glyph12[data_packet_counter][data_byte_counter-9 -: 8];
 //			13: data_in = (data_byte_counter==8)?8'h40:glyph13[data_packet_counter][data_byte_counter-9 -: 8];
 //			14: data_in = (data_byte_counter==8)?8'h40:glyph14[data_packet_counter][data_byte_counter-9 -: 8];
 //			15: data_in = (data_byte_counter==8)?8'h40:glyph15[data_packet_counter][data_byte_counter-9 -: 8];
@@ -373,9 +373,9 @@ always@(*) begin
 //			25: data_in = (data_byte_counter==8)?8'h40:glyph25[data_packet_counter][data_byte_counter-9 -: 8];
 //			26: data_in = (data_byte_counter==8)?8'h40:glyph26[data_packet_counter][data_byte_counter-9 -: 8];
 //			27: data_in = (data_byte_counter==8)?8'h40:glyph27[data_packet_counter][data_byte_counter-9 -: 8];
-			28: data_in = (data_byte_counter==8)?8'h40:glyph28[data_packet_counter][data_byte_counter-9 -: 8];
-			29: data_in = (data_byte_counter==8)?8'h40:glyph29[data_packet_counter][data_byte_counter-9 -: 8];
-			30: data_in = (data_byte_counter==8)?8'h40:glyph30[data_packet_counter][data_byte_counter-9 -: 8];
+//			28: data_in = (data_byte_counter==8)?8'h40:glyph28[data_packet_counter][data_byte_counter-9 -: 8];
+//			29: data_in = (data_byte_counter==8)?8'h40:glyph29[data_packet_counter][data_byte_counter-9 -: 8];
+//			30: data_in = (data_byte_counter==8)?8'h40:glyph30[data_packet_counter][data_byte_counter-9 -: 8];
 			default: data_in= (data_byte_counter==8)?8'h40:8'hAA;
 		endcase
 	end

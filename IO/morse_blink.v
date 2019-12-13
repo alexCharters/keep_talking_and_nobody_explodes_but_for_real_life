@@ -39,7 +39,7 @@ end
 always@(*) begin
 	//timer = 0;
 	//counter = 0;
-	morse_led = 0;
+	morse_led = morse_led;
 	case(CS)
 		IDLE: begin
 			morse_led = 0;
@@ -82,13 +82,13 @@ always@(*) begin
 		   $display(seq[counter -: 2]);
 			case(seq[counter -: 2])
 				2'b00: begin
-					if(timer>5000)
+					if(timer>5000000)
 						morse_led = 1'b1;
 					else
 					    morse_led = 1'b0;
 				end
 				2'b01: begin
-					if(timer>5000)
+					if(timer>5000000)
 						morse_led = 1'b1;
 					else
 					    morse_led = 1'b0;
@@ -162,9 +162,9 @@ always@(posedge clk) begin
 	
 	if (set_timer) begin
 		case(seq[counter -: 2])
-			2'b00: timer = 10000;
-			2'b01: timer = 20000;
-			2'b11: timer = 12000;
+			2'b00: timer = 10000000;
+			2'b01: timer = 20000000;
+			2'b11: timer = 12000000;
 			default: begin
 				$display(seq[counter -: 2]);
 				timer = 0;

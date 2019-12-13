@@ -18,6 +18,12 @@ module sevseg(bin,sev);
             7 : sev = 7'b1111000;
             8 : sev = 7'b0000000;
             9 : sev = 7'b0010000;
+				10 : sev = 7'b0001000;
+				11 : sev = 7'b0000011;
+				12 : sev = 7'b1000110;
+				13 : sev = 7'b0100001;
+				14 : sev = 7'b0000110;
+				15 : sev = 7'b0001110;
             //switch off 7 segment character when the bcd digit is not a decimal number.
             default : sev = 7'b1111111; 
         endcase
